@@ -84,8 +84,8 @@
 <!-- Docs page layout -->
 <div class="bs-docs-header" id="content">
     <div class="container">
-        <h1>Jeffrey Hicks</h1>
-        <p>A personal website where I collect and share thoughts, code, and presentations.</p>
+        <h1>Creating a Flux Example For the React-Webpack-Rails-Tutorial</h1>
+        <p>Pull Request Challenge</p>
     </div>
 </div>
 
@@ -93,53 +93,34 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h2 --><h2 id="md-about-me">About Me</h2><p>I&#39;m a developer who tweets at <a href="https://twitter.com/jrhicks">@jrhicks</a>.  I blog about things
-I&#39;m trying to learn.  I&#39;m a practicing 4DX coach, family guy, and I enjoy chess, bicycling, and health topics.</p>
-<!-- h2 --><h2 id="md-web-development">Web Development</h2><p>I work at <a href="htttp://www.cteh.com">CTEH LLC</a> where I&#39;ve been developing and maintaining a suite
-of Ruby-On-Rails applications for Emergency Response Management and readyness.  These applications are not
-public facing so I&#39;ve attempted to collect my public works below.</p>
-<!-- h4 --><h4 id="md-articles-i-39-m-writing">Articles I&#39;m Writing</h4><p>2015/02/07 - <a href='/creating_a_flux_example_for_the_react_webpack_rails_tutorial/index.html'>Creating a Flux Example For the React-Webpack-Rails-Tutorial</a></p>
-<!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-hackathon-code">Hackathon Code</h3><p><img src="hackathon.jpg" style="width: 100%; height: 100%;"></p>
-<p><strong>3-Way-Like-Data-Binding for PouchDB in Angular</strong> <br>
-<em>2014/10/25</em> <br>
-<em>ArkansasDev Hackathon 1.0</em> <br>
-Hacked on and <a href="https://github.com/jrhicks/ngPouch">released an experimental ngPouch</a> with two UCA students who were networking in anticipation of college graduation.</p>
-</div><!-- h3 --><div class='col-sm-4'><h3 id="md-public-presentations">Public Presentations</h3><p><img src="presentation.jpg" style="width: 100%; height: 100%;"></p>
-<p><strong>Javascript’s Build Ecosystem</strong> <br>
-<em>2014/07/26</em> <br>
-<em>BarCamp Little Rock</em> <br>
-Introduction to Bower, NPM, Grunt, Gulp, Yo and a live coding demonstration on how to use them together to build a gorgeous hybrid iPhone app and staticly generate a responsive website.</p>
-<p><strong>OmniAuth in Rails</strong> <br>
-<em>2012/06/12</em> <br>
-<em>Barcamp Conway</em> <br>
-Using 3rd party authentication and data to deliver more value quickly.</p>
-</div><!-- h3 --><div class='col-sm-4'><h3 id="md-open-source-projects">Open Source Projects</h3><p><img src="github_mug.jpg" style="width: 100%; height: 100%;"></p>
-<p><strong>In Production-Use Gems</strong></p>
-<p>PageFor - Collection of skinable Rails Helpers for rendering User Interface Components and Layouts</p>
-<p>PolyWag - Reduces controller boiler plate code without hidden side-effects</p>
-<p><strong>Experiments</strong></p>
-<p>Wikismith - A gulp static site generator that created this site.</p>
-</div></div><!-- h2 --><h2 id="md-4dx-coach">4DX Coach</h2><!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-at-cteh">At CTEH</h3><p><img src="cteh.jpg" style="width: 100%; height: 100%;"></p>
-<p>Under executive guidance and professional consulting from Franklyn Covey, I&#39;m part of small
-coaching team that help 30+ teams execute consistently on their most important goals.</p>
-</div><!-- h3 --><div class='col-sm-4'><h3 id="md-acorn-hours">Acorn Hours</h3><p><img src="acorn_hours_4dx.jpg" style="width: 100%; height: 100%;"></p>
-<p>I met with Acorn Hours CEO at barcamp Little Rock and helped him set his goals and leads.  A small
-personal scoreboard was created after our 2nd meeting.</p>
-</div><!-- h3 --><div class='col-sm-4'><h3 id="md-lawson-and-company">Lawson And Company</h3><p><img src="lawson_and_company.jpg" style="width: 100%; height: 100%;"></p>
-<p>I&#39;ve met with with Lawson and Company 3 times to introduce 4DX and help them develop their
-Lead and Lag Mesaures.  On the 3rd meeting they finalized their lead measures, crafted the
- best physical scoreboard I&#39;ve ever seen - and practiced holding weekly WIG sessions.
-session</p>
-</div></div><!-- h2 --><h2 id="md-family-guy">Family Guy</h2><!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-our-family">Our Family</h3><p><img src="family.jpg" style="width: 100%; height: 100%;"></p>
-<p>We live in Maumelle, Arkansas.  On weekends we like to grab lunch and enjoy the weather.</p>
-</div><!-- h3 --><div class='col-sm-4'><h3 id="md-lili">Lili</h3><p><img src="lili.jpg" style="width: 100%; height: 100%;"></p>
-<p>This is Lili and me a few years ago at Seagrove Beach.  We&#39;ve been together since 1998 and
-going strong.</p>
-</div><!-- h3 --><div class='col-sm-4'><h3 id="md-ava">Ava</h3><p><img src="ava.jpg" style="width: 100%; height: 100%;"></p>
-<p>Our world revolves around Ava.  In this photo she is doing a cheer pose and is pretty excited about
-casual-day at school.</p>
-</div></div><!-- h2 --><h2 id="md-hobbies">Hobbies</h2><p>You can find me on Chess With Friends, riding my bike around the Little Rock river trail, or
-spouting off some diet trivia I&#39;ve recently read.</p>
+<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>React.js Conf 2015 just ended and I&#39;m excited as ever to start using Rect.js, but unsure how
+ to meld this rich javascript ecosystem nicely with Rails.</p>
+<p>After reading Juston Gordon&#39;s article <a href="http://www.railsonmaui.com/blog/2014/10/02/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/">Fast Rich Client Rails Development With Webpack and the ES6 Transpiler</a>
+I was convinced he was on the right path and checked out his <a href="https://github.com/justin808/react-webpack-rails-tutorial">React Webpack Rails Project</a></p>
+<p>The project had an open issue to <a href="https://github.com/justin808/react-webpack-rails-tutorial/issues/13">Add demonstration with flux</a></p>
+<ul>
+<li><p>We could have a simple example of using flux to manage the data of the comments.</p>
+</li>
+<li><p><a href="http://facebook.github.io/flux/docs/overview.html#content">http://facebook.github.io/flux/docs/overview.html#content</a></p>
+</li>
+<li><p>This is the way I handle UIs. I do not use direct JSON calls from the react components.</p>
+</li>
+</ul>
+<!-- h1 --><h1 class="page-header" id="md-get-a-working-project-on-heroku-without-flux">Get a working Project On Heroku Without Flux</h1><ul>
+<li><p>1</p>
+</li>
+<li><p>2</p>
+</li>
+<li><p>3</p>
+</li>
+</ul>
+<!-- h1 --><h1 class="page-header" id="md-learrn-more-about-flux">Learrn more about Flux</h1><ul>
+<li><p>Links Here</p>
+</li>
+<li><p>Links Here</p>
+</li>
+</ul>
+<!-- h1 --><h1 class="page-header" id="md-code-highlights-and-thoughts">Code Highlights and Thoughts</h1><p>Lorem Ipsum Dolar Sit Amut</p>
 <!-- end -->
 </div>
 
@@ -149,13 +130,12 @@ spouting off some diet trivia I&#39;ve recently read.</p>
             
             
             
-            <li><a href="#md-about-me">About Me</a></li>
+            <li><a href="#md-introduction">Introduction</a></li>
             
             
             
             
             
-            <li><a href="#md-web-development">Web Development</a></li>
             
             
             
@@ -184,6 +164,7 @@ spouting off some diet trivia I&#39;ve recently read.</p>
             
             
             
+            <li><a href="#md-get-a-working-project-on-heroku-without-flux">Get a working Project On Heroku Without Flux</a></li>
             
             
             
@@ -193,7 +174,6 @@ spouting off some diet trivia I&#39;ve recently read.</p>
             
             
             
-            <li><a href="#md-4dx-coach">4DX Coach</a></li>
             
             
             
@@ -212,10 +192,10 @@ spouting off some diet trivia I&#39;ve recently read.</p>
             
             
             
+            <li><a href="#md-learrn-more-about-flux">Learrn more about Flux</a></li>
             
             
             
-            <li><a href="#md-family-guy">Family Guy</a></li>
             
             
             
@@ -234,10 +214,7 @@ spouting off some diet trivia I&#39;ve recently read.</p>
             
             
             
-            
-            
-            
-            <li><a href="#md-hobbies">Hobbies</a></li>
+            <li><a href="#md-code-highlights-and-thoughts">Code Highlights and Thoughts</a></li>
             
             
             
