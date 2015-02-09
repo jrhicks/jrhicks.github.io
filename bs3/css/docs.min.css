@@ -7,7 +7,16 @@
 
 body {
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 h2 h3 h4 h5 {
+  font-weight: bold;
 }
 
 .navbar-brand img {
@@ -434,9 +443,9 @@ border: 1px solid black;
 .bs-docs-sidebar .nav>li>a {
     display: block;
     padding: 4px 20px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
-    color: #999;
+    color: #333;
 }
 .bs-docs-sidebar .nav>li>a:hover, .bs-docs-sidebar .nav>li>a:focus {
     padding-left: 19px;

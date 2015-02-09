@@ -106,17 +106,22 @@ I was convinced he was on the right path with the first question, but in his <a 
 he left it as an exercise to <a href="https://github.com/justin808/react-webpack-rails-tutorial/issues/13">Add demonstration with flux</a>.</p>
 <p>In this article I will document</p>
 <ul>
-<li><p>Getting Juston&#39;s Basic Setup Working</p>
+<li><p>Getting the Basic Setup Working</p>
+</li>
+<li><p>Experiencing Hot Loading</p>
 </li>
 <li><p>Learning Flux</p>
 </li>
-<li><p>And Building the</p>
+<li><p>...... TBD</p>
 </li>
 </ul>
 <!-- h2 --><h2 id="md-getting-basic-setup-working">Getting Basic Setup Working</h2><p>My first objective was to get my setup working just like Juston&#39;s.  Below are his instructions for basic setup
 with a few additional notes where things got bumpy for me.</p>
 <ol>
-<li>Be sure that you have Node installed. I use nvm, with node version v0.10.33.</li>
+<li>Be sure that you have Node installed. I use nvm, with node version v0.10.33<ul>
+<li>Thanks to node-sass I found later versions of npm did not work</li>
+</ul>
+</li>
 <li>git clone git@github.com:justin808/react-webpack-rails-tutorial.git</li>
 <li>cd react-webpack-rails-tutorial</li>
 <li>Check that you have Ruby 2.1.5 and the gemset Rails 4.2<ul>
@@ -125,12 +130,22 @@ with a few additional notes where things got bumpy for me.</p>
 </ul>
 </li>
 <li>bundle install</li>
+<li>npm install<ul>
+<li>I had a partial completion.  After much toying around, I found it best to restart from scratch.</li>
+<li>rm -rf node_modules</li>
 <li>npm install</li>
+</ul>
+</li>
 <li>rake db:setup</li>
 <li>foreman start -f Procfile.dev</li>
 <li>Open a browser tab to <a href="http://0.0.0.0:4000">http://0.0.0.0:4000</a> for the Rail app example.</li>
 <li>Open a browser tab to <a href="http://0.0.0.0:3000">http://0.0.0.0:3000</a> for the Hot Module Replacement Example.</li>
 </ol>
+<!-- h2 --><h2 id="md-experience-hot-loading">Experience Hot Loading</h2><p>Open a browser and experience editing JSX code and having your app update in real time.  Its
+similar to AutoReloaders but with 1 significant difference.  The page does not reload.  Instead
+the modules are hot-loaded into the application without the browser reloading and losing application
+state!  You now have this <a href="https://www.youtube.com/watch?v=pw4fKkyPPg8">Webpack and the react-hot-loader in action</a></p>
+<p>Simply amazing!</p>
 <!-- h1 --><h1 class="page-header" id="md-learning-flux">Learning Flux</h1><p><img src="flux_diagram.png" style="width: 100%">
 From <a href="http://facebook.github.io/flux/docs/overview.html#content">Facebook&#39;s Overview of Flux</a></p>
 <!-- h2 --><h2 id="md-understanding-actions">Understanding Actions</h2><p>I think a key understanding of actions is that they are <strong>NOT</strong> functions or routines.  <u>Actions
@@ -403,317 +418,528 @@ to construct a message view component.</p>
             
             <li><a href="#md-introduction">Introduction</a></li>
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
-            <li><a href="#md-getting-basic-setup-working">Getting Basic Setup Working</a></li>
+          
             
             
+          
             
             
+          
             
             
+          
+          <li style="margin-left: 0.5em;"><a href="#md-getting-basic-setup-working">Getting Basic Setup Working</a></li>
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-experience-hot-loading">Experience Hot Loading</a></li>
+          
+            
+            
+          
+            
+            
+          
             
             
             <li><a href="#md-learning-flux">Learning Flux</a></li>
             
+          
             
             
+          
             
             
-            <li><a href="#md-understanding-actions">Understanding Actions</a></li>
+          
+          <li style="margin-left: 0.5em;"><a href="#md-understanding-actions">Understanding Actions</a></li>
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
+          <li style="margin-left: 0.5em;"><a href="#md-understanding-the-single-dispatcher">Understanding the Single Dispatcher</a></li>
+          
             
-            <li><a href="#md-understanding-the-single-dispatcher">Understanding the Single Dispatcher</a></li>
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
+          <li style="margin-left: 0.5em;"><a href="#md-understanding-stores">Understanding Stores</a></li>
+          
             
             
-            <li><a href="#md-understanding-stores">Understanding Stores</a></li>
+          
             
             
+          
+          <li style="margin-left: 0.5em;"><a href="#md-programming-a-store-module">Programming a Store Module</a></li>
+          
             
             
+          
             
-            <li><a href="#md-programming-a-store-module">Programming a Store Module</a></li>
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
             
             
+          
+          <li style="margin-left: 0.5em;"><a href="#md-view-components">View Components</a></li>
+          
             
             
+          
             
             
-            <li><a href="#md-view-components">View Components</a></li>
-            
-            
-            
-            
-            
+          
             
             
         </ul>
 
-        <a class="back-to-top" href="#top">
-            Back to top
-        </a>
 
     </div>
 </div>
