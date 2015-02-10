@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Wikismith">
+
+    <title>
+        Jeffrey Hicks
+    </title>
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bs3/bower/css/bootstrap.css">
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/bs3/css/blog.css">
+    <link rel="stylesheet" href="/bs3/css/docs.min.css">
+    <link rel="stylesheet" href="/bs3/css/railscasts.css">
+    <!-- endinject -->
+
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+
+
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="../../../" class="navbar-brand">
+              <img src="http://www.gravatar.com/avatar/91f491389b01231140190aef863408c9.png">
+              &nbsp;
+              jrhicks.github.io
+            </a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <!--
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/interests.html">Interest</a>
+                </li>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/about">Speaking</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">About</a></li>
+            </ul>
+            -->
+        </nav>
+    </div>
+</header>
+
+
+
+<!-- Docs page layout -->
+<div class="bs-docs-header" id="content">
+    <div class="container">
+        <h1>Getting Started with Flux on Rails</h1>
+        <p>An introduction to Webpack and Flux with and a Rails biased tutorial to getting started.</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+
+<div class="row">
+<div class="col-md-9" role="main">
+<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>React.js Conf 2015 just ended and your excited as ever to start using React.js, but with only
+a conceptual understanding of React and Flux - we have a lot to learn about
+the asset pipeline, Flux,  and it&#39;s ecosystem.</p>
+<p>Ultimately we want an example repository that is a straight forward and an ideomatic example
+of creating a Flux application on Rails.</p>
+<!-- h2 --><h2 id="md-integrating-webpack">Integrating Webpack</h2><p>Webpack takes modules with dependencies and generates static assets representing those modules.
+Its faster than gulp, and more powerful then browserify.  It rocks, and its time we start
+using it instead of relying on crufty gemified javascript and file soup.</p>
+<p>If you need additional motivation:</p>
+<ul>
+<li><p><a href="http://www.railsonmaui.com/blog/2014/10/02/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/">Fast Rich Client Rails Development With Webpack and the ES6 Transpiler</a> - Justin Gordon</p>
+</li>
+<li><p><a href="https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679">Setting up Webpack with Rails</a> - Flarnie Marchan</p>
+</li>
+</ul>
+<!-- h2 --><h2 id="md-test-driving-webpack">Test Driving Webpack</h2><p>To get a quick taste of webpack and the hot-loader described in Justin&#39;s article I used his
+<a href="https://github.com/justin808/react-webpack-rails-tutorial">tutorial repository</a>.  Below are his instructions with a few additional notes where things
+got bumpy for me.</p>
+<ol>
+<li>Be sure that you have Node installed. I use nvm, with node version v0.10.33<ul>
+<li>Thanks to node-sass I found later versions of npm did not work</li>
+</ul>
+</li>
+<li>git clone git@github.com:justin808/react-webpack-rails-tutorial.git</li>
+<li>cd react-webpack-rails-tutorial</li>
+<li>Check that you have Ruby 2.1.5 and the gemset Rails 4.2<ul>
+<li>RVM install was failing until I ran <strong>rvm get head</strong></li>
+<li>rvm install ruby-2.1.5</li>
+</ul>
+</li>
+<li>bundle install</li>
+<li>npm install<ul>
+<li>I had a partial completion.  After much toying around, I found it best to restart from scratch.</li>
+<li>rm -rf node_modules</li>
+<li>npm install</li>
+</ul>
+</li>
+<li>rake db:setup</li>
+<li>foreman start -f Procfile.dev</li>
+<li>Open a browser tab to <a href="http://0.0.0.0:4000">http://0.0.0.0:4000</a> for the Rail app example.</li>
+<li>Open a browser tab to <a href="http://0.0.0.0:3000">http://0.0.0.0:3000</a> for the Hot Module Replacement Example.</li>
+</ol>
+<!-- h2 --><h2 id="md-simple-schemes">Simple Schemes</h2><p>The hot-loader is awesome!  But in the spirit of simplification, you might want to
+look at some other Rails-Webpack schemes.</p>
+<p><a href="https://reinteractive.net/posts/213-rails-with-webpack-why-and-how">Rails with Webpack - Why and How</a> - Oct 24, 2014 - SEBASTIAN PORTO <br>
+Support multiple entry points, use Webpack watch and place bundled builds into app/assets/javascript.</p>
+<p><a href="https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679">Setting Up Webpack with Rails</a> - Aug 15, 2014 - Flarnie Marchan
+Use a similar approach, also introduces Loaders and has <a href="https://github.com/flarnie/webpack_rails_demo">example repository</a></p>
+<p><a href="http://www.tomdooner.com/2014/05/26/webpack.html">WEBPACK IN THE RAILS ASSET PIPELINE</a> - May 26, 2014 - Tim Dooner
+This snippet of code integrates Webpack into the Sprockets build process using tasks!</p>
+<!-- h1 --><h1 class="page-header" id="md-learning-flux">Learning Flux</h1><p>With just a basic understanding of Flux and React from watching:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=nYkdrAPrdcw&amp;list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v#t=66">Hacker Way: Rethinking Web App Development at Facebook</a> - May 4, 2014 - Facebook, Inc</li>
+</ul>
+<p>I needed to read through <a href="https://facebook.github.io/flux/docs/overview.html#content">Facebook&#39;s documentation</a> and scan the web to
+take away some key understandings on how exactly to code a Flux application</p>
+<p><img src="flux_diagram.png" style="width: 100%">
+From <a href="http://facebook.github.io/flux/docs/overview.html#content">Facebook&#39;s Overview of Flux</a></p>
+<!-- h2 --><h2 id="md-understanding-actions">Understanding Actions</h2><p>I think a key understanding of actions is that they are <strong>NOT</strong> functions or routines.  <u>Actions
+are data.</u></p>
+<p>&quot;When new data enters the system, whether through a person interacting with the application or through a web api call, that data is packaged into an <u>action</u> — <strong>an object literal containing the new
+fields of data and a specific action type</strong>.&quot; <a href="http://facebook.github.io/flux/docs/actions-and-the-dispatcher.html#actions-and-action-creators"><em>Actions and the Dispatcher</em>, Facebook, Inc</a></p>
+<!-- h4 --><h4 id="md-action-types">Action Types</h4><p>ActionTypes are literal primitives that are stored as constants.  It appears to be a react convention
+to use <a href="https://github.com/STRML/keyMirror">keyMirror</a> which given input: {key1: val1, key2: val2} will produce
+output {key1: key1, key2: key2}.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* script/constants/AppConstants.js */</span>
+
+<span class="hljs-keyword">var</span> keyMirror = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react/lib/keyMirror'</span>);
+
+<span class="hljs-module"><span class="hljs-keyword">module</span>.exports = </span>{
+  ActionTypes: keyMirror({
+    LOAD_STORIES: <span class="hljs-literal">null</span>,
+    RECEIVE_STORIES: <span class="hljs-literal">null</span>,
+    LOAD_STORY: <span class="hljs-literal">null</span>,
+    RECEIVE_STORY: <span class="hljs-literal">null</span>,
+    CREATE_STORY: <span class="hljs-literal">null</span>,
+    RECEIVE_CREATED_STORY: <span class="hljs-literal">null</span>
+  })
+}
+</code></pre>
+<!-- h4 --><h4 id="md-actions">Actions</h4><p>An action is an object literal with an action type and parameters.</p>
+<pre><code class="lang-javascript"><span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">type</span>:<span class="hljs-value"> ActionTypes.CREATE_STORY,
+      title: title,
+      body: body
+</span></span></span>}
+</code></pre>
+<!-- h4 --><h4 id="md-action-creators">Action Creators</h4><p>Action creators build action data and pass them to the dispatcher.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* scripts/actions/StoryActionsCreator.js */</span>
+
+<span class="hljs-keyword">var</span> AppDispatcher = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../dispatcher/AppDispatcher.js'</span>);
+<span class="hljs-keyword">var</span> AppConstants = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../constants/AppConstants.js'</span>);
+
+<span class="hljs-keyword">var</span> ActionTypes = AppConstants.ActionTypes;
+
+<span class="hljs-built_in">module</span>.exports = {
+
+  createStory: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(title, body)</span> </span>{
+    AppDispatcher.handleViewAction({
+      type: ActionTypes.CREATE_STORY,
+      title: title,
+      body: body
+    });
+  }
+}
+</code></pre>
+<!-- h2 --><h2 id="md-understanding-the-single-dispatcher">Understanding the Single Dispatcher</h2><p>A key point of the dispatcher is that it there is only ever <strong>one</strong> dispatcher.
+It is basically the manager and traffic cop since it can protect against
+circular dependencies and endless loops.</p>
+<p>While you are free to write your own, you can get a robust dispatcher as available through
+the <a href="https://www.npmjs.com/package/flux">flux npm module</a>.</p>
+<p>In your application, you extend flux&#39;s dispatcher with handler methods that wrap
+actions into a payload.  These handler methods are called by your Action Creators.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* scripts/dispatcher/AppDispatcher.js */</span>
+
+<span class="hljs-keyword">var</span> Dispatcher = <span class="hljs-built_in">require</span>(<span class="hljs-string">'flux'</span>).Dispatcher;
+<span class="hljs-keyword">var</span> assign = <span class="hljs-built_in">require</span>(<span class="hljs-string">'object-assign'</span>);
+
+<span class="hljs-keyword">var</span> AppDispatcher = assign({}, Dispatcher.prototype, {
+
+  handleAction: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(action)</span> </span>{
+    <span class="hljs-keyword">var</span> payload = {
+      action: action
+    };
+    <span class="hljs-keyword">this</span>.dispatch(payload);
+  }
+
+});
+
+<span class="hljs-built_in">module</span>.exports = AppDispatcher;
+</code></pre>
+<p>Note: A <a href="https://github.com/facebook/flux/blob/master/examples/flux-chat/js/dispatcher/ChatAppDispatcher.js">influential flux example</a>
+defines both a handleServerAction and handleViewAction in the dispatcher and adds a source
+attribute to the payload.  But <a href="http://stackoverflow.com/a/26164414/143725">Flux author clarifies on stackoverflow that this is not needed</a>
+I have a pending question on stack overflow if wrapping the action in payload is even necessary.</p>
+<p>Our method (hanndleAction) calls the dispatch method, which will broadcast the action payload to all of its
+registered stores. The stores will receive this action data and use its own logic
+ to update its inernal state.</p>
+<p><img src="dispatching.png" style="width: 100%; height: 100%"></p>
+<!-- h2 --><h2 id="md-understanding-stores">Understanding Stores</h2><p>Stores are application state and logic.  Unlike the dispatcher there isn&#39;t any library to lean on
+within flux to do our work for us.  Fortunately, this means there is very little outside of our
+code we need to understand; but we do need to stay true to store philosophies while programming a
+store module.  We will also need to understand how to map our problem domain to stores.  While
+similar to the M in MVC they aren&#39;t exactly models or collections, necessarily.</p>
+<!-- h2 --><h2 id="md-programming-a-store-module">Programming a Store Module</h2><p>To code a Flux store into a javascript module we will need to code the following:</p>
+<ul>
+<li><p><strong>Protect State</strong> - Define setter methods and declare variables in the module but do <strong>not export</strong> them.</p>
+</li>
+<li><p><strong>Register with the Dispatcher</strong> - Register a callback with the dispatcher to inspect payloads and call private setter methods with action data.</p>
+</li>
+<li><p><strong>Define and Export an Event Emitting Store</strong> - Define the Store that extends an Event Emitter and has <strong>read accessors</strong> to protected state.</p>
+</li>
+</ul>
+<p>This is the general layout, in the following sections we will discuss each section in detail.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* script/stores/ShoeStore.js */</span>
+
+<span class="hljs-keyword">var</span> AppDispatcher = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../dispatcher/AppDispatcher'</span>);
+<span class="hljs-keyword">var</span> ShoeConstants = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../constants/ShoeConstants'</span>);
+<span class="hljs-keyword">var</span> EventEmitter = <span class="hljs-built_in">require</span>(<span class="hljs-string">'events'</span>).EventEmitter;
+<span class="hljs-keyword">var</span> merge = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react/lib/merge'</span>);
+
+<span class="hljs-comment">// Protect State</span>
+<span class="hljs-keyword">var</span> _shoes = {};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadShoes</span><span class="hljs-params">(data)</span> </span>{
+  _shoes = data.shoes;
+}
+
+<span class="hljs-comment">// Register with the Dispatcher</span>
+AppDispatcher.register(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(payload)</span> </span>{
+  <span class="hljs-keyword">var</span> action = payload.action;
+  <span class="hljs-keyword">var</span> text;
+  <span class="hljs-comment">// Define what to do for certain actions</span>
+  <span class="hljs-keyword">switch</span>(action.actionType) {
+    <span class="hljs-keyword">case</span> ShoeConstants.LOAD_SHOES:
+      <span class="hljs-comment">// Call internal method based upon dispatched action</span>
+      loadShoes(action.data);
+      <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+<span class="hljs-comment">// Define and Export an Event Emitting Store</span>
+<span class="hljs-keyword">var</span> ShoeStore = merge(EventEmitter.prototype, {
+
+  <span class="hljs-comment">// Returns all shoes</span>
+  getShoes: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> _shoes;
+  },
+
+  emitChange: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">'change'</span>);
+  },
+
+  addChangeListener: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback)</span> </span>{
+    <span class="hljs-keyword">this</span>.on(<span class="hljs-string">'change'</span>, callback);
+  },
+
+  removeChangeListener: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback)</span> </span>{
+    <span class="hljs-keyword">this</span>.removeListener(<span class="hljs-string">'change'</span>, callback);
+  }
+
+});
+
+<span class="hljs-built_in">module</span>.exports = ShoeStore;
+</code></pre>
+<!-- h4 --><h4 id="md-protect-state">Protect State</h4><p>Stores insure only they can update state by declaring their state in variables inside the
+module but outside of exported Store.</p>
+<p>Notice these conventions of State Protection</p>
+<ol>
+<li>_shoes is declared outside of the ShoeStore</li>
+<li>loadShoes is declared outside the ShoeStore</li>
+<li>ShoeStore is the only thing exported (and doesn&#39;t itself offer any setters for _shoes)</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Protect State</span>
+<span class="hljs-keyword">var</span> _shoes = {};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadShoes</span><span class="hljs-params">(data)</span> </span>{
+  _shoes = data.shoes;
+}
+</code></pre>
+<!-- h4 --><h4 id="md-registering-with-the-dispatcher">Registering With the Dispatcher</h4><p>Outside of the Store, but within the module; you register with the dispatcher
+to handle the payload.  The callback should:</p>
+<ol>
+<li>switch on the action type</li>
+<li>call the internal method that updates the protected state</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Register with the Dispatcher</span>
+AppDispatcher.register(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(payload)</span> </span>{
+  <span class="hljs-keyword">var</span> action = payload.action;
+  <span class="hljs-keyword">var</span> text;
+  <span class="hljs-comment">// Define what to do for certain actions</span>
+  <span class="hljs-keyword">switch</span>(action.actionType) {
+    <span class="hljs-keyword">case</span> ShoeConstants.LOAD_SHOES:
+      <span class="hljs-comment">// Call internal method based upon dispatched action</span>
+      loadShoes(action.data);
+      <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+</code></pre>
+<!-- h4 --><h4 id="md-define-and-export-an-event-emitting-store">Define and Export an Event Emitting Store</h4><p>Since we extend from EventEmitter we easily manage listeners and execute their callbacks.  Here we declare
+the API we provide to our Views so they can register themselves as listeners and access
+state.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Define and Export an Event Emitting Store</span>
+<span class="hljs-keyword">var</span> ShoeStore = merge(EventEmitter.prototype, {
+
+  <span class="hljs-comment">// Returns all shoes</span>
+  getShoes: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> _shoes;
+  },
+
+  emitChange: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">'change'</span>);
+  },
+
+  addChangeListener: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback)</span> </span>{
+    <span class="hljs-keyword">this</span>.on(<span class="hljs-string">'change'</span>, <span class="hljs-keyword">callback</span>);
+  },
+
+  removeChangeListener: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback)</span> </span>{
+    <span class="hljs-keyword">this</span>.removeListener(<span class="hljs-string">'change'</span>, <span class="hljs-keyword">callback</span>);
+  }
+
+});
+
+module.exports = ShoeStore;
+</code></pre>
+<!-- h2 --><h2 id="md-view-components">View Components</h2><p><a href="https://reactjsnews.com/react-style-guide-patterns-i-like/">https://reactjsnews.com/react-style-guide-patterns-i-like/</a></p>
+<!-- h1 --><h1 class="page-header" id="md-adopting-flux-strategies">Adopting Flux Strategies</h1><ul>
+<li><p>How do we map Rails models to Flux Stores?</p>
+</li>
+<li><p>How do we interact with async web requests?</p>
+</li>
+<li><p>How can we initialize our data?</p>
+</li>
+<li><p>This seems like a lot of boilerplate and a little nebulous, are there any libraries?</p>
+</li>
+</ul>
+<!-- h2 --><h2 id="md-map-rails-models-to-flux-stores">Map Rails models to Flux Stores</h2><p>Most generally speaking, stores are application state and logic.  However, in hooking up
+our Rails application to Flux, there are some basic questions to ask about designing stores for
+relational data.</p>
+<p>One approach is to have a store for each type of relational data.  This strategy suggests that
+stores <a href="https://groups.google.com/d/msg/reactjs/Rn39oRbABeo/B-45py2PBucJ">can benefit from being normalized</a>.</p>
+<p>It is perfectly fine for one store to depend on the data from another store.  In
+fact, the dispatcher supports this with the waitFor API.</p>
+<p>Bill Fisher (Software Engineer at Facebook) writes in a his <a href="http://stackoverflow.com/a/25708499/143725">Stack Overflow Answer</a>
+that the preferred way to join the data is in the store and not the components.</p>
+<p>Given the following data</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* ArticleStore._articles */</span>
+{
+  <span class="hljs-string">'10'</span>: {id: <span class="hljs-number">10</span>, body: <span class="hljs-string">'Lorem Ipsum Dolar ...'</span>, author: <span class="hljs-number">1</span>, reviewer: <span class="hljs-number">2</span>}
+}
+
+<span class="hljs-comment">/* UserStore._users */</span>,
+{
+  <span class="hljs-string">'1'</span>: {id: <span class="hljs-number">1</span>, name: <span class="hljs-string">'user1'</span>},
+  <span class="hljs-string">'2'</span>: {id: <span class="hljs-number">2</span>, name: <span class="hljs-string">'user2'</span>}
+}
+</code></pre>
+<p>To achieve the waitFor functionality the user store would capture a dispatchToken when
+it registered with the dispatcher.</p>
+<pre><code class="lang-javascript">  UserStore.dispatchToken = AppDispatcher.register(<span class="hljs-keyword">function</span>(payload) {
+    /* <span class="hljs-keyword">...</span> */
+  });
+</code></pre>
+<p>And then from within the ArticleStore callback we can wait for the UserStore to
+process the action before we proceed:</p>
+<pre><code class="lang-javascript"> ArticleStore.dispatchToken = AppDispatcher.register(<span class="hljs-keyword">function</span>(payload) {
+    <span class="hljs-keyword">if</span> (payload.actionType === <span class="hljs-string">'foobar'</span>) {
+      AppDispatcher.waitFor([UserStore.dispatchToken]);
+      /* <span class="hljs-keyword">...</span> */
+    }
+  });
+</code></pre>
+<p>If we are careful to inform our dispatcher the sequence requirements, we can be
+assured that the users data will be updated and usable:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ArticleStore = merge(EventEmitter.prototype, {
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getArticles</span><span class="hljs-params">()</span> </span>{
+    users = UserStore.getUsers()
+    <span class="hljs-keyword">return</span> joinArticlesWith(users); <span class="hljs-comment">// custom routine to join/denormalize data</span>
+  },
+ });
+</code></pre>
+<p>If a store depends on data from other stores, it can wait for those stores to
+finish handling the currently dispatched action with the waitFor method.</p>
+<!-- h2 --><h2 id="md-handling-asynchronous-requests">Handling Asynchronous Requests</h2><p>It is not precisely intuitive in Flux where to handle asynchronous requests. This could be considered
+a Flux design pattern question, but general consensus from engineers at
+Facebook suggest that asynchronous requests actually do <strong>not</strong> belong in Stores,
+but in Action Creators.</p>
+<p>David Change writes in <a href="https://reactjsnews.com/the-state-of-flux/">The State of Flux</a>:  I think it is favorable to handle asynchronous requests in actions rather
+than stores because:</p>
+<ol>
+<li><p>It is a more consistent pattern to how data flows through the rest of the system</p>
+</li>
+<li><p>Multiple stores could be interested in listening to the success or failure of
+a request (such as a generic error handler store), and you typically don’t
+want to invoke actions from directly within your stores</p>
+</li>
+</ol>
+<!-- h2 --><h2 id="md-initialize-our-data">Initialize Our Data</h2><p>Depending on isomorphic requirements, this rabbit hole might get deep, but I couldn&#39;t find any reason
+that having an initialize action wouldn&#39;t suffice.</p>
+<pre><code class="lang-javascript"><span class="hljs-type">AppDispatcher</span>.handleAction(
+  { action: <span class="hljs-type">StoreConstants</span>.<span class="hljs-type">INITIALIZE</span>,
+    data: <span class="hljs-decorator">{...}</span>
+  }
+);
+</code></pre>
+<p>Getting the data from the database and running the method isomorphicly another issue.</p>
+<!-- h2 --><h2 id="md-adopting-a-framework-for-the-flux-pattern">Adopting a framework for the Flux Pattern</h2><p>When people talk about Flux they mean more of a pattern than a framework. But Javascript community has already made a solid input into it and developed different approaches for working with Flux in order to bring some structure and “frameworky” feel. The first thing which comes to mind after some exploration - <strong>there are too much Flux libraries right now</strong>.</p>
+<p>Comparisons</p>
+<ul>
+<li><p><a href="https://reactjsnews.com/the-state-of-flux/">The State of Flux</a> - Nov 6th 2014 - David Chang compares 6 Flux Frameworks.</p>
+</li>
+<li><p><a href="http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example">Flux solutions compared by example</a> - Feb 7th, 2015 - Dmitri Voronianski takes a post-react-conference look at flux frameworks and maintains a <a href="https://github.com/voronianski/flux-comparison">github repot of examples</a></p>
+</li>
+</ul>
+<p>The contenders</p>
+<ul>
+<li><a href="http://facebook.github.io/flux/">Flux official site</a></li>
+<li><a href="https://github.com/facebook/flux">Facebook&#39;s Flux - Application Architecture for Building User Interfaces</a></li>
+<li><a href="http://fluxxor.com/">fluxxor - A set of tools to facilitate building JavaScript data layers using the Flux</a></li>
+<li><a href="https://github.com/spoike/refluxjs">refluxjs - A simple library for uni-directional dataflow application architecture inspired by Flux</a></li>
+<li><a href="https://github.com/yoshuawuyts/barracks">barracks - Event dispatcher for the React Flux architecture</a></li>
+<li><a href="https://github.com/kenwheeler/mcfly">mcfly - A lightweight flux library with factories for Actions &amp; Stores</a></li>
+<li><a href="http://deloreanjs.com/">delorean - A completely agnostic JavaScript framework to apply Flux concepts</a></li>
+<li><a href="http://martyjs.org/">marty - A library for make it easy build isomorphic flux applications with React</a></li>
+<li><a href="https://github.com/yahoo/dispatchr">dispatchr - A Flux dispatcher for applications that run on the server and the client</a></li>
+<li><a href="https://github.com/yahoo/fetchr">fetchr - Augments Flux applications by allowing the same syntax on server/client</a></li>
+<li><a href="https://github.com/yahoo/flux-router-component">flux-router-component - Router React mixin for applications built with Flux</a></li>
+<li><a href="https://github.com/jmreidy/fluxy">fluxy - An implementation of Facebook&#39;s Flux architecture</a></li>
+<li><a href="https://github.com/gaearon/normalizr">normalizr — Normalizes nested JSON according to schema for Flux Stores</a></li>
+<li><a href="https://github.com/acdlite/flummox">Flummox - An isomorphic Flux library with zero singletons</a></li>
+<li><a href="https://github.com/goatslacker/alt">Alt - A flux implementation that is small, tested, terse, and meant to be used with ES6</a></li>
+<li><a href="https://github.com/TuxedoJS/TuxedoJS">Tuxx - A feature-complete framework built on React and Flux.</a></li>
+</ul>
+<!-- h1 --><h1 class="page-header" id="md-digging-into-flummox">Digging into Flummox</h1><p>Idiomatic, modular, testable, isomorphic Flux. No singletons required.</p>
+<!-- h2 --><h2 id="md-flummox-actions">Flummox Actions</h2><p>I love the way Flummox has you define action creators!  Actions are &quot;wrapped&quot; upon instantiation. When you fire an action, the return value isn&#39;t sent to the caller, but instead to the dispatcher. In other words, calling an action always returns undefined (or if the action is asynchronous, a promise that resolves to undefined — more below). This may seem weird, but it&#39;s designed this way to enforce unidirectional data flow. If this absolutely doesn&#39;t work for you, you can always use a helper function that calls the action internally while also returning a value to the original caller — just know this is an anti-pattern.</p>
+<p>This makes Flummox Actions:</p>
+<ul>
+<li><p>Terse but not magical</p>
+</li>
+<li><p>Opinionated: Unidirectionalism enforced</p>
+</li>
+<li><p>Async Intelligent</p>
+</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Flummox Action Example */</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageActions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Actions</span> </span>{
+
+  <span class="hljs-comment">// Methods on the prototype are automatically converted into actions</span>
+  newMessage(content) {
+
+    <span class="hljs-comment">// The return value from the action is sent to the dispatcher.</span>
+    <span class="hljs-comment">// To enforce unidirectional data flow, it is *not* returned to the caller.</span>
+    <span class="hljs-keyword">return</span> content;
+  }
+
+  <span class="hljs-comment">// Asynchrong nous functions are also supported: just return a promise</span>
+  <span class="hljs-comment">// This is easy using async-await</span>
+  async createMessage(messageContent) {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">return</span> await serverCreateMessage(messageContent);
+    } <span class="hljs-keyword">catch</span> (error) {
+      <span class="hljs-comment">// handle error somehow</span>
+    }
+  }
+
+}
+</code></pre>
+<p>Alt is a little too terse for my taste.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Alt Action Example */</span>
+
+<span class="hljs-keyword">class</span> ActionsCreators {
+    <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
+        <span class="hljs-keyword">this</span>.generateActions(
+            <span class="hljs-string">'receiveProducts'</span>,
+            <span class="hljs-string">'addToCart'</span>,
+            <span class="hljs-string">'finishCheckout'</span>
+        );
+    }
+
+    cartCheckout(products) {
+        <span class="hljs-keyword">this</span>.dispatch(products);
+        WebAPIUtils.checkoutProducts(products);
+    }
+}
+</code></pre>
+<p>I&#39;m not quite sure what Tuxx is doing?</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Tuxx Action Example*/</span>
+
+    <span class="hljs-keyword">var</span> Actions = <span class="hljs-built_in">require</span>(<span class="hljs-string">'tuxx/Actions'</span>);
+
+    <span class="hljs-keyword">var</span> todoActions = Actions.createActionCategory({
+      category: <span class="hljs-string">'todos'</span>,
+      source: <span class="hljs-string">'todo views'</span>,
+      actions: [<span class="hljs-string">'add'</span>, <span class="hljs-string">'remove'</span>]
+    });
+
+<span class="hljs-comment">/* */</span>
+</code></pre>
+<p>Look at the verbosity and boilerplate of marty</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Marty Action Example */</span>
+
+<span class="hljs-keyword">var</span> CartActionCreators = Marty.createActionCreators({
+    types: {
+        addToCart: CartConstants.ADD_TO_CART,
+        cartCheckout: CartConstants.CART_CHECKOUT
+    },
+
+    addToCart: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(product)</span> </span>{
+        <span class="hljs-keyword">this</span>.dispatch(product);
+    },
+
+    cartCheckout: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(products)</span> </span>{
+        <span class="hljs-keyword">this</span>.dispatch(products);
+        ShopAPI.checkoutProducts(products);
+    }
+});
+</code></pre>
+<!-- h2 --><h2 id="md-flummox-store">Flummox Store</h2><p>I&#39;m not knowledgeable to understand if Flummox&#39;s approach to Store&#39;s is superior to the other frameworks, but
+ I certainly like not dealing with Constants and big switch-case statements.  There seems to be a buzz about
+ immutability, and the Flummox Store has some opinions there!  My gut says this is good.</p>
+<ul>
+<li><p>No Constants</p>
+</li>
+<li><p>No big switch-case statements</p>
+</li>
+<li><p>Opinionated</p>
+</li>
+<li><p>Removes addListener() and removeListener() boilerplate</p>
+</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageStore</span> <span class="hljs-inheritance"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Store</span> </span>{
+
+  <span class="hljs-comment">// Note that passing a flux instance to the constructor is not required;</span>
+  <span class="hljs-comment">// we do it here so we have access to any action ids we're interested in.</span>
+  constructor(flux) {
+
+    <span class="hljs-comment">// Don't forget to call the super constructor</span>
+    <span class="hljs-keyword">super</span>();
+
+    <span class="hljs-comment">// Register handlers with the dispatcher using action ids, or the</span>
+    <span class="hljs-comment">// actions themselves</span>
+    let messageActions = flux.getActions(<span class="hljs-string">'messages'</span>);
+    <span class="hljs-keyword">this</span>.register(messageActions.newMessage, <span class="hljs-keyword">this</span>.handleNewMessage);
+
+    <span class="hljs-comment">// Set initial state using assignment</span>
+    <span class="hljs-keyword">this</span>.state = {};
+  }
+
+  <span class="hljs-comment">// Define handlers as methods...</span>
+  handleNewMessage() { ... }
+
+  <span class="hljs-comment">// It's also useful to define accessor-style methods that can be used by</span>
+  <span class="hljs-comment">// your views on state changes</span>
+  getMessage(id) { ... }
+}
+</code></pre>
+<p>I was a little concerned that I didn&#39;t see the waitFor method in their example, but looking
+through Github indicates it is available.</p>
+<!-- h2 --><h2 id="md-flummox-flux">Flummox Flux</h2><p>The Flux class unifies our stores and actions, along with a dispatcher, into a single, self-contained instance.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { Flux } from <span class="hljs-symbol">'flummo</span>x';
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppFlux</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Flux</span> </span>{
+
+  constructor() {
+    <span class="hljs-keyword">super</span>();
+
+    <span class="hljs-keyword">this</span>.createActions(<span class="hljs-symbol">'message</span>s', MessageActions);
+
+    <span class="hljs-comment">// The extra argument(s) are passed to the MessageStore constructor</span>
+    <span class="hljs-keyword">this</span>.createStore(<span class="hljs-symbol">'message</span>s', MessageStore, <span class="hljs-keyword">this</span>);
+  }
+
+}
+</code></pre>
+<!-- end -->
+</div>
+
+<div class="col-md-3">
+    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+        <ul class="nav bs-docs-sidenav">
+            
+            
+            
+            <li><a href="#md-introduction">Introduction</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-integrating-webpack">Integrating Webpack</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-test-driving-webpack">Test Driving Webpack</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-simple-schemes">Simple Schemes</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-learning-flux">Learning Flux</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-understanding-actions">Understanding Actions</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-understanding-the-single-dispatcher">Understanding the Single Dispatcher</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-understanding-stores">Understanding Stores</a></li>
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-programming-a-store-module">Programming a Store Module</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-view-components">View Components</a></li>
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-adopting-flux-strategies">Adopting Flux Strategies</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-map-rails-models-to-flux-stores">Map Rails models to Flux Stores</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-handling-asynchronous-requests">Handling Asynchronous Requests</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-initialize-our-data">Initialize Our Data</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-adopting-a-framework-for-the-flux-pattern">Adopting a framework for the Flux Pattern</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-digging-into-flummox">Digging into Flummox</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-flummox-actions">Flummox Actions</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-flummox-store">Flummox Store</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-flummox-flux">Flummox Flux</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+        </ul>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <p>Generated with <a href="http://wikismith.com">Wikismith</a> - <a href="http://getbootstrap.com">Bootstrap 3</a> Theme
+    </div>
+</footer>
+
+<!-- bower:js -->
+<script src="/bs3/bower/js/jquery.js"></script>
+<script src="/bs3/bower/js/bootstrap.js"></script>
+<!-- endinject -->
+
+<!-- inject:js -->
+<script src="/bs3/js/docs.min.js"></script>
+<!-- endinject -->
+
+
+
+
+
+</body>
+</html>
