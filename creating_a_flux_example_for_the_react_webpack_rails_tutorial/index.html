@@ -434,8 +434,8 @@ a request (such as a generic error handler store), and you typically don’t
 want to invoke actions from directly within your stores</p>
 </li>
 </ol>
-<!-- h2 --><h2 id="md-initialize-our-data">Initialize Our Data</h2><p>I couldn&#39;t really find a lot of material on this, but since the only way into a store is through the dispatcher, a reasonable approach
-would be to create an &quot;initialize action&quot; and dispatch it.</p>
+<!-- h2 --><h2 id="md-initialize-our-data">Initialize Our Data</h2><p>Depending on isomorphic requirements, this rabbit hole might get deep, but I couldn&#39;t find any reason
+that having an initialize action wouldn&#39;t suffice.</p>
 <pre><code class="lang-javascript"><span class="hljs-type">AppDispatcher</span>.handleAction(
   { action: <span class="hljs-type">StoreConstants</span>.<span class="hljs-type">INITIALIZE</span>,
     data: <span class="hljs-decorator">{...}</span>
@@ -443,15 +443,171 @@ would be to create an &quot;initialize action&quot; and dispatch it.</p>
 );
 </code></pre>
 <p>Getting the data from the database and running the method isomorphicly another issue.</p>
-<!-- h2 --><h2 id="md-adopting-a-library">Adopting a library</h2><p>When people talk about Flux they mean more of a pattern than a framework. But Javascript community has already made a solid input into it and developed different approaches for working with Flux in order to bring some structure and “frameworky” feel. The first thing which comes to mind after some exploration - <strong>there are too much Flux libraries right now</strong>.</p>
+<!-- h2 --><h2 id="md-adopting-a-framework-for-the-flux-pattern">Adopting a framework for the Flux Pattern</h2><p>When people talk about Flux they mean more of a pattern than a framework. But Javascript community has already made a solid input into it and developed different approaches for working with Flux in order to bring some structure and “frameworky” feel. The first thing which comes to mind after some exploration - <strong>there are too much Flux libraries right now</strong>.</p>
+<p>Comparisons</p>
 <ul>
 <li><p><a href="https://reactjsnews.com/the-state-of-flux/">The State of Flux</a> - Nov 6th 2014 - David Chang compares 6 Flux Frameworks.</p>
 </li>
-<li><p><a href="http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example">Flux solutions compared by example</a> - Feb 7th, 2015 -</p>
+<li><p><a href="http://pixelhunter.me/post/110248593059/flux-solutions-compared-by-example">Flux solutions compared by example</a> - Feb 7th, 2015 - Dmitri Voronianski takes a post-react-conference look at flux frameworks and maintains a <a href="https://github.com/voronianski/flux-comparison">github repot of examples</a></p>
 </li>
 </ul>
-<p>Eeek.  I best just write the example without a framework.  This will certainly provide more
-transparency to the pattern.</p>
+<p>The contenders</p>
+<ul>
+<li><a href="http://facebook.github.io/flux/">Flux official site</a></li>
+<li><a href="https://github.com/facebook/flux">Facebook&#39;s Flux - Application Architecture for Building User Interfaces</a></li>
+<li><a href="http://fluxxor.com/">fluxxor - A set of tools to facilitate building JavaScript data layers using the Flux</a></li>
+<li><a href="https://github.com/spoike/refluxjs">refluxjs - A simple library for uni-directional dataflow application architecture inspired by Flux</a></li>
+<li><a href="https://github.com/yoshuawuyts/barracks">barracks - Event dispatcher for the React Flux architecture</a></li>
+<li><a href="https://github.com/kenwheeler/mcfly">mcfly - A lightweight flux library with factories for Actions &amp; Stores</a></li>
+<li><a href="http://deloreanjs.com/">delorean - A completely agnostic JavaScript framework to apply Flux concepts</a></li>
+<li><a href="http://martyjs.org/">marty - A library for make it easy build isomorphic flux applications with React</a></li>
+<li><a href="https://github.com/yahoo/dispatchr">dispatchr - A Flux dispatcher for applications that run on the server and the client</a></li>
+<li><a href="https://github.com/yahoo/fetchr">fetchr - Augments Flux applications by allowing the same syntax on server/client</a></li>
+<li><a href="https://github.com/yahoo/flux-router-component">flux-router-component - Router React mixin for applications built with Flux</a></li>
+<li><a href="https://github.com/jmreidy/fluxy">fluxy - An implementation of Facebook&#39;s Flux architecture</a></li>
+<li><a href="https://github.com/gaearon/normalizr">normalizr — Normalizes nested JSON according to schema for Flux Stores</a></li>
+<li><a href="https://github.com/acdlite/flummox">Flummox - An isomorphic Flux library with zero singletons</a></li>
+<li><a href="https://github.com/goatslacker/alt">Alt - A flux implementation that is small, tested, terse, and meant to be used with ES6</a></li>
+<li><a href="https://github.com/TuxedoJS/TuxedoJS">Tuxx - A feature-complete framework built on React and Flux.</a></li>
+</ul>
+<!-- h1 --><h1 class="page-header" id="md-digging-into-flummox">Digging into Flummox</h1><p>Idiomatic, modular, testable, isomorphic Flux. No singletons required.</p>
+<!-- h2 --><h2 id="md-flummox-actions">Flummox Actions</h2><p>I love the way Flummox has you define action creators!  Actions are &quot;wrapped&quot; upon instantiation. When you fire an action, the return value isn&#39;t sent to the caller, but instead to the dispatcher. In other words, calling an action always returns undefined (or if the action is asynchronous, a promise that resolves to undefined — more below). This may seem weird, but it&#39;s designed this way to enforce unidirectional data flow. If this absolutely doesn&#39;t work for you, you can always use a helper function that calls the action internally while also returning a value to the original caller — just know this is an anti-pattern.</p>
+<p>This makes Flummox Actions:</p>
+<ul>
+<li><p>Terse but not magical</p>
+</li>
+<li><p>Opinionated: Unidirectionalism enforced</p>
+</li>
+<li><p>Async Intelligent</p>
+</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Flummox Action Example */</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageActions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Actions</span> </span>{
+
+  <span class="hljs-comment">// Methods on the prototype are automatically converted into actions</span>
+  newMessage(content) {
+
+    <span class="hljs-comment">// The return value from the action is sent to the dispatcher.</span>
+    <span class="hljs-comment">// To enforce unidirectional data flow, it is *not* returned to the caller.</span>
+    <span class="hljs-keyword">return</span> content;
+  }
+
+  <span class="hljs-comment">// Asynchrong nous functions are also supported: just return a promise</span>
+  <span class="hljs-comment">// This is easy using async-await</span>
+  async createMessage(messageContent) {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">return</span> await serverCreateMessage(messageContent);
+    } <span class="hljs-keyword">catch</span> (error) {
+      <span class="hljs-comment">// handle error somehow</span>
+    }
+  }
+
+}
+</code></pre>
+<p>Alt is a little too terse for my taste.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Alt Action Example */</span>
+
+<span class="hljs-keyword">class</span> ActionsCreators {
+    <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
+        <span class="hljs-keyword">this</span>.generateActions(
+            <span class="hljs-string">'receiveProducts'</span>,
+            <span class="hljs-string">'addToCart'</span>,
+            <span class="hljs-string">'finishCheckout'</span>
+        );
+    }
+
+    cartCheckout(products) {
+        <span class="hljs-keyword">this</span>.dispatch(products);
+        WebAPIUtils.checkoutProducts(products);
+    }
+}
+</code></pre>
+<p>I&#39;m not quite sure what Tuxx is doing?</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Tuxx Action Example*/</span>
+
+    <span class="hljs-keyword">var</span> Actions = <span class="hljs-built_in">require</span>(<span class="hljs-string">'tuxx/Actions'</span>);
+
+    <span class="hljs-keyword">var</span> todoActions = Actions.createActionCategory({
+      category: <span class="hljs-string">'todos'</span>,
+      source: <span class="hljs-string">'todo views'</span>,
+      actions: [<span class="hljs-string">'add'</span>, <span class="hljs-string">'remove'</span>]
+    });
+
+<span class="hljs-comment">/* */</span>
+</code></pre>
+<p>Look at the verbosity and boilerplate of marty</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Marty Action Example */</span>
+
+<span class="hljs-keyword">var</span> CartActionCreators = Marty.createActionCreators({
+    types: {
+        addToCart: CartConstants.ADD_TO_CART,
+        cartCheckout: CartConstants.CART_CHECKOUT
+    },
+
+    addToCart: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(product)</span> </span>{
+        <span class="hljs-keyword">this</span>.dispatch(product);
+    },
+
+    cartCheckout: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(products)</span> </span>{
+        <span class="hljs-keyword">this</span>.dispatch(products);
+        ShopAPI.checkoutProducts(products);
+    }
+});
+</code></pre>
+<!-- h2 --><h2 id="md-flummox-store">Flummox Store</h2><p>I&#39;m not knowledgeable to understand if Flummox&#39;s approach to Store&#39;s is superior to the other frameworks, but
+ I certainly like not dealing with Constants and big switch-case statements.  There seems to be a buzz about
+ immutability, and the Flummox Store has some opinions there!  My gut says this is good.</p>
+<ul>
+<li><p>No Constants</p>
+</li>
+<li><p>No big switch-case statements</p>
+</li>
+<li><p>Opinionated</p>
+</li>
+<li><p>Removes addListener() and removeListener() boilerplate</p>
+</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageStore</span> <span class="hljs-inheritance"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Store</span> </span>{
+
+  <span class="hljs-comment">// Note that passing a flux instance to the constructor is not required;</span>
+  <span class="hljs-comment">// we do it here so we have access to any action ids we're interested in.</span>
+  constructor(flux) {
+
+    <span class="hljs-comment">// Don't forget to call the super constructor</span>
+    <span class="hljs-keyword">super</span>();
+
+    <span class="hljs-comment">// Register handlers with the dispatcher using action ids, or the</span>
+    <span class="hljs-comment">// actions themselves</span>
+    let messageActions = flux.getActions(<span class="hljs-string">'messages'</span>);
+    <span class="hljs-keyword">this</span>.register(messageActions.newMessage, <span class="hljs-keyword">this</span>.handleNewMessage);
+
+    <span class="hljs-comment">// Set initial state using assignment</span>
+    <span class="hljs-keyword">this</span>.state = {};
+  }
+
+  <span class="hljs-comment">// Define handlers as methods...</span>
+  handleNewMessage() { ... }
+
+  <span class="hljs-comment">// It's also useful to define accessor-style methods that can be used by</span>
+  <span class="hljs-comment">// your views on state changes</span>
+  getMessage(id) { ... }
+}
+</code></pre>
+<!-- h2 --><h2 id="md-no-singletons">No Singletons</h2><p>No singletons make isomorphic capabilities and testing much simpler!  While nearly
+an impossible feat in other Flux implementations; in Flummox, isomorphic is this simple:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// shared/Flux.js</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Flux</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Flummox</span> </span>{ ... }
+
+<span class="hljs-comment">// server/app.js</span>
+app.get(<span class="hljs-string">"/"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(req, res)</span> </span>{
+  let flux = <span class="hljs-keyword">new</span> Flux();
+
+  res.send(
+    React.renderToString(&lt;App flux={flux} /&gt;)
+  );
+});
+</code></pre>
 <!-- end -->
 </div>
 
@@ -1130,7 +1286,7 @@ transparency to the pattern.</p>
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-adopting-a-library">Adopting a library</a></li>
+          <li style="margin-left: 0.5em;"><a href="#md-adopting-a-framework-for-the-flux-pattern">Adopting a framework for the Flux Pattern</a></li>
           
             
             
@@ -1158,6 +1314,305 @@ transparency to the pattern.</p>
           
             
             
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-digging-into-flummox">Digging into Flummox</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-flummox-actions">Flummox Actions</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-flummox-store">Flummox Store</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-no-singletons">No Singletons</a></li>
           
             
             
