@@ -610,7 +610,7 @@ export <span class="hljs-keyword">default</span> <span class="hljs-class"><span 
 <span class="hljs-keyword">let</span> actionIds = flux.getActionIds(<span class="hljs-string">'app'</span>);
 <span class="hljs-keyword">this</span>.productStore = flux.getStore(<span class="hljs-string">'products'</span>);
 </code></pre>
-<!-- h1 --><h1 class="page-header" id="md-digging-into-alt">Digging into Alt</h1><!-- h2 --><h2 id="md-alt-actions">Alt Actions</h2><p>More explicit connection to dispatcher than fluxxom.  Similar to fluxxom it has no constants boilerplate.</p>
+<!-- h1 --><h1 class="page-header" id="md-digging-into-alt">Digging into Alt</h1><!-- h2 --><h2 id="md-alt-actions">Alt Actions</h2><p>More explicit connection to dispatcher than flummox.  Similar to flummox it has no constants boilerplate.</p>
 <pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-type">LocationActions</span> {
   updateLocation<span class="hljs-container">()</span> {
     this.dispatch<span class="hljs-container">('<span class="hljs-type">Paris</span>')</span>
@@ -619,7 +619,7 @@ export <span class="hljs-keyword">default</span> <span class="hljs-class"><span 
 
 var locationActions = alt.createActions<span class="hljs-container">(<span class="hljs-type">LocationActions</span>)</span></span>
 </code></pre>
-<p>Unlike fluxxom, the pattern seems to use actions directly instead of first packing them into a flux object
+<p>Unlike flummox, the pattern seems to use actions directly instead of first packing them into a flux object
 using string keys.</p>
 <pre><code class="lang-javascript">locationActions.updateLocation()
 </code></pre>
