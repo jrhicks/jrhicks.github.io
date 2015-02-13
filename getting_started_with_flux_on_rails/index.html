@@ -85,7 +85,7 @@
 <div class="bs-docs-header" id="content">
     <div class="container">
         <h1>Getting Started with Flux on Rails</h1>
-        <p>An introduction to Webpack and Flux with and a Rails biased tutorial to getting started.</p>
+        <p>An introduction to Flux and Webpack from a Rails perspecive.</p>
     </div>
 </div>
 
@@ -595,23 +595,103 @@ that having an initialize action wouldn&#39;t suffice.</p>
   getMessage(id) { ... }
 }
 </code></pre>
-<p>I was a little concerned that I didn&#39;t see the waitFor method in their example, but looking
-through Github indicates it is available.</p>
-<!-- h2 --><h2 id="md-flummox-flux">Flummox Flux</h2><p>The Flux class unifies our stores and actions, along with a dispatcher, into a single, self-contained instance.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { Flux } from <span class="hljs-symbol">'flummo</span>x';
+<!-- h2 --><h2 id="md-flummox-criticism">Flummox Criticism</h2><p>I&#39;m not terribly excited about packing and upacking store and actions via string keys.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Packing Actions and Stores into flux using string keys */</span>
+export <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Flux</span> <span class="hljs-inheritance"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Flummox</span> </span>{
+    constructor() {
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.createActions(<span class="hljs-string">'app'</span>, Actions);
+        <span class="hljs-keyword">this</span>.createStore(<span class="hljs-string">'products'</span>, ProductStore, <span class="hljs-keyword">this</span>);
+        <span class="hljs-keyword">this</span>.createStore(<span class="hljs-string">'cart'</span>, CartStore, <span class="hljs-keyword">this</span>);
+    }
+}
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* Unpacking with string keys */</span>
+<span class="hljs-keyword">let</span> actionIds = flux.getActionIds(<span class="hljs-string">'app'</span>);
+<span class="hljs-keyword">this</span>.productStore = flux.getStore(<span class="hljs-string">'products'</span>);
+</code></pre>
+<!-- h1 --><h1 class="page-header" id="md-digging-into-alt">Digging into Alt</h1><!-- h2 --><h2 id="md-alt-actions">Alt Actions</h2><p>More explicit connection to dispatcher than fluxxom.  Similar to fluxxom it has no constants boilerplate.</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-type">LocationActions</span> {
+  updateLocation<span class="hljs-container">()</span> {
+    this.dispatch<span class="hljs-container">('<span class="hljs-type">Paris</span>')</span>
+  }
+}
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppFlux</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Flux</span> </span>{
+var locationActions = alt.createActions<span class="hljs-container">(<span class="hljs-type">LocationActions</span>)</span></span>
+</code></pre>
+<p>Unlike fluxxom, the pattern seems to use actions directly instead of first packing them into a flux object
+using string keys.</p>
+<pre><code class="lang-javascript">locationActions.updateLocation()
+</code></pre>
+<p>Writing out actions that pass data through directly can get quite tedious so there&#39;s a shorthand for writing
+ these what are essentially identity functions</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">class</span> LocationActions {
+  <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
+    <span class="hljs-comment">// for single action</span>
+    <span class="hljs-keyword">this</span>.generateActions(<span class="hljs-string">'updateLocation'</span>)
 
-  constructor() {
-    <span class="hljs-keyword">super</span>();
+    <span class="hljs-comment">// as well as for many actions</span>
+    <span class="hljs-keyword">this</span>.generateActions(<span class="hljs-string">'updateCity'</span>, <span class="hljs-string">'updateState'</span>, <span class="hljs-string">'updateCountry'</span>)
+  }
+}
+</code></pre>
+<!-- h2 --><h2 id="md-alt-stores">Alt Stores</h2><p>Similar to flummox, action binding replaces large case statements and constants-based boilerplate.  Setter
+methods are made private to non-dispatchers via the alt.crateStore</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">class</span> LocationStore {
+  <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
+    <span class="hljs-keyword">this</span>.bindAction(locationActions.updateLocation, <span class="hljs-keyword">this</span>.onUpdateLocation)
 
-    <span class="hljs-keyword">this</span>.createActions(<span class="hljs-symbol">'message</span>s', MessageActions);
+    <span class="hljs-keyword">this</span>.city = <span class="hljs-string">'Denver'</span>
+    <span class="hljs-keyword">this</span>.state = <span class="hljs-string">'Colorado'</span>
+  }
 
-    <span class="hljs-comment">// The extra argument(s) are passed to the MessageStore constructor</span>
-    <span class="hljs-keyword">this</span>.createStore(<span class="hljs-symbol">'message</span>s', MessageStore, <span class="hljs-keyword">this</span>);
+  onUpdateLocation(obj) {
+    <span class="hljs-keyword">var</span> { city, state } = obj
+    <span class="hljs-keyword">this</span>.city = city
+    <span class="hljs-keyword">this</span>.state = state
   }
 
 }
+
+<span class="hljs-keyword">var</span> locationStore = alt.createStore(LocationStore)
+</code></pre>
+<p>Stores are immutable, but accessible.  For example to get the city:</p>
+<pre><code class="lang-javascript">locationStore.getState().city
+</code></pre>
+<p>Waitfor seems pretty easy</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.waitFor([store1.dispatchToken, store2.dispatchToken])
+</code></pre>
+<!-- h2 --><h2 id="md-alt-components">Alt Components</h2><p>The alt.createStores gave them the ability to listen and unlisten.</p>
+<pre><code class="lang-jsx">var LocationComponent = React.createClass({
+  getInitialState() {
+    <span class="hljs-keyword">return</span> locationStore.getState()
+  },
+
+  componentWillMount() {
+    locationStore.listen(<span class="hljs-keyword">this</span>.onChange)
+  },
+
+  componentWillUnmount() {
+    locationStore.unlisten(<span class="hljs-keyword">this</span>.onChange)
+  },
+
+  onChange() {
+    <span class="hljs-keyword">this</span>.setState(<span class="hljs-keyword">this</span>.getInitialState())
+  },
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;<span class="hljs-keyword">div</span>&gt;
+        &lt;p&gt;
+          City {<span class="hljs-keyword">this</span>.state.city}
+        &lt;/p&gt;
+        &lt;p&gt;
+          State {<span class="hljs-keyword">this</span>.state.state}
+        &lt;/p&gt;
+      &lt;/<span class="hljs-keyword">div</span>&gt;
+    )
+  }
+})
 </code></pre>
 <!-- end -->
 </div>
@@ -1601,10 +1681,72 @@ through Github indicates it is available.</p>
             
             
           
+          <li style="margin-left: 0.5em;"><a href="#md-flummox-criticism">Flummox Criticism</a></li>
+          
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-flummox-flux">Flummox Flux</a></li>
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-digging-into-alt">Digging into Alt</a></li>
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-alt-actions">Alt Actions</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-alt-stores">Alt Stores</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-alt-components">Alt Components</a></li>
           
             
             
