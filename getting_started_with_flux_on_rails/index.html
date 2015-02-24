@@ -635,11 +635,11 @@ using string keys.</p>
   }
 }
 </code></pre>
-<!-- h2 --><h2 id="md-alt-stores">Alt Stores</h2><p>Similar to flummox, action binding replaces large case statements and constants-based boilerplate.  Setter
-methods are made private to non-dispatchers via the alt.crateStore</p>
+<!-- h2 --><h2 id="md-alt-stores">Alt Stores</h2><p>A super terse alt.js feature bindActions.  This procedure binds every methodxyz in the action to onMethodxyz.
+No constants, no case-soup, no need to re-iterate bindings.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">class</span> LocationStore {
   <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
-    <span class="hljs-keyword">this</span>.bindAction(locationActions.updateLocation, <span class="hljs-keyword">this</span>.onUpdateLocation)
+    <span class="hljs-keyword">this</span>.bindActions(locationActions)
 
     <span class="hljs-keyword">this</span>.city = <span class="hljs-string">'Denver'</span>
     <span class="hljs-keyword">this</span>.state = <span class="hljs-string">'Colorado'</span>
