@@ -101,48 +101,20 @@ of creating a Flux application on Rails.</p>
 <!-- h2 --><h2 id="md-integrating-webpack">Integrating Webpack</h2><p>Webpack takes modules with dependencies and generates static assets representing those modules.
 Its faster than gulp, and more powerful then browserify.  It rocks, and its time we start
 using it instead of relying on crufty gemified javascript and file soup.</p>
-<p>If you need additional motivation:</p>
-<ul>
-<li><p><a href="http://www.railsonmaui.com/blog/2014/10/02/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/">Fast Rich Client Rails Development With Webpack and the ES6 Transpiler</a> - Justin Gordon</p>
-</li>
-<li><p><a href="https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679">Setting up Webpack with Rails</a> - Flarnie Marchan</p>
-</li>
-</ul>
-<!-- h2 --><h2 id="md-test-driving-webpack">Test Driving Webpack</h2><p>To get a quick taste of webpack and the hot-loader described in Justin&#39;s article I used his
-<a href="https://github.com/justin808/react-webpack-rails-tutorial">tutorial repository</a>.  Below are his instructions with a few additional notes where things
-got bumpy for me.</p>
-<ol>
-<li>Be sure that you have Node installed. I use nvm, with node version v0.10.33<ul>
-<li>Thanks to node-sass I found later versions of npm did not work</li>
-</ul>
-</li>
-<li>git clone git@github.com:justin808/react-webpack-rails-tutorial.git</li>
-<li>cd react-webpack-rails-tutorial</li>
-<li>Check that you have Ruby 2.1.5 and the gemset Rails 4.2<ul>
-<li>RVM install was failing until I ran <strong>rvm get head</strong></li>
-<li>rvm install ruby-2.1.5</li>
-</ul>
-</li>
-<li>bundle install</li>
-<li>npm install<ul>
-<li>I had a partial completion.  After much toying around, I found it best to restart from scratch.</li>
-<li>rm -rf node_modules</li>
-<li>npm install</li>
-</ul>
-</li>
-<li>rake db:setup</li>
-<li>foreman start -f Procfile.dev</li>
-<li>Open a browser tab to <a href="http://0.0.0.0:4000">http://0.0.0.0:4000</a> for the Rail app example.</li>
-<li>Open a browser tab to <a href="http://0.0.0.0:3000">http://0.0.0.0:3000</a> for the Hot Module Replacement Example.</li>
-</ol>
-<!-- h2 --><h2 id="md-simple-schemes">Simple Schemes</h2><p>The hot-loader is awesome!  But in the spirit of simplification, you might want to
+<!-- h2 --><h2 id="md-simple-rails-setups">Simple Rails setups</h2><p>The hot-loader is awesome!  But in the spirit of simplification, you might want to
 look at some other Rails-Webpack schemes.</p>
-<p><a href="https://reinteractive.net/posts/213-rails-with-webpack-why-and-how">Rails with Webpack - Why and How</a> - Oct 24, 2014 - SEBASTIAN PORTO <br>
+<ul>
+<li><p><a href="https://reinteractive.net/posts/213-rails-with-webpack-why-and-how">Rails with Webpack - Why and How</a> - Oct 24, 2014 - SEBASTIAN PORTO <br>
 Support multiple entry points, use Webpack watch and place bundled builds into app/assets/javascript.</p>
-<p><a href="https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679">Setting Up Webpack with Rails</a> - Aug 15, 2014 - Flarnie Marchan
+</li>
+<li><p><a href="https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679">Setting Up Webpack with Rails</a> - Aug 15, 2014 - Flarnie Marchan
 Use a similar approach, also introduces Loaders and has <a href="https://github.com/flarnie/webpack_rails_demo">example repository</a></p>
-<p><a href="http://www.tomdooner.com/2014/05/26/webpack.html">WEBPACK IN THE RAILS ASSET PIPELINE</a> - May 26, 2014 - Tim Dooner
-This snippet of code integrates Webpack into the Sprockets build process using tasks!</p>
+</li>
+</ul>
+<ul>
+<li><a href="http://www.tomdooner.com/2014/05/26/webpack.html">WEBPACK IN THE RAILS ASSET PIPELINE</a> - May 26, 2014 - Tim Dooner
+This snippet of code integrates Webpack into the Sprockets build process using tasks!</li>
+</ul>
 <!-- h1 --><h1 class="page-header" id="md-learning-flux">Learning Flux</h1><p>With just a basic understanding of Flux and React from watching:</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=nYkdrAPrdcw&amp;list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v#t=66">Hacker Way: Rethinking Web App Development at Facebook</a> - May 4, 2014 - Facebook, Inc</li>
@@ -174,11 +146,11 @@ output {key1: key1, key2: key2}.</p>
 }
 </code></pre>
 <!-- h4 --><h4 id="md-actions">Actions</h4><p>An action is an object literal with an action type and parameters.</p>
-<pre><code class="lang-javascript"><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">type</span>:<span class="hljs-value"> ActionTypes.CREATE_STORY,
-      title: title,
-      body: body
-</span></span></span>}
+<pre><code class="lang-javascript">{
+      <span class="hljs-attribute">type</span>: ActionTypes.CREATE_STORY,
+      <span class="hljs-attribute">title</span>: title,
+      <span class="hljs-attribute">body</span>: body
+}
 </code></pre>
 <!-- h4 --><h4 id="md-action-creators">Action Creators</h4><p>Action creators build action data and pass them to the dispatcher.</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">/* scripts/actions/StoryActionsCreator.js */</span>
@@ -369,8 +341,6 @@ module.exports = ShoeStore;
 </li>
 <li><p>How do we interact with async web requests?</p>
 </li>
-<li><p>How can we initialize our data?</p>
-</li>
 <li><p>This seems like a lot of boilerplate and a little nebulous, are there any libraries?</p>
 </li>
 </ul>
@@ -386,13 +356,13 @@ that the preferred way to join the data is in the store and not the components.<
 <p>Given the following data</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">/* ArticleStore._articles */</span>
 {
-  <span class="hljs-string">'10'</span>: {id: <span class="hljs-number">10</span>, body: <span class="hljs-string">'Lorem Ipsum Dolar ...'</span>, author: <span class="hljs-number">1</span>, reviewer: <span class="hljs-number">2</span>}
+  <span class="hljs-string">'10'</span>: {<span class="hljs-string">id:</span> <span class="hljs-number">10</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Lorem Ipsum Dolar ...'</span>, <span class="hljs-string">author:</span> <span class="hljs-number">1</span>, <span class="hljs-string">reviewer:</span> <span class="hljs-number">2</span>}
 }
 
 <span class="hljs-comment">/* UserStore._users */</span>,
 {
-  <span class="hljs-string">'1'</span>: {id: <span class="hljs-number">1</span>, name: <span class="hljs-string">'user1'</span>},
-  <span class="hljs-string">'2'</span>: {id: <span class="hljs-number">2</span>, name: <span class="hljs-string">'user2'</span>}
+  <span class="hljs-string">'1'</span>: {<span class="hljs-string">id:</span> <span class="hljs-number">1</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'user1'</span>},
+  <span class="hljs-string">'2'</span>: {<span class="hljs-string">id:</span> <span class="hljs-number">2</span>, <span class="hljs-string">name:</span> <span class="hljs-string">'user2'</span>}
 }
 </code></pre>
 <p>To achieve the waitFor functionality the user store would capture a dispatchToken when
@@ -435,16 +405,8 @@ a request (such as a generic error handler store), and you typically don’t
 want to invoke actions from directly within your stores</p>
 </li>
 </ol>
-<!-- h2 --><h2 id="md-initialize-our-data">Initialize Our Data</h2><p>Depending on isomorphic requirements, this rabbit hole might get deep, but I couldn&#39;t find any reason
-that having an initialize action wouldn&#39;t suffice.</p>
-<pre><code class="lang-javascript"><span class="hljs-type">AppDispatcher</span>.handleAction(
-  { action: <span class="hljs-type">StoreConstants</span>.<span class="hljs-type">INITIALIZE</span>,
-    data: <span class="hljs-decorator">{...}</span>
-  }
-);
-</code></pre>
 <p>Getting the data from the database and running the method isomorphicly another issue.</p>
-<!-- h2 --><h2 id="md-adopting-a-framework-for-the-flux-pattern">Adopting a framework for the Flux Pattern</h2><p>When people talk about Flux they mean more of a pattern than a framework. But Javascript community has already made a solid input into it and developed different approaches for working with Flux in order to bring some structure and “frameworky” feel. The first thing which comes to mind after some exploration - <strong>there are too much Flux libraries right now</strong>.</p>
+<!-- h2 --><h2 id="md-adopting-a-flux-library">Adopting a Flux Library</h2><p>When people talk about Flux they mean more of a pattern than a framework. But Javascript community has already made a solid input into it and developed different approaches for working with Flux in order to bring some structure and “frameworky” feel. The first thing which comes to mind after some exploration - <strong>there are too much Flux libraries right now</strong>.</p>
 <p>Comparisons</p>
 <ul>
 <li><p><a href="https://reactjsnews.com/the-state-of-flux/">The State of Flux</a> - Nov 6th 2014 - David Chang compares 6 Flux Frameworks.</p>
@@ -484,7 +446,7 @@ that having an initialize action wouldn&#39;t suffice.</p>
 </ul>
 <pre><code class="lang-javascript"><span class="hljs-comment">/* Flummox Action Example */</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageActions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Actions</span> </span>{
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageActions</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Actions</span> {</span>
 
   <span class="hljs-comment">// Methods on the prototype are automatically converted into actions</span>
   newMessage(content) {
@@ -569,7 +531,7 @@ that having an initialize action wouldn&#39;t suffice.</p>
 <li><p>Removes addListener() and removeListener() boilerplate</p>
 </li>
 </ul>
-<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageStore</span> <span class="hljs-inheritance"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Store</span> </span>{
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageStore</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Store</span> {</span>
 
   <span class="hljs-comment">// Note that passing a flux instance to the constructor is not required;</span>
   <span class="hljs-comment">// we do it here so we have access to any action ids we're interested in.</span>
@@ -580,7 +542,7 @@ that having an initialize action wouldn&#39;t suffice.</p>
 
     <span class="hljs-comment">// Register handlers with the dispatcher using action ids, or the</span>
     <span class="hljs-comment">// actions themselves</span>
-    let messageActions = flux.getActions(<span class="hljs-string">'messages'</span>);
+    let messageActions = flux.getActions(<span class="hljs-symbol">'message</span>s');
     <span class="hljs-keyword">this</span>.register(messageActions.newMessage, <span class="hljs-keyword">this</span>.handleNewMessage);
 
     <span class="hljs-comment">// Set initial state using assignment</span>
@@ -597,12 +559,12 @@ that having an initialize action wouldn&#39;t suffice.</p>
 </code></pre>
 <!-- h2 --><h2 id="md-flummox-criticism">Flummox Criticism</h2><p>I&#39;m not terribly excited about packing and upacking store and actions via string keys.</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">/* Packing Actions and Stores into flux using string keys */</span>
-export <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Flux</span> <span class="hljs-inheritance"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Flummox</span> </span>{
+export <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Flux</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">Flummox</span> {</span>
     constructor() {
         <span class="hljs-keyword">super</span>();
-        <span class="hljs-keyword">this</span>.createActions(<span class="hljs-string">'app'</span>, Actions);
-        <span class="hljs-keyword">this</span>.createStore(<span class="hljs-string">'products'</span>, ProductStore, <span class="hljs-keyword">this</span>);
-        <span class="hljs-keyword">this</span>.createStore(<span class="hljs-string">'cart'</span>, CartStore, <span class="hljs-keyword">this</span>);
+        <span class="hljs-keyword">this</span>.createActions(<span class="hljs-symbol">'ap</span>p', <span class="hljs-type">Actions</span>);
+        <span class="hljs-keyword">this</span>.createStore(<span class="hljs-symbol">'product</span>s', <span class="hljs-type">ProductStore</span>, <span class="hljs-keyword">this</span>);
+        <span class="hljs-keyword">this</span>.createStore(<span class="hljs-symbol">'car</span>t', <span class="hljs-type">CartStore</span>, <span class="hljs-keyword">this</span>);
     }
 }
 </code></pre>
@@ -621,7 +583,7 @@ var locationActions = alt.createActions<span class="hljs-container">(<span class
 </code></pre>
 <p>Unlike flummox, the pattern seems to use actions directly instead of first packing them into a flux object
 using string keys.</p>
-<pre><code class="lang-javascript">locationActions.updateLocation()
+<pre><code class="lang-javascript">locationActions.<span class="hljs-function"><span class="hljs-title">updateLocation</span><span class="hljs-params">()</span></span>
 </code></pre>
 <p>Writing out actions that pass data through directly can get quite tedious so there&#39;s a shorthand for writing
  these what are essentially identity functions</p>
@@ -656,10 +618,10 @@ No constants, no case-soup, no need to re-iterate bindings.</p>
 <span class="hljs-keyword">var</span> locationStore = alt.createStore(LocationStore)
 </code></pre>
 <p>Stores are immutable, but accessible.  For example to get the city:</p>
-<pre><code class="lang-javascript">locationStore.getState().city
+<pre><code class="lang-javascript">locationStore.<span class="hljs-function"><span class="hljs-title">getState</span><span class="hljs-params">()</span></span>.city
 </code></pre>
 <p>Waitfor seems pretty easy</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.waitFor([store1.dispatchToken, store2.dispatchToken])
+<pre><code class="lang-javascript">this.<span class="hljs-function"><span class="hljs-title">waitFor</span><span class="hljs-params">([store1.dispatchToken, store2.dispatchToken])</span></span>
 </code></pre>
 <!-- h2 --><h2 id="md-alt-components">Alt Components</h2><p>The alt.createStores gave them the ability to listen and unlisten.</p>
 <pre><code class="lang-jsx">var LocationComponent = React.createClass({
@@ -722,88 +684,7 @@ No constants, no case-soup, no need to re-iterate bindings.</p>
             
             
           
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-test-driving-webpack">Test Driving Webpack</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
+          <li style="margin-left: 0.5em;"><a href="#md-simple-rails-setups">Simple Rails setups</a></li>
           
             
             
@@ -849,89 +730,6 @@ No constants, no case-soup, no need to re-iterate bindings.</p>
           
             
             
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-simple-schemes">Simple Schemes</a></li>
           
             
             
@@ -1244,15 +1042,6 @@ No constants, no case-soup, no need to re-iterate bindings.</p>
             
             
           
-            
-            
-          
-            
-            
-          
-            
-            
-          
           <li style="margin-left: 0.5em;"><a href="#md-map-rails-models-to-flux-stores">Map Rails models to Flux Stores</a></li>
           
             
@@ -1341,21 +1130,10 @@ No constants, no case-soup, no need to re-iterate bindings.</p>
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-initialize-our-data">Initialize Our Data</a></li>
-          
             
             
           
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-adopting-a-framework-for-the-flux-pattern">Adopting a framework for the Flux Pattern</a></li>
+          <li style="margin-left: 0.5em;"><a href="#md-adopting-a-flux-library">Adopting a Flux Library</a></li>
           
             
             
