@@ -84,8 +84,8 @@
 <!-- Docs page layout -->
 <div class="bs-docs-header" id="content">
     <div class="container">
-        <h1>Reapp Test Drive</h1>
-        <p>Building a reapp.io app with Adobe Phonegap Build.</p>
+        <h1>Customize Reapp-pack</h1>
+        <p></p>
     </div>
 </div>
 
@@ -93,46 +93,44 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<p>March 5, 2015</p>
-<!-- h2 --><h2 id="md-getting-started">Getting Started</h2><p>I thought I would start by following the simple instructions on <a href="http://reapp.io">Reapp.io</a></p>
-<ul>
-<li><p>npm install -g reapp</p>
-</li>
-<li><p>reapp new HelloWorldReapp</p>
-</li>
-<li><p>cd HelloWorldReapp</p>
-</li>
-<li><p>reapp build ios</p>
-</li>
-</ul>
-<p>This builds the html, js, and css assets needed for a phonegap/cordova hybrid app, but we need to create a base cordova app with the cordova CLI and copy the assets into the project.</p>
-<ul>
-<li><p>npm install -g phonegap</p>
-</li>
-<li><p>cd build</p>
-</li>
-<li><p>phonegap create phonegap</p>
-</li>
-<li><p>rm -rf phonegap/www</p>
-</li>
-<li><p>cp -R public phonegap/www</p>
-</li>
-</ul>
-<p>Then I created a public repository on GitHub at <a href="https://github.com/jrhicks/hello_world_reapp">https://github.com/jrhicks/hello_world_reapp</a> and pushed the phonegap directory into it.  From the same folder.</p>
-<ul>
-<li><p>cd phonegap</p>
-</li>
-<li><p>git init</p>
-</li>
-<li><p>git add README.md</p>
-</li>
-<li><p>git commit -m &quot;first commit&quot;</p>
-</li>
-<li><p>git remote add origin <a href="https://github.com/jrhicks/hello_world_reapp.git">https://github.com/jrhicks/hello_world_reapp.git</a></p>
-</li>
-<li><p>git push -u origin master</p>
-</li>
-</ul>
+<p>Checkout Reapp CLI and Reapp-Pack package from source.  Link the local reapp-pack to the local Reapp CLI, and then</p>
+<pre><code class="lang-bash">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/reapp/reapp.git
+
+git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/reapp/reapp-pack.git
+
+<span class="hljs-keyword">cd</span> reapp-pack
+
+npm link
+
+<span class="hljs-keyword">cd</span> ../reapp
+
+npm link reapp-pack
+
+<span class="hljs-keyword">cd</span> /myproject
+
+npm link reapp
+</code></pre>
+<p>Create the file config\run.config.js</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">module</span>.exports = {
+  entry: <span class="hljs-string">'./app/app.js'</span>,
+  devtool: <span class="hljs-string">'eval'</span>,
+  target: <span class="hljs-string">'web'</span>,
+  linkModules: <span class="hljs-keyword">true</span>,
+  hot: <span class="hljs-keyword">true</span>,
+  server: <span class="hljs-keyword">true</span>,
+  port: <span class="hljs-number">3011</span>,
+  <span class="hljs-built_in">debug</span>: <span class="hljs-keyword">true</span>
+};<span class="hljs-string">'localhost'</span>
+</code></pre>
+<p>Done!  Subsequent calls to reapp run will use your locally installed reapp-pack and your locally configured run.config.js :)  Use -d to debug</p>
+<pre><code>reapp <span class="hljs-keyword">run</span> -<span class="hljs-literal">d</span>
+</code></pre><p>If your on vagrant (like me) ... you may want to run:</p>
+<pre><code>reapp <span class="hljs-keyword">run</span> -<span class="hljs-keyword">d</span> -<span class="hljs-keyword">h</span> 0.0.0.0
+</code></pre><p>Merge in official repo changes</p>
+<pre><code class="lang-bash">git remote <span class="hljs-built_in">add</span> official <span class="hljs-keyword">https</span>://github.com/reapp/reapp.git
+git fetch official
+git <span class="hljs-built_in">merge</span> official/master
+</code></pre>
 <!-- end -->
 </div>
 
@@ -140,152 +138,6 @@
     <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
         <ul class="nav bs-docs-sidenav">
             
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-getting-started">Getting Started</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
             
             
           
