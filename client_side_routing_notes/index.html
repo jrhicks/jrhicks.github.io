@@ -183,6 +183,7 @@ offline.</p>
       partition: partition,
       last_sync: <span class="hljs-literal">null</span>, <span class="hljs-comment">// Server time</span>
       last_used: <span class="hljs-literal">null</span>,
+      is_fetching: <span class="hljs-literal">true</span>,
       records: []
     })
   }
@@ -221,18 +222,35 @@ offline.</p>
 </code></pre><p>If a project has way too many notes to load into memory, we could also add an additional partition by page or some other logical subdivision.  Some effort would need to be taken to ensure paritions where mutually exclusive.</p>
 <pre><code>partitions = [
   {
-<span class="hljs-label">    partition:</span> {<span class="hljs-string">project_id:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">user_id:</span> <span class="hljs-number">23</span>, <span class="hljs-string">page:</span> <span class="hljs-number">1</span>},
-<span class="hljs-label">    last_sync:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
-<span class="hljs-label">    last_used:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
-<span class="hljs-label">    records:</span> [
-<span class="hljs-label">      id:</span> <span class="hljs-number">3232</span>,
-<span class="hljs-label">      in_sync:</span> <span class="hljs-literal">true</span>,
-<span class="hljs-label">      has_conflicts:</span> <span class="hljs-literal">false</span>,
-<span class="hljs-label">      data:</span> {},
+    partition: {project_id: <span class="hljs-number">12312</span>, user_id: <span class="hljs-number">23</span>, page: <span class="hljs-number">1</span>},
+    last_sync: '<span class="hljs-number">2015</span>/<span class="hljs-number">03</span>/<span class="hljs-number">14</span> <span class="hljs-number">9</span>:<span class="hljs-number">26</span>',
+    last_used: '<span class="hljs-number">2015</span>/<span class="hljs-number">03</span>/<span class="hljs-number">14</span> <span class="hljs-number">9</span>:<span class="hljs-number">26</span>',
+    records: [
+      <span class="hljs-property">id</span>: <span class="hljs-number">3232</span>,
+      in_sync: <span class="hljs-constant">true</span>,
+      has_conflicts: <span class="hljs-constant">false</span>,
+      data: {},
     ]
   }
 ]
-</code></pre><!-- end -->
+
+While this <span class="hljs-keyword">is</span> an interesting thought experiment, <span class="hljs-keyword">it</span> doesn't address well pagination, nesting, composition, <span class="hljs-keyword">and</span> more complex data structures like summaries.  Lets look <span class="hljs-keyword">for</span> inspiration <span class="hljs-keyword">from</span> Relay <span class="hljs-keyword">and</span> GraphQL
+</code></pre><!-- h1 --><h1 class="page-header" id="md-relay-and-graphql">Relay and GraphQL</h1><p><a href="https://facebook.github.io/react/blog/2015/02/20/introducing-relay-and-graphql.html">Introducing Relay and GraphQL</a> 26 minutes - Greg Hurrell - 2015/02/02</p>
+<p>Relay and GraphQL are less concerned with offline date and more
+interested in decoupling the server and the UI.  With GraphQL
+each component can register their complex data needs (data and summary)
+and top level components can compose these together and send them
+to a generic server endpoint.</p>
+<p>&quot;We need a way for each component to staticly define its data needs&quot;.
+Stop writing dedicated endpoints.</p>
+<p><img src="relay1.png" width="100%"></p>
+<p><img src="relay2.png" width="100%"></p>
+<p>&quot;We want to specify the data need in <em>statics</em> so we can access them <em>without</em> instantiating the component&quot;</p>
+<p><img src="relay3.png" width="100%"></p>
+<p>The top level component can compose the queries of its children.</p>
+<p><img src="composition.png" width="100%"></p>
+<!-- h2 --><h2 id="md-understanding-graphql-cursors-and-pagination">Understanding GraphQL Cursors and Pagination</h2><p>Work in Progress... stay tuned</p>
+<!-- end -->
 </div>
 
 <div class="col-md-3">
@@ -385,6 +403,46 @@ offline.</p>
           
             
             
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-relay-and-graphql">Relay and GraphQL</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-understanding-graphql-cursors-and-pagination">Understanding GraphQL Cursors and Pagination</a></li>
           
             
             
