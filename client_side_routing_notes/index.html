@@ -118,7 +118,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-title">NotFoundRoute</span> <span class="hljs-attribute">handler</span>=<span class="hljs-value">{NotFound}</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Redirect</span> <span class="hljs-attribute">from</span>=<span class="hljs-value">"company"</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"about"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
-</code></pre><!-- h1 --><h1 class="page-header" id="md-flux-conerns">Flux Conerns</h1><!-- h2 --><h2 id="md-route-store">Route Store</h2><p><a href="https://github.com/rackt/react-router/blob/master/docs/guides/flux.md">Guide to React Router in a Flux App</a></p>
+</code></pre><!-- h1 --><h1 class="page-header" id="md-route-store">Route Store</h1><p><a href="https://github.com/rackt/react-router/blob/master/docs/guides/flux.md">Guide to React Router in a Flux App</a></p>
 <p>You can create your own RouterStore and fire an action in run callback:</p>
 <pre><code>Router.run(routes, <span class="hljs-function"><span class="hljs-params">(Handler, state)</span> =&gt;</span> {
   ActionCreators.changeRoute({ state });
@@ -126,7 +126,7 @@
 });
 </code></pre><p>Let RouterStore keep router state and add a public method to obtain it.
 This way your action creators and other stores can learn about current router state.</p>
-<!-- h2 --><h2 id="md-content-stores">Content Stores</h2><p>Dan Abramov introduces the concept of Content Stores in his <a href="https://github.com/gaearon/flux-react-router-example">Flux React Router Example</a></p>
+<!-- h1 --><h1 class="page-header" id="md-content-stores">Content Stores</h1><p>Dan Abramov introduces the concept of Content Stores in his <a href="https://github.com/gaearon/flux-react-router-example">Flux React Router Example</a></p>
 <p>As users navigate screens they are also navigating through your
 applications data and triggering server actions to fetch fresh
 data.  In the ContentStore pattern, ContentStores <em>harvest their objects from all server actions</em>.  </p>
@@ -145,96 +145,6 @@ the response for any new user entities and merges them in if found.</p>
     UserStore.emitChange();
   }
 });
-</code></pre><!-- h1 --><h1 class="page-header" id="md-partitioned-offline-stores">Partitioned Offline Stores</h1><p>Imagine if the user&#39;s accessible data could be segmented into data
-partitions where the entirety of that data was downloaded and managed
-offline.</p>
-<p>Each Partitioned Offline Store would store many &quot;partitions&quot;.  And keep track of their sync status.  Imagine a NotesStore that could be partitioned by Project.</p>
-<p><img src="schema.png"></p>
-<p>Our note store would have many partitions, and each partition would have many notes (not shown here for brevity).</p>
-<pre><code>partitions = [
-  {
-<span class="hljs-label">    partition:</span> {<span class="hljs-string">project_id:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">user_id:</span> <span class="hljs-number">23</span>},
-<span class="hljs-label">    last_sync:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
-<span class="hljs-label">    last_used:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
-<span class="hljs-label">    records:</span> [
-<span class="hljs-label">      id:</span> <span class="hljs-number">3232</span>,
-<span class="hljs-label">      in_sync:</span> <span class="hljs-literal">true</span>,
-<span class="hljs-label">      has_conflicts:</span> <span class="hljs-literal">false</span>,
-<span class="hljs-label">      data:</span> {},
-    ]
-  }
-]
-</code></pre><p>A background action would work to keep these offline partitions in sync, simply updating the conflicts and sync status as needed.</p>
-<p>If the user navigated to a different project, the notes store would create a new partition for the new project_id.  If space became limited on the front end, the stores could dispose of data from other partitions that was in sync.</p>
-<p>Lets look closer to what this might look like as an <a href="https://github.com/goatslacker/alt">alt store</a></p>
-<pre><code><span class="hljs-keyword">import</span> alt from <span class="hljs-string">'../alt'</span>;
-<span class="hljs-keyword">import</span> PartitionActions from <span class="hljs-string">'../actions/PartitionActions'</span>;
-<span class="hljs-keyword">import</span> NotesSyncActions from <span class="hljs-string">'../stores/NotesSyncActions'</span>;
-
-<span class="hljs-keyword">class</span> PartitionedNotesStore {
-  <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
-    <span class="hljs-keyword">this</span>.bindActions(PartitionActions);
-    <span class="hljs-keyword">this</span>.bindActions(NotesSyncActions);
-    <span class="hljs-keyword">this</span>.partitions = [];
-  }
-
-  onAddProjectPartition(partition) {
-    <span class="hljs-keyword">this</span>.partitions.append( {
-      partition: partition,
-      last_sync: <span class="hljs-literal">null</span>, <span class="hljs-comment">// Server time</span>
-      last_used: <span class="hljs-literal">null</span>,
-      is_fetching: <span class="hljs-literal">true</span>,
-      records: []
-    })
-  }
-
-  onSyncComplete(partition) {
-    <span class="hljs-comment">// Set last sync for partition</span>
-  }
-
-  onSyncInsert(partition, records) {
-    <span class="hljs-comment">// Handle new records from the server</span>
-  }  
-
-  onSyncUpdate(partition, records) {
-    <span class="hljs-comment">// Handle changed records from the server</span>
-  }
-
-  onSyncSuccess(partition, records) {
-    <span class="hljs-comment">// Update sync status of localy changed records that were accepted</span>
-    <span class="hljs-comment">// by the server</span>
-  }
-
-  onSyncConflict(partition, records) {
-    <span class="hljs-comment">// Update sync status of locally changed records that were not</span>
-    <span class="hljs-comment">// accepted by the server</span>
-  }
-
-  onOfflineInsert(parition, records) {
-    <span class="hljs-comment">// Handle new records made offline</span>
-  }
-
-  onOfflineUpdate(parition, records) {
-    <span class="hljs-comment">// Handle updates made offline</span>
-  }
-
-}
-</code></pre><p>If a project has way too many notes to load into memory, we could also add an additional partition by page or some other logical subdivision.  Some effort would need to be taken to ensure paritions where mutually exclusive.</p>
-<pre><code>partitions = [
-  {
-    partition: {project_id: <span class="hljs-number">12312</span>, user_id: <span class="hljs-number">23</span>, page: <span class="hljs-number">1</span>},
-    last_sync: '<span class="hljs-number">2015</span>/<span class="hljs-number">03</span>/<span class="hljs-number">14</span> <span class="hljs-number">9</span>:<span class="hljs-number">26</span>',
-    last_used: '<span class="hljs-number">2015</span>/<span class="hljs-number">03</span>/<span class="hljs-number">14</span> <span class="hljs-number">9</span>:<span class="hljs-number">26</span>',
-    records: [
-      <span class="hljs-property">id</span>: <span class="hljs-number">3232</span>,
-      in_sync: <span class="hljs-constant">true</span>,
-      has_conflicts: <span class="hljs-constant">false</span>,
-      data: {},
-    ]
-  }
-]
-
-While this <span class="hljs-keyword">is</span> an interesting thought experiment, <span class="hljs-keyword">it</span> doesn't address well pagination, nesting, composition, <span class="hljs-keyword">and</span> more complex data structures like summaries.  Lets look <span class="hljs-keyword">for</span> inspiration <span class="hljs-keyword">from</span> Relay <span class="hljs-keyword">and</span> GraphQL
 </code></pre><!-- h1 --><h1 class="page-header" id="md-relay-and-graphql">Relay and GraphQL</h1><p><a href="https://facebook.github.io/react/blog/2015/02/20/introducing-relay-and-graphql.html">Introducing Relay and GraphQL</a> 26 minutes - Greg Hurrell - 2015/02/02</p>
 <p>Relay and GraphQL are less concerned with offline date and more
 interested in decoupling the server and the UI.  With GraphQL
@@ -249,8 +159,190 @@ Stop writing dedicated endpoints.</p>
 <p><img src="relay3.png" width="100%"></p>
 <p>The top level component can compose the queries of its children.</p>
 <p><img src="composition.png" width="100%"></p>
-<!-- h2 --><h2 id="md-understanding-graphql-cursors-and-pagination">Understanding GraphQL Cursors and Pagination</h2><p>Work in Progress... stay tuned</p>
-<!-- end -->
+<!-- h1 --><h1 class="page-header" id="md-offline-partitions-store">Offline Partitions Store</h1><p>The offline partitions store approach is a strategy to register
+partitions of data you want to store offline and synchronize with a
+server as available.</p>
+<p>Each partition would keep track of its sync status and some basic info to help
+remove itself should space become limited on the front end.</p>
+<p>Consider the following schema for a project management application.</p>
+<p><img src="schema.png"></p>
+<p>When the user navigates into a project 12312 the following actions get fired:</p>
+<pre><code>  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'files'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
+  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'members'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
+  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'notes'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
+  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'tasks'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
+</code></pre><p>The OfflinePartitionStore would handle ensurePartition by either updating
+the lastEnsured timestamp or appending an empty (unsynced) partition.</p>
+<p>Assuming this app has no previous data, these actions would fill the OfflineParitionStore with a bunch of empty partitions, the end product would resemble something like this:</p>
+<pre><code>paritions = [
+  {
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'files'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">false</span>,
+<span class="hljs-label">    records:</span> [],
+<span class="hljs-label">    conflicts:</span> [],
+<span class="hljs-label">    localChanges:</span> []
+  },
+  {
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'members'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">false</span>,
+<span class="hljs-label">    records:</span> [],
+<span class="hljs-label">    conflicts:</span> [],
+<span class="hljs-label">    localChanges:</span> []
+  },
+  {
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">false</span>,
+<span class="hljs-label">    records:</span> [],
+<span class="hljs-label">    conflicts:</span> [],
+<span class="hljs-label">    localChanges:</span> []
+  },
+  {
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'tasks'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
+<span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">false</span>,
+<span class="hljs-label">    records:</span> [],
+<span class="hljs-label">    conflicts:</span> [],
+<span class="hljs-label">    localChanges:</span> []
+  }
+]
+</code></pre><p>At this point an OfflinePartitionSyncUtil would attempt to download the data sorted by <strong>updated_at ascending</strong>.  It hits a generic server endpoint and passes its partition params
+and lastUpdatedCursor to the server.  The server would respond with the next page of records
+and an indication if this was all that remains.</p>
+<p>Lets focus in on what the notes partition might look like once all data from the server was downloaded and we have all 3 notes in the store.</p>
+<pre><code>partitions = [
+  {
+<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">true</span>,
+<span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    localChanges:</span> [],
+<span class="hljs-label">    conflicts:</span> [],
+<span class="hljs-label">    records:</span> {
+<span class="hljs-label">      4545:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Lili'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Good Morning'</span>},
+      },
+<span class="hljs-label">      8723:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'John'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Good Bye'</span>},
+      }
+<span class="hljs-label">      3232:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Jeff'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Hello'</span>},
+      }
+    }
+  }
+]
+</code></pre><p>After a user on the front end makes an edit to 8723 we will want to catalog the update
+and keep a copy of the original value.  This original value will come in handy later
+when we want to ensure that we can unambigiously merge the data with the server.  Lets say
+two notes have been edited since we&#39;ve been offline.</p>
+<pre><code>partitions = [
+  {
+<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">true</span>,
+<span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
+<span class="hljs-label">    localChanges:</span> [<span class="hljs-number">8723</span>, <span class="hljs-number">3232</span>],
+<span class="hljs-label">    conflicts:</span> [],
+<span class="hljs-label">    records:</span> {
+<span class="hljs-label">      4545:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Lili'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Good Morning'</span>},
+      },
+<span class="hljs-label">      8723:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'John'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Good Bye Friends'</span>},
+<span class="hljs-label">        original:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'John'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Good Bye'</span>},
+      }
+<span class="hljs-label">      3232:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Jeff'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Hello Friends'</span>},
+<span class="hljs-label">        original:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Jeff'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Hello'</span>},
+      }
+    }
+  }
+]
+</code></pre><p>OfflinePartitionSyncUtil will sweep through the partitions and notice 2 local changes and
+attempt to send these changes to the server.  The server will receive the new data and the
+original data so that it can determine if both it and the client tried to change the same
+attribute.  </p>
+<p>In this hypothetical situation, lets assume that 8723 was successful, and 3232
+failed.  Our new store might look like:</p>
+<ul>
+<li><p>8723 is removed from localChanges and its original data was pruned</p>
+</li>
+<li><p>3232 is added to conflicts and its record is decorated with details</p>
+</li>
+</ul>
+<pre><code>partitions = [
+  {
+<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-string">'2015/03/14 9:30'</span>,
+<span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">true</span>,
+<span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:30'</span>,
+<span class="hljs-label">    localChanges:</span> [<span class="hljs-number">3232</span>],
+<span class="hljs-label">    conflicts:</span> [<span class="hljs-number">3232</span>],
+<span class="hljs-label">    records:</span> {
+<span class="hljs-label">      4545:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Lili'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Good Morning'</span>},
+      },
+<span class="hljs-label">      8723:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'John'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Good Bye Friends'</span>},
+      }
+<span class="hljs-label">      3232:</span> {
+<span class="hljs-label">        data:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Jeff'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Hello Friends'</span>},
+<span class="hljs-label">        server:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Jeff'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Hello Everyone'</span>},
+<span class="hljs-label">        original:</span> {<span class="hljs-string">name:</span> <span class="hljs-string">'Jeff'</span>, <span class="hljs-string">body:</span> <span class="hljs-string">'Hello'</span>},
+<span class="hljs-label">        lastSyncAttempt:</span> <span class="hljs-string">'2015/03/14 12:23:23'</span>,
+      }
+    }
+  }
+]
+</code></pre><p>A background action would work to keep these offline partitions in sync, simply updating the conflicts and sync status as needed.</p>
+<p>If the user navigated to a different project, the notes store would create a new partition for the new projectId.  If space became limited on the front end, the stores could dispose of data from other partitions that was in sync.</p>
+<p>Lets look closer to what this might look like as an <a href="https://github.com/goatslacker/alt">alt store</a></p>
+<pre><code><span class="hljs-keyword">import</span> alt from <span class="hljs-string">'../alt'</span>;
+<span class="hljs-keyword">import</span> PartitionActions from <span class="hljs-string">'../actions/PartitionActions'</span>;
+
+<span class="hljs-keyword">class</span> PartitionedNotesStore {
+  <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
+    <span class="hljs-keyword">this</span>.bindActions(PartitionActions);
+    <span class="hljs-keyword">this</span>.partitions = [];
+  }
+
+  onEnsurePartition(partition) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.includes?(partition)) {
+      <span class="hljs-keyword">this</span>.updateLastEnsured(partition);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.createPartition( partition );
+    }
+  }
+
+  onDownload(data) {
+    <span class="hljs-keyword">let</span> {partition, lastUpdatedCursor, records} = data;
+    <span class="hljs-comment">// update partition and merge records, flag and decorate conflicts</span>
+  }
+
+  onLocalUpdate(partition, record) {
+    <span class="hljs-comment">// Update records</span>
+  }
+
+  onServerUpdateSuccess(parition, record) {
+      <span class="hljs-comment">// Handle it</span>
+  }
+
+  onServerUpdateConflict(partition, record) {
+    <span class="hljs-comment">// Handle it</span>
+  }
+
+}
+</code></pre><!-- end -->
 </div>
 
 <div class="col-md-3">
@@ -332,46 +424,7 @@ Stop writing dedicated endpoints.</p>
           
             
             
-            <li><a href="#md-flux-conerns">Flux Conerns</a></li>
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-route-store">Route Store</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-content-stores">Content Stores</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-partitioned-offline-stores">Partitioned Offline Stores</a></li>
+            <li><a href="#md-route-store">Route Store</a></li>
             
           
             
@@ -388,11 +441,7 @@ Stop writing dedicated endpoints.</p>
           
             
             
-          
-            
-            
-          
-            
+            <li><a href="#md-content-stores">Content Stores</a></li>
             
           
             
@@ -441,8 +490,95 @@ Stop writing dedicated endpoints.</p>
           
             
             
+            <li><a href="#md-offline-partitions-store">Offline Partitions Store</a></li>
+            
           
-          <li style="margin-left: 0.5em;"><a href="#md-understanding-graphql-cursors-and-pagination">Understanding GraphQL Cursors and Pagination</a></li>
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
           
             
             
