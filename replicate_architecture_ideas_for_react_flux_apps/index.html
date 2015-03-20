@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Wikismith">
+
+    <title>
+        Jeffrey Hicks
+    </title>
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bs3/bower/css/bootstrap.css">
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/bs3/css/blog.css">
+    <link rel="stylesheet" href="/bs3/css/docs.min.css">
+    <link rel="stylesheet" href="/bs3/css/railscasts.css">
+    <!-- endinject -->
+
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+
+
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="../../../" class="navbar-brand">
+              <img src="http://www.gravatar.com/avatar/91f491389b01231140190aef863408c9.png">
+              &nbsp;
+              jrhicks.github.io
+            </a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <!--
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/interests.html">Interest</a>
+                </li>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/about">Speaking</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">About</a></li>
+            </ul>
+            -->
+        </nav>
+    </div>
+</header>
+
+
+
+<!-- Docs page layout -->
+<div class="bs-docs-header" id="content">
+    <div class="container">
+        <h1>Replicate Architecture Ideas For React-Flux Apps</h1>
+        <p>Data fetching and replication for Offline React Single Page Applications</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+
+<div class="row">
+<div class="col-md-9" role="main">
+<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>In <a href='/client_side_routing/index.html'>client side routing</a>, I settled on React Router being a robust-flux-compatible way to navigate <strong>screen space</strong> in SPA, but only reached inspiration on how to navigate <strong>data space</strong>.  I looked into Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores Pattern</a>, Facebook&#39;s <a href="/client_side_routing_notes/index.html#md-relay-and-graphql">Relay Architecture</a>, and a home-brewed <a href="/client_side_routing_notes/index.html#md-offline-partitions-store">Offline Partitions Store</a></p>
+<!-- h1 --><h1 class="page-header" id="md-pure-flux-pattern">Pure Flux Pattern</h1><p><img src="flux.png" width="100%"></p>
+<p><strong>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores</a> approach is pure flux!</strong>.  You have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed.</p>
+<!-- h1 --><h1 class="page-header" id="md-relay-architecture">Relay Architecture</h1><p><strong>Facebook&#39;s Relay approach is pure decoupling!</strong>  Statically declare the data needs of a component within itself.  Eliminate creating and <em>maintaining</em> custom server end-points that match the needs of each component (and subcomponent) on the page.</p>
+<p><img src="relay3.png" width="100%"></p>
+<!-- h1 --><h1 class="page-header" id="md-offline-pattern">Offline Pattern</h1><p>I liked the pure flux of Dan&#39;s approach and the pure decoupling of Relay.  So I wanted to combine both concepts into something useful for a partially connected front-end.</p>
+<p><img src="rd.png" width="100%"></p>
+<p>The replicated database only replicates subsets of the data on the server, these subsets are requested by the views when components mount.  Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.</p>
+<pre><code>componentWillMount() {
+  let projectId = parseInt(<span class="hljs-keyword">this</span>.getParams().projectId);
+  ReplicatedDatabase.syncUpdatesFor(<span class="hljs-string">'note'</span>, {<span class="hljs-string">project_id:</span> projectId} );
+  ReplicatedDatabase.syncUpdatesFor(<span class="hljs-string">'contact'</span>, {<span class="hljs-string">project_id:</span> projectId} );
+},
+</code></pre><p>All the data is fetched by the ReplicatedDatabase and stored normalized into an in-memory database with persistence options.  The replicated database can syndicate its changes to actions and from there we follow the traditional flux pattern.</p>
+<p>The ReplicatedDatabase keeps track of cursor information.  I&#39;ve removed validation, authenticaion, and authorization for simplicity, but here is an
+example RubyOnRails controller for download updates from the server.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#SERVER</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OfflineController</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">ApplicationController</span></span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>download_updated()
+    scope = <span class="hljs-constant">JSON</span>.parse(params[<span class="hljs-symbol">:scope</span>])
+    collection = scope[<span class="hljs-symbol">:collection</span>]
+    filter = scope[<span class="hljs-symbol">:filter</span>]
+
+    <span class="hljs-comment"># Get ActiveRecord Class For Requested Entity From String</span>
+    m = collection.camelize.constantize
+
+    <span class="hljs-keyword">if</span> scope[<span class="hljs-symbol">:lastUpdatedCursor</span>]
+      ci = scope[<span class="hljs-symbol">:lastIdCursor</span>]
+      cu = <span class="hljs-constant">DateTime</span>.parse(scope[<span class="hljs-symbol">:lastUpdatedCursor</span>])
+      data = m.where(filter)
+              .where([<span class="hljs-string">"updated_at &gt; ? or (updated_at=? and id&gt;?)"</span>, cu, cu, ci])
+              .order(<span class="hljs-string">"updated_at asc, id asc"</span>)
+              .limit(<span class="hljs-number">250</span>)
+    <span class="hljs-keyword">else</span>
+      data = m.where(filter)
+              .order(<span class="hljs-string">"updated_at asc, id asc"</span>)
+              .limit(<span class="hljs-number">250</span>)
+    <span class="hljs-keyword">end</span>
+    render <span class="hljs-symbol">text:</span> data.to_json
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Here is the front end code in the Replicated database</p>
+<pre><code>// REPLICATED DATABASE
+
+<span class="hljs-built_in">import</span> agent from 'superagent-promise';
+
+async downloadUpdatesFor(subscription) {
+  <span class="hljs-keyword">let</span> <span class="hljs-variable">i =</span> subscription.lastIdCursor;
+  <span class="hljs-keyword">let</span> <span class="hljs-variable">d =</span> subscription.lastUpdatedCursor;
+  do {
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">scope =</span> {
+                  collection: subscription.collection,
+                  filter: subscription.filter,
+                  lastIdCursor: i,
+                  lastUpdatedCursor: d
+                };
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">scopeJson =</span> encodeURIComponent(JSON.stringify(scope));
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">url =</span> `/offline/download_updated?<span class="hljs-variable">scope=</span>${scopeJson}`;
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">response =</span> await agent.get(url).end();
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">data =</span> JSON.parse(response.text);
+    await loadData(subscription, data);
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">lastItem =</span> data[data.length - <span class="hljs-number">1</span>];
+    <span class="hljs-keyword">if</span> (lastItem) {
+      <span class="hljs-variable">i =</span> lastItem.id;
+      <span class="hljs-variable">d =</span> lastItem.updated_at;
+    }
+  } while (data.length &gt; <span class="hljs-number">0</span>)
+}
+</code></pre><p>Using <a href="http://lokijs.org/">LokiJS</a> for storing the data.  Handling server updates would look something like:</p>
+<pre><code><span class="hljs-keyword">for</span> (<span class="hljs-built_in">let</span> serverRecord of data) {
+  <span class="hljs-built_in">let</span> <span class="hljs-built_in">local</span>Record = collection.findOne({id: serverRecord.id});
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">local</span>Record) {
+    <span class="hljs-comment"># TODO</span>
+  }
+  <span class="hljs-keyword">else</span> {
+    collection.insert(serverRecord);
+    subscription.recordsDownloaded += <span class="hljs-number">1</span>;
+    subscription.save
+  }
+}
+</code></pre><p>I use this basic insertion algorithm to sync 10,00 records.  Here is how it performs:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cuN3tyuMED8" frameborder="0" allowfullscreen></iframe>
+
+<!-- h1 --><h1 class="page-header" id="md-example-repository">Example Repository</h1><p>You can checkout the full project here <a href="https://github.com/jrhicks/OPStoreExample">https://github.com/jrhicks/OPStoreExample</a></p>
+<p>git clone <a href="https://github.com/jrhicks/OPStoreExample.git">https://github.com/jrhicks/OPStoreExample.git</a></p>
+<p>cd OPStoreExample</p>
+<p>bundle install</p>
+<p>rake db:setup</p>
+<p>npm install</p>
+<p>foreman start</p>
+<p>open <a href="http://localhost:3000">http://localhost:3000</a></p>
+<!-- end -->
+</div>
+
+<div class="col-md-3">
+    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+        <ul class="nav bs-docs-sidenav">
+            
+            
+            
+            <li><a href="#md-introduction">Introduction</a></li>
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-pure-flux-pattern">Pure Flux Pattern</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-relay-architecture">Relay Architecture</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-offline-pattern">Offline Pattern</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-example-repository">Example Repository</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+        </ul>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <p>Generated with <a href="http://wikismith.com">Wikismith</a> - <a href="http://getbootstrap.com">Bootstrap 3</a> Theme
+    </div>
+</footer>
+
+<!-- bower:js -->
+<script src="/bs3/bower/js/jquery.js"></script>
+<script src="/bs3/bower/js/bootstrap.js"></script>
+<!-- endinject -->
+
+<!-- inject:js -->
+<script src="/bs3/js/docs.min.js"></script>
+<!-- endinject -->
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    // Required: on line below, replace text in quotes with your forum shortname
+    var disqus_shortname = 'jrhicks';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+</body>
+</html>

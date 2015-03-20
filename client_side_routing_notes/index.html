@@ -126,6 +126,7 @@
 });
 </code></pre><p>Let RouterStore keep router state and add a public method to obtain it.
 This way your action creators and other stores can learn about current router state.</p>
+<!-- h1 --><h1 class="page-header" id="md-alt-example">Alt Example</h1><p>In case you like <a href="https://github.com/goatslacker/alt">alt</a> like me.  Here is a <a href="https://github.com/lostpebble/alt-react-router-example">alt-react-router-example</a> - An example project showing a way to use React-Router (and async calls) with the Flux implementation, Alt.</p>
 <!-- h1 --><h1 class="page-header" id="md-content-stores">Content Stores</h1><p>Dan Abramov introduces the concept of Content Stores in his <a href="https://github.com/gaearon/flux-react-router-example">Flux React Router Example</a></p>
 <p>As users navigate screens they are also navigating through your
 applications data and triggering server actions to fetch fresh
@@ -167,16 +168,16 @@ remove itself should space become limited on the front end.</p>
 <p>Consider the following schema for a project management application.</p>
 <p><img src="schema.png"></p>
 <p>When the user navigates into a project 12312 the following actions get fired:</p>
-<pre><code>  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'files'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
-  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'members'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
-  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'notes'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
-  <span class="hljs-tag">ensurePartition</span>({ <span class="hljs-attribute">entity</span>: <span class="hljs-string">'tasks'</span>, <span class="hljs-attribute">projectId</span>: <span class="hljs-number">12312</span>, <span class="hljs-attribute">userId</span>: <span class="hljs-number">23</span>});
+<pre><code>  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'files'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
+  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'members'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
+  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
+  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'tasks'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
 </code></pre><p>The OfflinePartitionStore would handle ensurePartition by either updating
 the lastEnsured timestamp or appending an empty (unsynced) partition.</p>
 <p>Assuming this app has no previous data, these actions would fill the OfflineParitionStore with a bunch of empty partitions, the end product would resemble something like this:</p>
 <pre><code>paritions = [
   {
-<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'files'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'files'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}},
 <span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
 <span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
 <span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
@@ -186,7 +187,7 @@ the lastEnsured timestamp or appending an empty (unsynced) partition.</p>
 <span class="hljs-label">    localChanges:</span> []
   },
   {
-<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'members'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'members'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}},
 <span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
 <span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
 <span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
@@ -196,7 +197,7 @@ the lastEnsured timestamp or appending an empty (unsynced) partition.</p>
 <span class="hljs-label">    localChanges:</span> []
   },
   {
-<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}},
 <span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
 <span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
 <span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
@@ -206,7 +207,7 @@ the lastEnsured timestamp or appending an empty (unsynced) partition.</p>
 <span class="hljs-label">    localChanges:</span> []
   },
   {
-<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'tasks'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    partition:</span> { <span class="hljs-string">entity:</span> <span class="hljs-string">'tasks'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}},
 <span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
 <span class="hljs-label">    lastSync:</span> <span class="hljs-literal">null</span>,
 <span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-literal">null</span>,
@@ -222,7 +223,7 @@ and an indication if this was all that remains.</p>
 <p>Lets focus in on what the notes partition might look like once all data from the server was downloaded and we have all 3 notes in the store.</p>
 <pre><code>partitions = [
   {
-<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}},
 <span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
 <span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">true</span>,
 <span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
@@ -247,7 +248,7 @@ when we want to ensure that we can unambigiously merge the data with the server.
 two notes have been edited since we&#39;ve been offline.</p>
 <pre><code>partitions = [
   {
-<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}},
 <span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
 <span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">true</span>,
 <span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:26'</span>,
@@ -282,7 +283,7 @@ failed.  Our new store might look like:</p>
 </ul>
 <pre><code>partitions = [
   {
-<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>},
+<span class="hljs-label">    partition:</span> {<span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}},
 <span class="hljs-label">    lastUpdatedCursor:</span> <span class="hljs-string">'2015/03/14 9:30'</span>,
 <span class="hljs-label">    cursorAtEnd:</span> <span class="hljs-literal">true</span>,
 <span class="hljs-label">    lastEnsured:</span> <span class="hljs-string">'2015/03/14 9:30'</span>,
@@ -434,6 +435,14 @@ failed.  Our new store might look like:</p>
             
           
             
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-alt-example">Alt Example</a></li>
             
           
             
@@ -611,7 +620,20 @@ failed.  Our new store might look like:</p>
 <!-- endinject -->
 
 
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    // Required: on line below, replace text in quotes with your forum shortname
+    var disqus_shortname = 'jrhicks';
 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
 </body>
