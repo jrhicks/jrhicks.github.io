@@ -98,13 +98,15 @@
 <p><strong>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores</a> approach is pure flux!</strong>.  You have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed.</p>
 <!-- h1 --><h1 class="page-header" id="md-relay-architecture">Relay Architecture</h1><p><strong>Facebook&#39;s Relay approach is pure decoupling!</strong>  Statically declare the data needs of a component within itself.  Eliminate creating and <em>maintaining</em> custom server end-points that match the needs of each component (and subcomponent) on the page.</p>
 <p><img src="relay3.png" width="100%"></p>
+<!-- h1 --><h1 class="page-header" id="md-flux-over-the-wire">Flux over the Wire</h1><p><a href="https://twitter.com/elierotenberg">Elie Rotenberg</a> who writes about <a href="https://blog.rotenberg.io/million-user-webchat-with-full-stack-flux-react-redis-and-postgresql/">Million User Webchat</a> has designed <a href="https://github.com/elierotenberg/nexus-flux">Nexus Flux</a></p>
+<p><img src="symmetrical-flux.png" width="100%"></p>
 <!-- h1 --><h1 class="page-header" id="md-offline-pattern">Offline Pattern</h1><p>I liked the pure flux of Dan&#39;s approach and the pure decoupling of Relay.  So I wanted to combine both concepts into something useful for a partially connected front-end.</p>
 <p><img src="rd.png" width="100%"></p>
 <p>The replicated database only replicates subsets of the data on the server, these subsets are requested by the views when components mount.  Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.</p>
 <pre><code>componentWillMount() {
   let projectId = parseInt(<span class="hljs-keyword">this</span>.getParams().projectId);
-  ReplicatedDatabase.syncUpdatesFor(<span class="hljs-string">'note'</span>, {<span class="hljs-string">project_id:</span> projectId} );
-  ReplicatedDatabase.syncUpdatesFor(<span class="hljs-string">'contact'</span>, {<span class="hljs-string">project_id:</span> projectId} );
+  ReplicatedDatabase.addSubscription(<span class="hljs-string">'note'</span>, {<span class="hljs-string">project_id:</span> projectId} );
+  ReplicatedDatabase.addSubscription(<span class="hljs-string">'contact'</span>, {<span class="hljs-string">project_id:</span> projectId} );
 },
 </code></pre><p>All the data is fetched by the ReplicatedDatabase and stored normalized into an in-memory database with persistence options.  The replicated database can syndicate its changes to actions and from there we follow the traditional flux pattern.</p>
 <p>The ReplicatedDatabase keeps track of cursor information.  I&#39;ve removed validation, authenticaion, and authorization for simplicity, but here is an
@@ -179,8 +181,8 @@ async downloadUpdatesFor(subscription) {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cuN3tyuMED8" frameborder="0" allowfullscreen></iframe>
 
 <!-- h1 --><h1 class="page-header" id="md-example-repository">Example Repository</h1><p>You can checkout the full project here <a href="https://github.com/jrhicks/OPStoreExample">https://github.com/jrhicks/OPStoreExample</a></p>
-<p>git clone <a href="https://github.com/jrhicks/OPStoreExample.git">https://github.com/jrhicks/OPStoreExample.git</a></p>
-<p>cd OPStoreExample</p>
+<p>git clone <a href="https://github.com/jrhicks/LokiJS-Flux-Example.git">https://github.com/jrhicks/LokiJS-Flux-Example.git</a></p>
+<p>cd LokiJS-Flux-Example</p>
 <p>bundle install</p>
 <p>rake db:setup</p>
 <p>npm install</p>
@@ -215,6 +217,17 @@ async downloadUpdatesFor(subscription) {
             
             
             <li><a href="#md-relay-architecture">Relay Architecture</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-flux-over-the-wire">Flux over the Wire</a></li>
             
           
             
