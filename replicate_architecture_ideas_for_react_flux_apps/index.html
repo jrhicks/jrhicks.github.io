@@ -98,9 +98,13 @@
 <p><strong>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores</a> approach is pure flux!</strong>.  You have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed.</p>
 <!-- h1 --><h1 class="page-header" id="md-relay-architecture">Relay Architecture</h1><p><strong>Facebook&#39;s Relay approach is pure decoupling!</strong>  Statically declare the data needs of a component within itself.  Eliminate creating and <em>maintaining</em> custom server end-points that match the needs of each component (and subcomponent) on the page.</p>
 <p><img src="relay3.png" width="100%"></p>
-<!-- h1 --><h1 class="page-header" id="md-flux-over-the-wire">Flux over the Wire</h1><p><a href="https://twitter.com/elierotenberg">Elie Rotenberg</a> who writes about <a href="https://blog.rotenberg.io/million-user-webchat-with-full-stack-flux-react-redis-and-postgresql/">Million User Webchat</a> has designed <a href="https://github.com/elierotenberg/nexus-flux">Nexus Flux</a></p>
-<p><img src="symmetrical-flux.png" width="100%"></p>
-<!-- h1 --><h1 class="page-header" id="md-offline-pattern">Offline Pattern</h1><p>I liked the pure flux of Dan&#39;s approach and the pure decoupling of Relay.  So I wanted to combine both concepts into something useful for a partially connected front-end.</p>
+<!-- h1 --><h1 class="page-header" id="md-full-stack-flux-pgsql">Full Stack Flux PGSQL</h1><p><a href="https://twitter.com/elierotenberg">Elie Rotenberg</a> who writes about <a href="https://blog.rotenberg.io/million-user-webchat-with-full-stack-flux-react-redis-and-postgresql/">Million User Webchat</a> has an awesome FLUX pattern for <strong>single state-state-of-truth</strong>.  Even more interesting to me is the replacement of the dispatcher with PGSQL triggers.</p>
+<p><img src="full-stack-flux-pgsql.png" width="100%"></p>
+<p>It goes through a lot of layers to get their, but the client component essentially updates the world by talking to
+the database.  This looks a little like updating shared-mutable-state, but I think this architecture shows that
+there is a difference between writing to a database (that notifies and dispatches) is different than writing to
+shared mutable state.</p>
+<!-- h1 --><h1 class="page-header" id="md-eventually-consistent-flux-pattern">Eventually Consistent Flux Pattern</h1><p>I liked the pure flux of Dan&#39;s approach, the pure decoupling of Relay, and the database-as-a-notifier approach of Full Stack Flux PGSQL.  How could I combine all these ideas, into an architecture that relaxed the importance of <strong>single state of truth</strong> in favor of higher availability and eventual consistency.  I came up with an &quot;Eventually Consistent Flux Pattern&quot;.</p>
 <p><img src="rd.png" width="100%"></p>
 <p>The replicated database only replicates subsets of the data on the server, these subsets are requested by the views when components mount.  Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.</p>
 <pre><code>componentWillMount() {
@@ -227,7 +231,7 @@ async downloadUpdatesFor(subscription) {
           
             
             
-            <li><a href="#md-flux-over-the-wire">Flux over the Wire</a></li>
+            <li><a href="#md-full-stack-flux-pgsql">Full Stack Flux PGSQL</a></li>
             
           
             
@@ -238,7 +242,10 @@ async downloadUpdatesFor(subscription) {
           
             
             
-            <li><a href="#md-offline-pattern">Offline Pattern</a></li>
+          
+            
+            
+            <li><a href="#md-eventually-consistent-flux-pattern">Eventually Consistent Flux Pattern</a></li>
             
           
             
