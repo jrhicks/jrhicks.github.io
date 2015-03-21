@@ -123,8 +123,8 @@ offline.</p>
 <!-- h2 --><h2 id="md-similarities-to-content-stores">Similarities to Content Stores</h2><p>Much like Content Stores, the Replicated Database implements a collection for each
 different entity type and data is normalized.  The unidirectionality is preserved.  Shared mutable state appears to be violated in this pattern, but I propose that writing to a database (that emits events to actions) maintains immutability.  For performance gains I propose that view&#39;s can read from the database but only in reaction to stores and constrained!</p>
 <!-- h2 --><h2 id="md-similarities-to-relay">Similarities to Relay</h2><p>The replicated database only replicates subsets of the data on the server, these subsets are requested by the views when components mount.  Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.</p>
-<p>Unlike Relay the semantic declaration in this pattern is much less descriptive and prescribes normalized scopes to replicate.  Relay is much better for fully online situations where your small amounts of screen relevant data that you expect to
-be constantly changing.</p>
+<p>Relay provides composable GQL.  This pattern uses many subscriptions that act
+as basic filters to restrict the replicated data.</p>
 <pre><code>componentWillMount() {
   let projectId = parseInt(<span class="hljs-keyword">this</span>.getParams().projectId);
   ReplicatedDatabase.addSubscription(<span class="hljs-string">'note'</span>, {<span class="hljs-string">project_id:</span> projectId} );
