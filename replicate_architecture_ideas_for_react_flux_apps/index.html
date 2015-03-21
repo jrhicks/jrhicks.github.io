@@ -93,7 +93,16 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>In <a href='/client_side_routing/index.html'>client side routing</a>, I settled on React Router being a robust-flux-compatible way to navigate <strong>screen space</strong> in SPA, but only reached inspiration on how to navigate <strong>data space</strong>.  I looked into Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores Pattern</a>, Facebook&#39;s <a href="/client_side_routing_notes/index.html#md-relay-and-graphql">Relay Architecture</a>, and a home-brewed <a href="/client_side_routing_notes/index.html#md-offline-partitions-store">Offline Partitions Store</a></p>
+<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>In <a href='/client_side_routing/index.html'>client side routing</a> navigating <strong>data space</strong> was proposed as a concern of client side routing and investigated the following architectures:</p>
+<ul>
+<li><p>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores Pattern</a></p>
+</li>
+<li><p>Facebook&#39;s <a href="/client_side_routing_notes/index.html#md-relay-and-graphql">Relay Architecture</a></p>
+</li>
+<li><p>A Home Brewed <a href="/client_side_routing_notes/index.html#md-offline-partitions-store">Offline Partitions Store</a></p>
+</li>
+</ul>
+<p>In this article I recap these patterns quickly, introduce a new pattern called Full Stack Flux and I refine the design of newly proposed pattern that draws on qualities of each of these patterns, but favors High Availability with Eventually Consistency.</p>
 <!-- h1 --><h1 class="page-header" id="md-pure-flux-pattern">Pure Flux Pattern</h1><p><img src="flux.png" width="100%"></p>
 <p><strong>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores</a> approach is pure flux!</strong>.  You have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed.</p>
 <!-- h1 --><h1 class="page-header" id="md-relay-architecture">Relay Architecture</h1><p><strong>Facebook&#39;s Relay approach is pure decoupling!</strong>  Statically declare the data needs of a component within itself.  Eliminate creating and <em>maintaining</em> custom server end-points that match the needs of each component (and subcomponent) on the page.</p>
@@ -201,6 +210,45 @@ async downloadUpdatesFor(subscription) {
             
             
             <li><a href="#md-introduction">Introduction</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
