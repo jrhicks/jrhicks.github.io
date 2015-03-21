@@ -112,7 +112,7 @@
 <p>It goes through a lot of layers to get there, but the client component essentially updates the world by talking to
 the database.  This looks a little like updating shared-mutable-state, but I think this architecture shows that writing to a database (that notifies and dispatches) is different than writing to
 shared mutable state.</p>
-<!-- h1 --><h1 class="page-header" id="md-eventually-consistent-flux-pattern">Eventually Consistent Flux Pattern</h1><p>I liked the pure flux of Dan&#39;s approach, the pure decoupling of Relay, and the database-as-a-notifier approach of Full Stack Flux PGSQL.  How could I combine all these ideas, into an architecture that relaxed the importance of <strong>Single Source Of Truth</strong> in favor of higher availability and eventual consistency.  I came up with an &quot;Eventually Consistent Flux Pattern&quot;.</p>
+<!-- h1 --><h1 class="page-header" id="md-high-availability-eventually-consistent-flux">High Availability Eventually Consistent Flux</h1><p>I liked the pure flux of Dan&#39;s approach, the pure decoupling of Relay, and the database-as-a-notifier approach of Full Stack Flux PGSQL.  How could I combine all these ideas, into an architecture that relaxed the importance of <strong>Single Source Of Truth</strong> in favor of higher availability and eventual consistency.  I came up with an &quot;Eventually Consistent Flux Pattern&quot;.</p>
 <p><img src="rd.png" width="100%"></p>
 <p>The replicated database only replicates subsets of the data on the server, these subsets are requested by the views when components mount.  Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.</p>
 <pre><code>componentWillMount() {
@@ -192,7 +192,7 @@ async downloadUpdatesFor(subscription) {
 </code></pre><p>I use this basic insertion algorithm to sync 10,00 records.  Here is how it performs:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cuN3tyuMED8" frameborder="0" allowfullscreen></iframe>
 
-<!-- h1 --><h1 class="page-header" id="md-example-repository">Example Repository</h1><p>You can checkout the full project here <a href="https://github.com/jrhicks/OPStoreExample">https://github.com/jrhicks/OPStoreExample</a></p>
+<!-- h1 --><h1 class="page-header" id="md-example-repository">Example Repository</h1><p>You can checkout the full project here <a href="https://github.com/jrhicks/LokiJS-Flux-Example">https://github.com/jrhicks/LokiJS-Flux-Example</a></p>
 <p>git clone <a href="https://github.com/jrhicks/LokiJS-Flux-Example.git">https://github.com/jrhicks/LokiJS-Flux-Example.git</a></p>
 <p>cd LokiJS-Flux-Example</p>
 <p>bundle install</p>
@@ -292,7 +292,7 @@ async downloadUpdatesFor(subscription) {
           
             
             
-            <li><a href="#md-eventually-consistent-flux-pattern">Eventually Consistent Flux Pattern</a></li>
+            <li><a href="#md-high-availability-eventually-consistent-flux">High Availability Eventually Consistent Flux</a></li>
             
           
             
