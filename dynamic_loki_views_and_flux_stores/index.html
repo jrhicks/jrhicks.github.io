@@ -97,7 +97,6 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/dynamic_loki_views_and_flux_stores/index.md">Edit it</a></div>
 
-
 <!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>There are some entertaining similarities between a LokiJS Dynamic View and a Flux Store.  In this post I introduce LokiJS Dynamic Views and demonstrate how you
 could use a Flux Store to implement the same functionality.</p>
 <p>I also show how to use Flux Stores to go beyond LokiJS and implement some capabilities LokiJS doesn&#39;t yet (but will soon) provide.  I end with some Flux-Frustrations that I think databases are uniquely capable of solving.</p>
@@ -261,7 +260,7 @@ the user double clicks the book is for it be added to your favorites list, then
 maybe the action should be called BookActions.addToFavorites(book).</p>
 <p>We can go a step further.  What if the only actions where create, update, and
 delete?  This type of design constraint
-was the subject of DHH&#39;s 2006 keynote.
+was the subject of <a href="http://www.slideshare.net/vishnu/discovering-a-world-of-resources-on-rails">DHH&#39;s 2006 keynote</a>
 In it he made a controversial but persuasive argument that if you&#39;ve modeled
  your domain correctly that everything is CRUD.</p>
 <p>So in the above example the DHH way would be to:</p>
@@ -270,8 +269,14 @@ In it he made a controversial but persuasive argument that if you&#39;ve modeled
 ditching ActionCreators and just using our collections.</p>
 <pre><code><span class="hljs-tag">db</span><span class="hljs-class">.favorites</span><span class="hljs-class">.insert</span>({<span class="hljs-attribute">user</span>: current_user.id, <span class="hljs-attribute">book</span>: book});
 </code></pre><p>I&#39;m certainly not suggesting this as an unbreakable rule.  You shouldn&#39;t have to make an update in order to show a drop-down menu or transition pages.  For all
-non-crud operations, just use React-Router.</p>
+non-crud operations, just use React-Router</p>
+<!-- h1 --><h1 class="page-header" id="md-cqrs">CQRS</h1><p>In a <a href="https://medium.com/@dan_abramov/the-case-for-flux-379b7d1982c6">Case for Flux</a>, Dan relates Flux to a foundational concept of Command Query Responsibility Segregation.  It is a very worthwhile read.  Here is more information on
+<a href="http://martinfowler.com/bliki/CQRS.html">CQRS from Martin Fowler</a></p>
 <!-- end -->
+<hr>
+<a href="https://twitter.com/jrhicks">Follow Jeffrey Hicks on Twitter</a></a>
+<hr>
+<div id="disqus_thread"></div>
 </div>
 
 <div class="col-md-3">
@@ -458,6 +463,14 @@ non-crud operations, just use React-Router.</p>
           
             
             
+            <li><a href="#md-cqrs">CQRS</a></li>
+            
+          
+            
+            
+          
+            
+            
         </ul>
 
 
@@ -484,7 +497,6 @@ non-crud operations, just use React-Router.</p>
 <!-- endinject -->
 
 
-<div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     // Required: on line below, replace text in quotes with your forum shortname
