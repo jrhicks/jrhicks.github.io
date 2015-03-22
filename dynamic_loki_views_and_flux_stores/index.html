@@ -228,6 +228,8 @@ bookView.applyMap( <span class="hljs-function"><span class="hljs-params">(b)</sp
 <li><p>Why can&#39;t I have less coupling?</p>
 </li>
 </ul>
+<p>I love stores!  I just don&#39;t want to have to author a class for every
+store that is tightly coupled to the component it serves!</p>
 <!-- h1 --><h1 class="page-header" id="md-database-solutions">Database Solutions</h1><!-- h2 --><h2 id="md-decoupling">Decoupling</h2><p>What if we could create the Store from within the component?  And we could do it
 in a concise, declarative fashion that other people were figuring out how to keep
 performant!</p>
@@ -259,9 +261,11 @@ In it he made a controversial but persuasive argument that if you&#39;ve modeled
  your domain correctly that everything is CRUD.</p>
 <p>So in the above example the DHH way would be to:</p>
 <pre><code><span class="hljs-tag">FavoritesActions</span><span class="hljs-class">.create</span>({<span class="hljs-attribute">user</span>: current_user.id, <span class="hljs-attribute">book</span>: book})
-</code></pre><p>I&#39;m certainly not suggesting this as an unbreakable rule.  You shouldn&#39;t have to make an update in order to show a drop-down menu or perform some other route changing user interaction.  (Maybe next blog post: its either CRUD our a Route Change!)</p>
-<p>I do think that action creators would do nice to be named after data
-collections and for the actions on them to be CRUD.  As DHH says (I think) ... learn to love the CRUD.</p>
+</code></pre><p>While this is quite an opinionated stance.  It certainly looks good for
+ditching ActionCreators and just using our collections.</p>
+<pre><code><span class="hljs-tag">db</span><span class="hljs-class">.favorites</span><span class="hljs-class">.insert</span>({<span class="hljs-attribute">user</span>: current_user.id, <span class="hljs-attribute">book</span>: book});
+</code></pre><p>I&#39;m certainly not suggesting this as an unbreakable rule.  You shouldn&#39;t have to make an update in order to show a drop-down menu or transition pages.  For all
+non-crud operations, just use React-Router.</p>
 <!-- end -->
 </div>
 
@@ -400,6 +404,9 @@ collections and for the actions on them to be CRUD.  As DHH says (I think) ... l
           
             
             
+          
+            
+            
             <li><a href="#md-database-solutions">Database Solutions</a></li>
             
           
@@ -421,6 +428,9 @@ collections and for the actions on them to be CRUD.  As DHH says (I think) ... l
             
           
           <li style="margin-left: 0.5em;"><a href="#md-design-constraints">Design Constraints</a></li>
+          
+            
+            
           
             
             
