@@ -97,9 +97,10 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/object_interface_mappers/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-reflection-lost">Reflection Lost</h1><p>Server side HTML rendering in Rails is easy and concise because Rails offers HTML helpers <strong>reflection on
-the data schema and routes</strong>.  </p>
-<p>This <strong>reflection powers</strong> the concise Rails HTML Helpers: simple_form and link_to</p>
+<!-- h1 --><h1 class="page-header" id="md-server-side-ui-helpers">Server Side UI Helpers</h1><p>Server side HTML rendering in Rails is easy and concise because Rails offers reflection on
+both the data schema and routes.</p>
+<p>This <strong>reflection capability</strong> is the enabling commonality that powers many Rails helpers and gems including the
+very popular simple_form and link_to.</p>
 <pre><code class="lang-erb">&lt;<span class="hljs-variable">%=</span> simple_form_for <span class="hljs-variable">@user</span> <span class="hljs-keyword">do</span> |f| <span class="hljs-variable">%&gt;</span>
   &lt;<span class="hljs-variable">%=</span> f.input :username <span class="hljs-variable">%&gt;</span>
   &lt;<span class="hljs-variable">%=</span> f.input :password <span class="hljs-variable">%&gt;</span>
@@ -108,8 +109,7 @@ the data schema and routes</strong>.  </p>
 </code></pre>
 <pre><code class="lang-erb">&lt;<span class="hljs-variable">%=</span> link_to <span class="hljs-variable">@user</span><span class="hljs-variable">%&gt;</span>
 </code></pre>
-<p>We lose this ability to reflect on the db schema and routes from the front-end.  How can we get that back?  </p>
-<!-- h1 --><h1 class="page-header" id="md-introducing-oims">Introducing OIMs</h1><p>OIMS or (object interface mappers) provide the meta data to build interface components for our
+<!-- h1 --><h1 class="page-header" id="md-client-side-oims">Client Side OIMs</h1><p>OIMS or (object interface mappers) provide the meta data to build interface components for our
 objects.</p>
 <p><a href="http://devchat.tv/js-jabber/150-jsj-oims">OIMs with Richard Kennard, Geraint Luff, and David Luecke</a> - Javascript Jabber 72 Minutes</p>
 <!-- h1 --><h1 class="page-header" id="md-json-schema">JSON Schema</h1><p>JSON Schema</p>
@@ -249,7 +249,7 @@ objects.</p>
             
             
             
-            <li><a href="#md-reflection-lost">Reflection Lost</a></li>
+            <li><a href="#md-server-side-ui-helpers">Server Side UI Helpers</a></li>
             
           
             
@@ -266,10 +266,7 @@ objects.</p>
           
             
             
-          
-            
-            
-            <li><a href="#md-introducing-oims">Introducing OIMs</a></li>
+            <li><a href="#md-client-side-oims">Client Side OIMs</a></li>
             
           
             
