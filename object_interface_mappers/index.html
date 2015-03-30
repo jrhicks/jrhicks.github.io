@@ -8,7 +8,7 @@
     <meta name="keywords" content="Wikismith">
 
     <title>
-      Object Interface Mappers
+      Runtime Model Reflection For Concise UI Declaration and Validation In React
     </title>
 
     <!-- bower:css -->
@@ -84,8 +84,8 @@
 <!-- Docs page layout -->
 <div class="bs-docs-header" id="content">
     <div class="container">
-        <h1>Object Interface Mappers</h1>
-        <p>Runtime Model Reflection For Concise UI Declaration and Validation In React</p>
+        <h1>Runtime Model Reflection For Concise UI Declaration and Validation In React</h1>
+        <p>Introduction to OIMs, JSON Schema, and TCOMB</p>
     </div>
 </div>
 
@@ -97,7 +97,18 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/object_interface_mappers/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-server-side-ui-helpers">Server Side UI Helpers</h1><p>Server side HTML rendering in Rails is easy and concise because Rails offers reflection on
+<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>In this article I highlight an underlying capability of Rails that makes so many HTML Helpers
+and gems a pleasure to work with and introduce their client-side counterpart.</p>
+<p>I compare two enabling technologies for client side OIMs:</p>
+<ul>
+<li><p>JSON Schema</p>
+</li>
+<li><p>TCOMB</p>
+</li>
+</ul>
+<p>And finally we look at some amazing examples of using TCOMB to render react form
+components.</p>
+<!-- h2 --><h2 id="md-server-side-ui-helpers">Server Side UI Helpers</h2><p>Server side HTML rendering in Rails is easy and concise because Rails offers reflection on
 both the data schema and routes.</p>
 <p>This <strong>reflection capability</strong> is the enabling commonality that powers many Rails helpers and gems including the
 very popular simple_form and link_to.</p>
@@ -109,7 +120,7 @@ very popular simple_form and link_to.</p>
 </code></pre>
 <pre><code class="lang-erb">&lt;<span class="hljs-variable">%=</span> link_to <span class="hljs-variable">@user</span><span class="hljs-variable">%&gt;</span>
 </code></pre>
-<!-- h1 --><h1 class="page-header" id="md-client-side-oims">Client Side OIMs</h1><p>OIMS or (object interface mappers) provide the meta data to build interface components for our
+<!-- h2 --><h2 id="md-client-side-oims">Client Side OIMs</h2><p>OIMS or (object interface mappers) provide the meta data to build interface components for our
 objects.</p>
 <p><a href="http://devchat.tv/js-jabber/150-jsj-oims">OIMs with Richard Kennard, Geraint Luff, and David Luecke</a> - Javascript Jabber 72 Minutes</p>
 <!-- h1 --><h1 class="page-header" id="md-json-schema">JSON Schema</h1><p>JSON Schema</p>
@@ -249,7 +260,7 @@ objects.</p>
             
             
             
-            <li><a href="#md-server-side-ui-helpers">Server Side UI Helpers</a></li>
+            <li><a href="#md-introduction">Introduction</a></li>
             
           
             
@@ -266,8 +277,49 @@ objects.</p>
           
             
             
-            <li><a href="#md-client-side-oims">Client Side OIMs</a></li>
+          
             
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-server-side-ui-helpers">Server Side UI Helpers</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-client-side-oims">Client Side OIMs</a></li>
           
             
             
