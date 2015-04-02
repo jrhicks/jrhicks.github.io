@@ -8,7 +8,7 @@
     <meta name="keywords" content="Wikismith">
 
     <title>
-      Runtime Reflection For React Forms
+      React Form Generation
     </title>
 
     <!-- bower:css -->
@@ -84,7 +84,7 @@
 <!-- Docs page layout -->
 <div class="bs-docs-header" id="content">
     <div class="container">
-        <h1>Runtime Reflection For React Forms</h1>
+        <h1>React Form Generation</h1>
         <p>Object Interface Mappers (tcomb, json-schema etc.)</p>
     </div>
 </div>
@@ -97,51 +97,38 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/object_interface_mappers/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>In this article I highlight an underlying capability of Rails that makes so many HTML Helpers
-and gems a pleasure to work with and introduce their client-side counterpart.</p>
-<p>I compare two enabling technologies for client side OIMs:</p>
-<ul>
-<li><p>JSON Schema</p>
-</li>
-<li><p>TCOMB</p>
-</li>
-</ul>
-<p>And finally we look at some <a href="http://gcanti.github.io/tcomb-form/demo/index.html">amazing demos</a> of using TCOMB to render react form
-components.</p>
-<!-- h2 --><h2 id="md-server-side-ui-helpers">Server Side UI Helpers</h2><p>Server side HTML rendering in Rails is easy and concise because Rails offers reflection on
-both the data schema and routes.</p>
-<p>This <strong>reflection capability</strong> is the enabling commonality that powers many Rails helpers and gems including the
-very popular simple_form and link_to.</p>
-<pre><code class="lang-erb">&lt;<span class="hljs-variable">%=</span> simple_form_for <span class="hljs-variable">@user</span> <span class="hljs-keyword">do</span> |f| <span class="hljs-variable">%&gt;</span>
-  &lt;<span class="hljs-variable">%=</span> f.input :username <span class="hljs-variable">%&gt;</span>
-  &lt;<span class="hljs-variable">%=</span> f.input :password <span class="hljs-variable">%&gt;</span>
-  &lt;<span class="hljs-variable">%=</span> f.<span class="hljs-keyword">button</span> :submit <span class="hljs-variable">%&gt;</span>
-&lt;% end <span class="hljs-variable">%&gt;</span>
-</code></pre>
-<pre><code class="lang-erb">&lt;<span class="hljs-variable">%=</span> link_to <span class="hljs-variable">@user</span><span class="hljs-variable">%&gt;</span>
-</code></pre>
-<!-- h2 --><h2 id="md-client-side-oims">Client Side OIMs</h2><p>OIMS or (object interface mappers) provide the meta data to build interface components for our
-objects.</p>
-<p><a href="http://devchat.tv/js-jabber/150-jsj-oims">OIMs with Richard Kennard, Geraint Luff, and David Luecke</a> - Javascript Jabber 72 Minutes</p>
-<!-- h1 --><h1 class="page-header" id="md-json-schema">JSON Schema</h1><p>JSON Schema</p>
-<ul>
-<li><p>describes your existing data format</p>
-</li>
-<li><p>clear, human- and machine-readable documentation</p>
-</li>
-<li><p>complete structural validation, useful for</p>
-</li>
-</ul>
-<p>JSON Hyper-Schema</p>
-<ul>
-<li><p>describes your existing API - no new structures required</p>
-</li>
-<li><p>links (including URI Templates for target URIs)</p>
-</li>
-<li><p>forms - specify a JSON Schema for the desired data</p>
-</li>
-</ul>
-<pre><code class="lang-js">{
+<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>Here are two competing data definition
+libraries and the form generation components that accompany them:</p>
+<table border=1 cellpadding="10">
+<thead>
+<tr>
+<th style="padding: 15px">Standard</th>
+<th style="padding: 15px">Form Component</th>
+<th style="padding: 15px">validation</th>
+<th style="padding: 15px">presentation customization</th>
+<th style="padding: 15px">demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 15px">json-schema</td>
+<td style="padding: 15px">plexus-form</td>
+<td style="padding: 15px">plexus-validate</td>
+<td style="padding: 15px">with classes</td>
+<td  style="padding: 15px"><a href="http://appliedmathematicsanu.github.io/plexus-form/">demo</a></td>
+</tr>
+<tr>
+<td style="padding: 15px">tcomb</td>
+<td style="padding: 15px">tcomb-form</td>
+<td style="padding: 15px">tcomb-validate</td>
+<td style="padding: 15px">layout and style</td>
+<td style="padding: 15px"><a href="http://gcanti.github.io/tcomb-form/demo/index.html">demo</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- h1 --><h1 class="page-header" id="md-json-schema">JSON Schema</h1><pre><code class="lang-js">{
     "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Example schema"</span></span>,
     "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
     "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
@@ -149,11 +136,7 @@ objects.</p>
         "<span class="hljs-attribute">authorId</span>": <span class="hljs-value">{"<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>}</span>,
         "<span class="hljs-attribute">message</span>": <span class="hljs-value">{"<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>}
     </span>}</span>,
-    "<span class="hljs-attribute">links</span>": <span class="hljs-value">[
-        {"<span class="hljs-attribute">rel</span>": <span class="hljs-value"><span class="hljs-string">"self"</span></span>, "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/posts/{id}"</span></span>},
-        {"<span class="hljs-attribute">rel</span>": <span class="hljs-value"><span class="hljs-string">"author"</span></span>, "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/{authorId}"</span></span>}
-    ]
-</span>}
+}
 </code></pre>
 <!-- h2 --><h2 id="md-plexus-form">Plexus-form</h2><p>React component that take JSON Schemas</p>
 <p><a href="https://github.com/AppliedMathematicsANU/plexus-form">Plexus-form</a></p>
@@ -271,143 +254,7 @@ objects.</p>
           
             
             
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-server-side-ui-helpers">Server Side UI Helpers</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-client-side-oims">Client Side OIMs</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
             <li><a href="#md-json-schema">JSON Schema</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
             
           
             
