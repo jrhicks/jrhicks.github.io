@@ -97,9 +97,19 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/object_interface_mappers/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>Here are two competing data definition
-libraries and the form generation components that accompany them:</p>
-<table border=1 cellpadding="10">
+<!-- h1 --><h1 class="page-header" id="md-priorities">Priorities</h1><p>In many server side frameworks, the HTML rendering ecosystems are rich and enjoyable because separate
+libraries and components can rely on a central mechanism to reflect on the
+data schema and routes.  This <strong>reflection standard</strong> (as it turns out) is more useful than
+just converting our data into SQL, its usefull for converting our data into UI.  </p>
+<p>Unfortunately the lack of need for an ORM in our front-end, leaves our front-end component ecosystem without a common reflection api.  Not only must different component authors of Forms, Grids, Calendars, Sign Boards, and Cross Tabs implement their own API; but the application author must learn each API and repeat the description of their data schema throughout their application.</p>
+<p>I assert that selecting the correct React Form Generation component is
+less important than selecting the right way to describe your data.  I hope
+the React community will promulgate a few good data description standards
+and that all sorts of components ranging from forms, tables, calendars, sign boards,
+and cross-tabs will use the same data schematic to provide rich functionality.</p>
+<p>Maybe we will start calling these data description standards that help us generate UI, OIMs or
+<a href="http://devchat.tv/js-jabber/150-jsj-oims">Object Interface Mappers</a>.</p>
+<!-- h1 --><h1 class="page-header" id="md-react-form-components">React Form Components</h1><table border=1 cellpadding="10">
 <thead>
 <tr>
 <th style="padding: 15px">Standard</th>
@@ -212,6 +222,9 @@ libraries and the form generation components that accompany them:</p>
 <!-- h2 --><h2 id="md-tcomb-form-native">TCOMB Form Native</h2><ul>
 <li><a href="https://github.com/gcanti/tcomb-form-native">tcomb-form-native</a> - react-native powered form-handling</li>
 </ul>
+<!-- h1 --><h1 class="page-header" id="md-see-also">See Also</h1><p>OIMS or (object interface mappers) provide the meta data to build interface components for our
+objects.</p>
+<p><a href="http://devchat.tv/js-jabber/150-jsj-oims">OIMs with Richard Kennard, Geraint Luff, and David Luecke</a> - Javascript Jabber 72 Minutes</p>
 <!-- end -->
 <hr>
 
@@ -243,10 +256,24 @@ libraries and the form generation components that accompany them:</p>
             
             
             
-            <li><a href="#md-introduction">Introduction</a></li>
+            <li><a href="#md-priorities">Priorities</a></li>
             
           
             
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-react-form-components">React Form Components</a></li>
             
           
             
@@ -366,6 +393,20 @@ libraries and the form generation components that accompany them:</p>
             
           
             
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-see-also">See Also</a></li>
             
           
             

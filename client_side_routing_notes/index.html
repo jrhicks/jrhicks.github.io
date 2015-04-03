@@ -312,7 +312,7 @@ failed.  Our new store might look like:</p>
 </code></pre><p>A background action would work to keep these offline partitions in sync, simply updating the conflicts and sync status as needed.</p>
 <p>If the user navigated to a different project, the notes store would create a new partition for the new projectId.  If space became limited on the front end, the stores could dispose of data from other partitions that was in sync.</p>
 <p>Lets look closer to what this might look like as an <a href="https://github.com/goatslacker/alt">alt store</a></p>
-<pre><code><span class="hljs-keyword">import</span> alt from <span class="hljs-string">'../alt'</span>;
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> alt from <span class="hljs-string">'../alt'</span>;
 <span class="hljs-keyword">import</span> PartitionActions from <span class="hljs-string">'../actions/PartitionActions'</span>;
 
 <span class="hljs-keyword">class</span> PartitionedNotesStore {
@@ -347,7 +347,8 @@ failed.  Our new store might look like:</p>
   }
 
 }
-</code></pre><!-- end -->
+</code></pre>
+<!-- end -->
 <hr>
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="jrhicks">Tweet</a>
