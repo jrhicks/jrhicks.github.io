@@ -99,16 +99,16 @@
 
 <!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>In <a href="/client_side_routing_notes/index.html">my last post</a>, navigating <strong>data space</strong> was proposed as one of a few concerns of client side routing and the following architectures were investigated:</p>
 <ul>
-<li><p>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html<a href="http://twitter.com/hashtag/md" target="_blank">#md</a>-content-stores">Content Stores Pattern</a></p>
+<li><p>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores Pattern</a></p>
 </li>
-<li><p>Facebook&#39;s <a href="/client_side_routing_notes/index.html<a href="http://twitter.com/hashtag/md" target="_blank">#md</a>-relay-and-graphql">Relay Architecture</a></p>
+<li><p>Facebook&#39;s <a href="/client_side_routing_notes/index.html#md-relay-and-graphql">Relay Architecture</a></p>
 </li>
-<li><p>A Home Brewed <a href="/client_side_routing_notes/index.html<a href="http://twitter.com/hashtag/md" target="_blank">#md</a>-offline-partitions-store">Offline Partitions Store</a></p>
+<li><p>A Home Brewed <a href="/client_side_routing_notes/index.html#md-offline-partitions-store">Offline Partitions Store</a></p>
 </li>
 </ul>
 <p>In this article I recap these patterns quickly and introduce how an offline flux pattern and example project that draws on qualities of each of these.</p>
 <!-- h1 --><h1 class="page-header" id="md-content-stores-pattern">Content Stores Pattern</h1><p><img src="flux.png" width="100%"></p>
-<p><strong>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html<a href="http://twitter.com/hashtag/md" target="_blank">#md</a>-content-stores">Content Stores</a> approach is pure flux!</strong>  We have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed.</p>
+<p><strong>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores</a> approach is pure flux!</strong>  We have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed.</p>
 <!-- h1 --><h1 class="page-header" id="md-relay-architecture">Relay Architecture</h1><p><strong>Facebook&#39;s Relay approach is pure decoupling!</strong>  Statically declare the data needs of a component within itself.  Eliminate creating and <em>maintaining</em> custom server end-points that match the needs of each component (and subcomponent) on the page.</p>
 <p><img src="relay3.png" width="100%"></p>
 <!-- h1 --><h1 class="page-header" id="md-offline-flux">Offline Flux</h1><p>I liked the pure flux of Dan&#39;s approach and the pure decoupling of Relay.  How could I combine  these ideas, into an architecture that featured a replicating database that could be used offline.</p>

@@ -201,8 +201,8 @@ and cross-tabs will use the same data schematic to provide rich functionality.</
 
 // retrieves values <span class="hljs-keyword">from</span> the <span class="hljs-type">UI</span>
 <span class="hljs-keyword">var</span> formValues = {
-  username: $('<span class="hljs-comment"><a href="http://twitter.com/hashtag/username" target="_blank">#username</a>').val().trim() || null,</span>
-  password: $('<span class="hljs-comment"><a href="http://twitter.com/hashtag/password" target="_blank">#password</a>').val().trim() || null</span>
+  username: $('<span class="hljs-comment">#username').val().trim() || null,</span>
+  password: $('<span class="hljs-comment">#password').val().trim() || null</span>
 };
 
 // <span class="hljs-keyword">if</span> formValues = {username: null, password: 'password'}
