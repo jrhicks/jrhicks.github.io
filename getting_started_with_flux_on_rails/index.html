@@ -121,16 +121,16 @@ This snippet of code integrates Webpack into the Sprockets build process using t
 </ul>
 <!-- h1 --><h1 class="page-header" id="md-learning-flux">Learning Flux</h1><p>With just a basic understanding of Flux and React from watching:</p>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=nYkdrAPrdcw&amp;list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v#t=66">Hacker Way: Rethinking Web App Development at Facebook</a> - May 4, 2014 - Facebook, Inc</li>
+<li><a href="https://www.youtube.com/watch?v=nYkdrAPrdcw&amp;list=PLb0IAmt7-GS188xDYE-u1ShQmFFGbrk0v<a href="http://twitter.com/hashtag/t" target="_blank">#t</a>=66">Hacker Way: Rethinking Web App Development at Facebook</a> - May 4, 2014 - Facebook, Inc</li>
 </ul>
-<p>I needed to read through <a href="https://facebook.github.io/flux/docs/overview.html#content">Facebook&#39;s documentation</a> and scan the web to
+<p>I needed to read through <a href="https://facebook.github.io/flux/docs/overview.html<a href="http://twitter.com/hashtag/content" target="_blank">#content</a>">Facebook&#39;s documentation</a> and scan the web to
 take away some key understandings on how exactly to code a Flux application</p>
 <p><img src="flux_diagram.png" style="width: 100%">
-From <a href="http://facebook.github.io/flux/docs/overview.html#content">Facebook&#39;s Overview of Flux</a></p>
+From <a href="http://facebook.github.io/flux/docs/overview.html<a href="http://twitter.com/hashtag/content" target="_blank">#content</a>">Facebook&#39;s Overview of Flux</a></p>
 <!-- h2 --><h2 id="md-understanding-actions">Understanding Actions</h2><p>I think a key understanding of actions is that they are <strong>NOT</strong> functions or routines.  <u>Actions
 are data.</u></p>
 <p>&quot;When new data enters the system, whether through a person interacting with the application or through a web api call, that data is packaged into an <u>action</u> — <strong>an object literal containing the new
-fields of data and a specific action type</strong>.&quot; <a href="http://facebook.github.io/flux/docs/actions-and-the-dispatcher.html#actions-and-action-creators"><em>Actions and the Dispatcher</em>, Facebook, Inc</a></p>
+fields of data and a specific action type</strong>.&quot; <a href="http://facebook.github.io/flux/docs/actions-and-the-dispatcher.html<a href="http://twitter.com/hashtag/actions" target="_blank">#actions</a>-and-action-creators"><em>Actions and the Dispatcher</em>, Facebook, Inc</a></p>
 <!-- h4 --><h4 id="md-action-types">Action Types</h4><p>ActionTypes are literal primitives that are stored as constants.  It appears to be a react convention
 to use <a href="https://github.com/STRML/keyMirror">keyMirror</a> which given input: {key1: val1, key2: val2} will produce
 output {key1: key1, key2: key2}.</p>
@@ -164,11 +164,11 @@ output {key1: key1, key2: key2}.</p>
 
 <span class="hljs-keyword">var</span> ActionTypes = AppConstants.ActionTypes;
 
-<span class="hljs-built_in">module</span>.exports = {
+<span class="hljs-module"><span class="hljs-keyword">module</span>.exports = </span>{
 
   createStory: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(title, body)</span> </span>{
     AppDispatcher.handleViewAction({
-      type: ActionTypes.CREATE_STORY,
+      <span class="hljs-keyword">type</span>: ActionTypes.CREATE_STORY,
       title: title,
       body: body
     });
@@ -371,16 +371,16 @@ that the preferred way to join the data is in the store and not the components.<
 </code></pre>
 <p>To achieve the waitFor functionality the user store would capture a dispatchToken when
 it registered with the dispatcher.</p>
-<pre><code class="lang-javascript">  UserStore.dispatchToken = AppDispatcher.register(<span class="hljs-keyword">function</span>(payload) {
-    /* <span class="hljs-keyword">...</span> */
+<pre><code class="lang-javascript">  UserStore.dispatchToken = AppDispatcher.register(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(payload)</span> </span>{
+    <span class="hljs-comment">/* ... */</span>
   });
 </code></pre>
 <p>And then from within the ArticleStore callback we can wait for the UserStore to
 process the action before we proceed:</p>
-<pre><code class="lang-javascript"> ArticleStore.dispatchToken = AppDispatcher.register(<span class="hljs-keyword">function</span>(payload) {
+<pre><code class="lang-javascript"> ArticleStore.dispatchToken = AppDispatcher.register(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(payload)</span> </span>{
     <span class="hljs-keyword">if</span> (payload.actionType === <span class="hljs-string">'foobar'</span>) {
       AppDispatcher.waitFor([UserStore.dispatchToken]);
-      /* <span class="hljs-keyword">...</span> */
+      <span class="hljs-comment">/* ... */</span>
     }
   });
 </code></pre>
@@ -603,23 +603,23 @@ using string keys.</p>
 </code></pre>
 <!-- h2 --><h2 id="md-alt-stores">Alt Stores</h2><p>A super terse alt.js feature bindActions.  This procedure binds every methodxyz in the action to onMethodxyz.
 No constants, no case-soup, no need to re-iterate bindings.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">class</span> LocationStore {
-  <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
-    <span class="hljs-keyword">this</span>.bindActions(locationActions)
+<pre><code class="lang-javascript">class LocationStore {
+  constructor() {
+    this.bindActions(locationActions)
 
-    <span class="hljs-keyword">this</span>.city = <span class="hljs-string">'Denver'</span>
-    <span class="hljs-keyword">this</span>.state = <span class="hljs-string">'Colorado'</span>
+    this.city = 'Denver'
+    this.<span class="hljs-keyword">state</span> = 'Colorado'
   }
 
-  onUpdateLocation(obj) {
-    <span class="hljs-keyword">var</span> { city, state } = obj
-    <span class="hljs-keyword">this</span>.city = city
-    <span class="hljs-keyword">this</span>.state = state
+  <span class="hljs-keyword">on</span>UpdateLocation(obj) {
+    var { city, <span class="hljs-keyword">state</span> } = obj
+    this.city = city
+    this.<span class="hljs-keyword">state</span> = <span class="hljs-keyword">state</span>
   }
 
 }
 
-<span class="hljs-keyword">var</span> locationStore = alt.createStore(LocationStore)
+var locationStore = alt.createStore(LocationStore)
 </code></pre>
 <p>Stores are immutable, but accessible.  For example to get the city:</p>
 <pre><code class="lang-javascript">locationStore.<span class="hljs-function"><span class="hljs-title">getState</span><span class="hljs-params">()</span></span>.city
@@ -630,31 +630,31 @@ No constants, no case-soup, no need to re-iterate bindings.</p>
 <!-- h2 --><h2 id="md-alt-components">Alt Components</h2><p>The alt.createStores gave them the ability to listen and unlisten.</p>
 <pre><code class="lang-jsx">var LocationComponent = React.createClass({
   getInitialState() {
-    <span class="hljs-keyword">return</span> locationStore.getState()
+    return locationStore.getState()
   },
 
   componentWillMount() {
-    locationStore.listen(<span class="hljs-keyword">this</span>.onChange)
+    locationStore.listen(this.<span class="hljs-keyword">on</span>Change)
   },
 
   componentWillUnmount() {
-    locationStore.unlisten(<span class="hljs-keyword">this</span>.onChange)
+    locationStore.unlisten(this.<span class="hljs-keyword">on</span>Change)
   },
 
-  onChange() {
-    <span class="hljs-keyword">this</span>.setState(<span class="hljs-keyword">this</span>.getInitialState())
+  <span class="hljs-keyword">on</span>Change() {
+    this.<span class="hljs-built_in">set</span>State(this.getInitialState())
   },
 
   render() {
-    <span class="hljs-keyword">return</span> (
-      &lt;<span class="hljs-keyword">div</span>&gt;
-        &lt;p&gt;
-          City {<span class="hljs-keyword">this</span>.state.city}
-        &lt;/p&gt;
-        &lt;p&gt;
-          State {<span class="hljs-keyword">this</span>.state.state}
-        &lt;/p&gt;
-      &lt;/<span class="hljs-keyword">div</span>&gt;
+    return (
+      <span class="hljs-variable">&lt;div&gt;</span>
+        <span class="hljs-variable">&lt;p&gt;</span>
+          City {this.<span class="hljs-keyword">state</span>.city}
+        <span class="hljs-variable">&lt;/p&gt;</span>
+        <span class="hljs-variable">&lt;p&gt;</span>
+          State {this.<span class="hljs-keyword">state</span>.<span class="hljs-keyword">state</span>}
+        <span class="hljs-variable">&lt;/p&gt;</span>
+      <span class="hljs-variable">&lt;/div&gt;</span>
     )
   }
 })

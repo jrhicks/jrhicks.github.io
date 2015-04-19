@@ -275,7 +275,7 @@ ditching ActionCreators and just using our collections.</p>
 <pre><code><span class="hljs-tag">db</span><span class="hljs-class">.favorites</span><span class="hljs-class">.insert</span>({<span class="hljs-attribute">user</span>: current_user.id, <span class="hljs-attribute">book</span>: book});
 </code></pre><p>I&#39;m certainly not suggesting this as an unbreakable rule.  You shouldn&#39;t have to make an update in order to show a drop-down menu or transition pages.  For all
 non-crud operations, just use React-Router</p>
-<!-- h1 --><h1 class="page-header" id="md-cqrs">CQRS</h1><p>In a <a href="https://medium.com/@dan_abramov/the-case-for-flux-379b7d1982c6">Case for Flux</a>, Dan relates Flux to a foundational concept of Command Query Responsibility Segregation.  It is a very worthwhile read.  Here is more information on
+<!-- h1 --><h1 class="page-header" id="md-cqrs">CQRS</h1><p>In a <a href="https://medium.com/<img width="30px" src="http://avatars.io/twitter/dan_abramov"> <a href="http://twitter.com/dan_abramov" target="_blank">@dan_abramov</a>/the-case-for-flux-379b7d1982c6">Case for Flux</a>, Dan relates Flux to a foundational concept of Command Query Responsibility Segregation.  It is a very worthwhile read.  Here is more information on
 <a href="http://martinfowler.com/bliki/CQRS.html">CQRS from Martin Fowler</a></p>
 <!-- h1 --><h1 class="page-header" id="md-conclusion">Conclusion</h1><p>I&#39;m not suggesting that Flux is bad.  In fact I use it extensively in a <a href="https://www.youtube.com/watch?v=HuaaEKpNEOU">Map editing application</a>.  But if we can invoke its
 elements dynamicly, abstract away performance concerns, reduce coupling, and preserve CQRS - I think we should investigate it.</p>
