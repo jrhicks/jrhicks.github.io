@@ -120,10 +120,186 @@
 <li><p>View - Views are React components.  They listen to changes in certain stores and re-render themselves as needed from data in 1 or more stores.  React components can respond to user events by dispatching actions.</p>
 </li>
 </ul>
-<!-- h1 --><h1 class="page-header" id="md-build-todomvc-using-flux">Build TodoMVC using Flux</h1><ul>
-<li><a href="https://github.com/arkency/react_flux_alt_immutable_todolist">https://github.com/arkency/react_flux_alt_immutable_todolist</a></li>
+<!-- h1 --><h1 class="page-header" id="md-flux-original">Flux Original</h1><!-- h2 --><h2 id="md-actions">Actions</h2><ul>
+<li><p>An action is data.</p>
+</li>
+<li><p>You write action creators.</p>
+</li>
+<li><p>Action creators create the data and send it the dispatcher.</p>
+</li>
 </ul>
-<!-- end -->
+<pre><code>var TodoActions = {
+
+  updateText: function(<span class="hljs-property">id</span>, <span class="hljs-type">text</span>) {
+    AppDispatcher.dispatch({
+      actionType: TodoConstants.TODO_UPDATE_TEXT,
+      <span class="hljs-property">id</span>: <span class="hljs-property">id</span>,
+      <span class="hljs-type">text</span>: <span class="hljs-type">text</span>
+    });
+  },
+
+  destroy: function(<span class="hljs-property">id</span>) {
+  AppDispatcher.dispatch({
+    actionType: TodoConstants.TODO_DESTROY,
+    <span class="hljs-property">id</span>: <span class="hljs-property">id</span>
+  });
+}
+</code></pre><!-- h2 --><h2 id="md-dispatcher">Dispatcher</h2><ul>
+<li><p>Sends the action to all stores that have registered with it.</p>
+</li>
+<li><p>Only 1 dispatcher.</p>
+</li>
+</ul>
+<!-- h2 --><h2 id="md-stores">Stores</h2><ul>
+<li><p>Register with the dispatcher.</p>
+</li>
+<li><p>Inspect the action and decide whether and how to update its data.</p>
+</li>
+<li><p>Emit Change</p>
+</li>
+</ul>
+<pre><code>AppDispatcher.register(function(action) {
+  var <span class="hljs-built_in">text</span>;
+
+  <span class="hljs-keyword">switch</span>(action.actionType) {
+    <span class="hljs-keyword">case</span> TodoConstants.TODO_CREATE:
+      <span class="hljs-built_in">text</span> = action.<span class="hljs-built_in">text</span>.<span class="hljs-built_in">trim</span>();
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">text</span> !== <span class="hljs-string">''</span>) {
+        create(<span class="hljs-built_in">text</span>);
+        TodoStore.emitChange();
+      }
+      <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-keyword">case</span> TodoConstants.TODO_TOGGLE_COMPLETE_ALL:
+      <span class="hljs-keyword">if</span> (TodoStore.areAllComplete()) {
+        updateAll({complete: <span class="hljs-keyword">false</span>});
+      } <span class="hljs-keyword">else</span> {
+        updateAll({complete: <span class="hljs-keyword">true</span>});
+      }
+      TodoStore.emitChange();
+      <span class="hljs-keyword">break</span>;
+</code></pre><!-- h2 --><h2 id="md-view">View</h2><ul>
+<li><p>These are React Components</p>
+</li>
+<li><p>Components can populate the default state fromt he store</p>
+</li>
+<li><p>When components mount, have them listen to emitted changes from the store</p>
+</li>
+<li><p>When components unmount, have them stop</p>
+</li>
+</ul>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTodoState</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">return</span> {
+    allTodos: TodoStore.getAll(),
+    areAllComplete: TodoStore.areAllComplete()
+  };
+}
+
+<span class="hljs-keyword">var</span> TodoApp = React.createClass({
+
+  getInitialState: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> getTodoState();
+  },
+
+  componentDidMount: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    TodoStore.addChangeListener(<span class="hljs-keyword">this</span>._onChange);
+  },
+
+  componentWillUnmount: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    TodoStore.removeChangeListener(<span class="hljs-keyword">this</span>._onChange);
+  },
+
+  <span class="hljs-comment">/**
+   * Event handler for 'change' events coming from the TodoStore
+   */</span>
+  _onChange: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">this</span>.setState(getTodoState());
+  }
+
+  render: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">/* Ommitted */</span>
+  }
+</code></pre><!-- h1 --><h1 class="page-header" id="md-flux-ecosystem">Flux Ecosystem</h1><p>Flux is a convention not a library.  Even the dispatcher which is a library isn&#39;t that hard to re-write.</p>
+<ul>
+<li><p><a href="https://github.com/voronianski/flux-comparison">Flux Comparison</a></p>
+</li>
+<li><p><a href="/getting_started_with_flux_on_rails/index.html#md-adopting-a-flux-library">Adopting a Flux Library</a></p>
+</li>
+</ul>
+<!-- h1 --><h1 class="page-header" id="md-build-todomvc-using-flux">Build TodoMVC using Flux</h1><ul>
+<li><p>git clone <a href="https://github.com/arkency/react_flux_alt_immutable_todolist">https://github.com/arkency/react_flux_alt_immutable_todolist</a></p>
+</li>
+<li><p>cd flux_alt_immutable_todolist</p>
+</li>
+<li><p>grunt build</p>
+</li>
+<li><p>grunt serve</p>
+</li>
+</ul>
+<!-- h2 --><h2 id="md-review-code-base">Review code base</h2><ul>
+<li><p>Form responds to input</p>
+</li>
+<li><p>Todo items respond</p>
+</li>
+</ul>
+<!-- h2 --><h2 id="md-clippy">Clippy</h2><p>Time magazine named Clippy one of the 50 worst inventions.  Sounds like a  good idea.</p>
+<p><img src="http://img.timeinc.net/time/photoessays/2010/worst_inventions/worstinventions_clippy.jpg" width="20%"></p>
+<pre><code><span class="hljs-keyword">import</span> ImmutableStore from <span class="hljs-string">'alt/utils/ImmutableUtil'</span>;
+<span class="hljs-keyword">import</span> AltInstance    from <span class="hljs-string">'lib/AltInstance'</span>;
+<span class="hljs-keyword">import</span> Actions        from <span class="hljs-string">'actions/TodoList'</span>;
+
+<span class="hljs-keyword">class</span> ClippyStore {
+  <span class="hljs-constructor"><span class="hljs-keyword">constructor</span>() </span>{
+    <span class="hljs-keyword">let</span> { addTask, removeTask } = Actions;
+
+    <span class="hljs-keyword">this</span>.bindListeners({
+      add: addTask,
+      remove: removeTask
+    });
+
+    <span class="hljs-keyword">this</span>.state = <span class="hljs-string">"Hello :)"</span>;
+  }
+
+  add(task) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Got It! Task noted."</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.setState(<span class="hljs-string">"Got it!  Task noted."</span>);
+  }
+
+  remove(taskID) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.setState(<span class="hljs-string">"Awesome!"</span>);
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> AltInstance.createStore(ImmutableStore(ClippyStore));
+</code></pre><!-- h2 --><h2 id="md-clippy-view">Clippy View</h2><ul>
+<li>Create class -vs- ES6 Classes</li>
+</ul>
+<pre><code><span class="hljs-keyword">import</span> <span class="hljs-type">React</span> from <span class="hljs-symbol">'react</span>/addons';
+<span class="hljs-keyword">import</span> { <span class="hljs-type">Alert</span> } from <span class="hljs-symbol">'react</span>-bootstrap';
+<span class="hljs-keyword">import</span> <span class="hljs-type">ClippyStore</span> from <span class="hljs-symbol">'stores</span>/<span class="hljs-type">Clippy</span>';
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Clippy</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> {</span>
+  constructor(props) {
+    <span class="hljs-keyword">super</span>(props);
+
+    <span class="hljs-keyword">this</span>.state = { message: <span class="hljs-type">ClippyStore</span>.getState() };
+    <span class="hljs-keyword">this</span>.onChange = <span class="hljs-keyword">this</span>.onChange.bind(<span class="hljs-keyword">this</span>);
+  }
+
+  componentDidMount()    { <span class="hljs-type">ClippyStore</span>.listen(<span class="hljs-keyword">this</span>.onChange); }
+  componentWillUnmount() { <span class="hljs-type">ClippyStore</span>.unlisten(<span class="hljs-keyword">this</span>.onChange); }
+
+  onChange()  { <span class="hljs-keyword">this</span>.setState({ message: <span class="hljs-type">ClippyStore</span>.getState() }); }
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;<span class="hljs-type">Alert</span>&gt; {<span class="hljs-keyword">this</span>.state.message} &lt;/<span class="hljs-type">Alert</span>&gt;
+    );
+  }
+}
+
+export <span class="hljs-keyword">default</span> <span class="hljs-type">Clippy</span>;
+</code></pre><!-- end -->
 <hr>
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="jrhicks">Tweet</a>
@@ -282,7 +458,322 @@
           
             
             
+            <li><a href="#md-flux-original">Flux Original</a></li>
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-actions">Actions</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-dispatcher">Dispatcher</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-stores">Stores</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-view">View</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-flux-ecosystem">Flux Ecosystem</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
             <li><a href="#md-build-todomvc-using-flux">Build TodoMVC using Flux</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-review-code-base">Review code base</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-clippy">Clippy</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-clippy-view">Clippy View</a></li>
+          
+            
+            
+          
+            
             
           
             
