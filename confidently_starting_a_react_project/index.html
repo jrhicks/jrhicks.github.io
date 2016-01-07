@@ -141,9 +141,15 @@ to be benefiting from it psychologically.</p>
 <li><p>Insight/guidance rather than more tools/opacity - You will find the most valuable thing is <a href="https://github.com/soulmachine/react-starter-kits">Clear, Concise, Current, and Correct Instructions On Trusted Tools</a></p>
 </li>
 </ul>
-<!-- h1 --><h1 class="page-header" id="md-project-setup">Project Setup</h1><p>Per Pete Hunt, you are going to want to pick up ES6 along the way, so you want to be sure to support it in your build/bundle process, so ES6 (although you don&#39;t need ES6 in all-its-depth) will be a requirement of the boilerplate.  Also, so we can avoid choosing between CommonJS and AMD, lets just learn <a href="http://exploringjs.com/es6/ch_modules.html">ES6 Modules</a> real fast:</p>
-<p>With ES6, you have 2 syntaxes.  You can either have multiple named exports or a single un-named export:</p>
-<p>Use Multiple <em>named</em> exports for some library like Math where you want to provide multiple helpful routines.</p>
+<!-- h1 --><h1 class="page-header" id="md-language">Language</h1><p>Per Pete Hunt, you don&#39;t have to learn ES6 (aka ES2015) from the start, but you are going to want to pick it up as you go.  So we choose to setup our project to support ES6, but we will only adopt and use features as-needed.</p>
+<!-- h1 --><h1 class="page-header" id="md-module-format">Module Format</h1><p>Okay.  We don&#39;t want to have to choose between AMD and CommonJS so lets just <a href="http://exploringjs.com/es6/ch_modules.html">learn ES6 modules</a>.  This is the first thing we <em>need to learn</em> about ES6.  We just need to understand 2 basic syntaxes:</p>
+<ul>
+<li><p>multiple named exports</p>
+</li>
+<li><p>single default export</p>
+</li>
+</ul>
+<p>Use Multiple <em>named</em> exports for some library like Math where you want to export  <em>multiple named</em> functions.</p>
 <pre><code><span class="hljs-comment">//------ lib.js ------</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> sqrt = <span class="hljs-built_in">Math</span>.sqrt;
 <span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">square</span><span class="hljs-params">(x)</span> </span>{
@@ -163,7 +169,7 @@ to be benefiting from it psychologically.</p>
 <span class="hljs-built_in">console</span>.log(square(<span class="hljs-number">11</span>)); <span class="hljs-comment">// 121</span>
 <span class="hljs-built_in">console</span>.log(diag(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
 You can also <span class="hljs-keyword">import</span> the complete module:
-</code></pre><p>Use a <em>default</em> where it makes more sense for a single and un-needely named export.</p>
+</code></pre><p>Use a <em>default</em> where it makes more sense for a single export.</p>
 <pre><code><span class="hljs-keyword">For</span> example, a <span class="hljs-function"><span class="hljs-keyword">function</span>:</span>
 
 <span class="hljs-comment">//------ myFunc.js ------</span>
@@ -172,8 +178,40 @@ export <span class="hljs-keyword">default</span> <span class="hljs-function"><sp
 <span class="hljs-comment">//------ main1.js ------</span>
 <span class="hljs-title">import</span> <span class="hljs-title">myFunc</span> <span class="hljs-title">from</span> '<span class="hljs-title">myFunc</span>';</span>
 myFunc();
-</code></pre><p>Pet Hunt recommends Webpack, and I couldn&#39;t agree more.  I think the choice about transpilers has really ended.  The community has really settled on Babel 6, but in order for Babel to win they went through a very competitive period of innovation where it went from being a specific tool to convert ES6 to ES5 (aka 6to5), to a more general transpiler (Babel).  To a highly configurable transpiler (Babel 6).  We need to be sure our webpack setup is configured for Babel 6.</p>
-<!-- h1 --><h1 class="page-header" id="md-atom">Atom</h1><p>Project snippets.  Reload with control-option-command-L.</p>
+</code></pre><!-- h1 --><h1 class="page-header" id="md-build-bundler">Build / Bundler</h1><p>Per Pete Hunt&#39;s advice for many good reasons:  Webpack.</p>
+<!-- h1 --><h1 class="page-header" id="md-transpiler">Transpiler</h1><p>The community has really settled on Babel 6, but in order for Babel to win they went through a very competitive period of innovation where it went from being a specific tool to convert ES6 to ES5 (aka 6to5), to a more general transpiler (Babel).  To a highly modular all-transformations-are-plugins (Babel 6.0.0)</p>
+<p>Here is what you need to know about Babel 6.  Every type of new syntax is its own transformation, and <strong>none are defaults</strong>.</p>
+<ul>
+<li>check-es2015-constants</li>
+<li>transform-es2015-arrow-functions</li>
+<li>transform-es2015-block-scoped-functions</li>
+<li>transform-es2015-block-scoping</li>
+<li>transform-es2015-classes</li>
+<li>transform-es2015-computed-properties</li>
+<li>transform-es2015-destructuring</li>
+<li>transform-es2015-for-of</li>
+<li>transform-es2015-function-name</li>
+<li>transform-es2015-literals</li>
+<li>transform-es2015-modules-commonjs</li>
+<li>transform-es2015-object-super</li>
+<li>transform-es2015-parameters</li>
+<li>transform-es2015-shorthand-properties</li>
+<li>transform-es2015-spread</li>
+<li>transform-es2015-sticky-regex</li>
+<li>transform-es2015-template-literals</li>
+<li>transform-es2015-typeof-symbol</li>
+<li>transform-es2015-unicode-regex</li>
+<li>transform-regenerator</li>
+</ul>
+<p>But you can have presets.  Presets are collections of transformation.  You can configure your transpiler to support all of ES6 (listed above) with one preset: ES2015.  Yes ES6 and ES2015 are the same thing.</p>
+<ul>
+<li>npm install babel-preset-es2015</li>
+</ul>
+<p>Add the following line to your .babelrc file:</p>
+<pre><code>{
+  "<span class="hljs-attribute">presets</span>": <span class="hljs-value">[<span class="hljs-string">"es2015"</span>]
+</span>}
+</code></pre><!-- h1 --><h1 class="page-header" id="md-atom">Atom</h1><p>Project snippets.  Reload with control-option-command-L.</p>
 <!-- h1 --><h1 class="page-header" id="md-notable-tweets">Notable tweets</h1><p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I only want <a href="https://t.co/KjNLQqay1R">https://t.co/KjNLQqay1R</a> for styling a React app. Compose your styles with components. This is it for me.</p>&mdash; Ryan Florence (<img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a>) <a href="https://twitter.com/ryanflorence/status/684528942456279040">January 6, 2016</a></blockquote></p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!-- end -->
@@ -392,7 +430,271 @@ myFunc();
           
             
             
-            <li><a href="#md-project-setup">Project Setup</a></li>
+            <li><a href="#md-language">Language</a></li>
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-module-format">Module Format</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-build-bundler">Build / Bundler</a></li>
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-transpiler">Transpiler</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
