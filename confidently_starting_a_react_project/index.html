@@ -97,14 +97,13 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/confidently_starting_a_react_project/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-the-paradox-of-choice">The Paradox of Choice</h1><p>The Paradox of Choice - Why More Is Less is a 2004 book by American psychologist Barry Schwartz. In the book, Schwartz argues that eliminating consumer choices can greatly reduce anxiety for shoppers.</p>
+<!-- h1 --><h1 class="page-header" id="md-2016-javascript-fatigue-resolution">2016 Javascript Fatigue Resolution</h1><p>Eric Clemmons blew up twitter with a well timed proposal that the react community resolve to fix <a href="http://tinyurl.com/zbahygs">Javascript Fatigue</a> in 2016.</p>
 <blockquote>
-<p>Autonomy and Freedom of choice are critical  to our well being, and
-choice is critical to freedom and autonomy. Nonetheless, though
-modern Americans have more choice than any group of people ever has
-before, and thus, presumably, more freedom and autonomy, we don&#39;t seem
-to be benefiting from it psychologically.</p>
-<p> quoted from Ch.5, <a href="http://www.ted.com/talks/barry_schwartz_on_the_paradox_of_choice?language=en">The Paradox of Choice, 2004</a></p>
+<p>Ultimately, the problem is that by choosing React
+(and inherently JSX), you’ve unwittingly opted
+into a confusing nest of build tools, boilerplate,
+linters, &amp; time-sinks to deal with before you ever
+get to create anything.</p>
 </blockquote>
 <!-- h2 --><h2 id="md-modern-react-choices">Modern React Choices</h2><ul>
 <li><p>Package Manager Choices: NPM, Bower</p>
@@ -119,6 +118,8 @@ to be benefiting from it psychologically.</p>
 </li>
 <li><p>Productivity Options: Dev Server, Hot Reloading, Linting, OpenBrowser</p>
 </li>
+<li><p>Coding Style: Filenames, Spacing, Casing, React createClass vs React.Component, ... much more</p>
+</li>
 <li><p>Code Organization: Nested Folders, LIFT</p>
 </li>
 <li><p>Flux Choices: Facebook&#39;s Flux, fluxxor, refluxjs, barracks, mcfly, marty, dispatchr, fetchr, fluxy, normalizr, flummox, alt, tuxx, redux</p>
@@ -128,25 +129,23 @@ to be benefiting from it psychologically.</p>
 <li><p>Styling Choices: Inline, jsxstyle, css-modules, react-jss ...</p>
 </li>
 </ul>
-<!-- h2 --><h2 id="md-javascript-fatigue">Javascript Fatigue</h2><p>Eric Clemmons blew up twitter with a well timed proposal that the react community resolve to fix <a href="http://tinyurl.com/zbahygs">Javascript Fatigue</a> in 2016.</p>
-<p>Some mixed reactions:</p>
-<p><img width="30px" src="http://avatars.io/twitter/mjackson"> <a href="http://twitter.com/mjackson" target="_blank">@mjackson</a> - This is kind of how I feel about #Javascript fatigue <a href="https://www.youtube.com/watch?v=akiVi1sR2rM">https://www.youtube.com/watch?v=akiVi1sR2rM</a> (Skip to 2:25)</p>
-<p><img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a> - I released Ember Tools Mar &#39;13 cause setting up Ember was terrible.&#10;Core team embraced ideas as ember-cli, first 1.x release July &#39;15.</p></p>
-<p><img width="30px" src="http://avatars.io/twitter/floydophone"> <a href="http://twitter.com/floydophone" target="_blank">@floydophone</a> - The reactjs community needs more opinions to help out newbies. Here&#39;s my first pass. Feedback/PRs welcome! <a href="https://t.co/Tfohv11miV">https://t.co/Tfohv11miV</a></p>
-<!-- h2 --><h2 id="md-fatigue-solutions">Fatigue Solutions</h2><ul>
-<li><p>Relax - You don&#39;t have to pick the best for your project to be a success.</p>
-</li>
-<li><p>Opinions - Pete Hunt&#39;s <a href="https://twitter.com/floydophone/status/684109201665208321">React Howto</a> 1/4/16</p>
-</li>
-<li><p>Boilerplates -  <a href="http://andrewhfarmer.com/starter-project/">Boilerplate Search Engine</a> because a good boilerplate has <strong>everything you need</strong> and <strong>nothing you don&#39;t</strong></p>
-</li>
-<li><p>Tools &amp; Generators - <a href="http://www.overreact.io/?utm_source=javascriptweekly&amp;utm_medium=email">The React File Generator</a></p>
-</li>
-<li><p>Insight/guidance rather than more tools/opacity - You will find the most valuable thing is <a href="https://github.com/soulmachine/react-starter-kits">Clear, Concise, Current, and Correct Instructions On Trusted Tools</a></p>
-</li>
-</ul>
-<!-- h1 --><h1 class="page-header" id="md-opinions-amp-instructions">Opinions &amp; Instructions</h1><p>After studying the opinions, boilerplates, insight/guidance and messaging leaders on twitter.  Here are some pretty good choices for a project setup with enough information about each selection to both setup and understand the setup of your project.</p>
-<!-- h2 --><h2 id="md-package-manager">Package Manager</h2><p>Not really a choice.  NPM.  But don&#39;t just use it to install the tools for someone elses project, we are going to start and understand our own project:</p>
+<!-- h2 --><h2 id="md-fatigue-solutions">Fatigue Solutions</h2><!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-mindfulness">Mindfulness</h3><p>Understand <a href="http://www.ted.com/talks/barry_schwartz_on_the_paradox_of_choice?language=en">The Paradox of Choice, 2004</a></p>
+<blockquote>
+<p>Choice is critical to freedom and autonomy. Nonetheless, we
+have have more choice than ever before but
+we don&#39;t seem to be benefiting from it psychologically.</p>
+</blockquote>
+<p>Relax - Success doesn&#39;t depend on picking the absolute best</p>
+<p>Embrace Opinions</p>
+</div><!-- h3 --><div class='col-sm-4'><h3 id="md-boilerplates-amp-generators">Boilerplates &amp; Generators</h3><p>Hard to find the <em>perfect boilerplate</em> and once installed can be a bit overwhelming: difficult to troubleshoot, difficult to extend &amp; tweak.</p>
+<p><a href="http://andrewhfarmer.com/starter-project/">Boilerplate Search Engine</a> because a good boilerplate has <strong>everything you need</strong> and <strong>nothing you don&#39;t</strong></p>
+<p><a href="http://www.overreact.io/?utm_source=javascriptweekly&amp;utm_medium=email">The React File Generator</a></p>
+</div><!-- h3 --><div class='col-sm-4'><h3 id="md-trusted-agents">Trusted Agents</h3><p><img width="30px" src="http://avatars.io/twitter/floydophone"> <a href="http://twitter.com/floydophone" target="_blank">@floydophone</a> - Pete Hunt - Worked on React at Facebook and wrote <a href="https://twitter.com/floydophone/status/684109201665208321">React Howto</a> in response to Javascript Fatigue buzz.</p>
+<p><img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a> - Ryan Florence - React heavyweight who wrote ember tools and react-router</p>
+<p><a href="https://github.com/airbnb/javascript/tree/master/react">Airbnb Style Guides</a></p>
+<p><a href="https://github.com/soulmachine/react-starter-kits">Clear, Concise, Correct Guides</a></p>
+</div></div><!-- h1 --><h1 class="page-header" id="md-confident-project-setup">Confident Project Setup</h1><p>Setup your project yourself using the choices of trusted agents and crisp understanding of their configuration so that you can confidently extend, tweak, and troubleshoot.</p>
+<!-- h2 --><h2 id="md-package-manager">Package Manager</h2><p>NPM -vs- Bower isn&#39;t really a choice.  NPM wins and Pete Hunt says its where learning needs to begin.  You are probably already familiar with <em>npm install</em>, but you may be less aware that your new project is initialized with npm.</p>
 <pre><code><span class="hljs-keyword">mkdir</span> myproject
 <span class="hljs-keyword">cd</span> myproject
 npm init
@@ -180,7 +179,17 @@ npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save-
 <li><a href="http://jamesknelson.com/the-six-things-you-need-to-know-about-babel-6/">The Six Things You Need To Know About Babel 6</a></li>
 <li><a href="http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/">Using ES6 and ES7 in the Browser, with Babel 6 and Webpack</a></li>
 </ul>
-<!-- h2 --><h2 id="md-building-bundling">Building / Bundling</h2><p>Webpack - like any new build tool can be a little intimidating to learn.  These basics can get you going <strong>very quickly</strong> though:</p>
+<!-- h2 --><h2 id="md-building-amp-bundling">Building &amp; Bundling</h2><p>Pete Hunt&#39;s Advice:</p>
+<blockquote>
+<p>For a number of good technical reasons CommonJS modules (i.e. everything in
+npm) cannot be used natively in the browser. You need a JavaScript
+“bundler” to “bundle” these modules into .js files that you can include in
+your web page with a &lt;script&gt; tag.</p>
+<p>Examples of JavaScript bundlers include webpack and browserify. Both are
+good choices, but I prefer webpack since it has a lot of features that make
+development of large apps easier.</p>
+</blockquote>
+<p>Webpack - like any new build tool can be a little intimidating to learn.  These basics can get you going <strong>very quickly</strong> though:</p>
 <p>For those who don&#39;t know what webpack is, please read <a href="https://github.com/ruanyf/webpack-demos">this tutorial</a>.</p>
 <pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> webpack
 </code></pre><p>Install essential webpack loaders(What is loader? See <a href="https://webpack.github.io/docs/loaders.html">official docs here</a>):</p>
@@ -252,46 +261,7 @@ npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save-
   }
 };
 </code></pre>
-<!-- h2 --><h2 id="md-module-format">Module Format</h2><p>Okay.  We don&#39;t want to have to choose between AMD and <a href="http://www.sitepoint.com/understanding-module-exports-exports-node-js/">CommonJS</a> so lets just <a href="http://exploringjs.com/es6/ch_modules.html">learn ES6 modules</a>.  No sweat, jump ahead of those that just copy and paste with an understanding of 2 basic syntaxes.</p>
-<ul>
-<li><p>want to export multiple things, name them</p>
-</li>
-<li><p>only need to export one thing, export default</p>
-</li>
-</ul>
-<pre><code><span class="hljs-comment">//------ lib.js ------</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> sqrt = <span class="hljs-built_in">Math</span>.sqrt;
-<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">square</span><span class="hljs-params">(x)</span> </span>{
-    <span class="hljs-keyword">return</span> x * x;
-}
-<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">diag</span><span class="hljs-params">(x, y)</span> </span>{
-    <span class="hljs-keyword">return</span> sqrt(square(x) + square(y));
-}
-
-<span class="hljs-comment">//------ main.js ------</span>
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> lib <span class="hljs-keyword">from</span> <span class="hljs-string">'lib'</span>;
-<span class="hljs-built_in">console</span>.log(lib.square(<span class="hljs-number">11</span>)); <span class="hljs-comment">// 121</span>
-<span class="hljs-built_in">console</span>.log(lib.diag(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
-
-<span class="hljs-comment">//------ main.js ------</span>
-<span class="hljs-keyword">import</span> { square, diag } <span class="hljs-keyword">from</span> <span class="hljs-string">'lib'</span>;
-<span class="hljs-built_in">console</span>.log(square(<span class="hljs-number">11</span>)); <span class="hljs-comment">// 121</span>
-<span class="hljs-built_in">console</span>.log(diag(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
-You can also <span class="hljs-keyword">import</span> the complete module:
-</code></pre><p>If your browsing along and you see something like:</p>
-<pre><code><span class="hljs-component">module.<span class="hljs-keyword">exports</span> = {stuff}</span>
-</code></pre><p>That is CommonJS (written in ES5)  No biggie.  In ES6 its:</p>
-<pre><code><span class="hljs-reserved">export</span> <span class="hljs-reserved">default</span> {stuff}
-</code></pre><p>Use a <em>default</em> where it makes more sense for a single export.</p>
-<pre><code><span class="hljs-keyword">For</span> example, a <span class="hljs-function"><span class="hljs-keyword">function</span>:</span>
-
-<span class="hljs-comment">//------ myFunc.js ------</span>
-export <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> <span class="hljs-comment">{ ··· }</span> <span class="hljs-comment">// no semicolon!</span>
-
-<span class="hljs-comment">//------ main1.js ------</span>
-<span class="hljs-title">import</span> <span class="hljs-title">myFunc</span> <span class="hljs-title">from</span> '<span class="hljs-title">myFunc</span>';</span>
-myFunc();
-</code></pre><!-- h2 --><h2 id="md-productivity-options">Productivity Options</h2><p>Productivity options can either speed up your project or grind you to a hault.  Pick the good ones, quickly understand their setup and add them to your project.  Don&#39;t look back.  You need:</p>
+<!-- h2 --><h2 id="md-productivity-options">Productivity Options</h2><p>Productivity options can either speed up your project or grind you to a hault.  Pick the good ones, quickly understand their setup and add them to your project.  Don&#39;t look back.  You need:</p>
 <ul>
 <li><p>webpack-dev-server</p>
 </li>
@@ -299,6 +269,122 @@ myFunc();
 </li>
 <li><p>Browser Open</p>
 </li>
+</ul>
+<!-- h2 --><h2 id="md-style-guides">Style Guides</h2><p>One of the fastest ways to decrease choice and anxiety is to adopt and abide by a style guide.</p>
+<p><a href="https://github.com/airbnb/javascript/tree/master/react]">Airbnb React/JSX Style Guide</a></p>
+<ul>
+<li>A mostly reasonable style guide to React and JSX</li>
+</ul>
+<ul>
+<li><p>Basic Rules</p>
+</li>
+<li><p>Class vs React.createClass</p>
+</li>
+<li><p>Naming</p>
+</li>
+<li><p>Declaration</p>
+</li>
+<li><p>Alignment</p>
+</li>
+<li><p>Quotes</p>
+</li>
+<li><p>Spacing</p>
+</li>
+<li><p>Props</p>
+</li>
+<li><p>Parentheses</p>
+</li>
+<li><p>Tags</p>
+</li>
+<li><p>Methods</p>
+</li>
+<li><p>Ordering</p>
+</li>
+</ul>
+<pre><code><span class="hljs-keyword">import</span> <span class="hljs-type">React</span>, { <span class="hljs-type">PropTypes</span> } from <span class="hljs-symbol">'reac</span>t';
+
+const propTypes = {
+  id: <span class="hljs-type">PropTypes</span>.number.isRequired,
+  url: <span class="hljs-type">PropTypes</span>.string.isRequired,
+  text: <span class="hljs-type">PropTypes</span>.string,
+};
+
+const defaultProps = {
+  text: <span class="hljs-symbol">'Hello</span> <span class="hljs-type">World</span>',
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Link</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> {</span>
+  static methodsAreOk() {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+  render() {
+    <span class="hljs-keyword">return</span> &lt;a href={<span class="hljs-keyword">this</span>.props.url} data-id={<span class="hljs-keyword">this</span>.props.id}&gt;{<span class="hljs-keyword">this</span>.props.text}&lt;/a&gt;
+  }
+}
+
+<span class="hljs-type">Link</span>.propTypes = propTypes;
+<span class="hljs-type">Link</span>.defaultProps = defaultProps;
+
+export <span class="hljs-keyword">default</span> <span class="hljs-type">Link</span>;
+</code></pre><p>Install:</p>
+<pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> eslint babel-eslint eslint-config-airbnb eslint-plugin-react
+</code></pre><p>Add <code>.eslintrc</code>:</p>
+<pre><code class="lang-json">{
+  "<span class="hljs-attribute">env</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">node</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">ecmaFeatures</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">jsx</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">globals</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">React</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">plugins</span>": <span class="hljs-value">[
+    <span class="hljs-string">"react"</span>
+  ]</span>,
+  "<span class="hljs-attribute">extends</span>": <span class="hljs-value"><span class="hljs-string">"airbnb"</span></span>,
+  "<span class="hljs-attribute">rules</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">comma-dangle</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">no-console</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">id-length</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">react/prop-types</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+  </span>}
+</span>}
+</code></pre>
+<p>Add <code>.eslintignore</code>:</p>
+<pre><code>build/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span>
+node_modules/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span>
+<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span>/<span class="hljs-keyword">*</span>.css
+<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span>/<span class="hljs-keyword">*</span>.html
+</code></pre><p>Add a subcommand <code>lint</code> to the <code>scripts</code> field of <code>package.json</code>:</p>
+<pre><code><span class="hljs-string">"lint"</span>: <span class="hljs-string">"eslint 'src/**/*.@(js|jsx)'"</span>,
+</code></pre><p>Run <code>npm run lint</code> to lint all source code.</p>
+<p>Add eslint to git pre-commit hook, this way you will never commit in code that doesn&#39;t pass a check.</p>
+<pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> precommit-hook
+</code></pre><p>In addition to the <code>precommit-hook</code> package, this command will also</p>
+<ul>
+<li>adds two files <code>.jshintrc</code> and <code>.jshintignore</code> to current project</li>
+<li>adds a <code>pre-commit</code> field to <code>package.json</code></li>
+<li>adds two subcommands <code>lint</code> and <code>validate</code> to the <code>scripts</code> field if none exist</li>
+</ul>
+<p>The <code>lint</code> subcommand in <code>scripts</code> uses <code>eslint</code> instead of <code>jshint</code>, which means this starter kit doesn&#39;t use jshint at all, and this is true.</p>
+<p>Since eslint supports ES6 while jshint only has partial support for ES6, the obvious choice is eslint.</p>
+<p>Delete two files <code>.jshintrc</code> and <code>.jshintignore</code>:</p>
+<pre><code>rm .jshint<span class="hljs-keyword">*</span>
+</code></pre><p>Reference:</p>
+<ul>
+<li><p><a href="https://github.com/soulmachine/react-starter-kits/blob/master/README.md">soulmachine/react-starter-kits</a></p>
+</li>
+<li><p><a href="https://github.com/ruanyf/react-babel-webpack-boilerplate">ruanyf/react-babel-webpack-boilerplate</a></p>
+</li>
+</ul>
+<ul>
+<li><a href="http://codeutopia.net/docs/eslint/">5-step quick start guide to ESLint</a></li>
+<li><a href="http://www.sitepoint.com/comparison-javascript-linting-tools/">A Comparison of JavaScript Linting Tools</a></li>
+<li><a href="https://github.com/ruanyf/react-babel-webpack-boilerplate">ruanyf/react-babel-webpack-boilerplate</a></li>
+<li><a href="https://github.com/ruanyf/webpack-demos">ruanyf/webpack-demos</a></li>
+<li><a href="https://github.com/petehunt/webpack-howto">petehunt/webpack-howto</a></li>
 </ul>
 <!-- h2 --><h2 id="md-folder-structure">Folder Structure</h2><p>Folder structure and application navigation and routing to me seem to be an important connection, so I asked the guy who wrote react-router and who has a lot of experience with Ember (where all these front-ends got their router inspiration).</p>
 <p><img width="30px" src="http://avatars.io/twitter/jrhicks"> <a href="http://twitter.com/jrhicks" target="_blank">@jrhicks</a>: do you still recommend a react-app-file-structure like <a href="https://gist.github.com/ryanflorence/110d4538bf98694538de">https://gist.github.com/ryanflorence/110d4538bf98694538de</a></p>
@@ -511,50 +597,45 @@ styles.sidebar = {
 })
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Course;
-</code></pre><!-- h2 --><h2 id="md-es6-es2015-adoption">ES6/ES2015 Adoption</h2><ul>
-<li><p>ES6 Classes - NO</p>
-</li>
-<li><p>Enhanced Object Properties - YES</p>
-</li>
-<li><p>ES6 Module - YES</p>
-</li>
-</ul>
-<p>ES6 brings the option to create react components as classes that extend React.Component.  I choose React.createClass because:</p>
+</code></pre><!-- h2 --><h2 id="md-module-format">Module Format</h2><p>Okay.  We don&#39;t want to have to choose between AMD and <a href="http://www.sitepoint.com/understanding-module-exports-exports-node-js/">CommonJS</a> so lets just <a href="http://exploringjs.com/es6/ch_modules.html">learn ES6 modules</a>.  No sweat, jump ahead of those that just copy and paste with an understanding of 2 basic syntaxes.</p>
 <ul>
-<li><p>Its a little less ES6 to learn</p>
+<li><p>want to export multiple things, name them</p>
 </li>
-<li><p>Less tedious: No need to manually bind functions</p>
-</li>
-<li><p>Consistently: Setting initial state through a lifecycle method instead of as a constructor responsibility seems more consistent with other ways I work with components.</p>
+<li><p>only need to export one thing, export default</p>
 </li>
 </ul>
-<p><strong>React.createClass</strong></p>
-<pre><code><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-
-<span class="hljs-keyword">const</span> Contacts = React.createClass({
-  render() {
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    )</span>;
-  }
-});
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Contacts;
-</code></pre><p><strong>React.Component</strong></p>
-<pre><code><span class="hljs-keyword">import</span> <span class="hljs-type">React</span> from <span class="hljs-symbol">'reac</span>t';
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Contacts</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> {</span>
-  constructor(props) {
-    <span class="hljs-keyword">super</span>(props);
-  }
-  render() {
-    <span class="hljs-keyword">return</span> (
-      &lt;div&gt;&lt;/div&gt;
-    );
-  }
+<pre><code><span class="hljs-comment">//------ lib.js ------</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> sqrt = <span class="hljs-built_in">Math</span>.sqrt;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">square</span><span class="hljs-params">(x)</span> </span>{
+    <span class="hljs-keyword">return</span> x * x;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">diag</span><span class="hljs-params">(x, y)</span> </span>{
+    <span class="hljs-keyword">return</span> sqrt(square(x) + square(y));
 }
 
-export <span class="hljs-keyword">default</span> <span class="hljs-type">Contacts</span>;
+<span class="hljs-comment">//------ main.js ------</span>
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> lib <span class="hljs-keyword">from</span> <span class="hljs-string">'lib'</span>;
+<span class="hljs-built_in">console</span>.log(lib.square(<span class="hljs-number">11</span>)); <span class="hljs-comment">// 121</span>
+<span class="hljs-built_in">console</span>.log(lib.diag(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+
+<span class="hljs-comment">//------ main.js ------</span>
+<span class="hljs-keyword">import</span> { square, diag } <span class="hljs-keyword">from</span> <span class="hljs-string">'lib'</span>;
+<span class="hljs-built_in">console</span>.log(square(<span class="hljs-number">11</span>)); <span class="hljs-comment">// 121</span>
+<span class="hljs-built_in">console</span>.log(diag(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+You can also <span class="hljs-keyword">import</span> the complete module:
+</code></pre><p>If your browsing along and you see something like:</p>
+<pre><code><span class="hljs-component">module.<span class="hljs-keyword">exports</span> = {stuff}</span>
+</code></pre><p>That is CommonJS (written in ES5)  No biggie.  In ES6 its:</p>
+<pre><code><span class="hljs-reserved">export</span> <span class="hljs-reserved">default</span> {stuff}
+</code></pre><p>Use a <em>default</em> where it makes more sense for a single export.</p>
+<pre><code><span class="hljs-keyword">For</span> example, a <span class="hljs-function"><span class="hljs-keyword">function</span>:</span>
+
+<span class="hljs-comment">//------ myFunc.js ------</span>
+export <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> <span class="hljs-comment">{ ··· }</span> <span class="hljs-comment">// no semicolon!</span>
+
+<span class="hljs-comment">//------ main1.js ------</span>
+<span class="hljs-title">import</span> <span class="hljs-title">myFunc</span> <span class="hljs-title">from</span> '<span class="hljs-title">myFunc</span>';</span>
+myFunc();
 </code></pre><!-- h1 --><h1 class="page-header" id="md-build-bundler">Build / Bundler</h1><p>Per Pete Hunt&#39;s advice for many good reasons:  Webpack.</p>
 <!-- h1 --><h1 class="page-header" id="md-atom">Atom</h1><p>Project snippets.  Reload with control-option-command-L.</p>
 <!-- h1 --><h1 class="page-header" id="md-notable-tweets">Notable tweets</h1><p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I only want <a href="https://t.co/KjNLQqay1R">https://t.co/KjNLQqay1R</a> for styling a React app. Compose your styles with components. This is it for me.</p>&mdash; Ryan Florence (<img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a>) <a href="https://twitter.com/ryanflorence/status/684528942456279040">January 6, 2016</a></blockquote></p>
@@ -590,10 +671,7 @@ export <span class="hljs-keyword">default</span> <span class="hljs-type">Contact
             
             
             
-            <li><a href="#md-the-paradox-of-choice">The Paradox of Choice</a></li>
-            
-          
-            
+            <li><a href="#md-2016-javascript-fatigue-resolution">2016 Javascript Fatigue Resolution</a></li>
             
           
             
@@ -715,17 +793,6 @@ export <span class="hljs-keyword">default</span> <span class="hljs-type">Contact
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-javascript-fatigue">Javascript Fatigue</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
             
             
           
@@ -787,13 +854,7 @@ export <span class="hljs-keyword">default</span> <span class="hljs-type">Contact
           
             
             
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-opinions-instructions">Opinions &amp; Instructions</a></li>
+            <li><a href="#md-confident-project-setup">Confident Project Setup</a></li>
             
           
             
@@ -946,48 +1007,7 @@ export <span class="hljs-keyword">default</span> <span class="hljs-type">Contact
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-building-bundling">Building / Bundling</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-module-format">Module Format</a></li>
+          <li style="margin-left: 0.5em;"><a href="#md-building-bundling">Building &amp; Bundling</a></li>
           
             
             
@@ -1044,6 +1064,323 @@ export <span class="hljs-keyword">default</span> <span class="hljs-type">Contact
             
           
           <li style="margin-left: 0.5em;"><a href="#md-productivity-options">Productivity Options</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-style-guides">Style Guides</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
           
             
             
@@ -1272,43 +1609,7 @@ export <span class="hljs-keyword">default</span> <span class="hljs-type">Contact
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-es6-es2015-adoption">ES6/ES2015 Adoption</a></li>
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
+          <li style="margin-left: 0.5em;"><a href="#md-module-format">Module Format</a></li>
           
             
             
