@@ -106,18 +106,20 @@ before, and thus, presumably, more freedom and autonomy, we don&#39;t seem
 to be benefiting from it psychologically.</p>
 <p> quoted from Ch.5, <a href="http://www.ted.com/talks/barry_schwartz_on_the_paradox_of_choice?language=en">The Paradox of Choice, 2004</a></p>
 </blockquote>
-<!-- h1 --><h1 class="page-header" id="md-modern-javascript-choices">Modern Javascript Choices</h1><ul>
+<!-- h2 --><h2 id="md-modern-react-choices">Modern React Choices</h2><ul>
+<li><p>Package Manager Choices: NPM, Bower</p>
+</li>
 <li><p>Language Choices: Plain Javascript, CoffeeScript, ES5, ES6, ES2015, ES7</p>
 </li>
 <li><p>Transpiler Choices: Traceur, Babel, Closure, Type-Script ...</p>
 </li>
+<li><p>Building, Bundling, Script Loading: Grunt, Gulp, Browserify, Webpack, RequireJS</p>
+</li>
 <li><p>Module Format Choices: AMD, CommonJS, ES6 Modules</p>
 </li>
-<li><p>Package Manager Choices: NPM, Bower</p>
+<li><p>Productivity Options: Dev Server, Hot Reloading, Linting, OpenBrowser</p>
 </li>
-<li><p>Framework Choices: Ember, Angular 1, Angular 2, React</p>
-</li>
-<li><p>Building, Bundling, Script Loading: Grunt, Gulp, Browserify, Webpack, RequireJS</p>
+<li><p>Code Organization: Nested Folders, LIFT</p>
 </li>
 <li><p>Flux Choices: Facebook&#39;s Flux, fluxxor, refluxjs, barracks, mcfly, marty, dispatchr, fetchr, fluxy, normalizr, flummox, alt, tuxx, redux</p>
 </li>
@@ -126,30 +128,137 @@ to be benefiting from it psychologically.</p>
 <li><p>Styling Choices: Inline, jsxstyle, css-modules, react-jss ...</p>
 </li>
 </ul>
-<!-- h1 --><h1 class="page-header" id="md-community-recognizes-javascript-fatigue">Community Recognizes Javascript Fatigue</h1><p>Eric Clemmons blew up twitter with a well timed proposal that the react community resolve to fix <a href="http://tinyurl.com/zbahygs">Javascript Fatigue</a> in 2016.</p>
+<!-- h2 --><h2 id="md-javascript-fatigue">Javascript Fatigue</h2><p>Eric Clemmons blew up twitter with a well timed proposal that the react community resolve to fix <a href="http://tinyurl.com/zbahygs">Javascript Fatigue</a> in 2016.</p>
 <p>Some mixed reactions:</p>
 <p><img width="30px" src="http://avatars.io/twitter/mjackson"> <a href="http://twitter.com/mjackson" target="_blank">@mjackson</a> - This is kind of how I feel about #Javascript fatigue <a href="https://www.youtube.com/watch?v=akiVi1sR2rM">https://www.youtube.com/watch?v=akiVi1sR2rM</a> (Skip to 2:25)</p>
 <p><img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a> - I released Ember Tools Mar &#39;13 cause setting up Ember was terrible.&#10;Core team embraced ideas as ember-cli, first 1.x release July &#39;15.</p></p>
 <p><img width="30px" src="http://avatars.io/twitter/floydophone"> <a href="http://twitter.com/floydophone" target="_blank">@floydophone</a> - The reactjs community needs more opinions to help out newbies. Here&#39;s my first pass. Feedback/PRs welcome! <a href="https://t.co/Tfohv11miV">https://t.co/Tfohv11miV</a></p>
-<!-- h1 --><h1 class="page-header" id="md-solutions-to-psychological-burden-of-choice">Solutions to Psychological Burden of Choice</h1><ul>
+<!-- h2 --><h2 id="md-fatigue-solutions">Fatigue Solutions</h2><ul>
 <li><p>Relax - You don&#39;t have to pick the best for your project to be a success.</p>
 </li>
-<li><p>Opinions &amp; Trusted Agents - Pete Hunt&#39;s <a href="https://twitter.com/floydophone/status/684109201665208321">React Howto</a> 1/4/16, Ryan Florence <a href="https://twitter.com/ryanflorence/status/684528942456279040">On Styling</a> 1/5/16</p>
+<li><p>Opinions - Pete Hunt&#39;s <a href="https://twitter.com/floydophone/status/684109201665208321">React Howto</a> 1/4/16</p>
 </li>
 <li><p>Boilerplates -  <a href="http://andrewhfarmer.com/starter-project/">Boilerplate Search Engine</a> because a good boilerplate has <strong>everything you need</strong> and <strong>nothing you don&#39;t</strong></p>
+</li>
+<li><p>Tools &amp; Generators - <a href="http://www.overreact.io/?utm_source=javascriptweekly&amp;utm_medium=email">The React File Generator</a></p>
 </li>
 <li><p>Insight/guidance rather than more tools/opacity - You will find the most valuable thing is <a href="https://github.com/soulmachine/react-starter-kits">Clear, Concise, Current, and Correct Instructions On Trusted Tools</a></p>
 </li>
 </ul>
-<!-- h1 --><h1 class="page-header" id="md-language">Language</h1><p>Per Pete Hunt, you don&#39;t have to learn ES6 (aka ES2015) from the start, but you are going to want to pick it up as you go.  So we choose to setup our project to support ES6, but we will only adopt and use features as-needed.</p>
-<!-- h1 --><h1 class="page-header" id="md-module-format">Module Format</h1><p>Okay.  We don&#39;t want to have to choose between AMD and CommonJS so lets just <a href="http://exploringjs.com/es6/ch_modules.html">learn ES6 modules</a>.  This is the first thing we <em>need to learn</em> about ES6.  We just need to understand 2 basic syntaxes:</p>
+<!-- h1 --><h1 class="page-header" id="md-opinions-amp-instructions">Opinions &amp; Instructions</h1><p>After studying the opinions, boilerplates, insight/guidance and messaging leaders on twitter.  Here are some pretty good choices for a project setup with enough information about each selection to both setup and understand the setup of your project.</p>
+<!-- h2 --><h2 id="md-package-manager">Package Manager</h2><p>Not really a choice.  NPM.  But don&#39;t just use it to install the tools for someone elses project, we are going to start and understand our own project:</p>
+<pre><code><span class="hljs-keyword">mkdir</span> myproject
+<span class="hljs-keyword">cd</span> myproject
+npm init
+npm install --<span class="hljs-keyword">save</span> react react-dom
+</code></pre><!-- h2 --><h2 id="md-language">Language</h2><p>Per Pete Hunt, you don&#39;t have to learn ES6 (aka ES2015) from the start, but you are going to want to pick it up as you go.  So we choose to setup our project to support ES6, but we will only adopt and use features as-needed.</p>
+<!-- h2 --><h2 id="md-transpiler">Transpiler</h2><p>Babel is the clear winner in this category.  But it can be tricky because many tutorials are geared towards Babel 5.  A little history of Babel.</p>
 <ul>
-<li><p>multiple named exports</p>
+<li><p>Started off as 6to5</p>
 </li>
-<li><p>single default export</p>
+<li><p>Renamed to Babel</p>
+</li>
+<li><p>Overhauled plugin system for Babel 6.0</p>
 </li>
 </ul>
-<p>Use Multiple <em>named</em> exports for some library like Math where you want to export  <em>multiple named</em> functions.</p>
+<p>Babel 6 changes drastically compared with Babel 5. Every transform is now a plugin, including ES2015 and JSX. Stage 0 is now a separate preset, not an option(used to be <code>stage: 0</code> in <code>.babelrc</code> in babel 5.x). So we need to install them addtionally.</p>
+<pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-<span class="hljs-number">0</span>
+</code></pre><p>And three presets to <code>.babelrc</code>:</p>
+<pre><code><span class="hljs-string">"presets"</span>: [<span class="hljs-string">"es2015"</span>, <span class="hljs-string">"react"</span>, <span class="hljs-string">"stage-0"</span>]
+</code></pre><p><strong>Runtime support</strong></p>
+<p>Babel can’t support all of ES6 with compilation alone — it also requires some runtime support. In particular, the new ES6 built-ins like Set, Map and Promise must be polyfilled, and Babel’s generator implementation also uses a number of runtime helpers.</p>
+<pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> <span class="hljs-comment">--save babel-polyfill</span></span>
+</code></pre><p>Babel also bakes a number of smaller helpers directly into your compiled code(used to be <code>--external-helpers</code> option in Babel 5.x). This is OK for single files, but when bundling with Webpack, repeated code will result in heavier file size. It is possible to replace these helpers with calls to the <code>babel-runtime</code> package by adding the <code>transform-runtime</code> plugin:</p>
+<pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> <span class="hljs-comment">--save babel-runtime</span>
+npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save-dev babel-plugin-transform-runtime</span></span>
+</code></pre><p>Add the plugin to <code>.babelrc</code>:</p>
+<pre><code><span class="hljs-string">"plugins"</span>: [<span class="hljs-string">"transform-runtime"</span>]
+</code></pre><p>Reference:</p>
+<ul>
+<li><a href="http://babeljs.io/blog/2015/10/29/6.0.0/">6.0.0 Released</a></li>
+<li><a href="http://babeljs.io/docs/setup/">http://babeljs.io/docs/setup/</a></li>
+<li><a href="http://jamesknelson.com/the-six-things-you-need-to-know-about-babel-6/">The Six Things You Need To Know About Babel 6</a></li>
+<li><a href="http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/">Using ES6 and ES7 in the Browser, with Babel 6 and Webpack</a></li>
+</ul>
+<!-- h2 --><h2 id="md-building-bundling">Building / Bundling</h2><p>Webpack - like any new build tool can be a little intimidating to learn.  These basics can get you going <strong>very quickly</strong> though:</p>
+<p>For those who don&#39;t know what webpack is, please read <a href="https://github.com/ruanyf/webpack-demos">this tutorial</a>.</p>
+<pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> webpack
+</code></pre><p>Install essential webpack loaders(What is loader? See <a href="https://webpack.github.io/docs/loaders.html">official docs here</a>):</p>
+<pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> babel-loader css-loader style-loader url-loader
+</code></pre><p>Add these loaders to <code>webpack.config.js</code>:</p>
+<pre><code class="lang-javascript">module: {
+  loaders: [
+    {
+      test: <span class="hljs-regexp">/\.css$/</span>,
+      <span class="hljs-keyword">include</span>: path.resolve(__dirname, <span class="hljs-string">'src'</span>),
+      loader: <span class="hljs-string">'style-loader!css-loader?modules'</span>
+    },
+    {
+      test: <span class="hljs-regexp">/\.jsx?$/</span>,
+      <span class="hljs-keyword">include</span>: path.resolve(__dirname, <span class="hljs-string">'src'</span>),
+      <span class="hljs-keyword">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+      loader: <span class="hljs-string">'babel'</span>
+    },
+    {
+      test: <span class="hljs-regexp">/\.(png|jpg)$/</span>,
+      loader: <span class="hljs-string">'url-loader?limit=8192'</span>
+    }
+  ]
+}
+</code></pre>
+<p>Babel requires some helper code to be run before your application. To achieve this, add the <code>babel-polyfill</code> to the <code>entry</code> section.</p>
+<p>If you write a component in a <code>.jsx</code> file instead of <code>.js</code>, you must import or require it with the <code>.jsx</code> extension. How to import components without <code>.jsx</code> suffix? Add a <code>resolve</code> field to <code>webpack.config.js</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">resolve</span>: {
+  <span class="hljs-comment">//When requiring, you don't need to add these extensions</span>
+  <span class="hljs-attribute">extensions</span>: [<span class="hljs-string">""</span>, <span class="hljs-string">".js"</span>, <span class="hljs-string">".jsx"</span>]
+},
+</code></pre>
+<p>Finally we have a complete <code>webpack.config.js</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">'webpack'</span>);
+<span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+
+<span class="hljs-module"><span class="hljs-keyword">module</span>.exports = </span>{
+  entry: [
+    <span class="hljs-string">'babel-polyfill'</span>,
+    path.resolve(__dirname, <span class="hljs-string">'src/main.jsx'</span>)
+  ],
+  resolve: {
+    <span class="hljs-comment">//When requiring, you don't need to add these extensions</span>
+    extensions: [<span class="hljs-string">""</span>, <span class="hljs-string">".js"</span>, <span class="hljs-string">".jsx"</span>]
+  },
+  output: {
+    path: __dirname + <span class="hljs-string">'/build'</span>,
+    publicPath: <span class="hljs-string">'/'</span>,
+    filename: <span class="hljs-string">'bundle.js'</span>
+  },
+  <span class="hljs-module"><span class="hljs-keyword">module</span>: </span>{
+    loaders: [
+      {
+        test: <span class="hljs-regexp">/\.css$/</span>,
+        include: path.resolve(__dirname, <span class="hljs-string">'src'</span>),
+        loader: <span class="hljs-string">'style-loader!css-loader?modules'</span>
+      },
+      {
+        test: <span class="hljs-regexp">/\.jsx?$/</span>,
+        include: path.resolve(__dirname, <span class="hljs-string">'src'</span>),
+        exclude: <span class="hljs-regexp">/node_modules/</span>,
+        loader: <span class="hljs-string">'babel'</span>
+      },
+      {
+        test: <span class="hljs-regexp">/\.(png|jpg)$/</span>,
+        loader: <span class="hljs-string">'url-loader?limit=8192'</span>
+      }
+    ]
+  }
+};
+</code></pre>
+<!-- h2 --><h2 id="md-module-format">Module Format</h2><p>Okay.  We don&#39;t want to have to choose between AMD and <a href="http://www.sitepoint.com/understanding-module-exports-exports-node-js/">CommonJS</a> so lets just <a href="http://exploringjs.com/es6/ch_modules.html">learn ES6 modules</a>.  No sweat, jump ahead of those that just copy and paste with an understanding of 2 basic syntaxes.</p>
+<ul>
+<li><p>want to export multiple things, name them</p>
+</li>
+<li><p>only need to export one thing, export default</p>
+</li>
+</ul>
 <pre><code><span class="hljs-comment">//------ lib.js ------</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> sqrt = <span class="hljs-built_in">Math</span>.sqrt;
 <span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">square</span><span class="hljs-params">(x)</span> </span>{
@@ -169,6 +278,10 @@ to be benefiting from it psychologically.</p>
 <span class="hljs-built_in">console</span>.log(square(<span class="hljs-number">11</span>)); <span class="hljs-comment">// 121</span>
 <span class="hljs-built_in">console</span>.log(diag(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
 You can also <span class="hljs-keyword">import</span> the complete module:
+</code></pre><p>If your browsing along and you see something like:</p>
+<pre><code><span class="hljs-component">module.<span class="hljs-keyword">exports</span> = {stuff}</span>
+</code></pre><p>That is CommonJS (written in ES5)  No biggie.  In ES6 its:</p>
+<pre><code><span class="hljs-reserved">export</span> <span class="hljs-reserved">default</span> {stuff}
 </code></pre><p>Use a <em>default</em> where it makes more sense for a single export.</p>
 <pre><code><span class="hljs-keyword">For</span> example, a <span class="hljs-function"><span class="hljs-keyword">function</span>:</span>
 
@@ -178,40 +291,272 @@ export <span class="hljs-keyword">default</span> <span class="hljs-function"><sp
 <span class="hljs-comment">//------ main1.js ------</span>
 <span class="hljs-title">import</span> <span class="hljs-title">myFunc</span> <span class="hljs-title">from</span> '<span class="hljs-title">myFunc</span>';</span>
 myFunc();
+</code></pre><!-- h2 --><h2 id="md-productivity-options">Productivity Options</h2><p>Productivity options can either speed up your project or grind you to a hault.  Pick the good ones, quickly understand their setup and add them to your project.  Don&#39;t look back.  You need:</p>
+<ul>
+<li><p>webpack-dev-server</p>
+</li>
+<li><p>Hot Module Replacement</p>
+</li>
+<li><p>Browser Open</p>
+</li>
+</ul>
+<!-- h2 --><h2 id="md-folder-structure">Folder Structure</h2><p>Folder structure and application navigation and routing to me seem to be an important connection, so I asked the guy who wrote react-router and who has a lot of experience with Ember (where all these front-ends got their router inspiration).</p>
+<p><img width="30px" src="http://avatars.io/twitter/jrhicks"> <a href="http://twitter.com/jrhicks" target="_blank">@jrhicks</a>: do you still recommend a react-app-file-structure like <a href="https://gist.github.com/ryanflorence/110d4538bf98694538de">https://gist.github.com/ryanflorence/110d4538bf98694538de</a></p>
+<p><img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a>: absolutely, check out the &quot;huge-apps&quot; example in react router: <a href="https://github.com/rackt/react-router/tree/master/examples/huge-apps">https://github.com/rackt/react-router/tree/master/examples/huge-apps</a></p>
+<p><strong>Views are a nested set of routes and components.</strong></p>
+<ol>
+<li><p>make it clear which components are reused, and which are only used in one view</p>
+</li>
+<li><p>If a module is shared among child views, it moves into the parent&#39;s component folder. It might make its way all the way to the root component folder.</p>
+</li>
+<li><p>Its just a big recursive structure because that&#39;s what an app is. Let&#39;s embrace it in our file system.</p>
+</li>
+</ol>
+<!-- h4 --><h4 id="md-example-huge-app">Example Huge App</h4><p>The following App is from an example that ships with React Router.  This example application managers courses.  In this screenshot the user has navigated into the first course &quot;React React Fundamentals&quot; and is viewing the details of the first assignment &quot;build a router&quot;.</p>
+<ul>
+<li><p>App has a global navigation</p>
+</li>
+<li><p>A course and its nested elements share sub navigation &quot;Announcements, Assignments, Grades&quot;</p>
+</li>
+<li><p>Assignments follow a master-detail pattern.  And the assignments sidebar is shared.</p>
+</li>
+</ul>
+<p><img src="huge_app.png" style="border: 2px solid black;" /></p>
+<!-- h4 --><h4 id="md-components-routes-indexes">Components - Routes - Indexes</h4><p>Views are composed of components, routes, and indexes.</p>
+<pre><code><span class="hljs-bullet">.
+</span>├── actions
+├── stores
+└── views
+<span class="hljs-code">        ├── components</span>
+<span class="hljs-code">        ├── routes</span>
+<span class="hljs-code">        └── index.js</span>
+</code></pre><p>Routes contain sub-views as shown below.  Not shown below is that each subview is itself the same arrangement of components, routes, and indexes.</p>
+<pre><code><span class="hljs-bullet">.
+</span>├── actions
+├── stores
+└── views
+<span class="hljs-code">        ├── components</span>
+<span class="hljs-code">        ├── routes</span>
+<span class="hljs-code">        │        ├── Calendar</span>
+<span class="hljs-code">        │        ├── Course</span>
+<span class="hljs-code">        │        ├── Grades        </span>
+<span class="hljs-code">        │        ├── Messages                </span>
+<span class="hljs-code">        │        └── Profile</span>
+<span class="hljs-code">        └── index.js</span>
+</code></pre><p>The index ties together the components and sub-views into a data structure that react-router can easily consume.</p>
+<p>./views/index.js</p>
+<pre><code><span class="hljs-reserved">export</span> <span class="hljs-reserved">default</span> {
+    <span class="hljs-attribute">path</span>: <span class="hljs-string">'/'</span>,
+    <span class="hljs-attribute">component</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./components/App'</span>),
+    <span class="hljs-attribute">childRoutes</span>: [
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Calendar'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Course'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Grades'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Messages'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Profile'</span>)
+    ]
+  }
+</code></pre><p>At the root of the application we have Global Navigation and a padded canvas where for the currently routed nested children.  If the user hasn&#39;t navigated to a nested child, we default to render the Dashboard.</p>
+<p>.views/components/App.js</p>
+<pre><code><span class="hljs-comment">/*globals COURSES:true */</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>
+<span class="hljs-keyword">import</span> Dashboard <span class="hljs-keyword">from</span> <span class="hljs-string">'./Dashboard'</span>
+<span class="hljs-keyword">import</span> GlobalNav <span class="hljs-keyword">from</span> <span class="hljs-string">'./GlobalNav'</span>
+
+<span class="hljs-keyword">const</span> App = React.createClass({
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;div&gt;
+        &lt;GlobalNav /&gt;
+        &lt;div style={{ <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span> }}&gt;
+          {<span class="hljs-keyword">this</span>.props.children || &lt;Dashboard courses={COURSES} /&gt;}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    )
+  }
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App
+</code></pre><p>Review the components along the nested route:</p>
+<p><img src="huge_app.png" style="border: 2px solid black;" /></p>
+<ul>
+<li>Course -&gt; Announcements -&gt; Announcement</li>
+</ul>
+<pre><code>.
+├── actions
+├── stores
+├── views
+│   ├── components
+│   │   ├── App<span class="hljs-class">.js</span>
+│   │   ├── Dashboard<span class="hljs-class">.js</span>
+│   │   └── GlobalNav<span class="hljs-class">.js</span>
+│   ├── routes
+│   │   └── Course
+│   │       ├── components
+│   │       │   ├── Course<span class="hljs-class">.js</span>
+│   │       │   ├── Dashboard<span class="hljs-class">.js</span>
+│   │       │   └── Nav<span class="hljs-class">.js</span>
+│   │       ├── routes
+│   │       │   ├── Announcements
+│   │       │   │   ├── components
+│   │       │   │   │   ├── Announcements<span class="hljs-class">.js</span>
+│   │       │   │   │   └── Sidebar<span class="hljs-class">.js</span>
+│   │       │   │   ├── routes
+│   │       │   │   │   └── Announcement
+│   │       │   │   │       ├── components
+│   │       │   │   │       │   └── Announcement<span class="hljs-class">.js</span>
+│   │       │   │   │       └── index<span class="hljs-class">.js</span>
+│   │       │   │   │   
+│   │       │   │   └── index<span class="hljs-class">.js</span>
+│   │       │   ├── Assignments
+│   │       │   └── Grades
+│   │       └── index<span class="hljs-class">.js</span>
+│   └── index<span class="hljs-class">.js</span>
+├── app<span class="hljs-class">.js</span>
+└── index.html
+</code></pre><p>Our application is just a div and the root index.js of the views.</p>
+<p>./app.js</p>
+<pre><code><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>
+<span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>
+<span class="hljs-keyword">import</span> { Router, browserHistory } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-router'</span>
+
+<span class="hljs-keyword">const</span> rootRoute = {
+  <span class="hljs-attribute">component</span>: <span class="hljs-string">'div'</span>,
+  <span class="hljs-attribute">childRoutes</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./views/index.js'</span>)
+}
+
+render(
+  &lt;Router history={browserHistory} routes={rootRoute} /&gt;,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'app'</span>)
+)
+</code></pre><p>./views/index.js</p>
+<pre><code><span class="hljs-reserved">export</span> <span class="hljs-reserved">default</span> {
+  <span class="hljs-attribute">component</span>: <span class="hljs-string">'div'</span>,
+  <span class="hljs-attribute">childRoutes</span>: [ {
+    <span class="hljs-attribute">path</span>: <span class="hljs-string">'/'</span>,
+    <span class="hljs-attribute">component</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">'./components/App'</span>),
+    <span class="hljs-attribute">childRoutes</span>: [
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Calendar'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Course'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Grades'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Messages'</span>),
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Profile'</span>)
+    ]
+  } ]
+}
+</code></pre><p>./views/routes/Course/index.js</p>
+<pre><code><span class="hljs-reserved">export</span> <span class="hljs-reserved">default</span> {
+  <span class="hljs-attribute">path</span>: <span class="hljs-string">'course/:courseId'</span>,
+
+  getChildRoutes(location, cb) {
+    <span class="hljs-built_in">require</span>.ensure([], <span class="hljs-function"><span class="hljs-params">(<span class="hljs-built_in">require</span>)</span> =&gt;</span> {
+      cb(<span class="hljs-literal">null</span>, [
+        <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Announcements'</span>),
+        <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Assignments'</span>),
+        <span class="hljs-built_in">require</span>(<span class="hljs-string">'./routes/Grades'</span>)
+      ])
+    })
+  },
+
+  getComponent(location, cb) {
+    <span class="hljs-built_in">require</span>.ensure([], <span class="hljs-function"><span class="hljs-params">(<span class="hljs-built_in">require</span>)</span> =&gt;</span> {
+      cb(<span class="hljs-literal">null</span>, <span class="hljs-built_in">require</span>(<span class="hljs-string">'./components/Course'</span>))
+    })
+  }
+}
+</code></pre><p>./components/Course.js</p>
+<pre><code>
+<span class="hljs-comment">/*globals COURSES:true */</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>
+<span class="hljs-keyword">import</span> Dashboard <span class="hljs-keyword">from</span> <span class="hljs-string">'./Dashboard'</span>
+<span class="hljs-keyword">import</span> Nav <span class="hljs-keyword">from</span> <span class="hljs-string">'./Nav'</span>
+
+<span class="hljs-keyword">const</span> styles = {}
+
+styles.sidebar = {
+  ...
+}
+
+<span class="hljs-keyword">const</span> Contacts = React.createClass({
+  render() {
+    <span class="hljs-keyword">let</span> { sidebar, main, children, params } = <span class="hljs-keyword">this</span>.props
+    <span class="hljs-keyword">let</span> course = COURSES[params.courseId]
+
+    <span class="hljs-keyword">let</span> content
+    <span class="hljs-keyword">if</span> (sidebar &amp;&amp; main) {
+      content = (
+        &lt;div&gt;
+          &lt;div className=<span class="hljs-string">"Sidebar"</span> style={styles.sidebar}&gt;
+            {sidebar}
+          &lt;/div&gt;
+          &lt;div className=<span class="hljs-string">"Main"</span> style={{ <span class="hljs-attribute">padding</span>: <span class="hljs-number">20</span> }}&gt;
+            {main}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      )
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (children) {
+      content = children
+    } <span class="hljs-keyword">else</span> {
+      content = &lt;Dashboard /&gt;
+    }
+
+    <span class="hljs-keyword">return</span> (
+      &lt;div&gt;
+        &lt;h2&gt;{course.name}&lt;/h2&gt;
+        &lt;Nav course={course} /&gt;
+        {content}
+      &lt;/div&gt;
+    )
+  }
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Course;
+</code></pre><!-- h2 --><h2 id="md-es6-es2015-adoption">ES6/ES2015 Adoption</h2><ul>
+<li><p>ES6 Classes - NO</p>
+</li>
+<li><p>Enhanced Object Properties - YES</p>
+</li>
+<li><p>ES6 Module - YES</p>
+</li>
+</ul>
+<p>ES6 brings the option to create react components as classes that extend React.Component.  I choose React.createClass because:</p>
+<ul>
+<li><p>Its a little less ES6 to learn</p>
+</li>
+<li><p>Less tedious: No need to manually bind functions</p>
+</li>
+<li><p>Consistently: Setting initial state through a lifecycle method instead of as a constructor responsibility seems more consistent with other ways I work with components.</p>
+</li>
+</ul>
+<p><strong>React.createClass</strong></p>
+<pre><code><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> Contacts = React.createClass({
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+});
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Contacts;
+</code></pre><p><strong>React.Component</strong></p>
+<pre><code><span class="hljs-keyword">import</span> <span class="hljs-type">React</span> from <span class="hljs-symbol">'reac</span>t';
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Contacts</span> <span class="hljs-keyword"><span class="hljs-keyword">extends</span></span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> {</span>
+  constructor(props) {
+    <span class="hljs-keyword">super</span>(props);
+  }
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;div&gt;&lt;/div&gt;
+    );
+  }
+}
+
+export <span class="hljs-keyword">default</span> <span class="hljs-type">Contacts</span>;
 </code></pre><!-- h1 --><h1 class="page-header" id="md-build-bundler">Build / Bundler</h1><p>Per Pete Hunt&#39;s advice for many good reasons:  Webpack.</p>
-<!-- h1 --><h1 class="page-header" id="md-transpiler">Transpiler</h1><p>The community has really settled on Babel 6, but in order for Babel to win they went through a very competitive period of innovation where it went from being a specific tool to convert ES6 to ES5 (aka 6to5), to a more general transpiler (Babel).  To a highly modular all-transformations-are-plugins (Babel 6.0.0)</p>
-<p>Here is what you need to know about Babel 6.  Every type of new syntax is its own transformation, and <strong>none are defaults</strong>.</p>
-<ul>
-<li>check-es2015-constants</li>
-<li>transform-es2015-arrow-functions</li>
-<li>transform-es2015-block-scoped-functions</li>
-<li>transform-es2015-block-scoping</li>
-<li>transform-es2015-classes</li>
-<li>transform-es2015-computed-properties</li>
-<li>transform-es2015-destructuring</li>
-<li>transform-es2015-for-of</li>
-<li>transform-es2015-function-name</li>
-<li>transform-es2015-literals</li>
-<li>transform-es2015-modules-commonjs</li>
-<li>transform-es2015-object-super</li>
-<li>transform-es2015-parameters</li>
-<li>transform-es2015-shorthand-properties</li>
-<li>transform-es2015-spread</li>
-<li>transform-es2015-sticky-regex</li>
-<li>transform-es2015-template-literals</li>
-<li>transform-es2015-typeof-symbol</li>
-<li>transform-es2015-unicode-regex</li>
-<li>transform-regenerator</li>
-</ul>
-<p>But you can have presets.  Presets are collections of transformation.  You can configure your transpiler to support all of ES6 (listed above) with one preset: ES2015.  Yes ES6 and ES2015 are the same thing.</p>
-<ul>
-<li>npm install babel-preset-es2015</li>
-</ul>
-<p>Add the following line to your .babelrc file:</p>
-<pre><code>{
-  "<span class="hljs-attribute">presets</span>": <span class="hljs-value">[<span class="hljs-string">"es2015"</span>]
-</span>}
-</code></pre><!-- h1 --><h1 class="page-header" id="md-atom">Atom</h1><p>Project snippets.  Reload with control-option-command-L.</p>
+<!-- h1 --><h1 class="page-header" id="md-atom">Atom</h1><p>Project snippets.  Reload with control-option-command-L.</p>
 <!-- h1 --><h1 class="page-header" id="md-notable-tweets">Notable tweets</h1><p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I only want <a href="https://t.co/KjNLQqay1R">https://t.co/KjNLQqay1R</a> for styling a React app. Compose your styles with components. This is it for me.</p>&mdash; Ryan Florence (<img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a>) <a href="https://twitter.com/ryanflorence/status/684528942456279040">January 6, 2016</a></blockquote></p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!-- end -->
@@ -265,8 +610,8 @@ myFunc();
           
             
             
-            <li><a href="#md-modern-javascript-choices">Modern Javascript Choices</a></li>
-            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-modern-react-choices">Modern React Choices</a></li>
           
             
             
@@ -360,8 +705,6 @@ myFunc();
           
             
             
-            <li><a href="#md-community-recognizes-javascript-fatigue">Community Recognizes Javascript Fatigue</a></li>
-            
           
             
             
@@ -372,25 +715,7 @@ myFunc();
             
             
           
-            
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-solutions-to-psychological-burden-of-choice">Solutions to Psychological Burden of Choice</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
+          <li style="margin-left: 0.5em;"><a href="#md-javascript-fatigue">Javascript Fatigue</a></li>
           
             
             
@@ -410,6 +735,23 @@ myFunc();
             
             
           
+          <li style="margin-left: 0.5em;"><a href="#md-fatigue-solutions">Fatigue Solutions</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
             
             
           
@@ -430,7 +772,11 @@ myFunc();
           
             
             
-            <li><a href="#md-language">Language</a></li>
+          
+            
+            
+          
+            
             
           
             
@@ -438,7 +784,539 @@ myFunc();
           
             
             
-            <li><a href="#md-module-format">Module Format</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-opinions-instructions">Opinions &amp; Instructions</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-package-manager">Package Manager</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-language">Language</a></li>
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-transpiler">Transpiler</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-building-bundling">Building / Bundling</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-module-format">Module Format</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-productivity-options">Productivity Options</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-folder-structure">Folder Structure</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-es6-es2015-adoption">ES6/ES2015 Adoption</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -486,233 +1364,6 @@ myFunc();
             
             
             <li><a href="#md-build-bundler">Build / Bundler</a></li>
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-transpiler">Transpiler</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
             
           
             
