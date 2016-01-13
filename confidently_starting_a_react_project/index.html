@@ -112,7 +112,9 @@ get to create anything.</p>
 </li>
 <li><p>Transpiler Choices: Traceur, Babel, Closure, Type-Script ...</p>
 </li>
-<li><p>Building, Bundling, Script Loading: Grunt, Gulp, Browserify, Webpack, RequireJS</p>
+<li><p>Building: Grunt, Gulp, Brocoli, Slush, NPM Scripts</p>
+</li>
+<li><p>Bundling: Browserify, Webpack, JSPM</p>
 </li>
 <li><p>Module Format Choices: AMD, CommonJS, ES6 Modules</p>
 </li>
@@ -135,7 +137,7 @@ get to create anything.</p>
 have have more choice than ever before but
 we don&#39;t seem to be benefiting from it psychologically.</p>
 </blockquote>
-<p>Relax - Success doesn&#39;t depend on picking the absolute best</p>
+<p>Relax - Success does <strong>not</strong> depend on picking the absolute best</p>
 <p>Embrace Opinions</p>
 </div><!-- h3 --><div class='col-sm-4'><h3 id="md-boilerplates-amp-generators">Boilerplates &amp; Generators</h3><p>Hard to find the <em>perfect boilerplate</em> and once installed can be a bit overwhelming: difficult to troubleshoot, difficult to extend &amp; tweak.</p>
 <p><a href="http://andrewhfarmer.com/starter-project/">Boilerplate Search Engine</a> because a good boilerplate has <strong>everything you need</strong> and <strong>nothing you don&#39;t</strong></p>
@@ -144,13 +146,13 @@ we don&#39;t seem to be benefiting from it psychologically.</p>
 <p><img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a> - Ryan Florence - React heavyweight who wrote ember tools and react-router</p>
 <p><a href="https://github.com/airbnb/javascript/tree/master/react">Airbnb Style Guides</a></p>
 <p><a href="https://github.com/soulmachine/react-starter-kits">Clear, Concise, Correct Guides</a></p>
-</div></div><!-- h1 --><h1 class="page-header" id="md-confident-project-setup">Confident Project Setup</h1><p>Setup your project yourself using the choices of trusted agents and crisp understanding of their configuration so that you can confidently extend, tweak, and troubleshoot.</p>
+</div></div><!-- h1 --><h1 class="page-header" id="md-confident-project-setup">Confident Project Setup</h1><p>Setup your project yourself using the choices of trusted agents and crisp understanding of their configuration so that you can confidently develop!</p>
 <!-- h2 --><h2 id="md-package-manager">Package Manager</h2><p>NPM -vs- Bower isn&#39;t really a choice.  NPM wins and Pete Hunt says its where learning needs to begin.  You are probably already familiar with <em>npm install</em>, but you may be less aware that your new project is initialized with npm.</p>
 <pre><code><span class="hljs-keyword">mkdir</span> myproject
 <span class="hljs-keyword">cd</span> myproject
 npm init
 npm install --<span class="hljs-keyword">save</span> react react-dom
-</code></pre><!-- h2 --><h2 id="md-language">Language</h2><p>Per Pete Hunt, you don&#39;t have to learn ES6 (aka ES2015) from the start, but you are going to want to pick it up as you go.  So we choose to setup our project to support ES6, but we will only adopt and use features as-needed.</p>
+</code></pre><!-- h2 --><h2 id="md-language">Language</h2><p>Per Pete Hunt, you don&#39;t have to learn ES6 (aka ES2015) from the start, but you are going to want to pick it up as you go.  So we choose to setup our project to support ES6, but we will only adopt and use features as-needed.  We are going to need a transpiler:</p>
 <!-- h2 --><h2 id="md-transpiler">Transpiler</h2><p>Babel is the clear winner in this category.  But it can be tricky because many tutorials are geared towards Babel 5.  A little history of Babel.</p>
 <ul>
 <li><p>Started off as 6to5</p>
@@ -179,7 +181,7 @@ npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save-
 <li><a href="http://jamesknelson.com/the-six-things-you-need-to-know-about-babel-6/">The Six Things You Need To Know About Babel 6</a></li>
 <li><a href="http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/">Using ES6 and ES7 in the Browser, with Babel 6 and Webpack</a></li>
 </ul>
-<!-- h2 --><h2 id="md-building-amp-bundling">Building &amp; Bundling</h2><p>Pete Hunt&#39;s Advice:</p>
+<!-- h2 --><h2 id="md-building-and-bundling">Building and Bundling</h2><p>Pete Hunt&#39;s Advice:</p>
 <blockquote>
 <p>For a number of good technical reasons CommonJS modules (i.e. everything in
 npm) cannot be used natively in the browser. You need a JavaScript
@@ -189,6 +191,14 @@ your web page with a &lt;script&gt; tag.</p>
 good choices, but I prefer webpack since it has a lot of features that make
 development of large apps easier.</p>
 </blockquote>
+<p>Also, since Webpack can also perform many build functions, we will defer adopting gulp, grunt as long as possible.  But since the command lines and all their options can be tedious to memorize we will add npm scripts.  </p>
+<p>Two choices done:</p>
+<ul>
+<li><p>Bundler - Webpack</p>
+</li>
+<li><p>Build Tool - Webpack w/ NPM Scripts</p>
+</li>
+</ul>
 <p>Webpack - like any new build tool can be a little intimidating to learn.  These basics can get you going <strong>very quickly</strong> though:</p>
 <p>For those who don&#39;t know what webpack is, please read <a href="https://github.com/ruanyf/webpack-demos">this tutorial</a>.</p>
 <pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> webpack
@@ -261,46 +271,48 @@ development of large apps easier.</p>
   }
 };
 </code></pre>
-<!-- h2 --><h2 id="md-productivity-options">Productivity Options</h2><p>Productivity options can either speed up your project or grind you to a hault.  Pick the good ones, quickly understand their setup and add them to your project.  Don&#39;t look back.  You need:</p>
+<!-- h2 --><h2 id="md-productivity-options">Productivity Options</h2><p>We don&#39;t want a time-sink of buggy toys.  Lets install the stuff that is easy to setup, solid, and saves time.</p>
+<!-- h4 --><h4 id="md-webpack-dev-server">webpack-dev-server</h4><p>The <a href="https://webpack.github.io/docs/webpack-dev-server.html">webpack-dev-server</a> is a little node.js Express server serve static files.</p>
+<pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> webpack-<span class="hljs-built_in">dev</span>-server
+</code></pre><p>Add a subcommand <code>start</code> in <code>scripts</code> section of <code>package.json</code>:</p>
+<pre><code><span class="hljs-comment">"start":</span> <span class="hljs-comment">"webpack</span><span class="hljs-literal">-</span><span class="hljs-comment">dev</span><span class="hljs-literal">-</span><span class="hljs-comment">server</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">devtool</span> <span class="hljs-comment">source</span><span class="hljs-literal">-</span><span class="hljs-comment">map</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">inline</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">progress</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">colors</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">content</span><span class="hljs-literal">-</span><span class="hljs-comment">base</span> <span class="hljs-comment">build"</span><span class="hljs-string">,</span>
+</code></pre><p>Now run <code>npm run start</code> and open <a href="http://localhost:8080">http://localhost:8080</a> in a browser.</p>
+<!-- h4 --><h4 id="md-open-browser-webpack-plugin">open-browser-webpack-plugin</h4><p><a href="https://github.com/baldore/open-browser-webpack-plugin">open-browser-webpack-plugin</a> opens a new browser tab when Webpack loads. Very useful if you&#39;re lazy and don&#39;t want to force yourself to open a new tab when Webpack is ready to play!</p>
+<pre><code>npm install --<span class="hljs-keyword">save</span>-dev <span class="hljs-keyword">open</span>-browser-webpack-<span class="hljs-keyword">plugin</span>
+</code></pre><p>Add require to this plugin and add a new instance to the <code>plugins</code> field of <code>webpack.config.js</code>:</p>
+<pre><code class="lang-javascript">var OpenBrowserPlugin = require(<span class="hljs-string">'open-browser-webpack-plugin'</span>);
+<span class="hljs-comment">// ...</span>
+<span class="hljs-string">plugins:</span> [
+  <span class="hljs-keyword">new</span> OpenBrowserPlugin({ <span class="hljs-string">url:</span> <span class="hljs-string">'http://localhost:8080'</span> })
+]
+</code></pre>
+<p>Now run <code>npm run start</code> you&#39;ll find that it will launch a browser to open <a href="http://localhost:8080">http://localhost:8080</a> automatically.</p>
+<pre><code>npm <span class="hljs-command">run</span> start
+</code></pre><!-- h4 --><h4 id="md-hot-module-replacement">Hot Module Replacement</h4><p><a href="https://github.com/webpack/docs/wiki/hot-module-replacement-with-webpack">Hot Module Replacement</a> (HMR) exchanges, adds, or removes modules while an application is running <strong>without a page reload</strong>.</p>
+<p>Just add a flag <code>--hot</code> to the subcommand <code>start</code>:</p>
+<pre><code><span class="hljs-comment">"start":</span> <span class="hljs-comment">"webpack</span><span class="hljs-literal">-</span><span class="hljs-comment">dev</span><span class="hljs-literal">-</span><span class="hljs-comment">server</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">devtool</span> <span class="hljs-comment">source</span><span class="hljs-literal">-</span><span class="hljs-comment">map</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">hot</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">inline</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">progress</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">colors</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">content</span><span class="hljs-literal">-</span><span class="hljs-comment">base</span> <span class="hljs-comment">build"</span><span class="hljs-string">,</span>
+</code></pre><p>Reference:</p>
 <ul>
-<li><p>webpack-dev-server</p>
+<li><a href="https://github.com/soulmachine/react-starter-kits/blob/master/README.md">soulmachine/react-starter-kits</a></li>
+</ul>
+<!-- h2 --><h2 id="md-style-guides">Style Guides</h2><p>One of the fastest ways to decrease choice and anxiety is to adopt and abide by a style guide.  Great!  Thanks to <a href="https://github.com/airbnb/javascript/tree/master/react">Airbnb&#39;s React/JSX Style Guide</a> we now have mostly reasonable <strong>opinions</strong> on React and JSX</p>
+<p>Big Choices</p>
+<ul>
+<li><p><a href="http://reactjsnews.com/composing-components/">React.createClass -vs- extends <strong>React.Component</strong></a></p>
 </li>
-<li><p>Hot Module Replacement</p>
-</li>
-<li><p>Browser Open</p>
+<li><p><strong>ES6 Proptypes</strong> -vs- <a href="http://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#es7-property-initializers">ES7 Property Initialiazers</a></p>
 </li>
 </ul>
-<!-- h2 --><h2 id="md-style-guides">Style Guides</h2><p>One of the fastest ways to decrease choice and anxiety is to adopt and abide by a style guide.</p>
-<p><a href="https://github.com/airbnb/javascript/tree/master/react]">Airbnb React/JSX Style Guide</a></p>
+<p>Small Choices</p>
 <ul>
-<li>A mostly reasonable style guide to React and JSX</li>
+<li>Basic Rules, Naming, Declaration, Alignment,
+Quotes, Spacing, Props, Parantheses, Tags, Methods, Ordering</li>
 </ul>
+<p>Avoided Choices</p>
 <ul>
-<li><p>Basic Rules</p>
-</li>
-<li><p>Class vs React.createClass</p>
-</li>
-<li><p>Naming</p>
-</li>
-<li><p>Declaration</p>
-</li>
-<li><p>Alignment</p>
-</li>
-<li><p>Quotes</p>
-</li>
-<li><p>Spacing</p>
-</li>
-<li><p>Props</p>
-</li>
-<li><p>Parentheses</p>
-</li>
-<li><p>Tags</p>
-</li>
-<li><p>Methods</p>
-</li>
-<li><p>Ordering</p>
-</li>
+<li>Bind in Constructor, <a href="https://github.com/andreypopp/autobind-decorator">Decorator Binding</a>, <a href="http://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html#autobinding">ES7 future property initializers</a></li>
 </ul>
+<p>An example styled React Component:</p>
 <pre><code><span class="hljs-keyword">import</span> <span class="hljs-type">React</span>, { <span class="hljs-type">PropTypes</span> } from <span class="hljs-symbol">'reac</span>t';
 
 const propTypes = {
@@ -327,9 +339,8 @@ const defaultProps = {
 <span class="hljs-type">Link</span>.defaultProps = defaultProps;
 
 export <span class="hljs-keyword">default</span> <span class="hljs-type">Link</span>;
-</code></pre><p>Install:</p>
-<pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> eslint babel-eslint eslint-config-airbnb eslint-plugin-react
-</code></pre><p>Add <code>.eslintrc</code>:</p>
+</code></pre><!-- h4 --><h4 id="md-install-eslint-with-airbnb-style-gide">Install ESLint With Airbnb Style Gide</h4><pre><code>npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> eslint babel-eslint eslint-config-airbnb eslint-plugin-react
+</code></pre><p>Add <code>.eslintrc</code>:  eslint --init</p>
 <pre><code class="lang-json">{
   "<span class="hljs-attribute">env</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">node</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
@@ -352,6 +363,26 @@ export <span class="hljs-keyword">default</span> <span class="hljs-type">Link</s
   </span>}
 </span>}
 </code></pre>
+<p>Installed Rules:</p>
+<ul>
+<li><p><a href="http://eslint.org/docs/rules/">eslint</a></p>
+</li>
+<li><p><a href="https://github.com/yannickcr/eslint-plugin-react">eslint-plugin-react</a></p>
+</li>
+<li><p><a href="https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb">eslint-config-airbnb</a></p>
+</li>
+</ul>
+<p>Disabled rules:</p>
+<ul>
+<li><p><a href="http://eslint.org/docs/rules/comma-dangle.html">comma-dangle</a> - Disallow or Enforce Dangling Commas</p>
+</li>
+<li><p><a href="http://eslint.org/docs/2.0.0/rules/no-console.html">no-console</a> - Limit minimum and maximum length for identifiers</p>
+</li>
+<li><p><a href="http://eslint.org/docs/rules/id-length.html">id-length</a> - Limit minimum and maximum length for identifiers</p>
+</li>
+<li><p><a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md">react/prop-types</a> - Prevent missing props validation in a React component definition</p>
+</li>
+</ul>
 <p>Add <code>.eslintignore</code>:</p>
 <pre><code>build/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span>
 node_modules/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span>
@@ -637,7 +668,14 @@ export <span class="hljs-keyword">default</span> <span class="hljs-function"><sp
 <span class="hljs-title">import</span> <span class="hljs-title">myFunc</span> <span class="hljs-title">from</span> '<span class="hljs-title">myFunc</span>';</span>
 myFunc();
 </code></pre><!-- h1 --><h1 class="page-header" id="md-build-bundler">Build / Bundler</h1><p>Per Pete Hunt&#39;s advice for many good reasons:  Webpack.</p>
-<!-- h1 --><h1 class="page-header" id="md-atom">Atom</h1><p>Project snippets.  Reload with control-option-command-L.</p>
+<!-- h1 --><h1 class="page-header" id="md-editor">Editor</h1><p>Atom was originally written in React, its the base for facebook&#39;s Nuclide.io.</p>
+<ul>
+<li><p>apm install react</p>
+</li>
+<li><p>apm install eslint</p>
+</li>
+</ul>
+<p>Project snippets.  Reload with control-option-command-L.</p>
 <!-- h1 --><h1 class="page-header" id="md-notable-tweets">Notable tweets</h1><p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I only want <a href="https://t.co/KjNLQqay1R">https://t.co/KjNLQqay1R</a> for styling a React app. Compose your styles with components. This is it for me.</p>&mdash; Ryan Florence (<img width="30px" src="http://avatars.io/twitter/ryanflorence"> <a href="http://twitter.com/ryanflorence" target="_blank">@ryanflorence</a>) <a href="https://twitter.com/ryanflorence/status/684528942456279040">January 6, 2016</a></blockquote></p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!-- end -->
@@ -690,6 +728,15 @@ myFunc();
             
           
           <li style="margin-left: 0.5em;"><a href="#md-modern-react-choices">Modern React Choices</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
           
             
             
@@ -1007,7 +1054,40 @@ myFunc();
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-building-bundling">Building &amp; Bundling</a></li>
+          <li style="margin-left: 0.5em;"><a href="#md-building-and-bundling">Building and Bundling</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
           
             
             
@@ -1107,7 +1187,70 @@ myFunc();
             
             
           
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
           <li style="margin-left: 0.5em;"><a href="#md-style-guides">Style Guides</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
           
             
             
@@ -1672,7 +1815,37 @@ myFunc();
           
             
             
-            <li><a href="#md-atom">Atom</a></li>
+            <li><a href="#md-editor">Editor</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
