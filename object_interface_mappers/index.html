@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Wikismith">
+
+    <title>
+      React Form Generation
+    </title>
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bs3/bower/css/bootstrap.css">
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/bs3/css/blog.css">
+    <link rel="stylesheet" href="/bs3/css/docs.min.css">
+    <link rel="stylesheet" href="/bs3/css/railscasts.css">
+    <!-- endinject -->
+
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+
+
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<!-- Docs master nav -->
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="../../../" class="navbar-brand">
+              <img src="http://www.gravatar.com/avatar/91f491389b01231140190aef863408c9.png">
+              &nbsp;
+              jrhicks.github.io
+            </a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <!--
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/interests.html">Interest</a>
+                </li>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/about">Speaking</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">About</a></li>
+            </ul>
+            -->
+        </nav>
+    </div>
+</header>
+
+
+
+<!-- Docs page layout -->
+<div class="bs-docs-header" id="content">
+    <div class="container">
+        <h1>React Form Generation</h1>
+        <p>Object Interface Mappers (tcomb, json-schema etc.)</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+
+<div class="row">
+<div class="col-md-9" role="main">
+
+
+<div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/object_interface_mappers/index.md">Edit it</a></div>
+
+<p>#Priorities</p>
+<p>In many server side frameworks, the HTML rendering ecosystems are rich and enjoyable because separate
+libraries and components can rely on a central mechanism to reflect on the
+data schema and routes.  This <strong>reflection standard</strong> (as it turns out) is more useful than
+just converting our data into SQL, its usefull for converting our data into UI.  </p>
+<p>Unfortunately the lack of need for an ORM in our front-end, leaves our front-end component ecosystem without a common reflection api.  Not only must different component authors of Forms, Grids, Calendars, Sign Boards, and Cross Tabs implement their own API; but the application author must learn each API and repeat the description of their data schema throughout their application.</p>
+<p>I assert that selecting the correct React Form Generation component is
+less important than selecting the right way to describe your data.  I hope
+the React community will promulgate a few good data description standards
+and that all sorts of components ranging from forms, tables, calendars, sign boards,
+and cross-tabs will use the same data schematic to provide rich functionality.</p>
+<p>Maybe we will start calling these data description standards that help us generate UI, OIMs or
+<a href="http://devchat.tv/js-jabber/150-jsj-oims">Object Interface Mappers</a>.</p>
+<p>#React Form Components</p>
+<table border=1 cellpadding="10">
+<thead>
+<tr>
+<th style="padding: 15px">Standard</th>
+<th style="padding: 15px">Form Component</th>
+<th style="padding: 15px">validation</th>
+<th style="padding: 15px">presentation customization</th>
+<th style="padding: 15px">demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 15px">json-schema</td>
+<td style="padding: 15px">plexus-form</td>
+<td style="padding: 15px">plexus-validate</td>
+<td style="padding: 15px">with classes</td>
+<td  style="padding: 15px"><a href="http://appliedmathematicsanu.github.io/plexus-form/">demo</a></td>
+</tr>
+<tr>
+<td style="padding: 15px">tcomb</td>
+<td style="padding: 15px">tcomb-form</td>
+<td style="padding: 15px">tcomb-validate</td>
+<td style="padding: 15px">layout and style</td>
+<td style="padding: 15px"><a href="http://gcanti.github.io/tcomb-form/demo/index.html">demo</a></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>#JSON Schema</p>
+<pre><code class="lang-js">{
+    "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Example schema"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value">{"<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>}</span>,
+        "<span class="hljs-attribute">authorId</span>": <span class="hljs-value">{"<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>}</span>,
+        "<span class="hljs-attribute">message</span>": <span class="hljs-value">{"<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>}
+    </span>}</span>,
+}
+</code></pre>
+<p>##Plexus-form</p>
+<p>React component that take JSON Schemas</p>
+<p><a href="https://github.com/AppliedMathematicsANU/plexus-form">Plexus-form</a></p>
+<pre><code class="lang-js">&lt;Form
+   buttons  = {[]}
+   <span class="hljs-keyword">schema</span>   = {schema}
+   validate = {validate}
+   onSubmit = {onSubmit}
+   handlers = {handlers}
+   submitOnChange = {true} /&gt;
+</code></pre>
+<p>#TCOMB</p>
+<p><a href="https://github.com/gcanti/tcomb">TCOMB Github</a> - Type Checking for Javascript</p>
+<pre><code class="lang-js">var Person = t.struct({
+  <span class="hljs-built_in">name</span>: t.<span class="hljs-built_in">Str</span>,              <span class="hljs-comment">// a required string</span>
+  surname: t.maybe(t.<span class="hljs-built_in">Str</span>),  <span class="hljs-comment">// an optional string</span>
+  age: t.Num,               <span class="hljs-comment">// a required number</span>
+  rememberMe: t.Bool        <span class="hljs-comment">// a boolean</span>
+});
+</code></pre>
+<!-- h2 --><h2 id="md-tcomb-vs-json-schema">TCOMB vs JSON Schema</h2><p>TCOMB expresses more with less code.</p>
+<pre><code class="lang-js">// JSON SCHEMA
+
+{
+  <span class="hljs-string">"type"</span>: <span class="hljs-string">"object"</span>,
+  <span class="hljs-string">"properties"</span>: {
+    <span class="hljs-string">"foo"</span>: {
+      <span class="hljs-string">"type"</span>: <span class="hljs-string">"number"</span>
+    },
+    <span class="hljs-string">"bar"</span>: {
+      <span class="hljs-string">"type"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-string">"enum"</span>: [
+        <span class="hljs-string">"a"</span>,
+        <span class="hljs-string">"b"</span>,
+        <span class="hljs-string">"c"</span>
+      ]
+    }
+  }
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// TCOMB</span>
+
+<span class="hljs-keyword">var</span> <span class="hljs-type">Schema</span> = <span class="hljs-class"><span class="hljs-keyword">struct</span>(</span>{
+  foo: <span class="hljs-type">Num</span>,
+  bar: enums.of('a b <span class="hljs-built_in">c</span>')
+});
+</code></pre>
+<p>##TCOMB Validation</p>
+<p><a href="https://github.com/gcanti/tcomb-validation">tcomb-validation</a> - Validation library based on type combinators</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> <span class="hljs-type">SignInInfo</span> = struct({
+  username: <span class="hljs-type">Str</span>,
+  password: <span class="hljs-type">Str</span>
+});
+
+// retrieves values <span class="hljs-keyword">from</span> the <span class="hljs-type">UI</span>
+<span class="hljs-keyword">var</span> formValues = {
+  username: $('<span class="hljs-comment">#username').val().trim() || null,</span>
+  password: $('<span class="hljs-comment">#password').val().trim() || null</span>
+};
+
+// <span class="hljs-keyword">if</span> formValues = {username: null, password: 'password'}
+<span class="hljs-keyword">var</span> <span class="hljs-literal">result</span> = validate(formValues, <span class="hljs-type">SignInInfo</span>);
+<span class="hljs-literal">result</span>.isValid();     // =&gt; <span class="hljs-literal">false</span>
+<span class="hljs-literal">result</span>.firstError();  // =&gt; 'username <span class="hljs-keyword">is</span> `null`, should be a `<span class="hljs-type">Str</span>`'
+</code></pre>
+<!-- h2 --><h2 id="md-tcomb-form">TCOMB Form</h2><p>React.js powered UI library for developing forms writing less code.</p>
+<ul>
+<li><p><a href="http://gcanti.github.io/tcomb-form/demo/index.html">Awesome Demos</a> - Bootstrap, Gridforms, and Ionic</p>
+</li>
+<li><p><a href="http://gcanti.github.io/tcomb-form/guide/index.html">Docs</a></p>
+</li>
+<li><p><a href="https://github.com/gcanti/tcomb-form">tcomb-form</a> - React.js powered form-handling</p>
+</li>
+</ul>
+<!-- h2 --><h2 id="md-tcomb-form-native">TCOMB Form Native</h2><ul>
+<li><a href="https://github.com/gcanti/tcomb-form-native">tcomb-form-native</a> - react-native powered form-handling</li>
+</ul>
+<!-- h1 --><h1 class="page-header" id="md-see-also">See Also</h1><p>OIMS or (object interface mappers) provide the meta data to build interface components for our
+objects.</p>
+<p><a href="http://devchat.tv/js-jabber/150-jsj-oims">OIMs with Richard Kennard, Geraint Luff, and David Luecke</a> - Javascript Jabber 72 Minutes</p>
+<!-- end -->
+<hr>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="jrhicks">Tweet</a>
+
+<a href="https://twitter.com/jrhicks">Follow Jeffrey Hicks on Twitter</a></a>
+<hr>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jrhicksgithubio';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+<div class="col-md-3">
+    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+
+        <ul class="nav bs-docs-sidenav">
+            
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-tcomb-vs-json-schema">TCOMB vs JSON Schema</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-tcomb-form">TCOMB Form</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+          <li style="margin-left: 0.5em;"><a href="#md-tcomb-form-native">TCOMB Form Native</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+            <li><a href="#md-see-also">See Also</a></li>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+        </ul>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+        <p>Generated with <a href="http://wikismith.com">Wikismith</a> - <a href="http://getbootstrap.com">Bootstrap 3</a> Theme
+    </div>
+</footer>
+
+<!-- bower:js -->
+<script src="/bs3/bower/js/jquery.js"></script>
+<script src="/bs3/bower/js/bootstrap.js"></script>
+<!-- endinject -->
+
+<!-- inject:js -->
+<script src="/bs3/js/docs.min.js"></script>
+<!-- endinject -->
+
+
+<!-- TWITTER Put this just before the closing body tag -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</body>
+</html>

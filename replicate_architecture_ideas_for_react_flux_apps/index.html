@@ -97,7 +97,8 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/replicate_architecture_ideas_for_react_flux_apps/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>In <a href="/client_side_routing_notes/index.html">my last post</a>, navigating <strong>data space</strong> was proposed as one of a few concerns of client side routing and the following architectures were investigated:</p>
+<p>#Introduction#</p>
+<p>In <a href="/client_side_routing_notes/index.html">my last post</a>, navigating <strong>data space</strong> was proposed as one of a few concerns of client side routing and the following architectures were investigated:</p>
 <ul>
 <li><p>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores Pattern</a></p>
 </li>
@@ -107,13 +108,17 @@
 </li>
 </ul>
 <p>In this article I recap these patterns quickly and introduce how an offline flux pattern and example project that draws on qualities of each of these.</p>
-<!-- h1 --><h1 class="page-header" id="md-content-stores-pattern">Content Stores Pattern</h1><p><img src="flux.png" width="100%"></p>
+<p>#Content Stores Pattern#</p>
+<p><img src="flux.png" width="100%"></p>
 <p><strong>Dan Abramov&#39;s <a href="/client_side_routing_notes/index.html#md-content-stores">Content Stores</a> approach is pure flux!</strong>  We have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed.</p>
-<!-- h1 --><h1 class="page-header" id="md-relay-architecture">Relay Architecture</h1><p><strong>Facebook&#39;s Relay approach is pure decoupling!</strong>  Statically declare the data needs of a component within itself.  Eliminate creating and <em>maintaining</em> custom server end-points that match the needs of each component (and subcomponent) on the page.</p>
+<p>#Relay Architecture#</p>
+<p><strong>Facebook&#39;s Relay approach is pure decoupling!</strong>  Statically declare the data needs of a component within itself.  Eliminate creating and <em>maintaining</em> custom server end-points that match the needs of each component (and subcomponent) on the page.</p>
 <p><img src="relay3.png" width="100%"></p>
-<!-- h1 --><h1 class="page-header" id="md-offline-flux">Offline Flux</h1><p>I liked the pure flux of Dan&#39;s approach and the pure decoupling of Relay.  How could I combine  these ideas, into an architecture that featured a replicating database that could be used offline.</p>
+<p>#Offline Flux</p>
+<p>I liked the pure flux of Dan&#39;s approach and the pure decoupling of Relay.  How could I combine  these ideas, into an architecture that featured a replicating database that could be used offline.</p>
 <p><img src="offline_flux.png" width="100%"></p>
-<!-- h2 --><h2 id="md-replicate">Replicate</h2><p>In the diagram above, you might find Replicate to be placed oddly as a sibling of view.  You can consider Replicate as a background worker that initiates actions routinely.  Replicate listens to stores similarly to components, but instead of updating DOM it changes aspects of
+<p>##Replicate</p>
+<p>In the diagram above, you might find Replicate to be placed oddly as a sibling of view.  You can consider Replicate as a background worker that initiates actions routinely.  Replicate listens to stores similarly to components, but instead of updating DOM it changes aspects of
 replication.</p>
 <p>ReplicateStore tells Replicate:</p>
 <ul>
@@ -151,30 +156,35 @@ replication.</p>
 }
 </code></pre>
 <p>It works out nicely for replication duties and behavior to be governed by stores because the replicate worker and views can respond equally.</p>
-<!-- h2 --><h2 id="md-db">DB</h2><p>You will also notice a DB inside of Store.  This illustrates that access to the
+<p>##DB</p>
+<p>You will also notice a DB inside of Store.  This illustrates that access to the
 DB is mediated through the store.  When Replicate receives a page of data from
 the server it sends a queue action to the ReplicateStore.  ReplicateStore appends
 the data to its queue and loads it in 20 microsecond intervals.  <a href="http://lokijs.org/">LokiJS</a> can knock out well over
 1000 in this time.  Similarly; basic insert, save, and delete operations are
 mediated through the store.</p>
-<!-- h2 --><h2 id="md-similarities-to-content-stores">Similarities to Content Stores</h2><p>Much like Content Stores, data is stored normalized and the Flux pattern is respected.  Unlike Content Stores, the different entities are not separated
+<p>##Similarities to Content Stores##</p>
+<p>Much like Content Stores, data is stored normalized and the Flux pattern is respected.  Unlike Content Stores, the different entities are not separated
 into their own stores.  Data is segregated into collections (LokiJS&#39;s concept
 of a table).  Having all collections in one store keeps things real easy, but it might seem at the cost of components over-responding to changes from collections they don&#39;t care about.  However, if components check collection&#39;s updatedAt in shouldComponentUpdate they can remain lazy.</p>
-<!-- h2 --><h2 id="md-similarities-to-relay">Similarities to Relay</h2><p>Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.</p>
+<p>##Similarities to Relay##</p>
+<p>Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.</p>
 <pre><code>componentWillMount() {
   let projectId = parseInt(<span class="hljs-keyword">this</span>.getParams().projectId);
   ReplicateActions.subscribe(<span class="hljs-string">'note'</span>, {<span class="hljs-string">project_id:</span> projectId} );
   ReplicateActions.subscribe(<span class="hljs-string">'contact'</span>, {<span class="hljs-string">project_id:</span> projectId} );
 },
 </code></pre><p>Similar to Relay, your server can have one generic server end point!  Which is awesome!  But you don&#39;t need GQL magic on the server, <a href="https://github.com/jrhicks/LokiJS-Flux-Example/blob/master/app/controllers/offline_controller.rb">here is a basic implementation in Rails</a></p>
-<!-- h2 --><h2 id="md-performance">Performance</h2><p>Its fast!   Thanks React and Loki!  In this video, I sync (download and insert into an offline database) over 10,000 records.  I&#39;m using Flux to manage the replication
+<p>##Performance##</p>
+<p>Its fast!   Thanks React and Loki!  In this video, I sync (download and insert into an offline database) over 10,000 records.  I&#39;m using Flux to manage the replication
 process and update the React view component to display progress.</p>
 <p>While I&#39;m pretty happy with 11,000 records in 4 seconds, I&#39;m pretty sure I could
 make it a lot faster if I didn&#39;t wait until it was done loading each batch before
 I requested the next batch from the server.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W7htuT9ZJck" frameborder="0" allowfullscreen></iframe>
 
-<!-- h2 --><h2 id="md-example-repository">Example Repository</h2><p>You can checkout the full project here <a href="https://github.com/jrhicks/LokiJS-Flux-Example">https://github.com/jrhicks/LokiJS-Flux-Example</a></p>
+<p>##Example Repository##</p>
+<p>You can checkout the full project here <a href="https://github.com/jrhicks/LokiJS-Flux-Example">https://github.com/jrhicks/LokiJS-Flux-Example</a></p>
 <p>git clone <a href="https://github.com/jrhicks/LokiJS-Flux-Example.git">https://github.com/jrhicks/LokiJS-Flux-Example.git</a></p>
 <p>cd LokiJS-Flux-Example</p>
 <p>bundle install</p>
@@ -213,88 +223,6 @@ I requested the next batch from the server.</p>
             
             
             
-            <li><a href="#md-introduction">Introduction</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-content-stores-pattern">Content Stores Pattern</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-relay-architecture">Relay Architecture</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-offline-flux">Offline Flux</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-replicate">Replicate</a></li>
           
             
             
@@ -347,23 +275,14 @@ I requested the next batch from the server.</p>
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-db">DB</a></li>
-          
             
             
           
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-similarities-to-content-stores">Similarities to Content Stores</a></li>
-          
             
             
-          
-            
-            
-          
-          <li style="margin-left: 0.5em;"><a href="#md-similarities-to-relay">Similarities to Relay</a></li>
           
             
             
@@ -377,7 +296,20 @@ I requested the next batch from the server.</p>
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-performance">Performance</a></li>
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
           
             
             
@@ -391,7 +323,65 @@ I requested the next batch from the server.</p>
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-example-repository">Example Repository</a></li>
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
           
             
             
