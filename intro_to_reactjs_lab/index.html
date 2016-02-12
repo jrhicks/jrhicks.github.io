@@ -127,12 +127,12 @@
 </code></pre><ul>
 <li>Add Hello World Code.</li>
 </ul>
-<pre><code>    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/jsx"</span>&gt;</span><span class="xml">
+<pre><code>    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/jsx"</span>&gt;</span><span class="handlebars"><span class="xml">
       React.render(
           <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Hello React<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>,
           document.body
       );
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    </span></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </code></pre><!-- h1 --><h1 class="page-header" id="md-basic-example-2">Basic Example 2</h1><ul>
 <li><p>Create js/app.js and move javascript code into it.</p>
 </li>
@@ -234,10 +234,10 @@
 </code></pre><ul>
 <li>Replace Hello World with HomePage</li>
 </ul>
-<pre><code>React.render(
-    <span class="hljs-tag">&lt;<span class="hljs-title">HomePage</span> /&gt;</span>,
-    document.body
-);
+<pre><code><span class="hljs-label">React.render</span>(
+    &lt;HomePage /&gt;,
+    document.<span class="hljs-keyword">body
+</span>)<span class="hljs-comment">;</span>
 </code></pre><!-- h1 --><h1 class="page-header" id="md-dataflow">Dataflow</h1><ul>
 <li>Lets add some data.  Put this in HomePage component, right in the render function.</li>
 </ul>
@@ -302,8 +302,8 @@
 </code></pre><!-- h1 --><h1 class="page-header" id="md-inverse-data-flow">Inverse Data Flow</h1><ul>
 <li>Add a searchHandler to our HomePage component</li>
 </ul>
-<pre><code><span class="hljs-rule"><span class="hljs-attribute">searchHandler</span>:<span class="hljs-value"><span class="hljs-function">function</span>(key) {
-    <span class="hljs-function">alert</span>(<span class="hljs-string">'Search key: '</span> + key)</span></span>;
+<pre><code>searchHandler:<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(key)</span> </span>{
+    alert(<span class="hljs-string">'Search key: '</span> + key);
 },
 </code></pre><ul>
 <li>And pass it as a property to our SearchBar</li>
@@ -392,21 +392,21 @@ using our employeeService</li>
 </li>
 </ul>
 <pre><code><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/router.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-</code></pre><pre><code>router.addRoute(<span class="hljs-string">''</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+</code></pre><pre><code>router.addRoute(<span class="hljs-string">''</span>, <span class="hljs-keyword">function</span>() {
     React.render(
         &lt;HomePage service={employeeService}/&gt;,
         document.body
     );
 });
 
-router.addRoute(<span class="hljs-string">'employees/:id'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(id)</span> </span>{
+router.addRoute(<span class="hljs-string">'employees/:id'</span>, <span class="hljs-keyword">function</span>(id) {
     React.render(
         &lt;EmployeePage employeeId={id} service={employeeService}/&gt;,
         document.body
     );
 });
 
-router.start();
+router.<span class="hljs-keyword">start</span>();
 </code></pre><ul>
 <li><p>Lets add the EmployeePage</p>
 </li>
@@ -451,9 +451,9 @@ router.start();
 <li><p>http-server</p>
 </li>
 </ul>
-<pre><code>&lt;meta <span class="hljs-variable">name=</span><span class="hljs-string">"viewport"</span> <span class="hljs-variable">content=</span><span class="hljs-string">"width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"</span>&gt;
-&lt;link <span class="hljs-variable">href=</span><span class="hljs-string">"ratchet/css/ratchet.css"</span> <span class="hljs-variable">rel=</span><span class="hljs-string">"stylesheet"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"text/css"</span>&gt;
-&lt;link <span class="hljs-variable">href=</span><span class="hljs-string">"css/styles.css"</span> <span class="hljs-variable">rel=</span><span class="hljs-string">"stylesheet"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"text/css"</span>&gt;
+<pre><code>&lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"</span>&gt;
+&lt;link href=<span class="hljs-string">"ratchet/css/ratchet.css"</span> rel=<span class="hljs-string">"stylesheet"</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text/css"</span>&gt;
+&lt;link href=<span class="hljs-string">"css/styles.css"</span> rel=<span class="hljs-string">"stylesheet"</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text/css"</span>&gt;
 </code></pre><ul>
 <li>Update Header</li>
 </ul>

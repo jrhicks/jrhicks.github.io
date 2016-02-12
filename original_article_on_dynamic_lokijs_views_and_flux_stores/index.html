@@ -97,15 +97,18 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/original_article_on_dynamic_lokijs_views_and_flux_stores/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-warning">Warning</h1><p>This article was originally an attempt to understand how and where
+<p>#Warning</p>
+<p>This article was originally an attempt to understand how and where
 to fit a database with dynamic views into the flux architecture.  </p>
 <ul>
 <li>See Instead: <a href="/replicate_architecture_ideas_for_react_flux_apps/index.html">Offline Flux with LokiJS</a></li>
 </ul>
-<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p>There are some entertaining similarities between a LokiJS Dynamic View and a Flux Store.  In this post I introduce LokiJS Dynamic Views and demonstrate how you
+<p>#Introduction#</p>
+<p>There are some entertaining similarities between a LokiJS Dynamic View and a Flux Store.  In this post I introduce LokiJS Dynamic Views and demonstrate how you
 could use a Flux Store to implement the same functionality.</p>
 <p>I also show how to use Flux Stores to go beyond LokiJS and implement some capabilities LokiJS doesn&#39;t yet (but will soon) provide.  I end with some Flux-Frustrations that I think databases are uniquely capable of solving.</p>
-<!-- h1 --><h1 class="page-header" id="md-dynamic-views">Dynamic Views</h1><p>LokiJS has a feature called dynamic views that can build themselves from a collection and then very efficiently maintain themselves from updates.  As
+<p>#Dynamic Views#</p>
+<p>LokiJS has a feature called dynamic views that can build themselves from a collection and then very efficiently maintain themselves from updates.  As
 described on LokiJS:</p>
 <blockquote>
 <p>The DynamicView class allows for &#39;live&#39;, optionally persistent views. It supports multiple &#39;find&#39; and &#39;where&#39; filters and a single sort criteria. Changes to documents within the collection are automatically evaluated for addition or removal from the view ...</p>
@@ -116,7 +119,8 @@ bookView.applyFind({<span class="hljs-string">'yearPublished'</span>:{ <span cla
 
 <span class="hljs-comment">// Its worth noting that bookView is an event emitter.</span>
 bookView.on(<span class="hljs-string">'rebuild'</span>, <span class="hljs-keyword">callback</span>);
-</code></pre><!-- h1 --><h1 class="page-header" id="md-flux-stores">Flux Stores</h1><p>Could we implement this with a Flux Store?  Yes!</p>
+</code></pre><p>#Flux Stores#</p>
+<p>Could we implement this with a Flux Store?  Yes!</p>
 <pre><code><span class="hljs-keyword">import</span> alt from <span class="hljs-string">'../alt'</span>;
 <span class="hljs-keyword">import</span> db from <span class="hljs-string">'../lokidb'</span>;
 <span class="hljs-keyword">import</span> BookCollectionActions from <span class="hljs-string">'../Stores/BookCollectionActions'</span>;
@@ -164,12 +168,14 @@ bookView.on(<span class="hljs-string">'rebuild'</span>, <span class="hljs-keywor
 }
 
 <span class="hljs-module"><span class="hljs-keyword">module</span>.exports = alt.createStore(OldBookStore);</span>
-</code></pre><!-- h1 --><h1 class="page-header" id="md-entertaining-similarities">Entertaining Similarities</h1><p>Certainly not identical, but I hope you see the analogy I&#39;m trying to make.</p>
+</code></pre><p>#Entertaining Similarities#</p>
+<p>Certainly not identical, but I hope you see the analogy I&#39;m trying to make.</p>
 <p><img src="lokilookalike.png" width="100%"></p>
-<!-- h1 --><h1 class="page-header" id="md-lokijs-joins">LokiJS Joins</h1><p>In <a href="https://github.com/techfort/LokiJS/issues/106">issue 106</a> applyMap
+<p>#LokiJS Joins#</p>
+<p>In <a href="https://github.com/techfort/LokiJS/issues/106">issue 106</a> applyMap
 function was proposed for dynamic views.  It would allow things like:</p>
-<pre><code><span class="hljs-reserved">var</span> bookView = books.addDynamicView(<span class="hljs-string">'bookView'</span>);
-bookView.applyMap( <span class="hljs-function"><span class="hljs-params">(b)</span> =&gt;</span> objectAssign(b, {<span class="hljs-attribute">author</span>: authorsCollection.findOne({<span class="hljs-attribute">id</span>: b.author_id})}) );
+<pre><code><span class="hljs-label">var</span> <span class="hljs-keyword">bookView </span>= <span class="hljs-keyword">books.addDynamicView('bookView');
+</span><span class="hljs-keyword">bookView.applyMap( </span>(<span class="hljs-keyword">b) </span>=&gt; objectAssign(<span class="hljs-keyword">b, </span>{author: authorsCollection.findOne({id: <span class="hljs-keyword">b.author_id})}) </span>)<span class="hljs-comment">;</span>
 </code></pre><p>This doesn&#39;t exist in LokiJS, but we could make it in a FluxStore</p>
 <pre><code><span class="hljs-keyword">import</span> alt from <span class="hljs-string">'../alt'</span>;
 <span class="hljs-keyword">import</span> db from <span class="hljs-string">'../lokidb'</span>;
@@ -225,7 +231,8 @@ bookView.applyMap( <span class="hljs-function"><span class="hljs-params">(b)</sp
 }
 
 <span class="hljs-module"><span class="hljs-keyword">module</span>.exports = alt.createStore(BookJoinStore);</span>
-</code></pre><!-- h1 --><h1 class="page-header" id="md-flux-frustrations">Flux Frustrations</h1><p>Lets say I have 3 pages with 2 components each that all show, filter, and convert books in different ways.</p>
+</code></pre><p>#Flux Frustrations#</p>
+<p>Lets say I have 3 pages with 2 components each that all show, filter, and convert books in different ways.</p>
 <p><img src="dec.png" max-width="100%"></p>
 <ul>
 <li><p>Do I have a store for each component?</p>
@@ -239,7 +246,9 @@ bookView.applyMap( <span class="hljs-function"><span class="hljs-params">(b)</sp
 </ul>
 <p>I love stores!  I just don&#39;t want to have to author a class for every
 store that is tightly coupled to the component it serves!</p>
-<!-- h1 --><h1 class="page-header" id="md-database-solutions">Database Solutions</h1><!-- h2 --><h2 id="md-decoupling">Decoupling</h2><p>What if we could create the Store from within the component?  And we could do it
+<p>#Database Solutions#</p>
+<p>##Decoupling##</p>
+<p>What if we could create the Store from within the component?  And we could do it
 in a concise, declarative fashion that other people were figuring out how to keep
 performant!</p>
 <p>What would that look like?  I propose you could create and start listening to the store on the component mounting, and discard the store on unmount.</p>
@@ -258,7 +267,8 @@ onChange() {
   <span class="hljs-keyword">this</span>.setState(<span class="hljs-keyword">this</span>.bookView.data);
 }
 </code></pre>
-<!-- h2 --><h2 id="md-design-constraints">Design Constraints</h2><p>Have you ever wondered what to call an action?  For example, lets
+<p>##Design Constraints#</p>
+<p>Have you ever wondered what to call an action?  For example, lets
 say a user double-clicks on book.  Have you ever been tempted to name an
 action after the user interaction?  Like &quot;BookActions.doubleClicked(book)&quot;?  Something about naming the action after the user interaction instead of the domain change feels dirty and wrong.  If what you really want to happen when
 the user double clicks the book is for it be added to your favorites list, then
@@ -269,15 +279,17 @@ was the subject of <a href="http://www.slideshare.net/vishnu/discovering-a-world
 In it he made a controversial but persuasive argument that if you&#39;ve modeled
  your domain correctly that everything is CRUD.</p>
 <p>So in the above example the DHH way would be to:</p>
-<pre><code><span class="hljs-tag">FavoritesActions</span><span class="hljs-class">.create</span>({<span class="hljs-attribute">user</span>: current_user.id, <span class="hljs-attribute">book</span>: book})
+<pre><code><span class="hljs-tag">FavoritesActions</span><span class="hljs-class">.create</span>(<span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">user</span>:<span class="hljs-value"> current_user.id, book: book</span></span></span>})
 </code></pre><p>While this is quite an opinionated stance.  It certainly looks good for
 ditching ActionCreators and just using our collections.</p>
-<pre><code><span class="hljs-tag">db</span><span class="hljs-class">.favorites</span><span class="hljs-class">.insert</span>({<span class="hljs-attribute">user</span>: current_user.id, <span class="hljs-attribute">book</span>: book});
+<pre><code><span class="hljs-tag">db</span><span class="hljs-class">.favorites</span><span class="hljs-class">.insert</span>(<span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">user</span>:<span class="hljs-value"> current_user.id, book: book</span></span></span>});
 </code></pre><p>I&#39;m certainly not suggesting this as an unbreakable rule.  You shouldn&#39;t have to make an update in order to show a drop-down menu or transition pages.  For all
 non-crud operations, just use React-Router</p>
-<!-- h1 --><h1 class="page-header" id="md-cqrs">CQRS</h1><p>In a <a href="https://medium.com/<img width="30px" src="http://avatars.io/twitter/dan_abramov"> <a href="http://twitter.com/dan_abramov" target="_blank">@dan_abramov</a>/the-case-for-flux-379b7d1982c6">Case for Flux</a>, Dan relates Flux to a foundational concept of Command Query Responsibility Segregation.  It is a very worthwhile read.  Here is more information on
+<p>#CQRS#</p>
+<p>In a <a href="https://medium.com/<img width="30px" src="http://avatars.io/twitter/dan_abramov"> <a href="http://twitter.com/dan_abramov" target="_blank">@dan_abramov</a>/the-case-for-flux-379b7d1982c6">Case for Flux</a>, Dan relates Flux to a foundational concept of Command Query Responsibility Segregation.  It is a very worthwhile read.  Here is more information on
 <a href="http://martinfowler.com/bliki/CQRS.html">CQRS from Martin Fowler</a></p>
-<!-- h1 --><h1 class="page-header" id="md-conclusion">Conclusion</h1><p>I&#39;m not suggesting that Flux is bad.  In fact I use it extensively in a <a href="https://www.youtube.com/watch?v=HuaaEKpNEOU">Map editing application</a>.  But if we can invoke its
+<p>#Conclusion</p>
+<p>I&#39;m not suggesting that Flux is bad.  In fact I use it extensively in a <a href="https://www.youtube.com/watch?v=HuaaEKpNEOU">Map editing application</a>.  But if we can invoke its
 elements dynamicly, abstract away performance concerns, reduce coupling, and preserve CQRS - I think we should investigate it.</p>
 <!-- end -->
 <hr>
@@ -310,8 +322,6 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
             
             
             
-            <li><a href="#md-warning">Warning</a></li>
-            
           
             
             
@@ -336,8 +346,6 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
           
             
             
-            <li><a href="#md-introduction">Introduction</a></li>
-            
           
             
             
@@ -345,9 +353,7 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
             
             
           
-            
             
-            <li><a href="#md-dynamic-views">Dynamic Views</a></li>
             
           
             
@@ -370,8 +376,6 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
           
             
             
-            <li><a href="#md-flux-stores">Flux Stores</a></li>
-            
           
             
             
@@ -381,8 +385,6 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
           
             
             
-            <li><a href="#md-entertaining-similarities">Entertaining Similarities</a></li>
-            
           
             
             
@@ -390,9 +392,7 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
             
             
           
-            
             
-            <li><a href="#md-lokijs-joins">LokiJS Joins</a></li>
             
           
             
@@ -409,8 +409,6 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
           
             
             
-            <li><a href="#md-flux-frustrations">Flux Frustrations</a></li>
-            
           
             
             
@@ -468,13 +466,9 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
           
             
             
-            <li><a href="#md-database-solutions">Database Solutions</a></li>
-            
           
             
             
-          
-          <li style="margin-left: 0.5em;"><a href="#md-decoupling">Decoupling</a></li>
           
             
             
@@ -488,8 +482,6 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-design-constraints">Design Constraints</a></li>
-          
             
             
           
@@ -513,15 +505,11 @@ elements dynamicly, abstract away performance concerns, reduce coupling, and pre
           
             
             
-            <li><a href="#md-cqrs">CQRS</a></li>
-            
           
             
             
           
-            
             
-            <li><a href="#md-conclusion">Conclusion</a></li>
             
           
             

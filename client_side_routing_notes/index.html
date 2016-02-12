@@ -97,7 +97,8 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/client_side_routing_notes/index.md">Edit it</a></div>
 
-<!-- h1 --><h1 class="page-header" id="md-introduction">Introduction</h1><p><a href="http://conf.reactjs.com/schedule.html#react-router-increases-your-productivity">React Router Increases Your Productivity</a> - 32 Minute Video - Jan 28th, 2015 at React.js Conf</p>
+<p>#Introduction#</p>
+<p><a href="http://conf.reactjs.com/schedule.html#react-router-increases-your-productivity">React Router Increases Your Productivity</a> - 32 Minute Video - Jan 28th, 2015 at React.js Conf</p>
 <p>Concepts</p>
 <ul>
 <li><p>&quot;Screen Creation Productivity&quot;</p>
@@ -111,7 +112,8 @@
 <li><p>Working URLS are a core to Web Applications</p>
 </li>
 </ul>
-<!-- h1 --><h1 class="page-header" id="md-basic-examples">Basic Examples</h1><pre><code><span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">handler</span>=<span class="hljs-value">{App}</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"/"</span>&gt;</span>
+<p>#Basic Examples#</p>
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">handler</span>=<span class="hljs-value">{App}</span> <span class="hljs-attribute">path</span>=<span class="hljs-value">"/"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">DefaultRoute</span> <span class="hljs-attribute">handler</span>=<span class="hljs-value">{Home}</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"about"</span> <span class="hljs-attribute">handler</span>=<span class="hljs-value">{About}</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Route</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"users"</span> <span class="hljs-attribute">handler</span>=<span class="hljs-value">{Users}</span>&gt;</span>
@@ -122,7 +124,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-title">NotFoundRoute</span> <span class="hljs-attribute">handler</span>=<span class="hljs-value">{NotFound}</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">Redirect</span> <span class="hljs-attribute">from</span>=<span class="hljs-value">"company"</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">"about"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Route</span>&gt;</span>
-</code></pre><!-- h1 --><h1 class="page-header" id="md-route-store">Route Store</h1><p><a href="https://github.com/rackt/react-router/blob/master/docs/guides/flux.md">Guide to React Router in a Flux App</a></p>
+</code></pre><p>#Route Store#</p>
+<p><a href="https://github.com/rackt/react-router/blob/master/docs/guides/flux.md">Guide to React Router in a Flux App</a></p>
 <p>You can create your own RouterStore and fire an action in run callback:</p>
 <pre><code>Router.run(routes, (Handler, <span class="hljs-keyword">state</span>) =&gt; {
   ActionCreators.changeRoute({ <span class="hljs-keyword">state</span> });
@@ -130,8 +133,10 @@
 });
 </code></pre><p>Let RouterStore keep router state and add a public method to obtain it.
 This way your action creators and other stores can learn about current router state.</p>
-<!-- h1 --><h1 class="page-header" id="md-alt-example">Alt Example</h1><p>In case you like <a href="https://github.com/goatslacker/alt">alt</a> like me.  Here is a <a href="https://github.com/lostpebble/alt-react-router-example">alt-react-router-example</a> - An example project showing a way to use React-Router (and async calls) with the Flux implementation, Alt.</p>
-<!-- h1 --><h1 class="page-header" id="md-content-stores">Content Stores</h1><p>Dan Abramov introduces the concept of Content Stores in his <a href="https://github.com/gaearon/flux-react-router-example">Flux React Router Example</a></p>
+<p>#Alt Example#</p>
+<p>In case you like <a href="https://github.com/goatslacker/alt">alt</a> like me.  Here is a <a href="https://github.com/lostpebble/alt-react-router-example">alt-react-router-example</a> - An example project showing a way to use React-Router (and async calls) with the Flux implementation, Alt.</p>
+<p>#Content Stores#</p>
+<p>Dan Abramov introduces the concept of Content Stores in his <a href="https://github.com/gaearon/flux-react-router-example">Flux React Router Example</a></p>
 <p>As users navigate screens they are also navigating through your
 applications data and triggering server actions to fetch fresh
 data.  In the ContentStore pattern, ContentStores <em>harvest their objects from all server actions</em>.  </p>
@@ -150,7 +155,8 @@ the response for any new user entities and merges them in if found.</p>
     UserStore.emitChange();
   }
 });
-</code></pre><!-- h1 --><h1 class="page-header" id="md-relay-and-graphql">Relay and GraphQL</h1><p><a href="https://facebook.github.io/react/blog/2015/02/20/introducing-relay-and-graphql.html">Introducing Relay and GraphQL</a> 26 minutes - Greg Hurrell - 2015/02/02</p>
+</code></pre><p>#Relay and GraphQL#</p>
+<p><a href="https://facebook.github.io/react/blog/2015/02/20/introducing-relay-and-graphql.html">Introducing Relay and GraphQL</a> 26 minutes - Greg Hurrell - 2015/02/02</p>
 <p>Relay and GraphQL are less concerned with offline date and more
 interested in decoupling the server and the UI.  With GraphQL
 each component can register their complex data needs (data and summary)
@@ -164,7 +170,8 @@ Stop writing dedicated endpoints.</p>
 <p><img src="relay3.png" width="100%"></p>
 <p>The top level component can compose the queries of its children.</p>
 <p><img src="composition.png" width="100%"></p>
-<!-- h1 --><h1 class="page-header" id="md-offline-partitions-store">Offline Partitions Store</h1><p>The offline partitions store approach is a strategy to register
+<p>#Offline Partitions Store#</p>
+<p>The offline partitions store approach is a strategy to register
 partitions of data you want to store offline and synchronize with a
 server as available.</p>
 <p>Each partition would keep track of its sync status and some basic info to help
@@ -172,10 +179,10 @@ remove itself should space become limited on the front end.</p>
 <p>Consider the following schema for a project management application.</p>
 <p><img src="schema.png"></p>
 <p>When the user navigates into a project 12312 the following actions get fired:</p>
-<pre><code>  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'files'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
-  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'members'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
-  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'notes'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
-  ensurePartition({ <span class="hljs-string">entity:</span> <span class="hljs-string">'tasks'</span>, <span class="hljs-string">filter:</span> {<span class="hljs-string">projectId:</span> <span class="hljs-number">12312</span>, <span class="hljs-string">userId:</span> <span class="hljs-number">23</span>}});
+<pre><code>  <span class="hljs-tag">ensurePartition</span>(<span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">entity</span>:<span class="hljs-value"> <span class="hljs-string">'files'</span>, filter: {projectId: <span class="hljs-number">12312</span>, userId: <span class="hljs-number">23</span></span></span></span>}});
+  <span class="hljs-tag">ensurePartition</span>(<span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">entity</span>:<span class="hljs-value"> <span class="hljs-string">'members'</span>, filter: {projectId: <span class="hljs-number">12312</span>, userId: <span class="hljs-number">23</span></span></span></span>}});
+  <span class="hljs-tag">ensurePartition</span>(<span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">entity</span>:<span class="hljs-value"> <span class="hljs-string">'notes'</span>, filter: {projectId: <span class="hljs-number">12312</span>, userId: <span class="hljs-number">23</span></span></span></span>}});
+  <span class="hljs-tag">ensurePartition</span>(<span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">entity</span>:<span class="hljs-value"> <span class="hljs-string">'tasks'</span>, filter: {projectId: <span class="hljs-number">12312</span>, userId: <span class="hljs-number">23</span></span></span></span>}});
 </code></pre><p>The OfflinePartitionStore would handle ensurePartition by either updating
 the lastEnsured timestamp or appending an empty (unsynced) partition.</p>
 <p>Assuming this app has no previous data, these actions would fill the OfflineParitionStore with a bunch of empty partitions, the end product would resemble something like this:</p>
@@ -379,7 +386,68 @@ failed.  Our new store might look like:</p>
             
             
             
-            <li><a href="#md-introduction">Introduction</a></li>
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -444,16 +512,6 @@ failed.  Our new store might look like:</p>
           
             
             
-            <li><a href="#md-basic-examples">Basic Examples</a></li>
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-route-store">Route Store</a></li>
-            
           
             
             
@@ -462,71 +520,6 @@ failed.  Our new store might look like:</p>
             
           
             
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-alt-example">Alt Example</a></li>
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-content-stores">Content Stores</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-relay-and-graphql">Relay and GraphQL</a></li>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-            <li><a href="#md-offline-partitions-store">Offline Partitions Store</a></li>
             
           
             

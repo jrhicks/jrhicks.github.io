@@ -5,8 +5,8 @@
 
 <h3>Stack Trace</h3>
 <pre>Error: Cannot find module '/Users/jrhicks/code/jrhicks.github.source/themes/minimum/index.js'
-    at Function.Module._resolveFilename (module.js:336:15)
-    at Function.require.resolve (module.js:388:19)
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.require.resolve (module.js:389:19)
     at pageContent (/Users/jrhicks/code/jrhicks.github.source/node_modules/wikismith/lib/core.js:207:42)
          204:         {
          205:             var module_name = file.params.theme || 'minimum'
@@ -47,14 +47,7 @@
           48:         }
           49:     }
           50: 
-    at Stream.ondata (stream.js:51:26)
-    at Stream.emit (events.js:107:17)
-    at Stream.stream.write (/Users/jrhicks/code/jrhicks.github.source/node_modules/event-stream/index.js:54:10)
-          51:     })
-          52:   })
-          53:   stream.write = function (data) {
-          54:     this.emit('data', data)
-          55:   }
-          56:   stream.destroy = function () {
-          57:     toMerge.forEach(function (e) {</pre>
+    at Stream.ondata (stream.js:31:26)
+    at emitOne (events.js:77:13)
+    at Stream.emit (events.js:169:7)</pre>
 </body></html>

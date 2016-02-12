@@ -97,10 +97,12 @@
 
 <div class="alert alert-success" role="alert">Want to help improve this article? <a href="https://github.com/jrhicks/jrhicks.github.source/edit/master/pages/in_app_code_generation/index.md">Edit it</a></div>
 
-<!-- h2 --><h2 id="md-introduction">Introduction</h2><p>Have you ever used the --save option when you npm-install a package.  Of course you do!  Because regardless your stance on code generation, a modest amount of assistance rocks!  I tend to think of application writing as a balance between code generation (but not too much) and refactoring (but not too much).</p>
+<p>##Introduction</p>
+<p>Have you ever used the --save option when you npm-install a package.  Of course you do!  Because regardless your stance on code generation, a modest amount of assistance rocks!  I tend to think of application writing as a balance between code generation (but not too much) and refactoring (but not too much).</p>
 <p><img src="./the_fine_line.png" /></p>
 <p>I wish there was a golden rule to knowing the perfect amount of code generation and refactoring.  If you find one, please share.  But for now, lets say some code generation is good, its up to you to determine how much.  Now that were passed that; what is the best way to generate code!  </p>
-<!-- h2 --><h2 id="md-an-index-pattern">An Index Pattern</h2><p>Lets say I want to maintain an index of FooBars.  So that every time I create a FooBar it gets added to this index.js:</p>
+<p>##An Index Pattern</p>
+<p>Lets say I want to maintain an index of FooBars.  So that every time I create a FooBar it gets added to this index.js:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> SmartFooBar <span class="hljs-keyword">from</span> <span class="hljs-string">'./SmartFoobar'</span>;
 <span class="hljs-keyword">import</span> SillyFooBar <span class="hljs-keyword">from</span> <span class="hljs-string">'./SillyFoobar'</span>;
 <span class="hljs-keyword">import</span> AwesomeFooBar <span class="hljs-keyword">from</span> <span class="hljs-string">'./AwesomeFoobar'</span>;
@@ -166,8 +168,6 @@ babel.<span class="hljs-keyword">register</span>(<span class="hljs-comment">{sta
             
             
           
-          <li style="margin-left: 0.5em;"><a href="#md-introduction">Introduction</a></li>
-          
             
             
           
@@ -179,8 +179,6 @@ babel.<span class="hljs-keyword">register</span>(<span class="hljs-comment">{sta
           
             
             
-          
-          <li style="margin-left: 0.5em;"><a href="#md-an-index-pattern">An Index Pattern</a></li>
           
             
             
