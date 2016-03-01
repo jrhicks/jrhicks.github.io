@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 757)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 756)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 752);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 751);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 754);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 753);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 756);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 755);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34350,7 +34350,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 751);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 750);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -34517,7 +34517,7 @@
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 744);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 743);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -58831,12 +58831,11 @@
 		"./arkansas-dev-hackathon-2015.md": 735,
 		"./client-side-routing-notes.md": 736,
 		"./confidently-starting-a-reactjs-project.md": 737,
-		"./cool-location.md": 738,
-		"./intro-to-flux.md": 739,
-		"./intro-to-reactjs.md": 740,
-		"./introduction-to-es6.md": 741,
-		"./offline-flux-with-lokijs.md": 742,
-		"./react-form-generation.md": 743
+		"./intro-to-flux.md": 738,
+		"./intro-to-reactjs.md": 739,
+		"./introduction-to-es6.md": 740,
+		"./offline-flux-with-lokijs.md": 741,
+		"./react-form-generation.md": 742
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -58871,7 +58870,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a48bb573-781d-4077-a392-f7d82e4812ae",
+	      "key": "979c22fd-3180-47d7-b7f0-606c31766040",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -58946,7 +58945,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "362ddccd-371a-4ffc-96be-3883da51e046",
+	      "key": "7622a1e3-26f1-421e-b459-11a3eb1d6d9e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59318,7 +59317,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1059bca7-b8ac-4d78-9bc9-76217daafff7",
+	      "key": "e8ad4a9d-2f48-4c38-bae4-5469ef0ebf0e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59497,7 +59496,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "268dbfad-d49d-4087-a5e9-c7c5a83e4977",
+	      "key": "952fda40-59f1-4a45-976d-3a205aaeb5cf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59763,7 +59762,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "34e2cb3d-b537-4afe-a4bd-3b57d212ed5d",
+	      "key": "a02a2f0e-58c7-40e2-a3bd-1833faaccaa4",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59851,7 +59850,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2223e793-8227-4640-ba43-12c422637224",
+	      "key": "3cea867c-a76b-4173-af74-9e48aa6837f2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59870,7 +59869,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d37a4e42-42f2-4c3b-aa4f-4cd9ea869fef",
+	      "key": "06c24259-cfcd-446f-be66-fd07748f1749",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59914,7 +59913,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b568df26-b588-4ae2-9ec7-47fdf73f4b0c",
+	      "key": "4e303247-2368-4948-86f6-e59575a1ddfe",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59952,7 +59951,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f33b550a-5aca-47d9-9cbc-488f33655a82",
+	      "key": "59b2031b-f0d6-47c0-be6b-1e3e51797923",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60013,7 +60012,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f181db4b-ccda-4be5-9f4c-b2c58183b572",
+	      "key": "94fba8ea-4b5f-41d7-8460-20fdd4062134",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60103,7 +60102,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "57dadb77-041f-43e1-9138-d7aeaec6c939",
+	      "key": "3bc8f6a2-5b55-4a23-aae2-d680882e0013",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60302,7 +60301,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "4bffb97c-17ad-4c2c-b148-601ba57d71ed",
+	      "key": "e515617f-9ac7-431e-a1fa-46a383519824",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60342,7 +60341,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e632dea5-5236-4fa2-8f31-ccc2ba78b62d",
+	      "key": "3c02316a-979d-4bb1-89ac-62b28f390faf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60385,7 +60384,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8046b56d-88de-40e7-a4ac-d1877f88d231",
+	      "key": "84a48fe0-dc6d-4aaf-9cd8-75c21c4c47a2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60468,7 +60467,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d92c3979-489f-44fc-9f4b-5389520b79e4",
+	      "key": "3103267a-5153-460c-95a8-3323d1c80428",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60837,7 +60836,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ab3cba9c-450d-42f6-b730-89323f64ebc1",
+	      "key": "854dd24b-3161-426a-b755-b09a33bd6a8d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60932,7 +60931,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b40ffc38-11df-446f-a362-4310e3410c5b",
+	      "key": "89c3fe17-488c-429e-8f04-16e9db16c643",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60998,7 +60997,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1f026ad5-4608-492f-b1df-e82c094be75d",
+	      "key": "cc349125-2df5-4d8f-9aec-224ba8dde169",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61147,7 +61146,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "39241369-9955-4836-97a8-6c45502ebd3b",
+	      "key": "e824a593-f116-498c-83b0-a794aed25e46",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61266,30 +61265,6 @@
 /***/ },
 /* 738 */
 /*!****************************************!*\
-  !*** ./content/posts/cool-location.md ***!
-  \****************************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "title": "Cool Location",
-	  "slug": "cool-location",
-	  "subtitle": null,
-	  "created": "2016-03-01T16:52:37.137Z",
-	  "author": "Jeffrey R. Hicks",
-	  "twitter": "jrhicks",
-	  "type": "post",
-	  "ast": [
-	    {
-	      "type": "section",
-	      "key": "fb835455-e9eb-4c60-b41a-ee2fbda988a4",
-	      "body": []
-	    }
-	  ]
-	}
-
-/***/ },
-/* 739 */
-/*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
 /***/ function(module, exports) {
@@ -61306,7 +61281,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "5cdb803d-aa36-4e2e-9961-c873677073e3",
+	      "key": "18ac9120-eddd-44e7-bd84-8301e963075c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61344,26 +61319,12 @@
 	            }
 	          ],
 	          "ordered": false
-	        },
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "cool-location",
-	                "method": "embed"
-	              },
-	              ""
-	            ]
-	          ]
 	        }
 	      ]
 	    },
 	    {
 	      "type": "section",
-	      "key": "0096d386-a696-4758-8c35-1c5bc96034b8",
+	      "key": "3d5b25eb-c7bb-4d3f-a154-23bc6e85da40",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61383,7 +61344,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "503b6d84-b413-496c-8fb1-177b3cf24604",
+	      "key": "c641644f-382e-4d31-90d3-f1833b1acedd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61403,7 +61364,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b7ae5543-f32c-43aa-b264-ac32bdd54b90",
+	      "key": "3662606d-9c28-4c38-9e88-2bc96fc1b8b2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61429,7 +61390,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e3eff093-1fc1-4ecf-9fc1-2c98082ddfe1",
+	      "key": "65e7c170-8f1c-4469-a6af-b7bb7a5b34f6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61455,7 +61416,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bc2d33fa-0f7a-4749-8f6e-99ef16f60988",
+	      "key": "828419ab-6f80-4a99-8eb8-89a21c4d9274",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61475,7 +61436,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "eff15c71-8eb6-4ef6-ac37-c49ff46a25f7",
+	      "key": "7ac847fd-0550-4637-be45-2ecb25451a76",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61540,7 +61501,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f8852e2a-ef3f-4f72-a326-c4da1075e02f",
+	      "key": "56e1ba89-15ba-4e7e-b2c7-14c12e9d42d5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61554,7 +61515,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d45b1ad0-735f-4823-b12f-df3f6b88e0e0",
+	      "key": "5e338dc5-4759-428b-a23a-0e9c8792c1cc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61613,7 +61574,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b2c51094-20a4-4780-83c6-9cf54e83ae21",
+	      "key": "56517862-2c6b-4e07-a513-c5c5897ffce7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61656,7 +61617,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f0bdd60c-5374-4afd-aa3b-f627a0a38b8e",
+	      "key": "c95bcd4a-bc8a-4107-808d-7c813dd9f7f3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61715,7 +61676,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0e2d9eca-5dea-47ce-a905-94e03a06dc6b",
+	      "key": "b2c1be03-1be7-4d67-a6cc-114627168ccf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61785,7 +61746,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6050ec3c-a3a4-4eec-affb-9dcbc8c7751d",
+	      "key": "a857c32c-a946-4e94-8cb4-d6d1e4fd0ac1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61848,7 +61809,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d98b6b9c-ca83-4578-8dc8-c72a00f030f7",
+	      "key": "722222eb-7673-487e-aee9-c81b665c58bb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61919,7 +61880,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "31887c17-67b0-466e-8052-044eeae991ba",
+	      "key": "d57ac766-f6d3-4f99-a933-da04b090c766",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61962,7 +61923,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6167a17d-244e-4ad6-b475-2c278153f74f",
+	      "key": "572d5bfd-6d07-47df-a31f-36a59d2d5c44",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61993,7 +61954,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "966ce0a7-acc7-4382-aecc-44d22a50498e",
+	      "key": "07931748-c36b-44e6-9d7f-3fb0c992a748",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62026,7 +61987,7 @@
 	}
 
 /***/ },
-/* 740 */
+/* 739 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -62044,7 +62005,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f728d584-1ed4-47fa-87c3-b7bb5cbe7064",
+	      "key": "f2b8c4a8-4288-481c-977d-d268dc6d179f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62109,7 +62070,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c86b5f62-4850-4829-a6f8-d8cb76f9987e",
+	      "key": "dd78de4d-2357-49d8-a06b-9a285611420b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62174,7 +62135,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a0b6c628-ab34-4fa9-8704-76bbe422b949",
+	      "key": "04220207-7ad5-4aae-8763-a85945001a34",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62322,7 +62283,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67356c10-7c92-4ebc-bed0-555e3e76dc5f",
+	      "key": "42f90e49-2ef1-4959-a67b-26c7fdbd22bd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62560,7 +62521,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4aef035e-54d8-4dc1-8f96-e42d567b4c93",
+	      "key": "c9e20bb0-db88-4775-8a40-a3720c7a89da",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62659,7 +62620,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ac5e70f7-cca3-453c-aa0f-039a0a2a5c18",
+	      "key": "805ed473-f9f5-4b10-b6b3-75334059be81",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62811,7 +62772,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f7054b91-9c24-4653-ae98-3c25c13112a5",
+	      "key": "5475b855-e48c-474d-a6e0-79403fb2dbe8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62906,7 +62867,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4e4a73a9-1034-4c12-b6fd-b957969b9f7f",
+	      "key": "6e1c1652-96cb-4c83-a1d4-c6d79f57b1df",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63044,7 +63005,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0366d57c-4198-4a4e-9307-19a9ba696784",
+	      "key": "b7476aef-be25-4d1a-9268-4c9b56df2baf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63239,7 +63200,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b4448aef-b06c-4de1-a535-f65e52323582",
+	      "key": "f4552f10-dcc9-4e92-886a-2286823e4e16",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63364,7 +63325,7 @@
 	}
 
 /***/ },
-/* 741 */
+/* 740 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -63382,7 +63343,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8276975d-2a35-48b7-abf9-2dca0b973ad1",
+	      "key": "8556ae41-cb56-4310-9d6a-5cf598541623",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63394,7 +63355,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b44e2c49-3905-4c76-86cf-720644206c88",
+	      "key": "bb34a51d-deb9-4215-96dd-7721375bccfb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63503,7 +63464,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b223c30a-35b2-41ea-8c29-c8519bbd41b8",
+	      "key": "178303e8-8d8e-43d5-9e0d-cd05a7be638f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63552,7 +63513,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dc3863e3-3fc6-4f64-8d45-7aabc916c8e6",
+	      "key": "f4819047-cad1-4035-8624-313115007e71",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63624,7 +63585,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7112d3ae-185d-45f4-a507-4402b08b6b01",
+	      "key": "b171ead0-1cd3-4105-a1fc-471f3ec50edd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63660,7 +63621,7 @@
 	}
 
 /***/ },
-/* 742 */
+/* 741 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -63678,7 +63639,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "3f4e2b08-4f92-41e8-806d-9e44d4fbbc77",
+	      "key": "2b2a9dd6-762a-4f0f-bb91-d053763d668c",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63776,7 +63737,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2d1def9a-94a5-4dc4-9ff4-7f77341f1c8d",
+	      "key": "7bc2caf2-7927-49f7-b03c-9bf928d99284",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63817,7 +63778,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e4d5aecc-874d-49bb-9117-36fada6843e0",
+	      "key": "49814df1-f168-47c3-b187-0d7384f3f8f7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63856,7 +63817,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e8f69793-2455-4e79-b665-534643714f89",
+	      "key": "5afdd52f-6e84-43bb-8359-1232a0eedab9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63882,7 +63843,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1a4538a0-08c1-4ee5-80bb-f5eff6e03c4d",
+	      "key": "f193003e-6897-4ada-ae53-5d0d512c791f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63960,7 +63921,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9b047965-694d-48da-81c6-acbc2dc7199a",
+	      "key": "3ac4e479-55c9-4710-8bc1-c9f955d42057",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63989,7 +63950,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8960ae16-cb90-4a04-9af7-4ce0d2331a70",
+	      "key": "ab694c26-6c57-41de-b363-5b8e99df27d5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64009,7 +63970,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ea52d563-4dc9-47ff-b2bc-9582670bae86",
+	      "key": "cb7dd974-db43-4537-8509-08a786db092c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64048,7 +64009,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "862f25b8-e5de-4d0d-8d57-5ee8ab6ed6c7",
+	      "key": "1118ca82-4b47-43b4-a84e-545ff01a677a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64082,7 +64043,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a5078b31-2186-48cf-ac1f-3a612856001c",
+	      "key": "28f596cf-1853-4fce-9c2b-dff6eb80df68",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64164,7 +64125,7 @@
 	}
 
 /***/ },
-/* 743 */
+/* 742 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -64182,7 +64143,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "37446c2b-7d8e-4566-8749-0ec46c968a86",
+	      "key": "088b595c-e804-4265-bf2c-2b7b58a13705",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64201,7 +64162,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5231a7b5-2092-48a8-8051-78115fc3b91c",
+	      "key": "82cb0ccc-0c62-472e-9172-d60df8fe7160",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64308,7 +64269,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f039af35-d9f0-4cc1-9245-87dfee766960",
+	      "key": "35816233-8c80-4874-b20c-607ff5d5a730",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64328,7 +64289,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0e2d4aaa-8f40-462d-9989-fbca8a2448f8",
+	      "key": "86d86020-273d-4b87-a4f9-00cd0a2ce123",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64367,7 +64328,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c2f7b087-95b2-4ca2-92b4-efbba6430fa3",
+	      "key": "965c3db1-b7c6-4280-876a-fe47572541d1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64401,7 +64362,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8207e94e-e620-4579-bf8e-f19e5eb82ab2",
+	      "key": "6347202d-9158-4af0-9e7f-bae4cbe261e9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64433,7 +64394,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "72cfc6dd-31f2-4931-842b-a17ea14b20b5",
+	      "key": "a16814e5-32d5-43ff-9a48-52182d147054",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64467,7 +64428,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "351f582d-3287-4cb3-94a7-9d6925b14e77",
+	      "key": "f7545312-f9cf-4110-bd0a-a6669efceb3a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64550,7 +64511,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7813f3ca-ae63-4801-91ff-9ecec0403806",
+	      "key": "f7f082ed-5ea0-4229-8972-908c11dac761",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64584,7 +64545,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "648a5c1a-1e98-4423-b843-2b9f5c3f4f6b",
+	      "key": "efbe6826-fc14-4ac6-9078-20bc2ca46c46",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64620,7 +64581,7 @@
 	}
 
 /***/ },
-/* 744 */
+/* 743 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -64628,7 +64589,7 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 745);
+	var req = __webpack_require__(/*! ./talks/ */ 744);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
@@ -64636,18 +64597,18 @@
 	module.exports = talks;
 
 /***/ },
-/* 745 */
+/* 744 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 746,
-		"./es-intro.md": 747,
-		"./lds-intro.md": 748,
-		"./talks.md": 749,
-		"./ui-principles.md": 750
+		"./component-vs-layout.md": 745,
+		"./es-intro.md": 746,
+		"./lds-intro.md": 747,
+		"./talks.md": 748,
+		"./ui-principles.md": 749
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -64660,11 +64621,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 745;
+	webpackContext.id = 744;
 
 
 /***/ },
-/* 746 */
+/* 745 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -64686,14 +64647,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0b5825d0-1c2f-4f55-8b12-4a741a6d0baf",
+	      "key": "25b3e15f-cd71-482c-827e-733be4452ca1",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 747 */
+/* 746 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -64715,14 +64676,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "83a84ec4-fc6b-42b0-a3ba-c3bdee1d0576",
+	      "key": "d6961232-fdbd-4571-8e4f-3bc1385ef35c",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 748 */
+/* 747 */
 /*!************************************!*\
   !*** ./content/talks/lds-intro.md ***!
   \************************************/
@@ -64744,14 +64705,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2e2fdf43-ca3e-42ac-8a0c-37db1bebeb51",
+	      "key": "9cada927-0bf8-49de-9508-3daba2e430a4",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 749 */
+/* 748 */
 /*!********************************!*\
   !*** ./content/talks/talks.md ***!
   \********************************/
@@ -64770,7 +64731,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e30ed13d-ed94-49b4-a0b0-104b66eefd45",
+	      "key": "3d01a770-82a5-4c28-9cb7-6de1ff49fdba",
 	      "body": [
 	        "",
 	        {
@@ -64835,7 +64796,7 @@
 	}
 
 /***/ },
-/* 750 */
+/* 749 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -64857,14 +64818,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d1c24ff9-6ac9-4b8f-97e1-8565ccc67e4b",
+	      "key": "4ab4c30c-71b5-474d-a596-ee6d0c06f68d",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 751 */
+/* 750 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -64874,7 +64835,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 752 */
+/* 751 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -64906,7 +64867,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 753);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 752);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -64948,17 +64909,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: _ProfilePanel2.default.description },
-	                'Student of Simple'
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: _ProfilePanel2.default.description },
-	                'Meddler of Models'
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: _ProfilePanel2.default.description },
-	                'Designer and Doer'
+	                'Application developer, designer, & mentor interested in web technologies and behavior science'
 	              )
 	            )
 	          )
@@ -64972,7 +64923,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 753 */
+/* 752 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -64982,7 +64933,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 754 */
+/* 753 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -65020,7 +64971,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 755);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 754);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -65146,7 +65097,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 755 */
+/* 754 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -65156,7 +65107,7 @@
 	module.exports = {"responsiveTable":"AgendaPanel__responsiveTable___1imD0","buttonCell":"AgendaPanel__buttonCell___mdHZT","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 756 */
+/* 755 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -65166,7 +65117,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 757 */
+/* 756 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -65176,12 +65127,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 758),
+	  component: __webpack_require__(/*! ./Content */ 757),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 758 */
+/* 757 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -65217,7 +65168,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 759);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 758);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -65252,7 +65203,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 759 */
+/* 758 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
