@@ -272,7 +272,7 @@
 
   .ProfilePanel__img___O4v7c {
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .ProfilePanel__img--rev___22HCM {
@@ -282,7 +282,7 @@
 
   .ProfilePanel__img___O4v7c img {
     display: block;
-    width: 100px;
+    width: 75px;
   }
 
   .ProfilePanel__bd___EnBFI > * + * {
@@ -292,12 +292,12 @@
   .ProfilePanel__heading___3ovu8 {
     font-weight: bold;
     color: #288ECC;
-    font-size: 2em;
+    font-size: 2rem;
     padding-bottom: 0.25em;
   }
 
   .ProfilePanel__description___2crKI {
-    font-size: 1.25em;
+    font-size: 1.15em;
     font-weight: bold;
     margin: 0;
     padding: 0;
