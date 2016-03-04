@@ -59017,7 +59017,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e968bed3-d386-4ab7-9206-d8725ac6035d",
+	      "key": "f816f8a4-da3e-4af7-8840-c1e38636230a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59092,7 +59092,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "97fe1ae4-44a7-405a-8518-21ef1b5dd38a",
+	      "key": "160e9d9f-467d-4f76-a639-b47a93833514",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59464,7 +59464,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "91f1e7e1-7900-4549-8776-3468a8e0ad93",
+	      "key": "14db5b40-a40a-4b56-a929-a78de807a7ac",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59643,7 +59643,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "57306de2-f180-4c7c-bbd0-8c8d63878d3a",
+	      "key": "b4e7f9d6-4e3a-46cf-8cc3-157964683d8b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59909,7 +59909,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "afb61683-a4fd-41a3-8d2c-97e3be0e1e4f",
+	      "key": "baf56671-8f50-4eff-8ac1-5349ed4c1418",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59997,7 +59997,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7d451c52-d7fc-4614-8b56-7a52c321d433",
+	      "key": "04ba5714-851b-4261-b0f0-2aa07786fdf2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60016,7 +60016,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "be488cf9-a298-4b17-a083-285d49925bed",
+	      "key": "1946fa97-5671-48eb-ac2a-f5733bdb208a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60060,7 +60060,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ac1f52b3-966f-462b-a63c-3d2708ae9657",
+	      "key": "f074b2d1-1467-448a-865e-fcb67a84cc9c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60098,7 +60098,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1a7d0417-5b79-41f0-a791-250f09f73bd2",
+	      "key": "c22994a0-8514-4d43-a227-6c5c904de136",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60159,7 +60159,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7af802ee-7abe-4893-9690-967b7d1236d4",
+	      "key": "43140d34-721f-4d01-8760-4d0d2ccfb936",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60249,7 +60249,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1ab2e221-159a-45da-824c-59c9c28e4ada",
+	      "key": "03d45833-6259-4855-899e-62ee17758d32",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60448,7 +60448,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "71ed683f-7afb-402d-814e-41024f4e8210",
+	      "key": "6f5f56a4-89ea-4afd-aa8c-d93fa4170633",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60488,7 +60488,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "84b40318-912f-4004-b232-1ebbb317376b",
+	      "key": "a84ab13c-5fba-49fe-86ee-f731e0434e72",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60531,7 +60531,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a5167ddf-5edb-4701-9b71-e6982331bf6a",
+	      "key": "c5f6abea-b92b-4c90-8e29-24d214635ca3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60614,7 +60614,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9a9621f5-14f1-4988-b6f3-750f1c8a98df",
+	      "key": "765eacc3-4cb6-41b7-9a23-2280f8d4ab47",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60983,7 +60983,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4e4f4434-25b1-490f-ae60-e34d559daf95",
+	      "key": "c37decae-d51e-4c49-a394-419b74766005",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61078,7 +61078,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d8e700ec-a88b-4b41-bc3d-1f950e9d8149",
+	      "key": "90f2404d-b74b-4207-b405-e439a8c6251f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61144,7 +61144,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cc33aa39-c30d-49e6-94c0-c01686d6bc36",
+	      "key": "cf05e6b2-cbb2-4d93-96a8-b5f8f7d0c2f6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61293,7 +61293,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cd5e9e04-7728-4008-99ec-9bf67407de25",
+	      "key": "9275cc7a-6f87-4dae-b206-1863f7e1a50e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61428,7 +61428,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f3a93407-2e12-41ff-9a43-92d0a289b437",
+	      "key": "526e3f42-3626-4258-a2ca-1b845d0dd70d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61471,7 +61471,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e01352d8-a6b4-4b1a-923e-79f4ef9e053e",
+	      "key": "021113ef-c2c9-4781-a727-689586b05a97",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61491,7 +61491,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ed7ea820-5562-433b-9d24-06c966c93841",
+	      "key": "3bb876bf-ac7a-401a-af0a-5337d2053b84",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61511,7 +61511,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "896f150b-65ef-46c9-81e0-c9259ba9eb59",
+	      "key": "7deb9d17-2740-4902-abfa-0b9daed82d96",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61537,7 +61537,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "07f7e620-1a71-4bd8-b514-ec7b3267961e",
+	      "key": "b97dceb7-70d3-45a6-b0cd-3ee1ad68fe03",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61563,7 +61563,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "019e3290-2b5b-49c6-911c-287313f1065c",
+	      "key": "e2f5d73c-28e2-4da1-ae67-9c5a238c7a3d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61583,7 +61583,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "171abc17-b5ac-450f-bfc4-4d48d6b8834a",
+	      "key": "6ae76d33-d3f3-4fe9-bd77-cc1707a4cf91",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61648,7 +61648,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c67f9ff9-7e95-4619-8f89-7172fa5e8227",
+	      "key": "364811a9-bdb9-49b2-b1ee-7d330dcac439",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61662,7 +61662,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a529481f-6f9b-4dca-8ead-736fc6e6ccf6",
+	      "key": "e2e96741-af4e-4312-bc66-c9446ead2265",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61721,7 +61721,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f1ab1d4a-9b11-461c-9b80-37a7e4721576",
+	      "key": "962a0fac-7320-4d93-a1c0-953c4aa09199",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61764,7 +61764,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a78a0b70-66f0-4416-9146-0b6104d20e45",
+	      "key": "7e23a473-c31b-4283-90a9-afea0c654f0e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61823,7 +61823,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2d540f88-4108-4b37-b1fa-d1ea0af9d7c6",
+	      "key": "f06cb62f-2d35-4fdf-94fc-52852e7b5c70",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61893,7 +61893,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4242eb3d-8bfa-41e1-a5a6-4f1029fbe7f8",
+	      "key": "07abcca4-4967-4d30-aae1-37d5a8258e40",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61956,7 +61956,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3fbfdba5-4c2d-41d0-8187-e0634e7de301",
+	      "key": "f6161816-67ab-47f3-be3f-d764405260d4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62027,7 +62027,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "527509e2-10cc-4526-adf9-a6ba44c71571",
+	      "key": "b4a3e71c-f720-48df-a551-511ca8d7c902",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62070,7 +62070,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5a750a33-c1e6-4f53-9a76-468b2fd1844a",
+	      "key": "a6f474c0-e04d-4885-9c99-e43ee271f861",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62101,7 +62101,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b87d42f2-3714-4a5d-87f9-0074c3f86058",
+	      "key": "d309a1a0-b7b0-4056-bf02-697046e619c9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62152,7 +62152,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a13f2cf4-71c1-445a-9de9-bf37088008db",
+	      "key": "8beec831-3ad6-4f5c-b4ea-18e29a7d2f13",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62217,7 +62217,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9b1c1cf0-d01d-4dd9-884c-bd3ce056d881",
+	      "key": "fe66cee1-3a7a-482e-b714-4aa6b4411407",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62282,7 +62282,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7a5eb3b0-46c1-4214-b744-31f7059b23b9",
+	      "key": "03631443-38e3-485a-b7a6-49d6b6fbd99e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62430,7 +62430,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ae73fa8a-4580-4fc0-b4c6-1e9f8e14b039",
+	      "key": "442d32d0-b416-47cb-925c-08edfb82330e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62668,7 +62668,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d781a654-1b81-4dee-af75-1e56044fb68b",
+	      "key": "d2cd2adc-0dae-49ca-9663-71f6d774f559",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62767,7 +62767,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "299d4a9f-6dab-415c-b1a1-40865a27fe68",
+	      "key": "f9d95c88-0d12-419b-96ca-a48d23ffc39f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62919,7 +62919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cec5b348-10cf-4c15-b020-8d315e0920bd",
+	      "key": "885eb5af-9910-4a20-8e9b-ec2ef91c5514",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63014,7 +63014,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f6db58cb-61af-4bdc-b63b-9c444bdfb718",
+	      "key": "2a2735f2-b180-4bbd-bb12-87501698052f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63152,7 +63152,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5ab90b00-01ce-415a-8d1e-cb4bd79a9617",
+	      "key": "26c49c68-f537-4567-a4a5-c3a6aa06c22d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63347,7 +63347,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c95720de-5442-4651-b9a0-189815e171ac",
+	      "key": "67c4d4c9-2d79-43a4-a796-9c4c8280cc4e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63490,7 +63490,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2ed09b8c-7fba-466b-add1-41e0ec3c9f5b",
+	      "key": "f8d71d4d-b09b-41d7-b0e9-ad16d75e7d6a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63502,7 +63502,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "13dea489-b712-4c98-82fb-52ebee04e914",
+	      "key": "b788ce89-4412-4dfe-87c1-e9f38d460ea5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63611,7 +63611,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5a647954-1952-44c1-bf25-afd6111768df",
+	      "key": "1d5dfaf4-e750-43e8-8332-4d18cc7afd81",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63660,7 +63660,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "22526968-580d-4ebc-b3c6-b6c938b4c0c6",
+	      "key": "2050b7f0-a9c3-4368-9cf3-3327c8e765e4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63732,7 +63732,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6dbc30ef-7973-4c8b-b723-10e99535aaf4",
+	      "key": "ceb3b221-2a3e-4a26-8503-d74b9b8fc7e5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63786,7 +63786,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "faf1faa4-6dd2-4fff-972b-e9427cfa01fb",
+	      "key": "cf41e1ab-2a08-479c-aa13-839fd647f1d4",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63884,7 +63884,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c01a57d7-0f9d-4f5d-a168-33c0b2b59d71",
+	      "key": "d5c9ba6d-f8c0-45c8-b0a9-8515c536bf89",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63925,7 +63925,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "016c0b6b-0b4d-487d-a1fe-978c3442d1e3",
+	      "key": "d859fc39-93c1-4714-9bc4-9e63a0571e3d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63964,7 +63964,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "29724277-cd45-460f-a4f3-4290a6756375",
+	      "key": "50ace043-64d4-475e-9139-ab4d0ba45ab1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63990,7 +63990,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c6df0f30-ac99-441e-9a9b-e84c67065ed5",
+	      "key": "4098bfc2-857f-4db8-8cd4-5bb5b11e0e80",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64068,7 +64068,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9892dcce-f692-4e3b-bc9d-221d7e7f4b56",
+	      "key": "61cea403-bbe1-460f-bd38-0cd33c91583b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64097,7 +64097,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aba6698a-727b-449d-b2a9-05f4a418a3ca",
+	      "key": "cd3844de-76ca-48ce-a31d-f09aaf9a2d68",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64117,7 +64117,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "90f1702e-f6c2-470e-817b-402ad186b42a",
+	      "key": "510f5346-59e6-4291-bf11-27c3a5af0707",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64156,7 +64156,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "98adf04a-e1db-435c-a923-2e62a2f82eca",
+	      "key": "f43dd46e-eb1f-4973-8a4b-481c2e449103",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64190,7 +64190,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b0647124-ab07-40c6-8ee6-4d8f385bfbb1",
+	      "key": "dd418ef7-8c16-4b5d-ac4c-40b64eda5b92",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64290,7 +64290,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "977ba859-6a15-4a02-8e22-f9677290e185",
+	      "key": "3e0701fd-1713-442d-8ca5-8fefc382023c",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64309,7 +64309,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2865b535-307b-4a7c-beaa-cf9975019558",
+	      "key": "35db6c3b-9b32-4a1e-88f4-8db75eb323e4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64416,7 +64416,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0dc141a8-e641-4f44-a0bb-7ef7d2882aab",
+	      "key": "1e39425b-15bd-46eb-9010-7bf2aa36974e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64436,7 +64436,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "52478278-9021-479c-9342-a596155e60a9",
+	      "key": "6e341ef7-a0f5-45f2-be15-5668f5bf5ddd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64475,7 +64475,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "208a2399-d43d-457f-891d-cace30129d4b",
+	      "key": "5a328b82-82d4-42b2-80af-748c1be1b115",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64509,7 +64509,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5f87bc3a-150a-4425-9070-db235f9db3dc",
+	      "key": "f44a6825-8016-4c74-85d5-f5bed0390ced",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64541,7 +64541,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2123a02c-8a98-405d-904b-da4f19827d14",
+	      "key": "de64e3b0-23d2-42b9-96f4-afc31e1cee92",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64575,7 +64575,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "194671a2-be1f-4470-91ef-3acac836989c",
+	      "key": "a03039e4-3942-48ab-86d0-7a2a9ca34aa4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64658,7 +64658,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a1251148-daae-4ca8-a9b6-0269a5a96263",
+	      "key": "3693bf2d-40ff-4c28-8594-077ff0c9c18b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64692,7 +64692,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "99cfa9f6-ced5-482e-965e-f23585f6a1d0",
+	      "key": "052a1070-b6ab-48ff-a3d9-5e3cce1a2663",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64790,7 +64790,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e12c0f37-da2e-4100-af70-420821726862",
+	      "key": "0c25c243-6523-4365-a7a1-6cb291be1f30",
 	      "body": []
 	    }
 	  ]
@@ -64819,7 +64819,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0c9b18f6-397b-483d-ad23-8627dcebb328",
+	      "key": "2b3901b4-c659-4206-bb65-9331305dd968",
 	      "body": []
 	    }
 	  ]
@@ -64848,7 +64848,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c733f9af-a04e-4e48-8831-355d5878a9b1",
+	      "key": "5b5c1fc3-6332-4b1e-99aa-2ac46b906cdf",
 	      "body": []
 	    }
 	  ]
@@ -64874,7 +64874,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d4dc6757-fe1b-4633-8d03-d736e267126f",
+	      "key": "f84d8ff8-9617-447d-80fc-f1efe8f2fb4b",
 	      "body": [
 	        "",
 	        {
@@ -64958,7 +64958,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "ffcd9de9-ae64-4cfb-9e14-969e43172f41",
+	      "key": "c1c73bb9-fb2a-48e8-9602-c49d2aa329f3",
 	      "body": []
 	    }
 	  ]
@@ -64988,8 +64988,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8d4a8807-9a70-4370-99f7-b5cb57d1d661",
+	      "key": "a5e0467f-ae01-40c6-84d7-258bceee0d83",
 	      "body": [
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Styles across many sites are surprisingly similar, but the CSS strategies to accomplish the style is non-obvious.  Style Design Patterns attempts to classify these commonly recurring problems and their solutions."
+	          ]
+	        },
 	        {
 	          "type": "paragraph",
 	          "text": [
@@ -65003,6 +65009,137 @@
 	              ""
 	            ]
 	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "This presentation will help someone with a basic understanding of CSS to both identify the patterns used in and be able to code a site like the following:"
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "<img src=\"/assets/images/cssday_twitter.png\" width=\"100%\"/>"
+	          ]
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "d2dcc4ba-d180-4899-880c-5b933acae595",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Style Design Patterns"
+	          ],
+	          "level": 2,
+	          "raw": "Style Design Patterns"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Panels extend to edges of browser with content of fixed width in the center."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Panels alternate color."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Hero panel background image covers the full area and large text overlay made legible with a vignette background gradient."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Robust tabs do not have fixed height, but instead let the content determine the height."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Tweets, right hand tiles, and left column elements spaced out with lobotomized owl."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Grid columns and galleries made flush with container edges using the negative margin pattern."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Left image moved up into Hero using Negative Margin Pattern."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Tweets implemented with the Media Object Pattern."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Masonry Layout Pattern groups the tweets and right hand content while providing a soft grey to cover the majority of the screen real-estate while providing a high-contrast white for the content."
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
 	        }
 	      ]
 	    }
