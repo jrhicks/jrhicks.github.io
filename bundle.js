@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 759)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 774)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 754);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 755);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 756);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 757);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 758);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 773);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34350,7 +34350,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 753);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 754);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -34513,7 +34513,11 @@
 	
 	var _MapType2 = _interopRequireDefault(_MapType);
 	
-	var _posts = __webpack_require__(/*! ../content/posts.js */ 733);
+	var _SpeakerDeck = __webpack_require__(/*! ../wikismith/SpeakerDeck */ 733);
+	
+	var _SpeakerDeck2 = _interopRequireDefault(_SpeakerDeck);
+	
+	var _posts = __webpack_require__(/*! ../content/posts.js */ 736);
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
@@ -34526,6 +34530,8 @@
 	_wikismith2.default.registerContentType('post', _PostType2.default);
 	_wikismith2.default.registerContentType('talk', _TalkType2.default);
 	_wikismith2.default.registerContentType('map', _MapType2.default);
+	_wikismith2.default.registerContentType('speakerdeck', _SpeakerDeck2.default);
+	
 	_wikismith2.default.registerContent(_posts2.default);
 	_wikismith2.default.registerContent(_talks2.default);
 	
@@ -58806,6 +58812,147 @@
 
 /***/ },
 /* 733 */
+/*!****************************************!*\
+  !*** ./wikismith/SpeakerDeck/index.js ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	// Render and Embed intentionally the same
+	
+	module.exports = {
+	  embed: __webpack_require__(/*! ./embed/SpeakerDeck */ 734),
+	  render: __webpack_require__(/*! ./embed/SpeakerDeck */ 734),
+	  link: __webpack_require__(/*! ./link/SpeakerDeck */ 735)
+	};
+
+/***/ },
+/* 734 */
+/*!*****************************************************!*\
+  !*** ./wikismith/SpeakerDeck/embed/SpeakerDeck.jsx ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _getPrototypeOf = __webpack_require__(/*! babel-runtime/core-js/object/get-prototype-of */ 436);
+	
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+	
+	var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 448);
+	
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+	
+	var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 449);
+	
+	var _createClass3 = _interopRequireDefault(_createClass2);
+	
+	var _possibleConstructorReturn2 = __webpack_require__(/*! babel-runtime/helpers/possibleConstructorReturn */ 453);
+	
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+	
+	var _inherits2 = __webpack_require__(/*! babel-runtime/helpers/inherits */ 490);
+	
+	var _inherits3 = _interopRequireDefault(_inherits2);
+	
+	var _react = __webpack_require__(/*! react */ 192);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var EmbedSpeakerDeck = function (_React$Component) {
+	  (0, _inherits3.default)(EmbedSpeakerDeck, _React$Component);
+	
+	  function EmbedSpeakerDeck() {
+	    (0, _classCallCheck3.default)(this, EmbedSpeakerDeck);
+	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(EmbedSpeakerDeck).apply(this, arguments));
+	  }
+	
+	  (0, _createClass3.default)(EmbedSpeakerDeck, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var script = document.createElement('script');
+	      script.src = '//speakerdeck.com/assets/embed.js';
+	      script.async = 1;
+	      document.body.appendChild(script);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'speakerdeck-embed', 'data-id': '5305bc1ee0854460a21a9fb6a81bd6b9' },
+	        'Loading Slides ...'
+	      );
+	    }
+	  }]);
+	  return EmbedSpeakerDeck;
+	}(_react2.default.Component);
+	
+	module.exports = EmbedSpeakerDeck;
+
+/***/ },
+/* 735 */
+/*!****************************************************!*\
+  !*** ./wikismith/SpeakerDeck/link/SpeakerDeck.jsx ***!
+  \****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _getPrototypeOf = __webpack_require__(/*! babel-runtime/core-js/object/get-prototype-of */ 436);
+	
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+	
+	var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 448);
+	
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+	
+	var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 449);
+	
+	var _createClass3 = _interopRequireDefault(_createClass2);
+	
+	var _possibleConstructorReturn2 = __webpack_require__(/*! babel-runtime/helpers/possibleConstructorReturn */ 453);
+	
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+	
+	var _inherits2 = __webpack_require__(/*! babel-runtime/helpers/inherits */ 490);
+	
+	var _inherits3 = _interopRequireDefault(_inherits2);
+	
+	var _react = __webpack_require__(/*! react */ 192);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SpeakerDeck = function (_React$Component) {
+	  (0, _inherits3.default)(SpeakerDeck, _React$Component);
+	
+	  function SpeakerDeck() {
+	    (0, _classCallCheck3.default)(this, SpeakerDeck);
+	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(SpeakerDeck).apply(this, arguments));
+	  }
+	
+	  (0, _createClass3.default)(SpeakerDeck, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'a',
+	        { href: '#/content/' + this.props.content.slug },
+	        this.props.content.title
+	      );
+	    }
+	  }]);
+	  return SpeakerDeck;
+	}(_react2.default.Component);
+	
+	module.exports = SpeakerDeck;
+
+/***/ },
+/* 736 */
 /*!**************************!*\
   !*** ./content/posts.js ***!
   \**************************/
@@ -58813,7 +58960,7 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./posts/ */ 734);
+	var req = __webpack_require__(/*! ./posts/ */ 737);
 	var posts = req.keys().map(function (k) {
 	  return req(k);
 	});
@@ -58821,22 +58968,19 @@
 	module.exports = posts;
 
 /***/ },
-/* 734 */
+/* 737 */
 /*!*****************************!*\
   !*** ./content/posts \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./arkansas-dev-hackathon-2015.md": 735,
-		"./client-side-routing-notes.md": 736,
-		"./confidently-starting-a-reactjs-project.md": 737,
-		"./cool-locations.md": 738,
-		"./home.md": 739,
-		"./intro-to-flux.md": 740,
-		"./intro-to-reactjs.md": 741,
-		"./introduction-to-es6.md": 742,
-		"./office.md": 743,
+		"./arkansas-dev-hackathon-2015.md": 738,
+		"./client-side-routing-notes.md": 739,
+		"./confidently-starting-a-reactjs-project.md": 740,
+		"./intro-to-flux.md": 741,
+		"./intro-to-reactjs.md": 742,
+		"./introduction-to-es6.md": 743,
 		"./offline-flux-with-lokijs.md": 744,
 		"./react-form-generation.md": 745
 	};
@@ -58851,11 +58995,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 734;
+	webpackContext.id = 737;
 
 
 /***/ },
-/* 735 */
+/* 738 */
 /*!******************************************************!*\
   !*** ./content/posts/arkansas-dev-hackathon-2015.md ***!
   \******************************************************/
@@ -58873,7 +59017,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e0ec0c27-31a1-4ddc-bfb9-274334578407",
+	      "key": "e968bed3-d386-4ab7-9206-d8725ac6035d",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -58948,7 +59092,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "260b39c3-381f-4277-bbfd-ae26b1641f07",
+	      "key": "97fe1ae4-44a7-405a-8518-21ef1b5dd38a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59320,7 +59464,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e48db4a8-4321-4e49-9352-6c41fdf1c241",
+	      "key": "91f1e7e1-7900-4549-8776-3468a8e0ad93",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59499,7 +59643,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3bad7646-ead1-491b-a834-388e96f3cb9b",
+	      "key": "57306de2-f180-4c7c-bbd0-8c8d63878d3a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59747,7 +59891,7 @@
 	}
 
 /***/ },
-/* 736 */
+/* 739 */
 /*!****************************************************!*\
   !*** ./content/posts/client-side-routing-notes.md ***!
   \****************************************************/
@@ -59765,7 +59909,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "4ae1afa1-782b-4b15-8154-768a602deb23",
+	      "key": "afb61683-a4fd-41a3-8d2c-97e3be0e1e4f",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59853,7 +59997,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1c24bbd8-b300-4015-9af8-d4e072cc2622",
+	      "key": "7d451c52-d7fc-4614-8b56-7a52c321d433",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59872,7 +60016,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c9ae83b4-66e6-40ee-9397-18249dbbb96c",
+	      "key": "be488cf9-a298-4b17-a083-285d49925bed",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59916,7 +60060,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0c8b63a8-76b0-4509-9c55-3f6241dbb97a",
+	      "key": "ac1f52b3-966f-462b-a63c-3d2708ae9657",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59954,7 +60098,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "052eb10a-8979-4e16-a6fe-2a8fd7114529",
+	      "key": "1a7d0417-5b79-41f0-a791-250f09f73bd2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60015,7 +60159,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1e81e4d1-c51e-4f3b-99c9-91e3b8e65ec9",
+	      "key": "7af802ee-7abe-4893-9690-967b7d1236d4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60105,7 +60249,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "133c57de-c221-4c77-a75c-d19551cd29c5",
+	      "key": "1ab2e221-159a-45da-824c-59c9c28e4ada",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60286,7 +60430,7 @@
 	}
 
 /***/ },
-/* 737 */
+/* 740 */
 /*!*****************************************************************!*\
   !*** ./content/posts/confidently-starting-a-reactjs-project.md ***!
   \*****************************************************************/
@@ -60304,7 +60448,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "6628590d-486e-4912-b840-cbc6eb7129ed",
+	      "key": "71ed683f-7afb-402d-814e-41024f4e8210",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60344,7 +60488,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8a58e71e-c806-4b02-9546-e45ec342174b",
+	      "key": "84b40318-912f-4004-b232-1ebbb317376b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60387,7 +60531,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e42f4ffe-865a-4378-9aca-8bfc4343caa8",
+	      "key": "a5167ddf-5edb-4701-9b71-e6982331bf6a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60470,7 +60614,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "979c4641-bf0e-4493-96bc-0eb73186c795",
+	      "key": "9a9621f5-14f1-4988-b6f3-750f1c8a98df",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60839,7 +60983,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03b1fa2f-542d-4ce6-b771-892f49051563",
+	      "key": "4e4f4434-25b1-490f-ae60-e34d559daf95",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60934,7 +61078,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "80c7cf80-214a-4021-86a5-fa35ab929dcc",
+	      "key": "d8e700ec-a88b-4b41-bc3d-1f950e9d8149",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61000,7 +61144,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9646f293-71c2-40e3-8cfe-a62c6ce2e153",
+	      "key": "cc33aa39-c30d-49e6-94c0-c01686d6bc36",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61149,7 +61293,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0f571cdc-7652-46f2-89c4-6a19d8b9e245",
+	      "key": "cd5e9e04-7728-4008-99ec-9bf67407de25",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61266,85 +61410,7 @@
 	}
 
 /***/ },
-/* 738 */
-/*!*****************************************!*\
-  !*** ./content/posts/cool-locations.md ***!
-  \*****************************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "title": "Cool Locations",
-	  "slug": "cool-locations",
-	  "subtitle": null,
-	  "created": "2016-03-02T21:00:23.337Z",
-	  "author": "Jeffrey R. Hicks",
-	  "twitter": "jrhicks",
-	  "type": "map",
-	  "ast": [
-	    {
-	      "type": "section",
-	      "key": "dd697b6b-a2fc-4e3b-9a0d-33649af38213",
-	      "body": [
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "office",
-	                "method": "embed"
-	              },
-	              ""
-	            ]
-	          ]
-	        },
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "home",
-	                "method": "reference"
-	              },
-	              ""
-	            ]
-	          ]
-	        }
-	      ]
-	    }
-	  ]
-	}
-
-/***/ },
-/* 739 */
-/*!*******************************!*\
-  !*** ./content/posts/home.md ***!
-  \*******************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "title": "Home",
-	  "slug": "home",
-	  "address": "33 Crystal Mountain Lane, Maumelle AR  72113",
-	  "subtitle": null,
-	  "created": "2016-03-02T21:00:45.857Z",
-	  "author": "Jeffrey R. Hicks",
-	  "twitter": "jrhicks",
-	  "type": "post",
-	  "ast": [
-	    {
-	      "type": "section",
-	      "key": "7e2daa07-5a93-44f4-9703-732c18c73794",
-	      "body": []
-	    }
-	  ]
-	}
-
-/***/ },
-/* 740 */
+/* 741 */
 /*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
@@ -61362,7 +61428,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c5b8214e-52ff-497e-8096-0f7863dc2d46",
+	      "key": "f3a93407-2e12-41ff-9a43-92d0a289b437",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61405,7 +61471,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "33bf9f6c-6a7e-4b91-8e68-b92732a59a09",
+	      "key": "e01352d8-a6b4-4b1a-923e-79f4ef9e053e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61425,7 +61491,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3a07272e-4c36-4562-9224-bd5f6dbb7f57",
+	      "key": "ed7ea820-5562-433b-9d24-06c966c93841",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61445,7 +61511,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "891230d8-87a5-49a4-b051-ff8d9920fc2b",
+	      "key": "896f150b-65ef-46c9-81e0-c9259ba9eb59",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61471,7 +61537,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dd664150-539f-4879-9c33-0e03a9b61e90",
+	      "key": "07f7e620-1a71-4bd8-b514-ec7b3267961e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61497,7 +61563,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8cd7fecc-1928-4abc-8347-2b7f0678fcad",
+	      "key": "019e3290-2b5b-49c6-911c-287313f1065c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61517,7 +61583,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ab7f7b7b-25f5-4107-87f7-5c7fe68992e6",
+	      "key": "171abc17-b5ac-450f-bfc4-4d48d6b8834a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61582,7 +61648,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "40b77b93-2600-4efc-9da4-8d99a7e9600d",
+	      "key": "c67f9ff9-7e95-4619-8f89-7172fa5e8227",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61596,7 +61662,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f1bf0c8f-7a84-4666-894b-47ac2169318b",
+	      "key": "a529481f-6f9b-4dca-8ead-736fc6e6ccf6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61655,7 +61721,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c1367f02-e13e-46dd-aa11-ae79772f22f4",
+	      "key": "f1ab1d4a-9b11-461c-9b80-37a7e4721576",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61698,7 +61764,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bbc173d8-6bca-4e1a-a705-1bdf6e133a7b",
+	      "key": "a78a0b70-66f0-4416-9146-0b6104d20e45",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61757,7 +61823,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "70c68ab6-d575-4d28-8055-30334da74e3f",
+	      "key": "2d540f88-4108-4b37-b1fa-d1ea0af9d7c6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61827,7 +61893,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5ea2a26b-c2c8-4eec-9f39-b5071b8cce73",
+	      "key": "4242eb3d-8bfa-41e1-a5a6-4f1029fbe7f8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61890,7 +61956,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "68163369-4cad-4d59-b4e0-a7c465d381be",
+	      "key": "3fbfdba5-4c2d-41d0-8187-e0634e7de301",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61961,7 +62027,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c757d655-20a1-46cb-89d0-22f63c4a7f69",
+	      "key": "527509e2-10cc-4526-adf9-a6ba44c71571",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62004,7 +62070,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f3a88a1c-c94b-4f42-82a9-df246bb1e4ba",
+	      "key": "5a750a33-c1e6-4f53-9a76-468b2fd1844a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62035,7 +62101,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ec62ea15-2178-4408-a560-9b8d5a037ef8",
+	      "key": "b87d42f2-3714-4a5d-87f9-0074c3f86058",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62068,7 +62134,7 @@
 	}
 
 /***/ },
-/* 741 */
+/* 742 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -62086,7 +62152,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "da242bbc-8836-4b26-af04-e885cf5815b9",
+	      "key": "a13f2cf4-71c1-445a-9de9-bf37088008db",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62151,7 +62217,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6b7db60e-c057-4826-8e1b-859b932bdead",
+	      "key": "9b1c1cf0-d01d-4dd9-884c-bd3ce056d881",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62216,7 +62282,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "32db314f-9b54-45b7-ad82-f9769ffb3b7a",
+	      "key": "7a5eb3b0-46c1-4214-b744-31f7059b23b9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62364,7 +62430,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "db69eb0b-0c12-425b-9499-e45af6040a7c",
+	      "key": "ae73fa8a-4580-4fc0-b4c6-1e9f8e14b039",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62602,7 +62668,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6550af56-57cf-4139-b3c8-4fd5a743cfd1",
+	      "key": "d781a654-1b81-4dee-af75-1e56044fb68b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62701,7 +62767,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f7002d72-d66b-44ce-bf5e-66d7d0c36553",
+	      "key": "299d4a9f-6dab-415c-b1a1-40865a27fe68",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62853,7 +62919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "968fa845-6c18-4976-a7fe-0220e2c87802",
+	      "key": "cec5b348-10cf-4c15-b020-8d315e0920bd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62948,7 +63014,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "99621c03-5de3-4753-9b7f-a6a0a05a1751",
+	      "key": "f6db58cb-61af-4bdc-b63b-9c444bdfb718",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63086,7 +63152,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "082dc8bf-c5db-477d-92f8-59f351eeb470",
+	      "key": "5ab90b00-01ce-415a-8d1e-cb4bd79a9617",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63281,7 +63347,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5a052109-05ef-4627-bbee-753557f8f1e1",
+	      "key": "c95720de-5442-4651-b9a0-189815e171ac",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63406,7 +63472,7 @@
 	}
 
 /***/ },
-/* 742 */
+/* 743 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -63424,7 +63490,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "369b6558-9fcf-4bfd-9557-c5888dc36f6b",
+	      "key": "2ed09b8c-7fba-466b-add1-41e0ec3c9f5b",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63436,7 +63502,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9932b73e-b21c-474b-93ff-b0037d67e85c",
+	      "key": "13dea489-b712-4c98-82fb-52ebee04e914",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63545,7 +63611,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f8c00809-0804-42d6-8676-bbc2f75192ae",
+	      "key": "5a647954-1952-44c1-bf25-afd6111768df",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63594,7 +63660,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "70fdf4df-0080-4911-85a1-7f77361272d1",
+	      "key": "22526968-580d-4ebc-b3c6-b6c938b4c0c6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63666,7 +63732,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "73013069-4619-4924-bb8d-a877b3d8293c",
+	      "key": "6dbc30ef-7973-4c8b-b723-10e99535aaf4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63702,38 +63768,6 @@
 	}
 
 /***/ },
-/* 743 */
-/*!*********************************!*\
-  !*** ./content/posts/office.md ***!
-  \*********************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "title": "Office",
-	  "slug": "office",
-	  "address": "5120 North Shore Drive.  North Little ROck, AR  72118",
-	  "subtitle": null,
-	  "created": "2016-03-02T21:00:45.856Z",
-	  "author": "Jeffrey R. Hicks",
-	  "twitter": "jrhicks",
-	  "type": "post",
-	  "ast": [
-	    {
-	      "type": "section",
-	      "key": "c70638ef-a04c-415a-a00e-1321b97c52ef",
-	      "body": [
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            "Say cool things about it here."
-	          ]
-	        }
-	      ]
-	    }
-	  ]
-	}
-
-/***/ },
 /* 744 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
@@ -63752,7 +63786,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e6519329-8527-4703-babf-374d492ca49f",
+	      "key": "faf1faa4-6dd2-4fff-972b-e9427cfa01fb",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63850,7 +63884,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8b77b59d-47af-4950-84b1-e52d064707b1",
+	      "key": "c01a57d7-0f9d-4f5d-a168-33c0b2b59d71",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63891,7 +63925,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7e7a1ea1-2944-4ffb-958d-f9b60e00d609",
+	      "key": "016c0b6b-0b4d-487d-a1fe-978c3442d1e3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63930,7 +63964,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b07bc25e-9548-4ea5-9f43-fed5e71259a3",
+	      "key": "29724277-cd45-460f-a4f3-4290a6756375",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63956,7 +63990,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9d857eb4-d4d3-479a-8330-7289cf630efd",
+	      "key": "c6df0f30-ac99-441e-9a9b-e84c67065ed5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64034,7 +64068,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ecdfa308-dd28-42dc-a9e2-b34ef3027d14",
+	      "key": "9892dcce-f692-4e3b-bc9d-221d7e7f4b56",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64063,7 +64097,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e7659332-aa5f-453e-910f-6240bc601b07",
+	      "key": "aba6698a-727b-449d-b2a9-05f4a418a3ca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64083,7 +64117,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6657f49a-26c6-4e44-a710-b372f77a61a7",
+	      "key": "90f1702e-f6c2-470e-817b-402ad186b42a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64122,7 +64156,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a2e176f5-20e4-4317-a0cb-3f691fcec2d7",
+	      "key": "98adf04a-e1db-435c-a923-2e62a2f82eca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64156,7 +64190,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fd72c9a9-71f8-4403-86b5-a60341766111",
+	      "key": "b0647124-ab07-40c6-8ee6-4d8f385bfbb1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64256,7 +64290,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "388b016c-d141-410c-9542-c65f5a98d9a8",
+	      "key": "977ba859-6a15-4a02-8e22-f9677290e185",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64275,7 +64309,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "01804a1f-6566-4949-a2d7-0fc7a4b44c61",
+	      "key": "2865b535-307b-4a7c-beaa-cf9975019558",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64382,7 +64416,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0a3febbd-35f9-43db-bbb0-e6f8878885b2",
+	      "key": "0dc141a8-e641-4f44-a0bb-7ef7d2882aab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64402,7 +64436,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5974cd28-e3a0-4047-b308-a26ed5427aa3",
+	      "key": "52478278-9021-479c-9342-a596155e60a9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64441,7 +64475,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "26c377dc-ae33-4a99-8186-38e55c30e2d5",
+	      "key": "208a2399-d43d-457f-891d-cace30129d4b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64475,7 +64509,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f99bff81-e965-45b3-a611-60587092cbd2",
+	      "key": "5f87bc3a-150a-4425-9070-db235f9db3dc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64507,7 +64541,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b16b9b77-244a-4c58-82ad-0a6c6a2d4dd9",
+	      "key": "2123a02c-8a98-405d-904b-da4f19827d14",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64541,7 +64575,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b84b04b4-c303-4ddc-8b4b-09f53bd2b113",
+	      "key": "194671a2-be1f-4470-91ef-3acac836989c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64624,7 +64658,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dec62266-5a94-42e2-a3d8-7ee5ce368290",
+	      "key": "a1251148-daae-4ca8-a9b6-0269a5a96263",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64658,7 +64692,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4c287431-602c-4134-9ba2-0190eb325f80",
+	      "key": "99cfa9f6-ced5-482e-965e-f23585f6a1d0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64721,7 +64755,8 @@
 		"./es-intro.md": 749,
 		"./lds-intro.md": 750,
 		"./talks.md": 751,
-		"./ui-principles.md": 752
+		"./ui-principles-deck.md": 752,
+		"./ui-principles.md": 753
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -64745,22 +64780,17 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "title": "Separation of Style Concerns in Layouts & Components",
+	  "title": "Component vs Layout",
 	  "slug": "component-vs-layout",
 	  "subtitle": null,
-	  "event": "Meetup",
-	  "location": "Iron Yard",
-	  "date": "2016/04/15 12:00 CST",
-	  "created": "2016-03-01T05:16:37.449Z",
+	  "created": "2016-03-04T00:33:12.666Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
 	  "type": "post",
-	  "category": "upcoming talk",
-	  "register": "http://www.meetup.com/Little-Rock-ReactJS-Meetup/events/229161092/",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "9180db65-0f69-418f-a834-1835562f0ea9",
+	      "key": "e12c0f37-da2e-4100-af70-420821726862",
 	      "body": []
 	    }
 	  ]
@@ -64774,7 +64804,7 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "title": "Radical Data Management - An Intro to Event Sourcing",
+	  "title": "Radical Data Mgmt With Event Sourcing",
 	  "slug": "es-intro",
 	  "subtitle": null,
 	  "event": "Meetup",
@@ -64789,7 +64819,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2840a264-c01c-4048-8592-6105c7ca83cd",
+	      "key": "0c9b18f6-397b-483d-ad23-8627dcebb328",
 	      "body": []
 	    }
 	  ]
@@ -64808,17 +64838,17 @@
 	  "subtitle": null,
 	  "event": "Meetup",
 	  "location": "Iron Yard",
-	  "date": "2016/05/20 12:00 CST",
+	  "date": "2016/04/15 12:00 CST",
 	  "created": "2016-03-01T05:16:37.450Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
 	  "type": "post",
 	  "category": "upcoming talk",
-	  "register": "http://www.meetup.com/Little-Rock-ReactJS-Meetup/events/229161095/",
+	  "register": "http://www.meetup.com/Little-Rock-ReactJS-Meetup/events/229161092/",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d37e9977-da13-4883-8607-af47cb86b6d5",
+	      "key": "c733f9af-a04e-4e48-8831-355d5878a9b1",
 	      "body": []
 	    }
 	  ]
@@ -64844,7 +64874,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "cff78803-6ce7-42e4-8591-cca3af15180c",
+	      "key": "d4dc6757-fe1b-4633-8d03-d736e267126f",
 	      "body": [
 	        "",
 	        {
@@ -64910,15 +64940,41 @@
 
 /***/ },
 /* 752 */
+/*!*********************************************!*\
+  !*** ./content/talks/ui-principles-deck.md ***!
+  \*********************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "ui principles deck",
+	  "slug": "ui-principles-deck",
+	  "subtitle": null,
+	  "created": "2016-03-04T01:28:50.039Z",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "type": [
+	    "speakerdeck"
+	  ],
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "ffcd9de9-ae64-4cfb-9e14-969e43172f41",
+	      "body": []
+	    }
+	  ]
+	}
+
+/***/ },
+/* 753 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "title": "Style Principles and Tactics",
+	  "title": "Style Design Patterns & Disciplines",
 	  "slug": "ui-principles",
-	  "subtitle": null,
+	  "subtitle": "Re-usable CSS solutions to commonly occurring problems",
 	  "event": "Guest Lecture",
 	  "location": "Iron Yard",
 	  "date": "2016/03/04 10:00 CST",
@@ -64927,18 +64983,34 @@
 	  "twitter": "jrhicks",
 	  "type": "post",
 	  "category": "upcoming talk",
+	  "ready": true,
 	  "video": "https://plus.google.com/hangouts/_/theironyard.com/jeff-hicks",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "9a66d491-46fd-4419-9737-d2eb592f1812",
-	      "body": []
+	      "key": "8d4a8807-9a70-4370-99f7-b5cb57d1d661",
+	      "body": [
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            [
+	              "",
+	              {
+	                "type": "wikismith",
+	                "slug": "ui-principles-deck",
+	                "method": "embed"
+	              },
+	              ""
+	            ]
+	          ]
+	        }
+	      ]
 	    }
 	  ]
 	}
 
 /***/ },
-/* 753 */
+/* 754 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -64948,7 +65020,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 754 */
+/* 755 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -64980,7 +65052,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 755);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 756);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -65031,7 +65103,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 755 */
+/* 756 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -65041,7 +65113,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 756 */
+/* 757 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -65075,11 +65147,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
+	var _reactMotion = __webpack_require__(/*! react-motion */ 758);
+	
 	var _wikismith = __webpack_require__(/*! ../wikismith */ 500);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 757);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 772);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -65100,6 +65174,17 @@
 	      return _wikismith2.default.scourContent().filter({ type: 'post', category: 'upcoming talk' }).sortBy(function (p) {
 	        return Date.parse(p.get('date'));
 	      }).value;
+	    }
+	  }, {
+	    key: 'renderTitle',
+	    value: function renderTitle(t) {
+	      var results = undefined;
+	      if (t.ready) {
+	        results = _wikismith2.default.linkTo(t);
+	      } else {
+	        results = t.title;
+	      }
+	      return results;
 	    }
 	  }, {
 	    key: 'renderAction',
@@ -65148,20 +65233,20 @@
 	                null,
 	                _react2.default.createElement(
 	                  'th',
-	                  null,
+	                  { key: 'topic' },
 	                  'Topic'
 	                ),
 	                _react2.default.createElement(
 	                  'th',
-	                  null,
+	                  { key: 'where' },
 	                  'Where'
 	                ),
 	                _react2.default.createElement(
 	                  'th',
-	                  null,
+	                  { key: 'when' },
 	                  'When'
 	                ),
-	                _react2.default.createElement('th', null)
+	                _react2.default.createElement('th', { key: 'acion' })
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -65170,25 +65255,25 @@
 	              this.sortedContent().map(function (t) {
 	                return _react2.default.createElement(
 	                  'tr',
-	                  null,
+	                  { key: t.slug },
 	                  _react2.default.createElement(
 	                    'td',
-	                    { value: 'title', className: _AgendaPanel2.default.titleCell },
-	                    t.title
+	                    { key: 'topic', value: 'topic', className: _AgendaPanel2.default.titleCell },
+	                    _this2.renderTitle(t)
 	                  ),
 	                  _react2.default.createElement(
 	                    'td',
-	                    { value: 'locaton' },
+	                    { k: 'where', value: 'where' },
 	                    t.location
 	                  ),
 	                  _react2.default.createElement(
 	                    'td',
-	                    { value: 'date', className: _AgendaPanel2.default.dateCell },
+	                    { key: 'when', value: 'when', className: _AgendaPanel2.default.dateCell },
 	                    t.date
 	                  ),
 	                  _react2.default.createElement(
 	                    'td',
-	                    { value: '', className: _AgendaPanel2.default.buttonCell },
+	                    { key: 'action', value: '', className: _AgendaPanel2.default.buttonCell },
 	                    _this2.renderAction(t)
 	                  )
 	                );
@@ -65205,7 +65290,1522 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 757 */
+/* 758 */
+/*!********************************************!*\
+  !*** ./~/react-motion/lib/react-motion.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
+	
+	var _Motion = __webpack_require__(/*! ./Motion */ 759);
+	
+	exports.Motion = _interopRequire(_Motion);
+	
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 766);
+	
+	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
+	
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 767);
+	
+	exports.TransitionMotion = _interopRequire(_TransitionMotion);
+	
+	var _spring = __webpack_require__(/*! ./spring */ 769);
+	
+	exports.spring = _interopRequire(_spring);
+	
+	var _presets = __webpack_require__(/*! ./presets */ 770);
+	
+	exports.presets = _interopRequire(_presets);
+	
+	// deprecated, dummy warning function
+	
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 771);
+	
+	exports.reorderKeys = _interopRequire(_reorderKeys);
+
+/***/ },
+/* 759 */
+/*!**************************************!*\
+  !*** ./~/react-motion/lib/Motion.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 760);
+	
+	var _mapToZero2 = _interopRequireDefault(_mapToZero);
+	
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 761);
+	
+	var _stripStyle2 = _interopRequireDefault(_stripStyle);
+	
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 762);
+	
+	var _stepper4 = _interopRequireDefault(_stepper3);
+	
+	var _performanceNow = __webpack_require__(/*! performance-now */ 763);
+	
+	var _performanceNow2 = _interopRequireDefault(_performanceNow);
+	
+	var _raf = __webpack_require__(/*! raf */ 764);
+	
+	var _raf2 = _interopRequireDefault(_raf);
+	
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 765);
+	
+	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
+	
+	var _react = __webpack_require__(/*! react */ 192);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var msPerFrame = 1000 / 60;
+	
+	var Motion = _react2['default'].createClass({
+	  displayName: 'Motion',
+	
+	  propTypes: {
+	    // TOOD: warn against putting a config in here
+	    defaultStyle: _react.PropTypes.objectOf(_react.PropTypes.number),
+	    style: _react.PropTypes.objectOf(_react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.object])).isRequired,
+	    children: _react.PropTypes.func.isRequired,
+	    onRest: _react.PropTypes.func
+	  },
+	
+	  getInitialState: function getInitialState() {
+	    var _props = this.props;
+	    var defaultStyle = _props.defaultStyle;
+	    var style = _props.style;
+	
+	    var currentStyle = defaultStyle || _stripStyle2['default'](style);
+	    var currentVelocity = _mapToZero2['default'](currentStyle);
+	    return {
+	      currentStyle: currentStyle,
+	      currentVelocity: currentVelocity,
+	      lastIdealStyle: currentStyle,
+	      lastIdealVelocity: currentVelocity
+	    };
+	  },
+	
+	  wasAnimating: false,
+	  animationID: null,
+	  prevTime: 0,
+	  accumulatedTime: 0,
+	  // it's possible that currentStyle's value is stale: if props is immediately
+	  // changed from 0 to 400 to spring(0) again, the async currentStyle is still
+	  // at 0 (didn't have time to tick and interpolate even once). If we naively
+	  // compare currentStyle with destVal it'll be 0 === 0 (no animation, stop).
+	  // In reality currentStyle should be 400
+	  unreadPropStyle: null,
+	  // after checking for unreadPropStyle != null, we manually go set the
+	  // non-interpolating values (those that are a number, without a spring
+	  // config)
+	  clearUnreadPropStyle: function clearUnreadPropStyle(destStyle) {
+	    var dirty = false;
+	    var _state = this.state;
+	    var currentStyle = _state.currentStyle;
+	    var currentVelocity = _state.currentVelocity;
+	    var lastIdealStyle = _state.lastIdealStyle;
+	    var lastIdealVelocity = _state.lastIdealVelocity;
+	
+	    for (var key in destStyle) {
+	      if (!destStyle.hasOwnProperty(key)) {
+	        continue;
+	      }
+	
+	      var styleValue = destStyle[key];
+	      if (typeof styleValue === 'number') {
+	        if (!dirty) {
+	          dirty = true;
+	          currentStyle = _extends({}, currentStyle);
+	          currentVelocity = _extends({}, currentVelocity);
+	          lastIdealStyle = _extends({}, lastIdealStyle);
+	          lastIdealVelocity = _extends({}, lastIdealVelocity);
+	        }
+	
+	        currentStyle[key] = styleValue;
+	        currentVelocity[key] = 0;
+	        lastIdealStyle[key] = styleValue;
+	        lastIdealVelocity[key] = 0;
+	      }
+	    }
+	
+	    if (dirty) {
+	      this.setState({ currentStyle: currentStyle, currentVelocity: currentVelocity, lastIdealStyle: lastIdealStyle, lastIdealVelocity: lastIdealVelocity });
+	    }
+	  },
+	
+	  startAnimationIfNecessary: function startAnimationIfNecessary() {
+	    var _this = this;
+	
+	    // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+	    // call cb? No, otherwise accidental parent rerender causes cb trigger
+	    this.animationID = _raf2['default'](function () {
+	      // check if we need to animate in the first place
+	      var propsStyle = _this.props.style;
+	      if (_shouldStopAnimation2['default'](_this.state.currentStyle, propsStyle, _this.state.currentVelocity)) {
+	        if (_this.wasAnimating && _this.props.onRest) {
+	          _this.props.onRest();
+	        }
+	
+	        // no need to cancel animationID here; shouldn't have any in flight
+	        _this.animationID = null;
+	        _this.wasAnimating = false;
+	        _this.accumulatedTime = 0;
+	        return;
+	      }
+	
+	      _this.wasAnimating = true;
+	
+	      var currentTime = _performanceNow2['default']();
+	      var timeDelta = currentTime - _this.prevTime;
+	      _this.prevTime = currentTime;
+	      _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+	      // more than 10 frames? prolly switched browser tab. Restart
+	      if (_this.accumulatedTime > msPerFrame * 10) {
+	        _this.accumulatedTime = 0;
+	      }
+	
+	      if (_this.accumulatedTime === 0) {
+	        // no need to cancel animationID here; shouldn't have any in flight
+	        _this.animationID = null;
+	        _this.startAnimationIfNecessary();
+	        return;
+	      }
+	
+	      var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame;
+	      var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+	
+	      var newLastIdealStyle = {};
+	      var newLastIdealVelocity = {};
+	      var newCurrentStyle = {};
+	      var newCurrentVelocity = {};
+	
+	      for (var key in propsStyle) {
+	        if (!propsStyle.hasOwnProperty(key)) {
+	          continue;
+	        }
+	
+	        var styleValue = propsStyle[key];
+	        if (typeof styleValue === 'number') {
+	          newCurrentStyle[key] = styleValue;
+	          newCurrentVelocity[key] = 0;
+	          newLastIdealStyle[key] = styleValue;
+	          newLastIdealVelocity[key] = 0;
+	        } else {
+	          var newLastIdealStyleValue = _this.state.lastIdealStyle[key];
+	          var newLastIdealVelocityValue = _this.state.lastIdealVelocity[key];
+	          for (var i = 0; i < framesToCatchUp; i++) {
+	            var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+	
+	            newLastIdealStyleValue = _stepper[0];
+	            newLastIdealVelocityValue = _stepper[1];
+	          }
+	
+	          var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+	
+	          var nextIdealX = _stepper2[0];
+	          var nextIdealV = _stepper2[1];
+	
+	          newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+	          newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion;
+	          newLastIdealStyle[key] = newLastIdealStyleValue;
+	          newLastIdealVelocity[key] = newLastIdealVelocityValue;
+	        }
+	      }
+	
+	      _this.animationID = null;
+	      // the amount we're looped over above
+	      _this.accumulatedTime -= framesToCatchUp * msPerFrame;
+	
+	      _this.setState({
+	        currentStyle: newCurrentStyle,
+	        currentVelocity: newCurrentVelocity,
+	        lastIdealStyle: newLastIdealStyle,
+	        lastIdealVelocity: newLastIdealVelocity
+	      });
+	
+	      _this.unreadPropStyle = null;
+	
+	      _this.startAnimationIfNecessary();
+	    });
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    this.prevTime = _performanceNow2['default']();
+	    this.startAnimationIfNecessary();
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(props) {
+	    if (this.unreadPropStyle != null) {
+	      // previous props haven't had the chance to be set yet; set them here
+	      this.clearUnreadPropStyle(this.unreadPropStyle);
+	    }
+	
+	    this.unreadPropStyle = props.style;
+	    if (this.animationID == null) {
+	      this.prevTime = _performanceNow2['default']();
+	      this.startAnimationIfNecessary();
+	    }
+	  },
+	
+	  componentWillUnmount: function componentWillUnmount() {
+	    if (this.animationID != null) {
+	      _raf2['default'].cancel(this.animationID);
+	      this.animationID = null;
+	    }
+	  },
+	
+	  render: function render() {
+	    var renderedChildren = this.props.children(this.state.currentStyle);
+	    return renderedChildren && _react2['default'].Children.only(renderedChildren);
+	  }
+	});
+	
+	exports['default'] = Motion;
+	module.exports = exports['default'];
+
+/***/ },
+/* 760 */
+/*!*****************************************!*\
+  !*** ./~/react-motion/lib/mapToZero.js ***!
+  \*****************************************/
+/***/ function(module, exports) {
+
+	
+	
+	// currently used to initiate the velocity style object to 0
+	'use strict';
+	
+	exports.__esModule = true;
+	exports['default'] = mapToZero;
+	
+	function mapToZero(obj) {
+	  var ret = {};
+	  for (var key in obj) {
+	    if (obj.hasOwnProperty(key)) {
+	      ret[key] = 0;
+	    }
+	  }
+	  return ret;
+	}
+	
+	module.exports = exports['default'];
+
+/***/ },
+/* 761 */
+/*!******************************************!*\
+  !*** ./~/react-motion/lib/stripStyle.js ***!
+  \******************************************/
+/***/ function(module, exports) {
+
+	
+	// turn {x: {val: 1, stiffness: 1, damping: 2}, y: 2} generated by
+	// `{x: spring(1, {stiffness: 1, damping: 2}), y: 2}` into {x: 1, y: 2}
+	
+	'use strict';
+	
+	exports.__esModule = true;
+	exports['default'] = stripStyle;
+	
+	function stripStyle(style) {
+	  var ret = {};
+	  for (var key in style) {
+	    if (!style.hasOwnProperty(key)) {
+	      continue;
+	    }
+	    ret[key] = typeof style[key] === 'number' ? style[key] : style[key].val;
+	  }
+	  return ret;
+	}
+	
+	module.exports = exports['default'];
+
+/***/ },
+/* 762 */
+/*!***************************************!*\
+  !*** ./~/react-motion/lib/stepper.js ***!
+  \***************************************/
+/***/ function(module, exports) {
+
+	
+	
+	// stepper is used a lot. Saves allocation to return the same array wrapper.
+	// This is fine and danger-free against mutations because the callsite
+	// immediately destructures it and gets the numbers inside without passing the
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = stepper;
+	
+	var reusedTuple = [];
+	
+	function stepper(secondPerFrame, x, v, destX, k, b, precision) {
+	  // Spring stiffness, in kg / s^2
+	
+	  // for animations, destX is really spring length (spring at rest). initial
+	  // position is considered as the stretched/compressed position of a spring
+	  var Fspring = -k * (x - destX);
+	
+	  // Damping, in kg / s
+	  var Fdamper = -b * v;
+	
+	  // usually we put mass here, but for animation purposes, specifying mass is a
+	  // bit redundant. you could simply adjust k and b accordingly
+	  // let a = (Fspring + Fdamper) / mass;
+	  var a = Fspring + Fdamper;
+	
+	  var newV = v + a * secondPerFrame;
+	  var newX = x + newV * secondPerFrame;
+	
+	  if (Math.abs(newV) < precision && Math.abs(newX - destX) < precision) {
+	    reusedTuple[0] = destX;
+	    reusedTuple[1] = 0;
+	    return reusedTuple;
+	  }
+	
+	  reusedTuple[0] = newX;
+	  reusedTuple[1] = newV;
+	  return reusedTuple;
+	}
+	
+	module.exports = exports["default"];
+	// array reference around.
+
+/***/ },
+/* 763 */
+/*!*****************************************************************!*\
+  !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
+  \*****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {// Generated by CoffeeScript 1.7.1
+	(function() {
+	  var getNanoSeconds, hrtime, loadTime;
+	
+	  if ((typeof performance !== "undefined" && performance !== null) && performance.now) {
+	    module.exports = function() {
+	      return performance.now();
+	    };
+	  } else if ((typeof process !== "undefined" && process !== null) && process.hrtime) {
+	    module.exports = function() {
+	      return (getNanoSeconds() - loadTime) / 1e6;
+	    };
+	    hrtime = process.hrtime;
+	    getNanoSeconds = function() {
+	      var hr;
+	      hr = hrtime();
+	      return hr[0] * 1e9 + hr[1];
+	    };
+	    loadTime = getNanoSeconds();
+	  } else if (Date.now) {
+	    module.exports = function() {
+	      return Date.now() - loadTime;
+	    };
+	    loadTime = Date.now();
+	  } else {
+	    module.exports = function() {
+	      return new Date().getTime() - loadTime;
+	    };
+	    loadTime = new Date().getTime();
+	  }
+	
+	}).call(this);
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
+
+/***/ },
+/* 764 */
+/*!***************************************!*\
+  !*** ./~/react-motion/~/raf/index.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 763)
+	  , root = typeof window === 'undefined' ? global : window
+	  , vendors = ['moz', 'webkit']
+	  , suffix = 'AnimationFrame'
+	  , raf = root['request' + suffix]
+	  , caf = root['cancel' + suffix] || root['cancelRequest' + suffix]
+	
+	for(var i = 0; !raf && i < vendors.length; i++) {
+	  raf = root[vendors[i] + 'Request' + suffix]
+	  caf = root[vendors[i] + 'Cancel' + suffix]
+	      || root[vendors[i] + 'CancelRequest' + suffix]
+	}
+	
+	// Some versions of FF have rAF but not cAF
+	if(!raf || !caf) {
+	  var last = 0
+	    , id = 0
+	    , queue = []
+	    , frameDuration = 1000 / 60
+	
+	  raf = function(callback) {
+	    if(queue.length === 0) {
+	      var _now = now()
+	        , next = Math.max(0, frameDuration - (_now - last))
+	      last = next + _now
+	      setTimeout(function() {
+	        var cp = queue.slice(0)
+	        // Clear queue here to prevent
+	        // callbacks from appending listeners
+	        // to the current frame's queue
+	        queue.length = 0
+	        for(var i = 0; i < cp.length; i++) {
+	          if(!cp[i].cancelled) {
+	            try{
+	              cp[i].callback(last)
+	            } catch(e) {
+	              setTimeout(function() { throw e }, 0)
+	            }
+	          }
+	        }
+	      }, Math.round(next))
+	    }
+	    queue.push({
+	      handle: ++id,
+	      callback: callback,
+	      cancelled: false
+	    })
+	    return id
+	  }
+	
+	  caf = function(handle) {
+	    for(var i = 0; i < queue.length; i++) {
+	      if(queue[i].handle === handle) {
+	        queue[i].cancelled = true
+	      }
+	    }
+	  }
+	}
+	
+	module.exports = function(fn) {
+	  // Wrap in a new function to prevent
+	  // `cancel` potentially being assigned
+	  // to the native rAF function
+	  return raf.call(root, fn)
+	}
+	module.exports.cancel = function() {
+	  caf.apply(root, arguments)
+	}
+	module.exports.polyfill = function() {
+	  root.requestAnimationFrame = raf
+	  root.cancelAnimationFrame = caf
+	}
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 765 */
+/*!***************************************************!*\
+  !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
+  \***************************************************/
+/***/ function(module, exports) {
+
+	
+	
+	// usage assumption: currentStyle values have already been rendered but it says
+	// nothing of whether currentStyle is stale (see unreadPropStyle)
+	'use strict';
+	
+	exports.__esModule = true;
+	exports['default'] = shouldStopAnimation;
+	
+	function shouldStopAnimation(currentStyle, style, currentVelocity) {
+	  for (var key in style) {
+	    if (!style.hasOwnProperty(key)) {
+	      continue;
+	    }
+	
+	    if (currentVelocity[key] !== 0) {
+	      return false;
+	    }
+	
+	    var styleValue = typeof style[key] === 'number' ? style[key] : style[key].val;
+	    // stepper will have already taken care of rounding precision errors, so
+	    // won't have such thing as 0.9999 !=== 1
+	    if (currentStyle[key] !== styleValue) {
+	      return false;
+	    }
+	  }
+	
+	  return true;
+	}
+	
+	module.exports = exports['default'];
+
+/***/ },
+/* 766 */
+/*!***********************************************!*\
+  !*** ./~/react-motion/lib/StaggeredMotion.js ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 760);
+	
+	var _mapToZero2 = _interopRequireDefault(_mapToZero);
+	
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 761);
+	
+	var _stripStyle2 = _interopRequireDefault(_stripStyle);
+	
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 762);
+	
+	var _stepper4 = _interopRequireDefault(_stepper3);
+	
+	var _performanceNow = __webpack_require__(/*! performance-now */ 763);
+	
+	var _performanceNow2 = _interopRequireDefault(_performanceNow);
+	
+	var _raf = __webpack_require__(/*! raf */ 764);
+	
+	var _raf2 = _interopRequireDefault(_raf);
+	
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 765);
+	
+	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
+	
+	var _react = __webpack_require__(/*! react */ 192);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var msPerFrame = 1000 / 60;
+	
+	function shouldStopAnimationAll(currentStyles, styles, currentVelocities) {
+	  for (var i = 0; i < currentStyles.length; i++) {
+	    if (!_shouldStopAnimation2['default'](currentStyles[i], styles[i], currentVelocities[i])) {
+	      return false;
+	    }
+	  }
+	  return true;
+	}
+	
+	var StaggeredMotion = _react2['default'].createClass({
+	  displayName: 'StaggeredMotion',
+	
+	  propTypes: {
+	    // TOOD: warn against putting a config in here
+	    defaultStyles: _react.PropTypes.arrayOf(_react.PropTypes.objectOf(_react.PropTypes.number)),
+	    styles: _react.PropTypes.func.isRequired,
+	    children: _react.PropTypes.func.isRequired
+	  },
+	
+	  getInitialState: function getInitialState() {
+	    var _props = this.props;
+	    var defaultStyles = _props.defaultStyles;
+	    var styles = _props.styles;
+	
+	    var currentStyles = defaultStyles || styles().map(_stripStyle2['default']);
+	    var currentVelocities = currentStyles.map(function (currentStyle) {
+	      return _mapToZero2['default'](currentStyle);
+	    });
+	    return {
+	      currentStyles: currentStyles,
+	      currentVelocities: currentVelocities,
+	      lastIdealStyles: currentStyles,
+	      lastIdealVelocities: currentVelocities
+	    };
+	  },
+	
+	  animationID: null,
+	  prevTime: 0,
+	  accumulatedTime: 0,
+	  // it's possible that currentStyle's value is stale: if props is immediately
+	  // changed from 0 to 400 to spring(0) again, the async currentStyle is still
+	  // at 0 (didn't have time to tick and interpolate even once). If we naively
+	  // compare currentStyle with destVal it'll be 0 === 0 (no animation, stop).
+	  // In reality currentStyle should be 400
+	  unreadPropStyles: null,
+	  // after checking for unreadPropStyles != null, we manually go set the
+	  // non-interpolating values (those that are a number, without a spring
+	  // config)
+	  clearUnreadPropStyle: function clearUnreadPropStyle(unreadPropStyles) {
+	    var _state = this.state;
+	    var currentStyles = _state.currentStyles;
+	    var currentVelocities = _state.currentVelocities;
+	    var lastIdealStyles = _state.lastIdealStyles;
+	    var lastIdealVelocities = _state.lastIdealVelocities;
+	
+	    var someDirty = false;
+	    for (var i = 0; i < unreadPropStyles.length; i++) {
+	      var unreadPropStyle = unreadPropStyles[i];
+	      var dirty = false;
+	
+	      for (var key in unreadPropStyle) {
+	        if (!unreadPropStyle.hasOwnProperty(key)) {
+	          continue;
+	        }
+	
+	        var styleValue = unreadPropStyle[key];
+	        if (typeof styleValue === 'number') {
+	          if (!dirty) {
+	            dirty = true;
+	            someDirty = true;
+	            currentStyles[i] = _extends({}, currentStyles[i]);
+	            currentVelocities[i] = _extends({}, currentVelocities[i]);
+	            lastIdealStyles[i] = _extends({}, lastIdealStyles[i]);
+	            lastIdealVelocities[i] = _extends({}, lastIdealVelocities[i]);
+	          }
+	          currentStyles[i][key] = styleValue;
+	          currentVelocities[i][key] = 0;
+	          lastIdealStyles[i][key] = styleValue;
+	          lastIdealVelocities[i][key] = 0;
+	        }
+	      }
+	    }
+	
+	    if (someDirty) {
+	      this.setState({ currentStyles: currentStyles, currentVelocities: currentVelocities, lastIdealStyles: lastIdealStyles, lastIdealVelocities: lastIdealVelocities });
+	    }
+	  },
+	
+	  startAnimationIfNecessary: function startAnimationIfNecessary() {
+	    var _this = this;
+	
+	    // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+	    // call cb? No, otherwise accidental parent rerender causes cb trigger
+	    this.animationID = _raf2['default'](function () {
+	      var destStyles = _this.props.styles(_this.state.lastIdealStyles);
+	
+	      // check if we need to animate in the first place
+	      if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities)) {
+	        // no need to cancel animationID here; shouldn't have any in flight
+	        _this.animationID = null;
+	        _this.accumulatedTime = 0;
+	        return;
+	      }
+	
+	      var currentTime = _performanceNow2['default']();
+	      var timeDelta = currentTime - _this.prevTime;
+	      _this.prevTime = currentTime;
+	      _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+	      // more than 10 frames? prolly switched browser tab. Restart
+	      if (_this.accumulatedTime > msPerFrame * 10) {
+	        _this.accumulatedTime = 0;
+	      }
+	
+	      if (_this.accumulatedTime === 0) {
+	        // no need to cancel animationID here; shouldn't have any in flight
+	        _this.animationID = null;
+	        _this.startAnimationIfNecessary();
+	        return;
+	      }
+	
+	      var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame;
+	      var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+	
+	      var newLastIdealStyles = [];
+	      var newLastIdealVelocities = [];
+	      var newCurrentStyles = [];
+	      var newCurrentVelocities = [];
+	
+	      for (var i = 0; i < destStyles.length; i++) {
+	        var destStyle = destStyles[i];
+	        var newCurrentStyle = {};
+	        var newCurrentVelocity = {};
+	        var newLastIdealStyle = {};
+	        var newLastIdealVelocity = {};
+	
+	        for (var key in destStyle) {
+	          if (!destStyle.hasOwnProperty(key)) {
+	            continue;
+	          }
+	
+	          var styleValue = destStyle[key];
+	          if (typeof styleValue === 'number') {
+	            newCurrentStyle[key] = styleValue;
+	            newCurrentVelocity[key] = 0;
+	            newLastIdealStyle[key] = styleValue;
+	            newLastIdealVelocity[key] = 0;
+	          } else {
+	            var newLastIdealStyleValue = _this.state.lastIdealStyles[i][key];
+	            var newLastIdealVelocityValue = _this.state.lastIdealVelocities[i][key];
+	            for (var j = 0; j < framesToCatchUp; j++) {
+	              var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+	
+	              newLastIdealStyleValue = _stepper[0];
+	              newLastIdealVelocityValue = _stepper[1];
+	            }
+	
+	            var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+	
+	            var nextIdealX = _stepper2[0];
+	            var nextIdealV = _stepper2[1];
+	
+	            newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+	            newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion;
+	            newLastIdealStyle[key] = newLastIdealStyleValue;
+	            newLastIdealVelocity[key] = newLastIdealVelocityValue;
+	          }
+	        }
+	
+	        newCurrentStyles[i] = newCurrentStyle;
+	        newCurrentVelocities[i] = newCurrentVelocity;
+	        newLastIdealStyles[i] = newLastIdealStyle;
+	        newLastIdealVelocities[i] = newLastIdealVelocity;
+	      }
+	
+	      _this.animationID = null;
+	      // the amount we're looped over above
+	      _this.accumulatedTime -= framesToCatchUp * msPerFrame;
+	
+	      _this.setState({
+	        currentStyles: newCurrentStyles,
+	        currentVelocities: newCurrentVelocities,
+	        lastIdealStyles: newLastIdealStyles,
+	        lastIdealVelocities: newLastIdealVelocities
+	      });
+	
+	      _this.unreadPropStyles = null;
+	
+	      _this.startAnimationIfNecessary();
+	    });
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    this.prevTime = _performanceNow2['default']();
+	    this.startAnimationIfNecessary();
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(props) {
+	    if (this.unreadPropStyles != null) {
+	      // previous props haven't had the chance to be set yet; set them here
+	      this.clearUnreadPropStyle(this.unreadPropStyles);
+	    }
+	
+	    this.unreadPropStyles = props.styles(this.state.lastIdealStyles);
+	    if (this.animationID == null) {
+	      this.prevTime = _performanceNow2['default']();
+	      this.startAnimationIfNecessary();
+	    }
+	  },
+	
+	  componentWillUnmount: function componentWillUnmount() {
+	    if (this.animationID != null) {
+	      _raf2['default'].cancel(this.animationID);
+	      this.animationID = null;
+	    }
+	  },
+	
+	  render: function render() {
+	    var renderedChildren = this.props.children(this.state.currentStyles);
+	    return renderedChildren && _react2['default'].Children.only(renderedChildren);
+	  }
+	});
+	
+	exports['default'] = StaggeredMotion;
+	module.exports = exports['default'];
+
+/***/ },
+/* 767 */
+/*!************************************************!*\
+  !*** ./~/react-motion/lib/TransitionMotion.js ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 760);
+	
+	var _mapToZero2 = _interopRequireDefault(_mapToZero);
+	
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 761);
+	
+	var _stripStyle2 = _interopRequireDefault(_stripStyle);
+	
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 762);
+	
+	var _stepper4 = _interopRequireDefault(_stepper3);
+	
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 768);
+	
+	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
+	
+	var _performanceNow = __webpack_require__(/*! performance-now */ 763);
+	
+	var _performanceNow2 = _interopRequireDefault(_performanceNow);
+	
+	var _raf = __webpack_require__(/*! raf */ 764);
+	
+	var _raf2 = _interopRequireDefault(_raf);
+	
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 765);
+	
+	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
+	
+	var _react = __webpack_require__(/*! react */ 192);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var msPerFrame = 1000 / 60;
+	
+	// the children function & (potential) styles function asks as param an
+	// Array<TransitionPlainStyle>, where each TransitionPlainStyle is of the format
+	// {key: string, data?: any, style: PlainStyle}. However, the way we keep
+	// internal states doesn't contain such a data structure (check the state and
+	// TransitionMotionState). So when children function and others ask for such
+	// data we need to generate them on the fly by combining mergedPropsStyles and
+	// currentStyles/lastIdealStyles
+	function rehydrateStyles(mergedPropsStyles, unreadPropStyles, plainStyles) {
+	  if (unreadPropStyles == null) {
+	    // $FlowFixMe
+	    return mergedPropsStyles.map(function (mergedPropsStyle, i) {
+	      return {
+	        key: mergedPropsStyle.key,
+	        data: mergedPropsStyle.data,
+	        style: plainStyles[i]
+	      };
+	    });
+	  }
+	  return mergedPropsStyles.map(function (mergedPropsStyle, i) {
+	    // $FlowFixMe
+	    for (var j = 0; j < unreadPropStyles.length; j++) {
+	      // $FlowFixMe
+	      if (unreadPropStyles[j].key === mergedPropsStyle.key) {
+	        return {
+	          // $FlowFixMe
+	          key: unreadPropStyles[j].key,
+	          data: unreadPropStyles[j].data,
+	          style: plainStyles[i]
+	        };
+	      }
+	    }
+	    // $FlowFixMe
+	    return { key: mergedPropsStyle.key, data: mergedPropsStyle.data, style: plainStyles[i] };
+	  });
+	}
+	
+	function shouldStopAnimationAll(currentStyles, destStyles, currentVelocities, mergedPropsStyles) {
+	  if (mergedPropsStyles.length !== destStyles.length) {
+	    return false;
+	  }
+	
+	  for (var i = 0; i < mergedPropsStyles.length; i++) {
+	    if (mergedPropsStyles[i].key !== destStyles[i].key) {
+	      return false;
+	    }
+	  }
+	
+	  // we have the invariant that mergedPropsStyles and
+	  // currentStyles/currentVelocities/last* are synced in terms of cells, see
+	  // mergeAndSync comment for more info
+	  for (var i = 0; i < mergedPropsStyles.length; i++) {
+	    if (!_shouldStopAnimation2['default'](currentStyles[i], destStyles[i].style, currentVelocities[i])) {
+	      return false;
+	    }
+	  }
+	
+	  return true;
+	}
+	
+	// core key merging logic
+	
+	// things to do: say previously merged style is {a, b}, dest style (prop) is {b,
+	// c}, previous current (interpolating) style is {a, b}
+	// **invariant**: current[i] corresponds to merged[i] in terms of key
+	
+	// steps:
+	// turn merged style into {a?, b, c}
+	//    add c, value of c is destStyles.c
+	//    maybe remove a, aka call willLeave(a), then merged is either {b, c} or {a, b, c}
+	// turn current (interpolating) style from {a, b} into {a?, b, c}
+	//    maybe remove a
+	//    certainly add c, value of c is willEnter(c)
+	// loop over merged and construct new current
+	// dest doesn't change, that's owner's
+	function mergeAndSync(willEnter, willLeave, oldMergedPropsStyles, destStyles, oldCurrentStyles, oldCurrentVelocities, oldLastIdealStyles, oldLastIdealVelocities) {
+	  var newMergedPropsStyles = _mergeDiff2['default'](oldMergedPropsStyles, destStyles, function (oldIndex, oldMergedPropsStyle) {
+	    var leavingStyle = willLeave(oldMergedPropsStyle);
+	    if (leavingStyle == null) {
+	      return null;
+	    }
+	    if (_shouldStopAnimation2['default'](oldCurrentStyles[oldIndex], leavingStyle, oldCurrentVelocities[oldIndex])) {
+	      return null;
+	    }
+	    return { key: oldMergedPropsStyle.key, data: oldMergedPropsStyle.data, style: leavingStyle };
+	  });
+	
+	  var newCurrentStyles = [];
+	  var newCurrentVelocities = [];
+	  var newLastIdealStyles = [];
+	  var newLastIdealVelocities = [];
+	  for (var i = 0; i < newMergedPropsStyles.length; i++) {
+	    var newMergedPropsStyleCell = newMergedPropsStyles[i];
+	    var foundOldIndex = null;
+	    for (var j = 0; j < oldMergedPropsStyles.length; j++) {
+	      if (oldMergedPropsStyles[j].key === newMergedPropsStyleCell.key) {
+	        foundOldIndex = j;
+	        break;
+	      }
+	    }
+	    // TODO: key search code
+	    if (foundOldIndex == null) {
+	      var plainStyle = willEnter(newMergedPropsStyleCell);
+	      newCurrentStyles[i] = plainStyle;
+	      newLastIdealStyles[i] = plainStyle;
+	
+	      // $FlowFixMe
+	      var velocity = _mapToZero2['default'](newMergedPropsStyleCell.style);
+	      newCurrentVelocities[i] = velocity;
+	      newLastIdealVelocities[i] = velocity;
+	    } else {
+	      newCurrentStyles[i] = oldCurrentStyles[foundOldIndex];
+	      newLastIdealStyles[i] = oldLastIdealStyles[foundOldIndex];
+	      newCurrentVelocities[i] = oldCurrentVelocities[foundOldIndex];
+	      newLastIdealVelocities[i] = oldLastIdealVelocities[foundOldIndex];
+	    }
+	  }
+	
+	  return [newMergedPropsStyles, newCurrentStyles, newCurrentVelocities, newLastIdealStyles, newLastIdealVelocities];
+	}
+	
+	var TransitionMotion = _react2['default'].createClass({
+	  displayName: 'TransitionMotion',
+	
+	  propTypes: {
+	    defaultStyles: _react.PropTypes.arrayOf(_react.PropTypes.shape({
+	      key: _react.PropTypes.string.isRequired,
+	      data: _react.PropTypes.any,
+	      style: _react.PropTypes.objectOf(_react.PropTypes.number).isRequired
+	    })),
+	    styles: _react.PropTypes.oneOfType([_react.PropTypes.func, _react.PropTypes.arrayOf(_react.PropTypes.shape({
+	      key: _react.PropTypes.string.isRequired,
+	      data: _react.PropTypes.any,
+	      style: _react.PropTypes.objectOf(_react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.object])).isRequired
+	    }))]).isRequired,
+	    children: _react.PropTypes.func.isRequired,
+	    willLeave: _react.PropTypes.func,
+	    willEnter: _react.PropTypes.func
+	  },
+	
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      willEnter: function willEnter(styleThatEntered) {
+	        return _stripStyle2['default'](styleThatEntered.style);
+	      },
+	      // recall: returning null makes the current unmounting TransitionStyle
+	      // disappear immediately
+	      willLeave: function willLeave() {
+	        return null;
+	      }
+	    };
+	  },
+	
+	  getInitialState: function getInitialState() {
+	    var _props = this.props;
+	    var defaultStyles = _props.defaultStyles;
+	    var styles = _props.styles;
+	    var willEnter = _props.willEnter;
+	    var willLeave = _props.willLeave;
+	
+	    var destStyles = typeof styles === 'function' ? styles() : styles;
+	
+	    // this is special. for the first time around, we don't have a comparison
+	    // between last (no last) and current merged props. we'll compute last so:
+	    // say default is {a, b} and styles (dest style) is {b, c}, we'll
+	    // fabricate last as {a, b}
+	    var oldMergedPropsStyles = undefined;
+	    if (defaultStyles == null) {
+	      oldMergedPropsStyles = destStyles;
+	    } else {
+	      // $FlowFixMe
+	      oldMergedPropsStyles = defaultStyles.map(function (defaultStyleCell) {
+	        // TODO: key search code
+	        for (var i = 0; i < destStyles.length; i++) {
+	          if (destStyles[i].key === defaultStyleCell.key) {
+	            return destStyles[i];
+	          }
+	        }
+	        return defaultStyleCell;
+	      });
+	    }
+	    var oldCurrentStyles = defaultStyles == null ? destStyles.map(function (s) {
+	      return _stripStyle2['default'](s.style);
+	    }) : defaultStyles.map(function (s) {
+	      return _stripStyle2['default'](s.style);
+	    });
+	    var oldCurrentVelocities = defaultStyles == null ? destStyles.map(function (s) {
+	      return _mapToZero2['default'](s.style);
+	    }) : defaultStyles.map(function (s) {
+	      return _mapToZero2['default'](s.style);
+	    });
+	
+	    var _mergeAndSync = mergeAndSync(
+	    // $FlowFixMe
+	    willEnter,
+	    // $FlowFixMe
+	    willLeave, oldMergedPropsStyles, destStyles, oldCurrentStyles, oldCurrentVelocities, oldCurrentStyles, // oldLastIdealStyles really
+	    oldCurrentVelocities);
+	
+	    var mergedPropsStyles = _mergeAndSync[0];
+	    var currentStyles = _mergeAndSync[1];
+	    var currentVelocities = _mergeAndSync[2];
+	    var lastIdealStyles = _mergeAndSync[3];
+	    var lastIdealVelocities = _mergeAndSync[4];
+	    // oldLastIdealVelocities really
+	
+	    return {
+	      currentStyles: currentStyles,
+	      currentVelocities: currentVelocities,
+	      lastIdealStyles: lastIdealStyles,
+	      lastIdealVelocities: lastIdealVelocities,
+	      mergedPropsStyles: mergedPropsStyles
+	    };
+	  },
+	
+	  animationID: null,
+	  prevTime: 0,
+	  accumulatedTime: 0,
+	  // it's possible that currentStyle's value is stale: if props is immediately
+	  // changed from 0 to 400 to spring(0) again, the async currentStyle is still
+	  // at 0 (didn't have time to tick and interpolate even once). If we naively
+	  // compare currentStyle with destVal it'll be 0 === 0 (no animation, stop).
+	  // In reality currentStyle should be 400
+	  unreadPropStyles: null,
+	  // after checking for unreadPropStyles != null, we manually go set the
+	  // non-interpolating values (those that are a number, without a spring
+	  // config)
+	  clearUnreadPropStyle: function clearUnreadPropStyle(unreadPropStyles) {
+	    var _mergeAndSync2 = mergeAndSync(
+	    // $FlowFixMe
+	    this.props.willEnter,
+	    // $FlowFixMe
+	    this.props.willLeave, this.state.mergedPropsStyles, unreadPropStyles, this.state.currentStyles, this.state.currentVelocities, this.state.lastIdealStyles, this.state.lastIdealVelocities);
+	
+	    var mergedPropsStyles = _mergeAndSync2[0];
+	    var currentStyles = _mergeAndSync2[1];
+	    var currentVelocities = _mergeAndSync2[2];
+	    var lastIdealStyles = _mergeAndSync2[3];
+	    var lastIdealVelocities = _mergeAndSync2[4];
+	
+	    for (var i = 0; i < unreadPropStyles.length; i++) {
+	      var unreadPropStyle = unreadPropStyles[i].style;
+	      var dirty = false;
+	
+	      for (var key in unreadPropStyle) {
+	        if (!unreadPropStyle.hasOwnProperty(key)) {
+	          continue;
+	        }
+	
+	        var styleValue = unreadPropStyle[key];
+	        if (typeof styleValue === 'number') {
+	          if (!dirty) {
+	            dirty = true;
+	            currentStyles[i] = _extends({}, currentStyles[i]);
+	            currentVelocities[i] = _extends({}, currentVelocities[i]);
+	            lastIdealStyles[i] = _extends({}, lastIdealStyles[i]);
+	            lastIdealVelocities[i] = _extends({}, lastIdealVelocities[i]);
+	            mergedPropsStyles[i] = {
+	              key: mergedPropsStyles[i].key,
+	              data: mergedPropsStyles[i].data,
+	              style: _extends({}, mergedPropsStyles[i].style)
+	            };
+	          }
+	          currentStyles[i][key] = styleValue;
+	          currentVelocities[i][key] = 0;
+	          lastIdealStyles[i][key] = styleValue;
+	          lastIdealVelocities[i][key] = 0;
+	          mergedPropsStyles[i].style[key] = styleValue;
+	        }
+	      }
+	    }
+	
+	    // unlike the other 2 components, we can't detect staleness and optionally
+	    // opt out of setState here. each style object's data might contain new
+	    // stuff we're not/cannot compare
+	    this.setState({
+	      currentStyles: currentStyles,
+	      currentVelocities: currentVelocities,
+	      mergedPropsStyles: mergedPropsStyles,
+	      lastIdealStyles: lastIdealStyles,
+	      lastIdealVelocities: lastIdealVelocities
+	    });
+	  },
+	
+	  startAnimationIfNecessary: function startAnimationIfNecessary() {
+	    var _this = this;
+	
+	    // TODO: when config is {a: 10} and dest is {a: 10} do we raf once and
+	    // call cb? No, otherwise accidental parent rerender causes cb trigger
+	    this.animationID = _raf2['default'](function () {
+	      var propStyles = _this.props.styles;
+	      var destStyles = typeof propStyles === 'function' ? propStyles(rehydrateStyles(_this.state.mergedPropsStyles, _this.unreadPropStyles, _this.state.lastIdealStyles)) : propStyles;
+	
+	      // check if we need to animate in the first place
+	      if (shouldStopAnimationAll(_this.state.currentStyles, destStyles, _this.state.currentVelocities, _this.state.mergedPropsStyles)) {
+	        // no need to cancel animationID here; shouldn't have any in flight
+	        _this.animationID = null;
+	        _this.accumulatedTime = 0;
+	        return;
+	      }
+	
+	      var currentTime = _performanceNow2['default']();
+	      var timeDelta = currentTime - _this.prevTime;
+	      _this.prevTime = currentTime;
+	      _this.accumulatedTime = _this.accumulatedTime + timeDelta;
+	      // more than 10 frames? prolly switched browser tab. Restart
+	      if (_this.accumulatedTime > msPerFrame * 10) {
+	        _this.accumulatedTime = 0;
+	      }
+	
+	      if (_this.accumulatedTime === 0) {
+	        // no need to cancel animationID here; shouldn't have any in flight
+	        _this.animationID = null;
+	        _this.startAnimationIfNecessary();
+	        return;
+	      }
+	
+	      var currentFrameCompletion = (_this.accumulatedTime - Math.floor(_this.accumulatedTime / msPerFrame) * msPerFrame) / msPerFrame;
+	      var framesToCatchUp = Math.floor(_this.accumulatedTime / msPerFrame);
+	
+	      var _mergeAndSync3 = mergeAndSync(
+	      // $FlowFixMe
+	      _this.props.willEnter,
+	      // $FlowFixMe
+	      _this.props.willLeave, _this.state.mergedPropsStyles, destStyles, _this.state.currentStyles, _this.state.currentVelocities, _this.state.lastIdealStyles, _this.state.lastIdealVelocities);
+	
+	      var newMergedPropsStyles = _mergeAndSync3[0];
+	      var newCurrentStyles = _mergeAndSync3[1];
+	      var newCurrentVelocities = _mergeAndSync3[2];
+	      var newLastIdealStyles = _mergeAndSync3[3];
+	      var newLastIdealVelocities = _mergeAndSync3[4];
+	
+	      for (var i = 0; i < newMergedPropsStyles.length; i++) {
+	        var newMergedPropsStyle = newMergedPropsStyles[i].style;
+	        var newCurrentStyle = {};
+	        var newCurrentVelocity = {};
+	        var newLastIdealStyle = {};
+	        var newLastIdealVelocity = {};
+	
+	        for (var key in newMergedPropsStyle) {
+	          if (!newMergedPropsStyle.hasOwnProperty(key)) {
+	            continue;
+	          }
+	
+	          var styleValue = newMergedPropsStyle[key];
+	          if (typeof styleValue === 'number') {
+	            newCurrentStyle[key] = styleValue;
+	            newCurrentVelocity[key] = 0;
+	            newLastIdealStyle[key] = styleValue;
+	            newLastIdealVelocity[key] = 0;
+	          } else {
+	            var newLastIdealStyleValue = newLastIdealStyles[i][key];
+	            var newLastIdealVelocityValue = newLastIdealVelocities[i][key];
+	            for (var j = 0; j < framesToCatchUp; j++) {
+	              var _stepper = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+	
+	              newLastIdealStyleValue = _stepper[0];
+	              newLastIdealVelocityValue = _stepper[1];
+	            }
+	
+	            var _stepper2 = _stepper4['default'](msPerFrame / 1000, newLastIdealStyleValue, newLastIdealVelocityValue, styleValue.val, styleValue.stiffness, styleValue.damping, styleValue.precision);
+	
+	            var nextIdealX = _stepper2[0];
+	            var nextIdealV = _stepper2[1];
+	
+	            newCurrentStyle[key] = newLastIdealStyleValue + (nextIdealX - newLastIdealStyleValue) * currentFrameCompletion;
+	            newCurrentVelocity[key] = newLastIdealVelocityValue + (nextIdealV - newLastIdealVelocityValue) * currentFrameCompletion;
+	            newLastIdealStyle[key] = newLastIdealStyleValue;
+	            newLastIdealVelocity[key] = newLastIdealVelocityValue;
+	          }
+	        }
+	
+	        newLastIdealStyles[i] = newLastIdealStyle;
+	        newLastIdealVelocities[i] = newLastIdealVelocity;
+	        newCurrentStyles[i] = newCurrentStyle;
+	        newCurrentVelocities[i] = newCurrentVelocity;
+	      }
+	
+	      _this.animationID = null;
+	      // the amount we're looped over above
+	      _this.accumulatedTime -= framesToCatchUp * msPerFrame;
+	
+	      _this.setState({
+	        currentStyles: newCurrentStyles,
+	        currentVelocities: newCurrentVelocities,
+	        lastIdealStyles: newLastIdealStyles,
+	        lastIdealVelocities: newLastIdealVelocities,
+	        mergedPropsStyles: newMergedPropsStyles
+	      });
+	
+	      _this.unreadPropStyles = null;
+	
+	      _this.startAnimationIfNecessary();
+	    });
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    this.prevTime = _performanceNow2['default']();
+	    this.startAnimationIfNecessary();
+	  },
+	
+	  componentWillReceiveProps: function componentWillReceiveProps(props) {
+	    if (this.unreadPropStyles) {
+	      // previous props haven't had the chance to be set yet; set them here
+	      this.clearUnreadPropStyle(this.unreadPropStyles);
+	    }
+	
+	    if (typeof props.styles === 'function') {
+	      // $FlowFixMe
+	      this.unreadPropStyles = props.styles(rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.lastIdealStyles));
+	    } else {
+	      this.unreadPropStyles = props.styles;
+	    }
+	
+	    if (this.animationID == null) {
+	      this.prevTime = _performanceNow2['default']();
+	      this.startAnimationIfNecessary();
+	    }
+	  },
+	
+	  componentWillUnmount: function componentWillUnmount() {
+	    if (this.animationID != null) {
+	      _raf2['default'].cancel(this.animationID);
+	      this.animationID = null;
+	    }
+	  },
+	
+	  render: function render() {
+	    var hydratedStyles = rehydrateStyles(this.state.mergedPropsStyles, this.unreadPropStyles, this.state.currentStyles);
+	    var renderedChildren = this.props.children(hydratedStyles);
+	    return renderedChildren && _react2['default'].Children.only(renderedChildren);
+	  }
+	});
+	
+	exports['default'] = TransitionMotion;
+	module.exports = exports['default'];
+	
+	// list of styles, each containing interpolating values. Part of what's passed
+	// to children function. Notice that this is
+	// Array<ActualInterpolatingStyleObject>, without the wrapper that is {key: ...,
+	// data: ... style: ActualInterpolatingStyleObject}. Only mergedPropsStyles
+	// contains the key & data info (so that we only have a single source of truth
+	// for these, and to save space). Check the comment for `rehydrateStyles` to
+	// see how we regenerate the entirety of what's passed to children function
+	
+	// the array that keeps track of currently rendered stuff! Including stuff
+	// that you've unmounted but that's still animating. This is where it lives
+
+/***/ },
+/* 768 */
+/*!*****************************************!*\
+  !*** ./~/react-motion/lib/mergeDiff.js ***!
+  \*****************************************/
+/***/ function(module, exports) {
+
+	
+	
+	// core keys merging algorithm. If previous render's keys are [a, b], and the
+	// next render's [c, b, d], what's the final merged keys and ordering?
+	
+	// - c and a must both be before b
+	// - b before d
+	// - ordering between a and c ambiguous
+	
+	// this reduces to merging two partially ordered lists (e.g. lists where not
+	// every item has a definite ordering, like comparing a and c above). For the
+	// ambiguous ordering we deterministically choose to place the next render's
+	// item after the previous'; so c after a
+	
+	// this is called a topological sorting. Except the existing algorithms don't
+	// work well with js bc of the amount of allocation, and isn't optimized for our
+	// current use-case bc the runtime is linear in terms of edges (see wiki for
+	// meaning), which is huge when two lists have many common elements
+	'use strict';
+	
+	exports.__esModule = true;
+	exports['default'] = mergeDiff;
+	
+	function mergeDiff(prev, next, onRemove) {
+	  // bookkeeping for easier access of a key's index below. This is 2 allocations +
+	  // potentially triggering chrome hash map mode for objs (so it might be faster
+	
+	  var prevKeyIndex = {};
+	  for (var i = 0; i < prev.length; i++) {
+	    prevKeyIndex[prev[i].key] = i;
+	  }
+	  var nextKeyIndex = {};
+	  for (var i = 0; i < next.length; i++) {
+	    nextKeyIndex[next[i].key] = i;
+	  }
+	
+	  // first, an overly elaborate way of merging prev and next, eliminating
+	  // duplicates (in terms of keys). If there's dupe, keep the item in next).
+	  // This way of writing it saves allocations
+	  var ret = [];
+	  for (var i = 0; i < next.length; i++) {
+	    ret[i] = next[i];
+	  }
+	  for (var i = 0; i < prev.length; i++) {
+	    if (!nextKeyIndex.hasOwnProperty(prev[i].key)) {
+	      // this is called my TM's `mergeAndSync`, which calls willLeave. We don't
+	      // merge in keys that the user desires to kill
+	      var fill = onRemove(i, prev[i]);
+	      if (fill != null) {
+	        ret.push(fill);
+	      }
+	    }
+	  }
+	
+	  // now all the items all present. Core sorting logic to have the right order
+	  return ret.sort(function (a, b) {
+	    var nextOrderA = nextKeyIndex[a.key];
+	    var nextOrderB = nextKeyIndex[b.key];
+	    var prevOrderA = prevKeyIndex[a.key];
+	    var prevOrderB = prevKeyIndex[b.key];
+	
+	    if (nextOrderA != null && nextOrderB != null) {
+	      // both keys in next
+	      return nextKeyIndex[a.key] - nextKeyIndex[b.key];
+	    } else if (prevOrderA != null && prevOrderB != null) {
+	      // both keys in prev
+	      return prevKeyIndex[a.key] - prevKeyIndex[b.key];
+	    } else if (nextOrderA != null) {
+	      // key a in next, key b in prev
+	
+	      // how to determine the order between a and b? We find a "pivot" (term
+	      // abuse), a key present in both prev and next, that is sandwiched between
+	      // a and b. In the context of our above example, if we're comparing a and
+	      // d, b's (the only) pivot
+	      for (var i = 0; i < next.length; i++) {
+	        var pivot = next[i].key;
+	        if (!prevKeyIndex.hasOwnProperty(pivot)) {
+	          continue;
+	        }
+	
+	        if (nextOrderA < nextKeyIndex[pivot] && prevOrderB > prevKeyIndex[pivot]) {
+	          return -1;
+	        } else if (nextOrderA > nextKeyIndex[pivot] && prevOrderB < prevKeyIndex[pivot]) {
+	          return 1;
+	        }
+	      }
+	      // pluggable. default to: next bigger than prev
+	      return 1;
+	    }
+	    // prevOrderA, nextOrderB
+	    for (var i = 0; i < next.length; i++) {
+	      var pivot = next[i].key;
+	      if (!prevKeyIndex.hasOwnProperty(pivot)) {
+	        continue;
+	      }
+	      if (nextOrderB < nextKeyIndex[pivot] && prevOrderA > prevKeyIndex[pivot]) {
+	        return 1;
+	      } else if (nextOrderB > nextKeyIndex[pivot] && prevOrderA < prevKeyIndex[pivot]) {
+	        return -1;
+	      }
+	    }
+	    // pluggable. default to: next bigger than prev
+	    return -1;
+	  });
+	}
+	
+	module.exports = exports['default'];
+	// to loop through and find a key's index each time), but I no longer care
+
+/***/ },
+/* 769 */
+/*!**************************************!*\
+  !*** ./~/react-motion/lib/spring.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	exports['default'] = spring;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _presets = __webpack_require__(/*! ./presets */ 770);
+	
+	var _presets2 = _interopRequireDefault(_presets);
+	
+	var defaultConfig = _extends({}, _presets2['default'].noWobble, {
+	  precision: 0.01
+	});
+	
+	function spring(val, config) {
+	  return _extends({}, defaultConfig, config, { val: val });
+	}
+	
+	module.exports = exports['default'];
+
+/***/ },
+/* 770 */
+/*!***************************************!*\
+  !*** ./~/react-motion/lib/presets.js ***!
+  \***************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = {
+	  noWobble: { stiffness: 170, damping: 26 }, // the default, if nothing provided
+	  gentle: { stiffness: 120, damping: 14 },
+	  wobbly: { stiffness: 180, damping: 12 },
+	  stiff: { stiffness: 210, damping: 20 }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 771 */
+/*!*******************************************!*\
+  !*** ./~/react-motion/lib/reorderKeys.js ***!
+  \*******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	
+	exports.__esModule = true;
+	exports['default'] = reorderKeys;
+	
+	var hasWarned = false;
+	
+	function reorderKeys() {
+	  if (process.env.NODE_ENV === 'development') {
+	    if (!hasWarned) {
+	      hasWarned = true;
+	      console.error('`reorderKeys` has been removed, since it is no longer needed for TransitionMotion\'s new styles array API.');
+	    }
+	  }
+	}
+	
+	module.exports = exports['default'];
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
+
+/***/ },
+/* 772 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -65215,7 +66815,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 758 */
+/* 773 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -65225,7 +66825,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 759 */
+/* 774 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -65235,12 +66835,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 760),
+	  component: __webpack_require__(/*! ./Content */ 775),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 760 */
+/* 775 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -65276,7 +66876,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 761);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 776);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -65311,7 +66911,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 761 */
+/* 776 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
