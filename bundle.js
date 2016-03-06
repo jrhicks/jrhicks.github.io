@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 774)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 798)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 755);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 779);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 757);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 781);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 773);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 797);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34322,6 +34322,22 @@
 
 	'use strict';
 	
+	var _slicedToArray2 = __webpack_require__(/*! babel-runtime/helpers/slicedToArray */ 500);
+	
+	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+	
+	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 505);
+	
+	var _getIterator3 = _interopRequireDefault(_getIterator2);
+	
+	var _toConsumableArray2 = __webpack_require__(/*! babel-runtime/helpers/toConsumableArray */ 509);
+	
+	var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
+	
+	var _map = __webpack_require__(/*! babel-runtime/core-js/map */ 517);
+	
+	var _map2 = _interopRequireDefault(_map);
+	
 	var _getPrototypeOf = __webpack_require__(/*! babel-runtime/core-js/object/get-prototype-of */ 436);
 	
 	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -34346,11 +34362,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _wikismith = __webpack_require__(/*! ../wikismith */ 500);
+	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 754);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 778);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -34361,77 +34377,64 @@
 	
 	  function MainPanel(props) {
 	    (0, _classCallCheck3.default)(this, MainPanel);
-	
-	    var _this = (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(MainPanel).call(this, props));
-	
-	    _this.renderYearOfTalks = _this.renderYearOfTalks.bind(_this);
-	    _this.renderTalk = _this.renderTalk.bind(_this);
-	
-	    _this.talksByYear = [{
-	      year: '2015',
-	      talks: [{
-	        title: 'Styling React Components',
-	        link: false
-	      }, {
-	        title: 'Confidently Setting Up A React Project',
-	        link: false
-	      }, {
-	        title: 'Intro to Flux',
-	        link: false
-	      }, {
-	        title: 'Intro to ReactJS',
-	        link: false
-	      }]
-	    }, {
-	      year: '2014',
-	      talks: [{
-	        title: 'Javascript Build Ecosystem',
-	        link: false
-	      }]
-	    }, {
-	      year: '2012',
-	      talks: [{
-	        title: 'Using OmniAuth In Rails To Create More Value',
-	        link: false
-	      }]
-	    }];
-	    return _this;
+	    return (0, _possibleConstructorReturn3.default)(this, (0, _getPrototypeOf2.default)(MainPanel).call(this, props));
 	  }
 	
 	  (0, _createClass3.default)(MainPanel, [{
-	    key: 'renderTalk',
-	    value: function renderTalk(talk) {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        talk.title
-	      );
-	    }
-	  }, {
-	    key: 'sortedPosts',
-	    value: function sortedPosts() {
-	      // console.log(wikismith);
-	      return _wikismith2.default.scourContent().filter({ type: 'post', cover: true }).sortBy(function (p) {
+	    key: 'getPostsByYear',
+	    value: function getPostsByYear() {
+	      var posts = _wikismith2.default.scourContent().filter({ type: 'post', cover: true }).sortBy(function (p) {
 	        return Date.parse(p.get('created'));
 	      }).value.reverse();
+	      return this.groupByYear(posts);
 	    }
 	  }, {
-	    key: 'renderYearOfTalks',
-	    value: function renderYearOfTalks(year) {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          year.year
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: _MainPanel2.default.collectionOfEntries },
-	          year.talks.map(this.renderTalk)
-	        )
-	      );
+	    key: 'getTalksByYear',
+	    value: function getTalksByYear() {
+	      var talks = _wikismith2.default.scourContent().filter({ type: 'post', category: 'past talks' }).sortBy(function (p) {
+	        return Date.parse(p.get('created'));
+	      }).value.reverse();
+	      return this.groupByYear(talks);
+	    }
+	  }, {
+	    key: 'groupByYear',
+	    value: function groupByYear(items) {
+	      var results = new _map2.default();
+	      var y = undefined;
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+	
+	      try {
+	        for (var _iterator = (0, _getIterator3.default)(items), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var p = _step.value;
+	
+	          y = new Date(p.created).getYear() + 1990;
+	          if (results.get(y) === undefined) {
+	            results.set(y, [p]);
+	          } else {
+	            var yItems = results.get(y);
+	            yItems.push(p);
+	            results.set(y, yItems);
+	          }
+	        }
+	        // Convert to an Array
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+	
+	      return [].concat((0, _toConsumableArray3.default)(results));
 	    }
 	  }, {
 	    key: 'render',
@@ -34453,16 +34456,29 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: _MainPanel2.default.collectionOfYears },
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                '2015'
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: _MainPanel2.default.collectionOfEntries },
-	                this.sortedPosts().map(_wikismith2.default.linkTo)
-	              )
+	              this.getPostsByYear().map(function (_ref) {
+	                var _ref2 = (0, _slicedToArray3.default)(_ref, 2);
+	
+	                var year = _ref2[0];
+	                var posts = _ref2[1];
+	
+	                return _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    year
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: _MainPanel2.default.collectionOfEntries },
+	                    posts.map(function (post) {
+	                      return _wikismith2.default.linkTo(post);
+	                    })
+	                  )
+	                );
+	              })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -34476,7 +34492,29 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: _MainPanel2.default.collectionOfYears },
-	              this.talksByYear.map(this.renderYearOfTalks)
+	              this.getTalksByYear().map(function (_ref3) {
+	                var _ref4 = (0, _slicedToArray3.default)(_ref3, 2);
+	
+	                var year = _ref4[0];
+	                var posts = _ref4[1];
+	
+	                return _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    year
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: _MainPanel2.default.collectionOfEntries },
+	                    posts.map(function (post) {
+	                      return _wikismith2.default.linkTo(post);
+	                    })
+	                  )
+	                );
+	              })
 	            )
 	          )
 	        )
@@ -34490,6 +34528,732 @@
 
 /***/ },
 /* 500 */
+/*!**************************************************!*\
+  !*** ./~/babel-runtime/helpers/slicedToArray.js ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	exports.__esModule = true;
+	
+	var _isIterable2 = __webpack_require__(/*! ../core-js/is-iterable */ 501);
+	
+	var _isIterable3 = _interopRequireDefault(_isIterable2);
+	
+	var _getIterator2 = __webpack_require__(/*! ../core-js/get-iterator */ 505);
+	
+	var _getIterator3 = _interopRequireDefault(_getIterator2);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+	  function sliceIterator(arr, i) {
+	    var _arr = [];
+	    var _n = true;
+	    var _d = false;
+	    var _e = undefined;
+	
+	    try {
+	      for (var _i = (0, _getIterator3.default)(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
+	        _arr.push(_s.value);
+	
+	        if (i && _arr.length === i) break;
+	      }
+	    } catch (err) {
+	      _d = true;
+	      _e = err;
+	    } finally {
+	      try {
+	        if (!_n && _i["return"]) _i["return"]();
+	      } finally {
+	        if (_d) throw _e;
+	      }
+	    }
+	
+	    return _arr;
+	  }
+	
+	  return function (arr, i) {
+	    if (Array.isArray(arr)) {
+	      return arr;
+	    } else if ((0, _isIterable3.default)(Object(arr))) {
+	      return sliceIterator(arr, i);
+	    } else {
+	      throw new TypeError("Invalid attempt to destructure non-iterable instance");
+	    }
+	  };
+	}();
+
+/***/ },
+/* 501 */
+/*!************************************************!*\
+  !*** ./~/babel-runtime/core-js/is-iterable.js ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/is-iterable */ 502), __esModule: true };
+
+/***/ },
+/* 502 */
+/*!*************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/fn/is-iterable.js ***!
+  \*************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(/*! ../modules/web.dom.iterable */ 473);
+	__webpack_require__(/*! ../modules/es6.string.iterator */ 457);
+	module.exports = __webpack_require__(/*! ../modules/core.is-iterable */ 503);
+
+/***/ },
+/* 503 */
+/*!***********************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/core.is-iterable.js ***!
+  \***********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var classof   = __webpack_require__(/*! ./$.classof */ 504)
+	  , ITERATOR  = __webpack_require__(/*! ./$.wks */ 470)('iterator')
+	  , Iterators = __webpack_require__(/*! ./$.iterators */ 467);
+	module.exports = __webpack_require__(/*! ./$.core */ 444).isIterable = function(it){
+	  var O = Object(it);
+	  return O[ITERATOR] !== undefined
+	    || '@@iterator' in O
+	    || Iterators.hasOwnProperty(classof(O));
+	};
+
+/***/ },
+/* 504 */
+/*!****************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.classof.js ***!
+  \****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// getting tag from 19.1.3.6 Object.prototype.toString()
+	var cof = __webpack_require__(/*! ./$.cof */ 479)
+	  , TAG = __webpack_require__(/*! ./$.wks */ 470)('toStringTag')
+	  // ES3 wrong here
+	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
+	
+	module.exports = function(it){
+	  var O, T, B;
+	  return it === undefined ? 'Undefined' : it === null ? 'Null'
+	    // @@toStringTag case
+	    : typeof (T = (O = Object(it))[TAG]) == 'string' ? T
+	    // builtinTag case
+	    : ARG ? cof(O)
+	    // ES3 arguments fallback
+	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+	};
+
+/***/ },
+/* 505 */
+/*!*************************************************!*\
+  !*** ./~/babel-runtime/core-js/get-iterator.js ***!
+  \*************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/get-iterator */ 506), __esModule: true };
+
+/***/ },
+/* 506 */
+/*!**************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/fn/get-iterator.js ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(/*! ../modules/web.dom.iterable */ 473);
+	__webpack_require__(/*! ../modules/es6.string.iterator */ 457);
+	module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 507);
+
+/***/ },
+/* 507 */
+/*!************************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/core.get-iterator.js ***!
+  \************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var anObject = __webpack_require__(/*! ./$.an-object */ 487)
+	  , get      = __webpack_require__(/*! ./core.get-iterator-method */ 508);
+	module.exports = __webpack_require__(/*! ./$.core */ 444).getIterator = function(it){
+	  var iterFn = get(it);
+	  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
+	  return anObject(iterFn.call(it));
+	};
+
+/***/ },
+/* 508 */
+/*!*******************************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/core.get-iterator-method.js ***!
+  \*******************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var classof   = __webpack_require__(/*! ./$.classof */ 504)
+	  , ITERATOR  = __webpack_require__(/*! ./$.wks */ 470)('iterator')
+	  , Iterators = __webpack_require__(/*! ./$.iterators */ 467);
+	module.exports = __webpack_require__(/*! ./$.core */ 444).getIteratorMethod = function(it){
+	  if(it != undefined)return it[ITERATOR]
+	    || it['@@iterator']
+	    || Iterators[classof(it)];
+	};
+
+/***/ },
+/* 509 */
+/*!******************************************************!*\
+  !*** ./~/babel-runtime/helpers/toConsumableArray.js ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	exports.__esModule = true;
+	
+	var _from = __webpack_require__(/*! ../core-js/array/from */ 510);
+	
+	var _from2 = _interopRequireDefault(_from);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function (arr) {
+	  if (Array.isArray(arr)) {
+	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+	      arr2[i] = arr[i];
+	    }
+	
+	    return arr2;
+	  } else {
+	    return (0, _from2.default)(arr);
+	  }
+	};
+
+/***/ },
+/* 510 */
+/*!***********************************************!*\
+  !*** ./~/babel-runtime/core-js/array/from.js ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/array/from */ 511), __esModule: true };
+
+/***/ },
+/* 511 */
+/*!************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/fn/array/from.js ***!
+  \************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(/*! ../../modules/es6.string.iterator */ 457);
+	__webpack_require__(/*! ../../modules/es6.array.from */ 512);
+	module.exports = __webpack_require__(/*! ../../modules/$.core */ 444).Array.from;
+
+/***/ },
+/* 512 */
+/*!*********************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/es6.array.from.js ***!
+  \*********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var ctx         = __webpack_require__(/*! ./$.ctx */ 445)
+	  , $export     = __webpack_require__(/*! ./$.export */ 442)
+	  , toObject    = __webpack_require__(/*! ./$.to-object */ 439)
+	  , call        = __webpack_require__(/*! ./$.iter-call */ 513)
+	  , isArrayIter = __webpack_require__(/*! ./$.is-array-iter */ 514)
+	  , toLength    = __webpack_require__(/*! ./$.to-length */ 515)
+	  , getIterFn   = __webpack_require__(/*! ./core.get-iterator-method */ 508);
+	$export($export.S + $export.F * !__webpack_require__(/*! ./$.iter-detect */ 516)(function(iter){ Array.from(iter); }), 'Array', {
+	  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
+	  from: function from(arrayLike/*, mapfn = undefined, thisArg = undefined*/){
+	    var O       = toObject(arrayLike)
+	      , C       = typeof this == 'function' ? this : Array
+	      , $$      = arguments
+	      , $$len   = $$.length
+	      , mapfn   = $$len > 1 ? $$[1] : undefined
+	      , mapping = mapfn !== undefined
+	      , index   = 0
+	      , iterFn  = getIterFn(O)
+	      , length, result, step, iterator;
+	    if(mapping)mapfn = ctx(mapfn, $$len > 2 ? $$[2] : undefined, 2);
+	    // if object isn't iterable or it's array with default iterator - use simple case
+	    if(iterFn != undefined && !(C == Array && isArrayIter(iterFn))){
+	      for(iterator = iterFn.call(O), result = new C; !(step = iterator.next()).done; index++){
+	        result[index] = mapping ? call(iterator, mapfn, [step.value, index], true) : step.value;
+	      }
+	    } else {
+	      length = toLength(O.length);
+	      for(result = new C(length); length > index; index++){
+	        result[index] = mapping ? mapfn(O[index], index) : O[index];
+	      }
+	    }
+	    result.length = index;
+	    return result;
+	  }
+	});
+
+
+/***/ },
+/* 513 */
+/*!******************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.iter-call.js ***!
+  \******************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// call something on iterator step with safe closing on error
+	var anObject = __webpack_require__(/*! ./$.an-object */ 487);
+	module.exports = function(iterator, fn, value, entries){
+	  try {
+	    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
+	  // 7.4.6 IteratorClose(iterator, completion)
+	  } catch(e){
+	    var ret = iterator['return'];
+	    if(ret !== undefined)anObject(ret.call(iterator));
+	    throw e;
+	  }
+	};
+
+/***/ },
+/* 514 */
+/*!**********************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.is-array-iter.js ***!
+  \**********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// check on default Array iterator
+	var Iterators  = __webpack_require__(/*! ./$.iterators */ 467)
+	  , ITERATOR   = __webpack_require__(/*! ./$.wks */ 470)('iterator')
+	  , ArrayProto = Array.prototype;
+	
+	module.exports = function(it){
+	  return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
+	};
+
+/***/ },
+/* 515 */
+/*!******************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.to-length.js ***!
+  \******************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.15 ToLength
+	var toInteger = __webpack_require__(/*! ./$.to-integer */ 459)
+	  , min       = Math.min;
+	module.exports = function(it){
+	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+	};
+
+/***/ },
+/* 516 */
+/*!********************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.iter-detect.js ***!
+  \********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var ITERATOR     = __webpack_require__(/*! ./$.wks */ 470)('iterator')
+	  , SAFE_CLOSING = false;
+	
+	try {
+	  var riter = [7][ITERATOR]();
+	  riter['return'] = function(){ SAFE_CLOSING = true; };
+	  Array.from(riter, function(){ throw 2; });
+	} catch(e){ /* empty */ }
+	
+	module.exports = function(exec, skipClosing){
+	  if(!skipClosing && !SAFE_CLOSING)return false;
+	  var safe = false;
+	  try {
+	    var arr  = [7]
+	      , iter = arr[ITERATOR]();
+	    iter.next = function(){ safe = true; };
+	    arr[ITERATOR] = function(){ return iter; };
+	    exec(arr);
+	  } catch(e){ /* empty */ }
+	  return safe;
+	};
+
+/***/ },
+/* 517 */
+/*!****************************************!*\
+  !*** ./~/babel-runtime/core-js/map.js ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/map */ 518), __esModule: true };
+
+/***/ },
+/* 518 */
+/*!*****************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/fn/map.js ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(/*! ../modules/es6.object.to-string */ 489);
+	__webpack_require__(/*! ../modules/es6.string.iterator */ 457);
+	__webpack_require__(/*! ../modules/web.dom.iterable */ 473);
+	__webpack_require__(/*! ../modules/es6.map */ 519);
+	__webpack_require__(/*! ../modules/es7.map.to-json */ 526);
+	module.exports = __webpack_require__(/*! ../modules/$.core */ 444).Map;
+
+/***/ },
+/* 519 */
+/*!**************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/es6.map.js ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var strong = __webpack_require__(/*! ./$.collection-strong */ 520);
+	
+	// 23.1 Map Objects
+	__webpack_require__(/*! ./$.collection */ 525)('Map', function(get){
+	  return function Map(){ return get(this, arguments.length > 0 ? arguments[0] : undefined); };
+	}, {
+	  // 23.1.3.6 Map.prototype.get(key)
+	  get: function get(key){
+	    var entry = strong.getEntry(this, key);
+	    return entry && entry.v;
+	  },
+	  // 23.1.3.9 Map.prototype.set(key, value)
+	  set: function set(key, value){
+	    return strong.def(this, key === 0 ? 0 : key, value);
+	  }
+	}, strong, true);
+
+/***/ },
+/* 520 */
+/*!**************************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.collection-strong.js ***!
+  \**************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $            = __webpack_require__(/*! ./$ */ 452)
+	  , hide         = __webpack_require__(/*! ./$.hide */ 463)
+	  , redefineAll  = __webpack_require__(/*! ./$.redefine-all */ 521)
+	  , ctx          = __webpack_require__(/*! ./$.ctx */ 445)
+	  , strictNew    = __webpack_require__(/*! ./$.strict-new */ 522)
+	  , defined      = __webpack_require__(/*! ./$.defined */ 440)
+	  , forOf        = __webpack_require__(/*! ./$.for-of */ 523)
+	  , $iterDefine  = __webpack_require__(/*! ./$.iter-define */ 460)
+	  , step         = __webpack_require__(/*! ./$.iter-step */ 476)
+	  , ID           = __webpack_require__(/*! ./$.uid */ 472)('id')
+	  , $has         = __webpack_require__(/*! ./$.has */ 466)
+	  , isObject     = __webpack_require__(/*! ./$.is-object */ 488)
+	  , setSpecies   = __webpack_require__(/*! ./$.set-species */ 524)
+	  , DESCRIPTORS  = __webpack_require__(/*! ./$.descriptors */ 465)
+	  , isExtensible = Object.isExtensible || isObject
+	  , SIZE         = DESCRIPTORS ? '_s' : 'size'
+	  , id           = 0;
+	
+	var fastKey = function(it, create){
+	  // return primitive with prefix
+	  if(!isObject(it))return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+	  if(!$has(it, ID)){
+	    // can't set id to frozen object
+	    if(!isExtensible(it))return 'F';
+	    // not necessary to add id
+	    if(!create)return 'E';
+	    // add missing object id
+	    hide(it, ID, ++id);
+	  // return object id with prefix
+	  } return 'O' + it[ID];
+	};
+	
+	var getEntry = function(that, key){
+	  // fast case
+	  var index = fastKey(key), entry;
+	  if(index !== 'F')return that._i[index];
+	  // frozen object case
+	  for(entry = that._f; entry; entry = entry.n){
+	    if(entry.k == key)return entry;
+	  }
+	};
+	
+	module.exports = {
+	  getConstructor: function(wrapper, NAME, IS_MAP, ADDER){
+	    var C = wrapper(function(that, iterable){
+	      strictNew(that, C, NAME);
+	      that._i = $.create(null); // index
+	      that._f = undefined;      // first entry
+	      that._l = undefined;      // last entry
+	      that[SIZE] = 0;           // size
+	      if(iterable != undefined)forOf(iterable, IS_MAP, that[ADDER], that);
+	    });
+	    redefineAll(C.prototype, {
+	      // 23.1.3.1 Map.prototype.clear()
+	      // 23.2.3.2 Set.prototype.clear()
+	      clear: function clear(){
+	        for(var that = this, data = that._i, entry = that._f; entry; entry = entry.n){
+	          entry.r = true;
+	          if(entry.p)entry.p = entry.p.n = undefined;
+	          delete data[entry.i];
+	        }
+	        that._f = that._l = undefined;
+	        that[SIZE] = 0;
+	      },
+	      // 23.1.3.3 Map.prototype.delete(key)
+	      // 23.2.3.4 Set.prototype.delete(value)
+	      'delete': function(key){
+	        var that  = this
+	          , entry = getEntry(that, key);
+	        if(entry){
+	          var next = entry.n
+	            , prev = entry.p;
+	          delete that._i[entry.i];
+	          entry.r = true;
+	          if(prev)prev.n = next;
+	          if(next)next.p = prev;
+	          if(that._f == entry)that._f = next;
+	          if(that._l == entry)that._l = prev;
+	          that[SIZE]--;
+	        } return !!entry;
+	      },
+	      // 23.2.3.6 Set.prototype.forEach(callbackfn, thisArg = undefined)
+	      // 23.1.3.5 Map.prototype.forEach(callbackfn, thisArg = undefined)
+	      forEach: function forEach(callbackfn /*, that = undefined */){
+	        var f = ctx(callbackfn, arguments.length > 1 ? arguments[1] : undefined, 3)
+	          , entry;
+	        while(entry = entry ? entry.n : this._f){
+	          f(entry.v, entry.k, this);
+	          // revert to the last existing entry
+	          while(entry && entry.r)entry = entry.p;
+	        }
+	      },
+	      // 23.1.3.7 Map.prototype.has(key)
+	      // 23.2.3.7 Set.prototype.has(value)
+	      has: function has(key){
+	        return !!getEntry(this, key);
+	      }
+	    });
+	    if(DESCRIPTORS)$.setDesc(C.prototype, 'size', {
+	      get: function(){
+	        return defined(this[SIZE]);
+	      }
+	    });
+	    return C;
+	  },
+	  def: function(that, key, value){
+	    var entry = getEntry(that, key)
+	      , prev, index;
+	    // change existing entry
+	    if(entry){
+	      entry.v = value;
+	    // create new entry
+	    } else {
+	      that._l = entry = {
+	        i: index = fastKey(key, true), // <- index
+	        k: key,                        // <- key
+	        v: value,                      // <- value
+	        p: prev = that._l,             // <- previous entry
+	        n: undefined,                  // <- next entry
+	        r: false                       // <- removed
+	      };
+	      if(!that._f)that._f = entry;
+	      if(prev)prev.n = entry;
+	      that[SIZE]++;
+	      // add to index
+	      if(index !== 'F')that._i[index] = entry;
+	    } return that;
+	  },
+	  getEntry: getEntry,
+	  setStrong: function(C, NAME, IS_MAP){
+	    // add .keys, .values, .entries, [@@iterator]
+	    // 23.1.3.4, 23.1.3.8, 23.1.3.11, 23.1.3.12, 23.2.3.5, 23.2.3.8, 23.2.3.10, 23.2.3.11
+	    $iterDefine(C, NAME, function(iterated, kind){
+	      this._t = iterated;  // target
+	      this._k = kind;      // kind
+	      this._l = undefined; // previous
+	    }, function(){
+	      var that  = this
+	        , kind  = that._k
+	        , entry = that._l;
+	      // revert to the last existing entry
+	      while(entry && entry.r)entry = entry.p;
+	      // get next entry
+	      if(!that._t || !(that._l = entry = entry ? entry.n : that._t._f)){
+	        // or finish the iteration
+	        that._t = undefined;
+	        return step(1);
+	      }
+	      // return step by kind
+	      if(kind == 'keys'  )return step(0, entry.k);
+	      if(kind == 'values')return step(0, entry.v);
+	      return step(0, [entry.k, entry.v]);
+	    }, IS_MAP ? 'entries' : 'values' , !IS_MAP, true);
+	
+	    // add [@@species], 23.1.2.2, 23.2.2.2
+	    setSpecies(NAME);
+	  }
+	};
+
+/***/ },
+/* 521 */
+/*!*********************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.redefine-all.js ***!
+  \*********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var redefine = __webpack_require__(/*! ./$.redefine */ 462);
+	module.exports = function(target, src){
+	  for(var key in src)redefine(target, key, src[key]);
+	  return target;
+	};
+
+/***/ },
+/* 522 */
+/*!*******************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.strict-new.js ***!
+  \*******************************************************************/
+/***/ function(module, exports) {
+
+	module.exports = function(it, Constructor, name){
+	  if(!(it instanceof Constructor))throw TypeError(name + ": use the 'new' operator!");
+	  return it;
+	};
+
+/***/ },
+/* 523 */
+/*!***************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.for-of.js ***!
+  \***************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	var ctx         = __webpack_require__(/*! ./$.ctx */ 445)
+	  , call        = __webpack_require__(/*! ./$.iter-call */ 513)
+	  , isArrayIter = __webpack_require__(/*! ./$.is-array-iter */ 514)
+	  , anObject    = __webpack_require__(/*! ./$.an-object */ 487)
+	  , toLength    = __webpack_require__(/*! ./$.to-length */ 515)
+	  , getIterFn   = __webpack_require__(/*! ./core.get-iterator-method */ 508);
+	module.exports = function(iterable, entries, fn, that){
+	  var iterFn = getIterFn(iterable)
+	    , f      = ctx(fn, that, entries ? 2 : 1)
+	    , index  = 0
+	    , length, step, iterator;
+	  if(typeof iterFn != 'function')throw TypeError(iterable + ' is not iterable!');
+	  // fast case for arrays with default iterator
+	  if(isArrayIter(iterFn))for(length = toLength(iterable.length); length > index; index++){
+	    entries ? f(anObject(step = iterable[index])[0], step[1]) : f(iterable[index]);
+	  } else for(iterator = iterFn.call(iterable); !(step = iterator.next()).done; ){
+	    call(iterator, f, step.value, entries);
+	  }
+	};
+
+/***/ },
+/* 524 */
+/*!********************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.set-species.js ***!
+  \********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var core        = __webpack_require__(/*! ./$.core */ 444)
+	  , $           = __webpack_require__(/*! ./$ */ 452)
+	  , DESCRIPTORS = __webpack_require__(/*! ./$.descriptors */ 465)
+	  , SPECIES     = __webpack_require__(/*! ./$.wks */ 470)('species');
+	
+	module.exports = function(KEY){
+	  var C = core[KEY];
+	  if(DESCRIPTORS && C && !C[SPECIES])$.setDesc(C, SPECIES, {
+	    configurable: true,
+	    get: function(){ return this; }
+	  });
+	};
+
+/***/ },
+/* 525 */
+/*!*******************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.collection.js ***!
+  \*******************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $              = __webpack_require__(/*! ./$ */ 452)
+	  , global         = __webpack_require__(/*! ./$.global */ 443)
+	  , $export        = __webpack_require__(/*! ./$.export */ 442)
+	  , fails          = __webpack_require__(/*! ./$.fails */ 447)
+	  , hide           = __webpack_require__(/*! ./$.hide */ 463)
+	  , redefineAll    = __webpack_require__(/*! ./$.redefine-all */ 521)
+	  , forOf          = __webpack_require__(/*! ./$.for-of */ 523)
+	  , strictNew      = __webpack_require__(/*! ./$.strict-new */ 522)
+	  , isObject       = __webpack_require__(/*! ./$.is-object */ 488)
+	  , setToStringTag = __webpack_require__(/*! ./$.set-to-string-tag */ 469)
+	  , DESCRIPTORS    = __webpack_require__(/*! ./$.descriptors */ 465);
+	
+	module.exports = function(NAME, wrapper, methods, common, IS_MAP, IS_WEAK){
+	  var Base  = global[NAME]
+	    , C     = Base
+	    , ADDER = IS_MAP ? 'set' : 'add'
+	    , proto = C && C.prototype
+	    , O     = {};
+	  if(!DESCRIPTORS || typeof C != 'function' || !(IS_WEAK || proto.forEach && !fails(function(){
+	    new C().entries().next();
+	  }))){
+	    // create collection constructor
+	    C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
+	    redefineAll(C.prototype, methods);
+	  } else {
+	    C = wrapper(function(target, iterable){
+	      strictNew(target, C, NAME);
+	      target._c = new Base;
+	      if(iterable != undefined)forOf(iterable, IS_MAP, target[ADDER], target);
+	    });
+	    $.each.call('add,clear,delete,forEach,get,has,set,keys,values,entries'.split(','),function(KEY){
+	      var IS_ADDER = KEY == 'add' || KEY == 'set';
+	      if(KEY in proto && !(IS_WEAK && KEY == 'clear'))hide(C.prototype, KEY, function(a, b){
+	        if(!IS_ADDER && IS_WEAK && !isObject(a))return KEY == 'get' ? undefined : false;
+	        var result = this._c[KEY](a === 0 ? 0 : a, b);
+	        return IS_ADDER ? this : result;
+	      });
+	    });
+	    if('size' in proto)$.setDesc(C.prototype, 'size', {
+	      get: function(){
+	        return this._c.size;
+	      }
+	    });
+	  }
+	
+	  setToStringTag(C, NAME);
+	
+	  O[NAME] = C;
+	  $export($export.G + $export.W + $export.F, O);
+	
+	  if(!IS_WEAK)common.setStrong(C, NAME, IS_MAP);
+	
+	  return C;
+	};
+
+/***/ },
+/* 526 */
+/*!**********************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/es7.map.to-json.js ***!
+  \**********************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+	var $export  = __webpack_require__(/*! ./$.export */ 442);
+	
+	$export($export.P, 'Map', {toJSON: __webpack_require__(/*! ./$.collection-to-json */ 527)('Map')});
+
+/***/ },
+/* 527 */
+/*!***************************************************************************!*\
+  !*** ./~/babel-runtime/~/core-js/library/modules/$.collection-to-json.js ***!
+  \***************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+	var forOf   = __webpack_require__(/*! ./$.for-of */ 523)
+	  , classof = __webpack_require__(/*! ./$.classof */ 504);
+	module.exports = function(NAME){
+	  return function toJSON(){
+	    if(classof(this) != NAME)throw TypeError(NAME + "#toJSON isn't generic");
+	    var arr = [];
+	    forOf(this, false, arr.push, arr);
+	    return arr;
+	  };
+	};
+
+/***/ },
+/* 528 */
 /*!**************************!*\
   !*** ./app/wikismith.js ***!
   \**************************/
@@ -34497,31 +35261,31 @@
 
 	'use strict';
 	
-	var _wikismith = __webpack_require__(/*! ../wikismith */ 501);
+	var _wikismith = __webpack_require__(/*! ../wikismith */ 529);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _PostType = __webpack_require__(/*! ../wikismith/PostType */ 539);
+	var _PostType = __webpack_require__(/*! ../wikismith/PostType */ 562);
 	
 	var _PostType2 = _interopRequireDefault(_PostType);
 	
-	var _TalkType = __webpack_require__(/*! ../wikismith/TalkType */ 712);
+	var _TalkType = __webpack_require__(/*! ../wikismith/TalkType */ 735);
 	
 	var _TalkType2 = _interopRequireDefault(_TalkType);
 	
-	var _MapType = __webpack_require__(/*! ../wikismith/MapType */ 720);
+	var _MapType = __webpack_require__(/*! ../wikismith/MapType */ 743);
 	
 	var _MapType2 = _interopRequireDefault(_MapType);
 	
-	var _SpeakerDeck = __webpack_require__(/*! ../wikismith/SpeakerDeck */ 733);
+	var _SpeakerDeck = __webpack_require__(/*! ../wikismith/SpeakerDeck */ 756);
 	
 	var _SpeakerDeck2 = _interopRequireDefault(_SpeakerDeck);
 	
-	var _posts = __webpack_require__(/*! ../content/posts.js */ 736);
+	var _posts = __webpack_require__(/*! ../content/posts.js */ 759);
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 746);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 770);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -34538,7 +35302,7 @@
 	module.exports = _wikismith2.default;
 
 /***/ },
-/* 501 */
+/* 529 */
 /*!****************************!*\
   !*** ./wikismith/index.js ***!
   \****************************/
@@ -34546,7 +35310,7 @@
 
 	'use strict';
 	
-	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 502);
+	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 505);
 	
 	var _getIterator3 = _interopRequireDefault(_getIterator2);
 	
@@ -34562,11 +35326,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _extractTypes = __webpack_require__(/*! ./extractTypes */ 507);
+	var _extractTypes = __webpack_require__(/*! ./extractTypes */ 530);
 	
 	var _extractTypes2 = _interopRequireDefault(_extractTypes);
 	
-	var _scourjs = __webpack_require__(/*! scourjs */ 508);
+	var _scourjs = __webpack_require__(/*! scourjs */ 531);
 	
 	var _scourjs2 = _interopRequireDefault(_scourjs);
 	
@@ -34702,82 +35466,7 @@
 	module.exports = new WikiSmith();
 
 /***/ },
-/* 502 */
-/*!*************************************************!*\
-  !*** ./~/babel-runtime/core-js/get-iterator.js ***!
-  \*************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/get-iterator */ 503), __esModule: true };
-
-/***/ },
-/* 503 */
-/*!**************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/fn/get-iterator.js ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(/*! ../modules/web.dom.iterable */ 473);
-	__webpack_require__(/*! ../modules/es6.string.iterator */ 457);
-	module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 504);
-
-/***/ },
-/* 504 */
-/*!************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/core.get-iterator.js ***!
-  \************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var anObject = __webpack_require__(/*! ./$.an-object */ 487)
-	  , get      = __webpack_require__(/*! ./core.get-iterator-method */ 505);
-	module.exports = __webpack_require__(/*! ./$.core */ 444).getIterator = function(it){
-	  var iterFn = get(it);
-	  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
-	  return anObject(iterFn.call(it));
-	};
-
-/***/ },
-/* 505 */
-/*!*******************************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/core.get-iterator-method.js ***!
-  \*******************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	var classof   = __webpack_require__(/*! ./$.classof */ 506)
-	  , ITERATOR  = __webpack_require__(/*! ./$.wks */ 470)('iterator')
-	  , Iterators = __webpack_require__(/*! ./$.iterators */ 467);
-	module.exports = __webpack_require__(/*! ./$.core */ 444).getIteratorMethod = function(it){
-	  if(it != undefined)return it[ITERATOR]
-	    || it['@@iterator']
-	    || Iterators[classof(it)];
-	};
-
-/***/ },
-/* 506 */
-/*!****************************************************************!*\
-  !*** ./~/babel-runtime/~/core-js/library/modules/$.classof.js ***!
-  \****************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	// getting tag from 19.1.3.6 Object.prototype.toString()
-	var cof = __webpack_require__(/*! ./$.cof */ 479)
-	  , TAG = __webpack_require__(/*! ./$.wks */ 470)('toStringTag')
-	  // ES3 wrong here
-	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
-	
-	module.exports = function(it){
-	  var O, T, B;
-	  return it === undefined ? 'Undefined' : it === null ? 'Null'
-	    // @@toStringTag case
-	    : typeof (T = (O = Object(it))[TAG]) == 'string' ? T
-	    // builtinTag case
-	    : ARG ? cof(O)
-	    // ES3 arguments fallback
-	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-	};
-
-/***/ },
-/* 507 */
+/* 530 */
 /*!***********************************!*\
   !*** ./wikismith/extractTypes.js ***!
   \***********************************/
@@ -34785,7 +35474,7 @@
 
 	'use strict';
 	
-	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 502);
+	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 505);
 	
 	var _getIterator3 = _interopRequireDefault(_getIterator2);
 	
@@ -34841,7 +35530,7 @@
 	module.exports = extractTypes;
 
 /***/ },
-/* 508 */
+/* 531 */
 /*!********************************!*\
   !*** ./~/scourjs/lib/index.js ***!
   \********************************/
@@ -34854,14 +35543,14 @@
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
-	var Search = __webpack_require__(/*! scour-search */ 509);
-	var assign = __webpack_require__(/*! object-assign */ 514);
-	var buildExtensions = __webpack_require__(/*! ./build_extensions */ 520);
-	var normalizeKeypath = __webpack_require__(/*! ../utilities/normalize_keypath */ 523);
-	var utils = __webpack_require__(/*! ../utilities */ 524);
-	var negate = __webpack_require__(/*! ./negate */ 538);
-	var sortValues = __webpack_require__(/*! ../utilities/sort_values */ 537);
-	var toFunction = __webpack_require__(/*! to-function */ 535);
+	var Search = __webpack_require__(/*! scour-search */ 532);
+	var assign = __webpack_require__(/*! object-assign */ 537);
+	var buildExtensions = __webpack_require__(/*! ./build_extensions */ 543);
+	var normalizeKeypath = __webpack_require__(/*! ../utilities/normalize_keypath */ 546);
+	var utils = __webpack_require__(/*! ../utilities */ 547);
+	var negate = __webpack_require__(/*! ./negate */ 561);
+	var sortValues = __webpack_require__(/*! ../utilities/sort_values */ 560);
+	var toFunction = __webpack_require__(/*! to-function */ 558);
 	
 	/**
 	 * scour : scour(object)
@@ -35859,7 +36548,7 @@
 	module.exports = scour;
 
 /***/ },
-/* 509 */
+/* 532 */
 /*!***********************************************!*\
   !*** ./~/scourjs/~/scour-search/lib/index.js ***!
   \***********************************************/
@@ -35869,16 +36558,16 @@
 	
 	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 	
-	var normalizeKeypath = __webpack_require__(/*! ../utilities/normalize_keypath */ 510);
-	var cloneWithoutKeys = __webpack_require__(/*! ./clone_without_keys */ 511);
-	var toAST = __webpack_require__(/*! ./to_ast */ 512);
-	var assign = __webpack_require__(/*! object-assign */ 514);
-	var each = __webpack_require__(/*! ../utilities/each */ 515);
-	var stringify = __webpack_require__(/*! ./stringify */ 518);
+	var normalizeKeypath = __webpack_require__(/*! ../utilities/normalize_keypath */ 533);
+	var cloneWithoutKeys = __webpack_require__(/*! ./clone_without_keys */ 534);
+	var toAST = __webpack_require__(/*! ./to_ast */ 535);
+	var assign = __webpack_require__(/*! object-assign */ 537);
+	var each = __webpack_require__(/*! ../utilities/each */ 538);
+	var stringify = __webpack_require__(/*! ./stringify */ 541);
 	
-	var operands = __webpack_require__(/*! ./operands */ 513);
-	var indexers = __webpack_require__(/*! ./indexers */ 519);
-	var fallbacks = __webpack_require__(/*! ./fallbacks */ 516);
+	var operands = __webpack_require__(/*! ./operands */ 536);
+	var indexers = __webpack_require__(/*! ./indexers */ 542);
+	var fallbacks = __webpack_require__(/*! ./fallbacks */ 539);
 	
 	/**
 	 * Searcher : Searcher(data)
@@ -36184,7 +36873,7 @@
 	module.exports = Search;
 
 /***/ },
-/* 510 */
+/* 533 */
 /*!*****************************************************************!*\
   !*** ./~/scourjs/~/scour-search/utilities/normalize_keypath.js ***!
   \*****************************************************************/
@@ -36216,7 +36905,7 @@
 
 
 /***/ },
-/* 511 */
+/* 534 */
 /*!************************************************************!*\
   !*** ./~/scourjs/~/scour-search/lib/clone_without_keys.js ***!
   \************************************************************/
@@ -36239,7 +36928,7 @@
 	};
 
 /***/ },
-/* 512 */
+/* 535 */
 /*!************************************************!*\
   !*** ./~/scourjs/~/scour-search/lib/to_ast.js ***!
   \************************************************/
@@ -36249,8 +36938,8 @@
 	
 	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 	
-	var operands = __webpack_require__(/*! ./operands */ 513);
-	var fallbacks = __webpack_require__(/*! ./fallbacks */ 516);
+	var operands = __webpack_require__(/*! ./operands */ 536);
+	var fallbacks = __webpack_require__(/*! ./fallbacks */ 539);
 	
 	/*
 	 * Converts a MongoDB-style query to an AST (abstract syntax tree) that's
@@ -36296,7 +36985,7 @@
 	};
 
 /***/ },
-/* 513 */
+/* 536 */
 /*!**************************************************!*\
   !*** ./~/scourjs/~/scour-search/lib/operands.js ***!
   \**************************************************/
@@ -36306,9 +36995,9 @@
 	
 	function _typeof(obj) { return obj && typeof Symbol !== "undefined" && obj.constructor === Symbol ? "symbol" : typeof obj; }
 	
-	var cloneWithoutKeys = __webpack_require__(/*! ./clone_without_keys */ 511);
-	var assign = __webpack_require__(/*! object-assign */ 514);
-	var each = __webpack_require__(/*! ../utilities/each */ 515);
+	var cloneWithoutKeys = __webpack_require__(/*! ./clone_without_keys */ 534);
+	var assign = __webpack_require__(/*! object-assign */ 537);
+	var each = __webpack_require__(/*! ../utilities/each */ 538);
 	
 	/**
 	 * Internal: operands.
@@ -36440,7 +37129,7 @@
 	}
 
 /***/ },
-/* 514 */
+/* 537 */
 /*!********************************************!*\
   !*** ./~/scourjs/~/object-assign/index.js ***!
   \********************************************/
@@ -36488,7 +37177,7 @@
 
 
 /***/ },
-/* 515 */
+/* 538 */
 /*!****************************************************!*\
   !*** ./~/scourjs/~/scour-search/utilities/each.js ***!
   \****************************************************/
@@ -36526,7 +37215,7 @@
 
 
 /***/ },
-/* 516 */
+/* 539 */
 /*!***************************************************!*\
   !*** ./~/scourjs/~/scour-search/lib/fallbacks.js ***!
   \***************************************************/
@@ -36534,8 +37223,8 @@
 
 	'use strict';
 	
-	var normalizeKeypath = __webpack_require__(/*! ../utilities/normalize_keypath */ 510);
-	var get = __webpack_require__(/*! ../utilities/get */ 517);
+	var normalizeKeypath = __webpack_require__(/*! ../utilities/normalize_keypath */ 533);
+	var get = __webpack_require__(/*! ../utilities/get */ 540);
 	
 	var fallbacks = {};
 	
@@ -36680,7 +37369,7 @@
 	module.exports = fallbacks;
 
 /***/ },
-/* 517 */
+/* 540 */
 /*!***************************************************!*\
   !*** ./~/scourjs/~/scour-search/utilities/get.js ***!
   \***************************************************/
@@ -36701,7 +37390,7 @@
 
 
 /***/ },
-/* 518 */
+/* 541 */
 /*!***************************************************!*\
   !*** ./~/scourjs/~/scour-search/lib/stringify.js ***!
   \***************************************************/
@@ -36724,7 +37413,7 @@
 	module.exports = JSON.stringify;
 
 /***/ },
-/* 519 */
+/* 542 */
 /*!**************************************************!*\
   !*** ./~/scourjs/~/scour-search/lib/indexers.js ***!
   \**************************************************/
@@ -36732,8 +37421,8 @@
 
 	'use strict';
 	
-	var stringify = __webpack_require__(/*! ./stringify */ 518);
-	var get = __webpack_require__(/*! ../utilities/get */ 517);
+	var stringify = __webpack_require__(/*! ./stringify */ 541);
+	var get = __webpack_require__(/*! ../utilities/get */ 540);
 	var indexers = {};
 	
 	indexers['$eq'] = function (item, key, field, index) {
@@ -36745,7 +37434,7 @@
 	module.exports = indexers;
 
 /***/ },
-/* 520 */
+/* 543 */
 /*!*******************************************!*\
   !*** ./~/scourjs/lib/build_extensions.js ***!
   \*******************************************/
@@ -36753,7 +37442,7 @@
 
 	'use strict';
 	
-	var map = __webpack_require__(/*! ../utilities/map */ 521);
+	var map = __webpack_require__(/*! ../utilities/map */ 544);
 	
 	/**
 	 * Internal: builds extensions based on parameters passed onto `.use()`.
@@ -36773,13 +37462,13 @@
 	};
 
 /***/ },
-/* 521 */
+/* 544 */
 /*!************************************!*\
   !*** ./~/scourjs/utilities/map.js ***!
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var forEach = __webpack_require__(/*! ./each */ 522)
+	var forEach = __webpack_require__(/*! ./each */ 545)
 	
 	module.exports = function map (each, fn) {
 	  if (typeof each !== 'function') each = forEach.bind(this, each)
@@ -36790,7 +37479,7 @@
 
 
 /***/ },
-/* 522 */
+/* 545 */
 /*!*************************************!*\
   !*** ./~/scourjs/utilities/each.js ***!
   \*************************************/
@@ -36828,7 +37517,7 @@
 
 
 /***/ },
-/* 523 */
+/* 546 */
 /*!**************************************************!*\
   !*** ./~/scourjs/utilities/normalize_keypath.js ***!
   \**************************************************/
@@ -36857,7 +37546,7 @@
 
 
 /***/ },
-/* 524 */
+/* 547 */
 /*!**************************************!*\
   !*** ./~/scourjs/utilities/index.js ***!
   \**************************************/
@@ -36881,7 +37570,7 @@
 	 * This is also available as `require('scourjs/utilities/get')`.
 	 */
 	
-	exports.get = __webpack_require__(/*! ./get */ 525)
+	exports.get = __webpack_require__(/*! ./get */ 548)
 	
 	/**
 	 * scour.set : scour.set(object, keypath, value)
@@ -36895,7 +37584,7 @@
 	 * This is also available as `require('scourjs/utilities/set')`.
 	 */
 	
-	exports.set = __webpack_require__(/*! ./set */ 526)
+	exports.set = __webpack_require__(/*! ./set */ 549)
 	
 	/**
 	 * scour.del : scour.del(object, keypath)
@@ -36909,7 +37598,7 @@
 	 * This is also available as `require('scourjs/utilities/del')`.
 	 */
 	
-	exports.del = __webpack_require__(/*! ./del */ 528)
+	exports.del = __webpack_require__(/*! ./del */ 551)
 	
 	/**
 	 * scour.extendIn : scour.extendIn(object, keypath, extensions...)
@@ -36923,7 +37612,7 @@
 	 * This is also available as `require('scourjs/utilities/extend_in')`.
 	 */
 	
-	exports.extendIn = __webpack_require__(/*! ./extend_in */ 530)
+	exports.extendIn = __webpack_require__(/*! ./extend_in */ 553)
 	
 	/**
 	 * scour.each : scour.each(iterable, fn)
@@ -36937,7 +37626,7 @@
 	 * [Array#forEach]: http://devdocs.io/javascript/global_objects/array/foreach
 	 */
 	
-	exports.each = __webpack_require__(/*! ./each */ 522)
+	exports.each = __webpack_require__(/*! ./each */ 545)
 	
 	/**
 	 * scour.map : scour.map(iterable, fn)
@@ -36953,7 +37642,7 @@
 	 * [Array#map]: http://devdocs.io/javascript/global_objects/array/map
 	 */
 	
-	exports.map = __webpack_require__(/*! ./map */ 521)
+	exports.map = __webpack_require__(/*! ./map */ 544)
 	
 	/**
 	 * scour.mapObject : scour.mapObject(iterable, fn)
@@ -36974,7 +37663,7 @@
 	 * This is also available as `require('scourjs/utilities/map_object')`.
 	 */
 	
-	exports.mapObject = __webpack_require__(/*! ./map_object */ 531)
+	exports.mapObject = __webpack_require__(/*! ./map_object */ 554)
 	
 	/**
 	 * scour.indexedMap : scour.indexedMap(iterable, fn)
@@ -37003,7 +37692,7 @@
 	 * This is also available as `require('scourjs/utilities/indexed_map')`.
 	 */
 	
-	exports.indexedMap = __webpack_require__(/*! ./indexed_map */ 532)
+	exports.indexedMap = __webpack_require__(/*! ./indexed_map */ 555)
 	
 	/**
 	 * scour.filter : scour.filter(iterable, function(val, key), [isArray])
@@ -37021,7 +37710,7 @@
 	 * [Array#filter]: http://devdocs.io/javascript/global_objects/array/filter
 	 */
 	
-	exports.filter = __webpack_require__(/*! ./filter */ 533)
+	exports.filter = __webpack_require__(/*! ./filter */ 556)
 	
 	/**
 	 * scour.sortBy : scour.sortBy(iterable, criteria)
@@ -37033,11 +37722,11 @@
 	 * This is also available as `require('scourjs/utilities/sort_by')`.
 	 */
 	
-	exports.sortBy = __webpack_require__(/*! ./sort_by */ 534)
+	exports.sortBy = __webpack_require__(/*! ./sort_by */ 557)
 
 
 /***/ },
-/* 525 */
+/* 548 */
 /*!************************************!*\
   !*** ./~/scourjs/utilities/get.js ***!
   \************************************/
@@ -37058,7 +37747,7 @@
 
 
 /***/ },
-/* 526 */
+/* 549 */
 /*!************************************!*\
   !*** ./~/scourjs/utilities/set.js ***!
   \************************************/
@@ -37066,7 +37755,7 @@
 
 	'use strict'
 	
-	var clone = __webpack_require__(/*! ./clone */ 527)
+	var clone = __webpack_require__(/*! ./clone */ 550)
 	
 	/**
 	 * Sets a `keypath` into an `object` immutably.
@@ -37106,14 +37795,14 @@
 
 
 /***/ },
-/* 527 */
+/* 550 */
 /*!**************************************!*\
   !*** ./~/scourjs/utilities/clone.js ***!
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function clone (object) {
-	  var assign = __webpack_require__(/*! object-assign */ 514)
+	  var assign = __webpack_require__(/*! object-assign */ 537)
 	  return Array.isArray(object)
 	    ? [].slice.call(object)
 	    : assign({}, object)
@@ -37121,7 +37810,7 @@
 
 
 /***/ },
-/* 528 */
+/* 551 */
 /*!************************************!*\
   !*** ./~/scourjs/utilities/del.js ***!
   \************************************/
@@ -37129,8 +37818,8 @@
 
 	'use strict'
 	
-	var clone = __webpack_require__(/*! ./clone */ 527)
-	var cloneWithout = __webpack_require__(/*! ./clone_without */ 529)
+	var clone = __webpack_require__(/*! ./clone */ 550)
+	var cloneWithout = __webpack_require__(/*! ./clone_without */ 552)
 	
 	/**
 	 * Deletes a `keypath` from an `object` immutably.
@@ -37172,7 +37861,7 @@
 
 
 /***/ },
-/* 529 */
+/* 552 */
 /*!**********************************************!*\
   !*** ./~/scourjs/utilities/clone_without.js ***!
   \**********************************************/
@@ -37199,15 +37888,15 @@
 
 
 /***/ },
-/* 530 */
+/* 553 */
 /*!******************************************!*\
   !*** ./~/scourjs/utilities/extend_in.js ***!
   \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var get = __webpack_require__(/*! ./get */ 525)
-	var set = __webpack_require__(/*! ./set */ 526)
-	var assign = __webpack_require__(/*! object-assign */ 514)
+	var get = __webpack_require__(/*! ./get */ 548)
+	var set = __webpack_require__(/*! ./set */ 549)
+	var assign = __webpack_require__(/*! object-assign */ 537)
 	
 	module.exports = function extendIn (source, keypath, extensions) {
 	  if (keypath.length === 0) return assign({}, source, extensions)
@@ -37223,13 +37912,13 @@
 
 
 /***/ },
-/* 531 */
+/* 554 */
 /*!*******************************************!*\
   !*** ./~/scourjs/utilities/map_object.js ***!
   \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var forEach = __webpack_require__(/*! ./each */ 522)
+	var forEach = __webpack_require__(/*! ./each */ 545)
 	
 	module.exports = function mapObject (each, fn) {
 	  if (typeof each !== 'function') each = forEach.bind(this, each)
@@ -37240,13 +37929,13 @@
 
 
 /***/ },
-/* 532 */
+/* 555 */
 /*!********************************************!*\
   !*** ./~/scourjs/utilities/indexed_map.js ***!
   \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var forEach = __webpack_require__(/*! ./each */ 522)
+	var forEach = __webpack_require__(/*! ./each */ 545)
 	
 	module.exports = function indexedMap (each, fn) {
 	  /* istanbul ignore next */
@@ -37261,13 +37950,13 @@
 
 
 /***/ },
-/* 533 */
+/* 556 */
 /*!***************************************!*\
   !*** ./~/scourjs/utilities/filter.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var forEach = __webpack_require__(/*! ./each */ 522)
+	var forEach = __webpack_require__(/*! ./each */ 545)
 	
 	module.exports = function filter (each, fn, _isArray) {
 	  var isArray = typeof _isArray !== 'undefined' ? _isArray : Array.isArray(each)
@@ -37292,16 +37981,16 @@
 
 
 /***/ },
-/* 534 */
+/* 557 */
 /*!****************************************!*\
   !*** ./~/scourjs/utilities/sort_by.js ***!
   \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var map = __webpack_require__(/*! ./map */ 521)
-	var forEach = __webpack_require__(/*! ./each */ 522)
-	var toFunction = __webpack_require__(/*! to-function */ 535)
-	var sortValues = __webpack_require__(/*! ./sort_values */ 537)
+	var map = __webpack_require__(/*! ./map */ 544)
+	var forEach = __webpack_require__(/*! ./each */ 545)
+	var toFunction = __webpack_require__(/*! to-function */ 558)
+	var sortValues = __webpack_require__(/*! ./sort_values */ 560)
 	
 	module.exports = function sortBy (each, condition, isArray) {
 	  if (typeof isArray === 'undefined' && !Array.isArray(each)) isArray = false
@@ -37318,7 +38007,7 @@
 
 
 /***/ },
-/* 535 */
+/* 558 */
 /*!******************************************!*\
   !*** ./~/scourjs/~/to-function/index.js ***!
   \******************************************/
@@ -37331,9 +38020,9 @@
 	
 	var expr;
 	try {
-	  expr = __webpack_require__(/*! props */ 536);
+	  expr = __webpack_require__(/*! props */ 559);
 	} catch(e) {
-	  expr = __webpack_require__(/*! component-props */ 536);
+	  expr = __webpack_require__(/*! component-props */ 559);
 	}
 	
 	/**
@@ -37479,7 +38168,7 @@
 
 
 /***/ },
-/* 536 */
+/* 559 */
 /*!************************************************************!*\
   !*** ./~/scourjs/~/to-function/~/component-props/index.js ***!
   \************************************************************/
@@ -37573,14 +38262,14 @@
 
 
 /***/ },
-/* 537 */
+/* 560 */
 /*!********************************************!*\
   !*** ./~/scourjs/utilities/sort_values.js ***!
   \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var indexedMap = __webpack_require__(/*! ../utilities/indexed_map */ 532)
-	var map = __webpack_require__(/*! ../utilities/map */ 521)
+	var indexedMap = __webpack_require__(/*! ../utilities/indexed_map */ 555)
+	var map = __webpack_require__(/*! ../utilities/map */ 544)
 	
 	/*
 	 * Internal: Sorts a `{ key, value, criteria, index }` tuple array by
@@ -37608,7 +38297,7 @@
 
 
 /***/ },
-/* 538 */
+/* 561 */
 /*!*********************************!*\
   !*** ./~/scourjs/lib/negate.js ***!
   \*********************************/
@@ -37627,7 +38316,7 @@
 	};
 
 /***/ },
-/* 539 */
+/* 562 */
 /*!*************************************!*\
   !*** ./wikismith/PostType/index.js ***!
   \*************************************/
@@ -37636,13 +38325,13 @@
 	'use strict';
 	
 	module.exports = {
-	  embed: __webpack_require__(/*! ./embed/Post */ 540),
-	  render: __webpack_require__(/*! ./render/Post */ 541),
-	  link: __webpack_require__(/*! ./link/Post */ 711)
+	  embed: __webpack_require__(/*! ./embed/Post */ 563),
+	  render: __webpack_require__(/*! ./render/Post */ 564),
+	  link: __webpack_require__(/*! ./link/Post */ 734)
 	};
 
 /***/ },
-/* 540 */
+/* 563 */
 /*!*******************************************!*\
   !*** ./wikismith/PostType/embed/Post.jsx ***!
   \*******************************************/
@@ -37700,7 +38389,7 @@
 	module.exports = EmbedPost;
 
 /***/ },
-/* 541 */
+/* 564 */
 /*!********************************************!*\
   !*** ./wikismith/PostType/render/Post.jsx ***!
   \********************************************/
@@ -37732,11 +38421,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Body = __webpack_require__(/*! ./Body */ 542);
+	var _Body = __webpack_require__(/*! ./Body */ 565);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _Post = __webpack_require__(/*! ./Post.scss */ 710);
+	var _Post = __webpack_require__(/*! ./Post.scss */ 733);
 	
 	var _Post2 = _interopRequireDefault(_Post);
 	
@@ -37843,7 +38532,7 @@
 	module.exports = Post;
 
 /***/ },
-/* 542 */
+/* 565 */
 /*!********************************************!*\
   !*** ./wikismith/PostType/render/Body.jsx ***!
   \********************************************/
@@ -37851,7 +38540,7 @@
 
 	'use strict';
 	
-	var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 543);
+	var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 566);
 	
 	var _stringify2 = _interopRequireDefault(_stringify);
 	
@@ -37883,15 +38572,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactHighlight = __webpack_require__(/*! react-highlight */ 545);
+	var _reactHighlight = __webpack_require__(/*! react-highlight */ 568);
 	
 	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
 	
-	var _Body = __webpack_require__(/*! ./Body.scss */ 686);
+	var _Body = __webpack_require__(/*! ./Body.scss */ 709);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _nodeUuid = __webpack_require__(/*! node-uuid */ 687);
+	var _nodeUuid = __webpack_require__(/*! node-uuid */ 710);
 	
 	var _nodeUuid2 = _interopRequireDefault(_nodeUuid);
 	
@@ -38099,16 +38788,16 @@
 	module.exports = Body;
 
 /***/ },
-/* 543 */
+/* 566 */
 /*!***************************************************!*\
   !*** ./~/babel-runtime/core-js/json/stringify.js ***!
   \***************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/json/stringify */ 544), __esModule: true };
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/json/stringify */ 567), __esModule: true };
 
 /***/ },
-/* 544 */
+/* 567 */
 /*!****************************************************************!*\
   !*** ./~/babel-runtime/~/core-js/library/fn/json/stringify.js ***!
   \****************************************************************/
@@ -38120,16 +38809,16 @@
 	};
 
 /***/ },
-/* 545 */
+/* 568 */
 /*!************************************!*\
   !*** ./~/react-highlight/index.js ***!
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./lib */ 546);
+	module.exports = __webpack_require__(/*! ./lib */ 569);
 
 /***/ },
-/* 546 */
+/* 569 */
 /*!****************************************!*\
   !*** ./~/react-highlight/lib/index.js ***!
   \****************************************/
@@ -38137,7 +38826,7 @@
 
 	'use strict';
 	
-	var hljs = __webpack_require__(/*! highlight.js */ 547);
+	var hljs = __webpack_require__(/*! highlight.js */ 570);
 	var React = __webpack_require__(/*! react */ 192);
 	var ReactDOM = __webpack_require__(/*! react-dom */ 348);
 	
@@ -38185,156 +38874,156 @@
 	module.exports = Highlight;
 
 /***/ },
-/* 547 */
+/* 570 */
 /*!*************************************!*\
   !*** ./~/highlight.js/lib/index.js ***!
   \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var hljs = __webpack_require__(/*! ./highlight */ 548);
+	var hljs = __webpack_require__(/*! ./highlight */ 571);
 	
-	hljs.registerLanguage('1c', __webpack_require__(/*! ./languages/1c */ 549));
-	hljs.registerLanguage('accesslog', __webpack_require__(/*! ./languages/accesslog */ 550));
-	hljs.registerLanguage('actionscript', __webpack_require__(/*! ./languages/actionscript */ 551));
-	hljs.registerLanguage('apache', __webpack_require__(/*! ./languages/apache */ 552));
-	hljs.registerLanguage('applescript', __webpack_require__(/*! ./languages/applescript */ 553));
-	hljs.registerLanguage('armasm', __webpack_require__(/*! ./languages/armasm */ 554));
-	hljs.registerLanguage('xml', __webpack_require__(/*! ./languages/xml */ 555));
-	hljs.registerLanguage('asciidoc', __webpack_require__(/*! ./languages/asciidoc */ 556));
-	hljs.registerLanguage('aspectj', __webpack_require__(/*! ./languages/aspectj */ 557));
-	hljs.registerLanguage('autohotkey', __webpack_require__(/*! ./languages/autohotkey */ 558));
-	hljs.registerLanguage('autoit', __webpack_require__(/*! ./languages/autoit */ 559));
-	hljs.registerLanguage('avrasm', __webpack_require__(/*! ./languages/avrasm */ 560));
-	hljs.registerLanguage('axapta', __webpack_require__(/*! ./languages/axapta */ 561));
-	hljs.registerLanguage('bash', __webpack_require__(/*! ./languages/bash */ 562));
-	hljs.registerLanguage('brainfuck', __webpack_require__(/*! ./languages/brainfuck */ 563));
-	hljs.registerLanguage('cal', __webpack_require__(/*! ./languages/cal */ 564));
-	hljs.registerLanguage('capnproto', __webpack_require__(/*! ./languages/capnproto */ 565));
-	hljs.registerLanguage('ceylon', __webpack_require__(/*! ./languages/ceylon */ 566));
-	hljs.registerLanguage('clojure', __webpack_require__(/*! ./languages/clojure */ 567));
-	hljs.registerLanguage('clojure-repl', __webpack_require__(/*! ./languages/clojure-repl */ 568));
-	hljs.registerLanguage('cmake', __webpack_require__(/*! ./languages/cmake */ 569));
-	hljs.registerLanguage('coffeescript', __webpack_require__(/*! ./languages/coffeescript */ 570));
-	hljs.registerLanguage('cpp', __webpack_require__(/*! ./languages/cpp */ 571));
-	hljs.registerLanguage('crmsh', __webpack_require__(/*! ./languages/crmsh */ 572));
-	hljs.registerLanguage('crystal', __webpack_require__(/*! ./languages/crystal */ 573));
-	hljs.registerLanguage('cs', __webpack_require__(/*! ./languages/cs */ 574));
-	hljs.registerLanguage('css', __webpack_require__(/*! ./languages/css */ 575));
-	hljs.registerLanguage('d', __webpack_require__(/*! ./languages/d */ 576));
-	hljs.registerLanguage('markdown', __webpack_require__(/*! ./languages/markdown */ 577));
-	hljs.registerLanguage('dart', __webpack_require__(/*! ./languages/dart */ 578));
-	hljs.registerLanguage('delphi', __webpack_require__(/*! ./languages/delphi */ 579));
-	hljs.registerLanguage('diff', __webpack_require__(/*! ./languages/diff */ 580));
-	hljs.registerLanguage('django', __webpack_require__(/*! ./languages/django */ 581));
-	hljs.registerLanguage('dns', __webpack_require__(/*! ./languages/dns */ 582));
-	hljs.registerLanguage('dockerfile', __webpack_require__(/*! ./languages/dockerfile */ 583));
-	hljs.registerLanguage('dos', __webpack_require__(/*! ./languages/dos */ 584));
-	hljs.registerLanguage('dust', __webpack_require__(/*! ./languages/dust */ 585));
-	hljs.registerLanguage('elixir', __webpack_require__(/*! ./languages/elixir */ 586));
-	hljs.registerLanguage('elm', __webpack_require__(/*! ./languages/elm */ 587));
-	hljs.registerLanguage('ruby', __webpack_require__(/*! ./languages/ruby */ 588));
-	hljs.registerLanguage('erb', __webpack_require__(/*! ./languages/erb */ 589));
-	hljs.registerLanguage('erlang-repl', __webpack_require__(/*! ./languages/erlang-repl */ 590));
-	hljs.registerLanguage('erlang', __webpack_require__(/*! ./languages/erlang */ 591));
-	hljs.registerLanguage('fix', __webpack_require__(/*! ./languages/fix */ 592));
-	hljs.registerLanguage('fortran', __webpack_require__(/*! ./languages/fortran */ 593));
-	hljs.registerLanguage('fsharp', __webpack_require__(/*! ./languages/fsharp */ 594));
-	hljs.registerLanguage('gams', __webpack_require__(/*! ./languages/gams */ 595));
-	hljs.registerLanguage('gcode', __webpack_require__(/*! ./languages/gcode */ 596));
-	hljs.registerLanguage('gherkin', __webpack_require__(/*! ./languages/gherkin */ 597));
-	hljs.registerLanguage('glsl', __webpack_require__(/*! ./languages/glsl */ 598));
-	hljs.registerLanguage('go', __webpack_require__(/*! ./languages/go */ 599));
-	hljs.registerLanguage('golo', __webpack_require__(/*! ./languages/golo */ 600));
-	hljs.registerLanguage('gradle', __webpack_require__(/*! ./languages/gradle */ 601));
-	hljs.registerLanguage('groovy', __webpack_require__(/*! ./languages/groovy */ 602));
-	hljs.registerLanguage('haml', __webpack_require__(/*! ./languages/haml */ 603));
-	hljs.registerLanguage('handlebars', __webpack_require__(/*! ./languages/handlebars */ 604));
-	hljs.registerLanguage('haskell', __webpack_require__(/*! ./languages/haskell */ 605));
-	hljs.registerLanguage('haxe', __webpack_require__(/*! ./languages/haxe */ 606));
-	hljs.registerLanguage('http', __webpack_require__(/*! ./languages/http */ 607));
-	hljs.registerLanguage('inform7', __webpack_require__(/*! ./languages/inform7 */ 608));
-	hljs.registerLanguage('ini', __webpack_require__(/*! ./languages/ini */ 609));
-	hljs.registerLanguage('irpf90', __webpack_require__(/*! ./languages/irpf90 */ 610));
-	hljs.registerLanguage('java', __webpack_require__(/*! ./languages/java */ 611));
-	hljs.registerLanguage('javascript', __webpack_require__(/*! ./languages/javascript */ 612));
-	hljs.registerLanguage('json', __webpack_require__(/*! ./languages/json */ 613));
-	hljs.registerLanguage('julia', __webpack_require__(/*! ./languages/julia */ 614));
-	hljs.registerLanguage('kotlin', __webpack_require__(/*! ./languages/kotlin */ 615));
-	hljs.registerLanguage('lasso', __webpack_require__(/*! ./languages/lasso */ 616));
-	hljs.registerLanguage('less', __webpack_require__(/*! ./languages/less */ 617));
-	hljs.registerLanguage('lisp', __webpack_require__(/*! ./languages/lisp */ 618));
-	hljs.registerLanguage('livecodeserver', __webpack_require__(/*! ./languages/livecodeserver */ 619));
-	hljs.registerLanguage('livescript', __webpack_require__(/*! ./languages/livescript */ 620));
-	hljs.registerLanguage('lua', __webpack_require__(/*! ./languages/lua */ 621));
-	hljs.registerLanguage('makefile', __webpack_require__(/*! ./languages/makefile */ 622));
-	hljs.registerLanguage('mathematica', __webpack_require__(/*! ./languages/mathematica */ 623));
-	hljs.registerLanguage('matlab', __webpack_require__(/*! ./languages/matlab */ 624));
-	hljs.registerLanguage('mel', __webpack_require__(/*! ./languages/mel */ 625));
-	hljs.registerLanguage('mercury', __webpack_require__(/*! ./languages/mercury */ 626));
-	hljs.registerLanguage('mizar', __webpack_require__(/*! ./languages/mizar */ 627));
-	hljs.registerLanguage('perl', __webpack_require__(/*! ./languages/perl */ 628));
-	hljs.registerLanguage('mojolicious', __webpack_require__(/*! ./languages/mojolicious */ 629));
-	hljs.registerLanguage('monkey', __webpack_require__(/*! ./languages/monkey */ 630));
-	hljs.registerLanguage('nginx', __webpack_require__(/*! ./languages/nginx */ 631));
-	hljs.registerLanguage('nimrod', __webpack_require__(/*! ./languages/nimrod */ 632));
-	hljs.registerLanguage('nix', __webpack_require__(/*! ./languages/nix */ 633));
-	hljs.registerLanguage('nsis', __webpack_require__(/*! ./languages/nsis */ 634));
-	hljs.registerLanguage('objectivec', __webpack_require__(/*! ./languages/objectivec */ 635));
-	hljs.registerLanguage('ocaml', __webpack_require__(/*! ./languages/ocaml */ 636));
-	hljs.registerLanguage('openscad', __webpack_require__(/*! ./languages/openscad */ 637));
-	hljs.registerLanguage('oxygene', __webpack_require__(/*! ./languages/oxygene */ 638));
-	hljs.registerLanguage('parser3', __webpack_require__(/*! ./languages/parser3 */ 639));
-	hljs.registerLanguage('pf', __webpack_require__(/*! ./languages/pf */ 640));
-	hljs.registerLanguage('php', __webpack_require__(/*! ./languages/php */ 641));
-	hljs.registerLanguage('powershell', __webpack_require__(/*! ./languages/powershell */ 642));
-	hljs.registerLanguage('processing', __webpack_require__(/*! ./languages/processing */ 643));
-	hljs.registerLanguage('profile', __webpack_require__(/*! ./languages/profile */ 644));
-	hljs.registerLanguage('prolog', __webpack_require__(/*! ./languages/prolog */ 645));
-	hljs.registerLanguage('protobuf', __webpack_require__(/*! ./languages/protobuf */ 646));
-	hljs.registerLanguage('puppet', __webpack_require__(/*! ./languages/puppet */ 647));
-	hljs.registerLanguage('python', __webpack_require__(/*! ./languages/python */ 648));
-	hljs.registerLanguage('q', __webpack_require__(/*! ./languages/q */ 649));
-	hljs.registerLanguage('r', __webpack_require__(/*! ./languages/r */ 650));
-	hljs.registerLanguage('rib', __webpack_require__(/*! ./languages/rib */ 651));
-	hljs.registerLanguage('roboconf', __webpack_require__(/*! ./languages/roboconf */ 652));
-	hljs.registerLanguage('rsl', __webpack_require__(/*! ./languages/rsl */ 653));
-	hljs.registerLanguage('ruleslanguage', __webpack_require__(/*! ./languages/ruleslanguage */ 654));
-	hljs.registerLanguage('rust', __webpack_require__(/*! ./languages/rust */ 655));
-	hljs.registerLanguage('scala', __webpack_require__(/*! ./languages/scala */ 656));
-	hljs.registerLanguage('scheme', __webpack_require__(/*! ./languages/scheme */ 657));
-	hljs.registerLanguage('scilab', __webpack_require__(/*! ./languages/scilab */ 658));
-	hljs.registerLanguage('scss', __webpack_require__(/*! ./languages/scss */ 659));
-	hljs.registerLanguage('smali', __webpack_require__(/*! ./languages/smali */ 660));
-	hljs.registerLanguage('smalltalk', __webpack_require__(/*! ./languages/smalltalk */ 661));
-	hljs.registerLanguage('sml', __webpack_require__(/*! ./languages/sml */ 662));
-	hljs.registerLanguage('sqf', __webpack_require__(/*! ./languages/sqf */ 663));
-	hljs.registerLanguage('sql', __webpack_require__(/*! ./languages/sql */ 664));
-	hljs.registerLanguage('stata', __webpack_require__(/*! ./languages/stata */ 665));
-	hljs.registerLanguage('step21', __webpack_require__(/*! ./languages/step21 */ 666));
-	hljs.registerLanguage('stylus', __webpack_require__(/*! ./languages/stylus */ 667));
-	hljs.registerLanguage('swift', __webpack_require__(/*! ./languages/swift */ 668));
-	hljs.registerLanguage('tcl', __webpack_require__(/*! ./languages/tcl */ 669));
-	hljs.registerLanguage('tex', __webpack_require__(/*! ./languages/tex */ 670));
-	hljs.registerLanguage('thrift', __webpack_require__(/*! ./languages/thrift */ 671));
-	hljs.registerLanguage('tp', __webpack_require__(/*! ./languages/tp */ 672));
-	hljs.registerLanguage('twig', __webpack_require__(/*! ./languages/twig */ 673));
-	hljs.registerLanguage('typescript', __webpack_require__(/*! ./languages/typescript */ 674));
-	hljs.registerLanguage('vala', __webpack_require__(/*! ./languages/vala */ 675));
-	hljs.registerLanguage('vbnet', __webpack_require__(/*! ./languages/vbnet */ 676));
-	hljs.registerLanguage('vbscript', __webpack_require__(/*! ./languages/vbscript */ 677));
-	hljs.registerLanguage('vbscript-html', __webpack_require__(/*! ./languages/vbscript-html */ 678));
-	hljs.registerLanguage('verilog', __webpack_require__(/*! ./languages/verilog */ 679));
-	hljs.registerLanguage('vhdl', __webpack_require__(/*! ./languages/vhdl */ 680));
-	hljs.registerLanguage('vim', __webpack_require__(/*! ./languages/vim */ 681));
-	hljs.registerLanguage('x86asm', __webpack_require__(/*! ./languages/x86asm */ 682));
-	hljs.registerLanguage('xl', __webpack_require__(/*! ./languages/xl */ 683));
-	hljs.registerLanguage('xquery', __webpack_require__(/*! ./languages/xquery */ 684));
-	hljs.registerLanguage('zephir', __webpack_require__(/*! ./languages/zephir */ 685));
+	hljs.registerLanguage('1c', __webpack_require__(/*! ./languages/1c */ 572));
+	hljs.registerLanguage('accesslog', __webpack_require__(/*! ./languages/accesslog */ 573));
+	hljs.registerLanguage('actionscript', __webpack_require__(/*! ./languages/actionscript */ 574));
+	hljs.registerLanguage('apache', __webpack_require__(/*! ./languages/apache */ 575));
+	hljs.registerLanguage('applescript', __webpack_require__(/*! ./languages/applescript */ 576));
+	hljs.registerLanguage('armasm', __webpack_require__(/*! ./languages/armasm */ 577));
+	hljs.registerLanguage('xml', __webpack_require__(/*! ./languages/xml */ 578));
+	hljs.registerLanguage('asciidoc', __webpack_require__(/*! ./languages/asciidoc */ 579));
+	hljs.registerLanguage('aspectj', __webpack_require__(/*! ./languages/aspectj */ 580));
+	hljs.registerLanguage('autohotkey', __webpack_require__(/*! ./languages/autohotkey */ 581));
+	hljs.registerLanguage('autoit', __webpack_require__(/*! ./languages/autoit */ 582));
+	hljs.registerLanguage('avrasm', __webpack_require__(/*! ./languages/avrasm */ 583));
+	hljs.registerLanguage('axapta', __webpack_require__(/*! ./languages/axapta */ 584));
+	hljs.registerLanguage('bash', __webpack_require__(/*! ./languages/bash */ 585));
+	hljs.registerLanguage('brainfuck', __webpack_require__(/*! ./languages/brainfuck */ 586));
+	hljs.registerLanguage('cal', __webpack_require__(/*! ./languages/cal */ 587));
+	hljs.registerLanguage('capnproto', __webpack_require__(/*! ./languages/capnproto */ 588));
+	hljs.registerLanguage('ceylon', __webpack_require__(/*! ./languages/ceylon */ 589));
+	hljs.registerLanguage('clojure', __webpack_require__(/*! ./languages/clojure */ 590));
+	hljs.registerLanguage('clojure-repl', __webpack_require__(/*! ./languages/clojure-repl */ 591));
+	hljs.registerLanguage('cmake', __webpack_require__(/*! ./languages/cmake */ 592));
+	hljs.registerLanguage('coffeescript', __webpack_require__(/*! ./languages/coffeescript */ 593));
+	hljs.registerLanguage('cpp', __webpack_require__(/*! ./languages/cpp */ 594));
+	hljs.registerLanguage('crmsh', __webpack_require__(/*! ./languages/crmsh */ 595));
+	hljs.registerLanguage('crystal', __webpack_require__(/*! ./languages/crystal */ 596));
+	hljs.registerLanguage('cs', __webpack_require__(/*! ./languages/cs */ 597));
+	hljs.registerLanguage('css', __webpack_require__(/*! ./languages/css */ 598));
+	hljs.registerLanguage('d', __webpack_require__(/*! ./languages/d */ 599));
+	hljs.registerLanguage('markdown', __webpack_require__(/*! ./languages/markdown */ 600));
+	hljs.registerLanguage('dart', __webpack_require__(/*! ./languages/dart */ 601));
+	hljs.registerLanguage('delphi', __webpack_require__(/*! ./languages/delphi */ 602));
+	hljs.registerLanguage('diff', __webpack_require__(/*! ./languages/diff */ 603));
+	hljs.registerLanguage('django', __webpack_require__(/*! ./languages/django */ 604));
+	hljs.registerLanguage('dns', __webpack_require__(/*! ./languages/dns */ 605));
+	hljs.registerLanguage('dockerfile', __webpack_require__(/*! ./languages/dockerfile */ 606));
+	hljs.registerLanguage('dos', __webpack_require__(/*! ./languages/dos */ 607));
+	hljs.registerLanguage('dust', __webpack_require__(/*! ./languages/dust */ 608));
+	hljs.registerLanguage('elixir', __webpack_require__(/*! ./languages/elixir */ 609));
+	hljs.registerLanguage('elm', __webpack_require__(/*! ./languages/elm */ 610));
+	hljs.registerLanguage('ruby', __webpack_require__(/*! ./languages/ruby */ 611));
+	hljs.registerLanguage('erb', __webpack_require__(/*! ./languages/erb */ 612));
+	hljs.registerLanguage('erlang-repl', __webpack_require__(/*! ./languages/erlang-repl */ 613));
+	hljs.registerLanguage('erlang', __webpack_require__(/*! ./languages/erlang */ 614));
+	hljs.registerLanguage('fix', __webpack_require__(/*! ./languages/fix */ 615));
+	hljs.registerLanguage('fortran', __webpack_require__(/*! ./languages/fortran */ 616));
+	hljs.registerLanguage('fsharp', __webpack_require__(/*! ./languages/fsharp */ 617));
+	hljs.registerLanguage('gams', __webpack_require__(/*! ./languages/gams */ 618));
+	hljs.registerLanguage('gcode', __webpack_require__(/*! ./languages/gcode */ 619));
+	hljs.registerLanguage('gherkin', __webpack_require__(/*! ./languages/gherkin */ 620));
+	hljs.registerLanguage('glsl', __webpack_require__(/*! ./languages/glsl */ 621));
+	hljs.registerLanguage('go', __webpack_require__(/*! ./languages/go */ 622));
+	hljs.registerLanguage('golo', __webpack_require__(/*! ./languages/golo */ 623));
+	hljs.registerLanguage('gradle', __webpack_require__(/*! ./languages/gradle */ 624));
+	hljs.registerLanguage('groovy', __webpack_require__(/*! ./languages/groovy */ 625));
+	hljs.registerLanguage('haml', __webpack_require__(/*! ./languages/haml */ 626));
+	hljs.registerLanguage('handlebars', __webpack_require__(/*! ./languages/handlebars */ 627));
+	hljs.registerLanguage('haskell', __webpack_require__(/*! ./languages/haskell */ 628));
+	hljs.registerLanguage('haxe', __webpack_require__(/*! ./languages/haxe */ 629));
+	hljs.registerLanguage('http', __webpack_require__(/*! ./languages/http */ 630));
+	hljs.registerLanguage('inform7', __webpack_require__(/*! ./languages/inform7 */ 631));
+	hljs.registerLanguage('ini', __webpack_require__(/*! ./languages/ini */ 632));
+	hljs.registerLanguage('irpf90', __webpack_require__(/*! ./languages/irpf90 */ 633));
+	hljs.registerLanguage('java', __webpack_require__(/*! ./languages/java */ 634));
+	hljs.registerLanguage('javascript', __webpack_require__(/*! ./languages/javascript */ 635));
+	hljs.registerLanguage('json', __webpack_require__(/*! ./languages/json */ 636));
+	hljs.registerLanguage('julia', __webpack_require__(/*! ./languages/julia */ 637));
+	hljs.registerLanguage('kotlin', __webpack_require__(/*! ./languages/kotlin */ 638));
+	hljs.registerLanguage('lasso', __webpack_require__(/*! ./languages/lasso */ 639));
+	hljs.registerLanguage('less', __webpack_require__(/*! ./languages/less */ 640));
+	hljs.registerLanguage('lisp', __webpack_require__(/*! ./languages/lisp */ 641));
+	hljs.registerLanguage('livecodeserver', __webpack_require__(/*! ./languages/livecodeserver */ 642));
+	hljs.registerLanguage('livescript', __webpack_require__(/*! ./languages/livescript */ 643));
+	hljs.registerLanguage('lua', __webpack_require__(/*! ./languages/lua */ 644));
+	hljs.registerLanguage('makefile', __webpack_require__(/*! ./languages/makefile */ 645));
+	hljs.registerLanguage('mathematica', __webpack_require__(/*! ./languages/mathematica */ 646));
+	hljs.registerLanguage('matlab', __webpack_require__(/*! ./languages/matlab */ 647));
+	hljs.registerLanguage('mel', __webpack_require__(/*! ./languages/mel */ 648));
+	hljs.registerLanguage('mercury', __webpack_require__(/*! ./languages/mercury */ 649));
+	hljs.registerLanguage('mizar', __webpack_require__(/*! ./languages/mizar */ 650));
+	hljs.registerLanguage('perl', __webpack_require__(/*! ./languages/perl */ 651));
+	hljs.registerLanguage('mojolicious', __webpack_require__(/*! ./languages/mojolicious */ 652));
+	hljs.registerLanguage('monkey', __webpack_require__(/*! ./languages/monkey */ 653));
+	hljs.registerLanguage('nginx', __webpack_require__(/*! ./languages/nginx */ 654));
+	hljs.registerLanguage('nimrod', __webpack_require__(/*! ./languages/nimrod */ 655));
+	hljs.registerLanguage('nix', __webpack_require__(/*! ./languages/nix */ 656));
+	hljs.registerLanguage('nsis', __webpack_require__(/*! ./languages/nsis */ 657));
+	hljs.registerLanguage('objectivec', __webpack_require__(/*! ./languages/objectivec */ 658));
+	hljs.registerLanguage('ocaml', __webpack_require__(/*! ./languages/ocaml */ 659));
+	hljs.registerLanguage('openscad', __webpack_require__(/*! ./languages/openscad */ 660));
+	hljs.registerLanguage('oxygene', __webpack_require__(/*! ./languages/oxygene */ 661));
+	hljs.registerLanguage('parser3', __webpack_require__(/*! ./languages/parser3 */ 662));
+	hljs.registerLanguage('pf', __webpack_require__(/*! ./languages/pf */ 663));
+	hljs.registerLanguage('php', __webpack_require__(/*! ./languages/php */ 664));
+	hljs.registerLanguage('powershell', __webpack_require__(/*! ./languages/powershell */ 665));
+	hljs.registerLanguage('processing', __webpack_require__(/*! ./languages/processing */ 666));
+	hljs.registerLanguage('profile', __webpack_require__(/*! ./languages/profile */ 667));
+	hljs.registerLanguage('prolog', __webpack_require__(/*! ./languages/prolog */ 668));
+	hljs.registerLanguage('protobuf', __webpack_require__(/*! ./languages/protobuf */ 669));
+	hljs.registerLanguage('puppet', __webpack_require__(/*! ./languages/puppet */ 670));
+	hljs.registerLanguage('python', __webpack_require__(/*! ./languages/python */ 671));
+	hljs.registerLanguage('q', __webpack_require__(/*! ./languages/q */ 672));
+	hljs.registerLanguage('r', __webpack_require__(/*! ./languages/r */ 673));
+	hljs.registerLanguage('rib', __webpack_require__(/*! ./languages/rib */ 674));
+	hljs.registerLanguage('roboconf', __webpack_require__(/*! ./languages/roboconf */ 675));
+	hljs.registerLanguage('rsl', __webpack_require__(/*! ./languages/rsl */ 676));
+	hljs.registerLanguage('ruleslanguage', __webpack_require__(/*! ./languages/ruleslanguage */ 677));
+	hljs.registerLanguage('rust', __webpack_require__(/*! ./languages/rust */ 678));
+	hljs.registerLanguage('scala', __webpack_require__(/*! ./languages/scala */ 679));
+	hljs.registerLanguage('scheme', __webpack_require__(/*! ./languages/scheme */ 680));
+	hljs.registerLanguage('scilab', __webpack_require__(/*! ./languages/scilab */ 681));
+	hljs.registerLanguage('scss', __webpack_require__(/*! ./languages/scss */ 682));
+	hljs.registerLanguage('smali', __webpack_require__(/*! ./languages/smali */ 683));
+	hljs.registerLanguage('smalltalk', __webpack_require__(/*! ./languages/smalltalk */ 684));
+	hljs.registerLanguage('sml', __webpack_require__(/*! ./languages/sml */ 685));
+	hljs.registerLanguage('sqf', __webpack_require__(/*! ./languages/sqf */ 686));
+	hljs.registerLanguage('sql', __webpack_require__(/*! ./languages/sql */ 687));
+	hljs.registerLanguage('stata', __webpack_require__(/*! ./languages/stata */ 688));
+	hljs.registerLanguage('step21', __webpack_require__(/*! ./languages/step21 */ 689));
+	hljs.registerLanguage('stylus', __webpack_require__(/*! ./languages/stylus */ 690));
+	hljs.registerLanguage('swift', __webpack_require__(/*! ./languages/swift */ 691));
+	hljs.registerLanguage('tcl', __webpack_require__(/*! ./languages/tcl */ 692));
+	hljs.registerLanguage('tex', __webpack_require__(/*! ./languages/tex */ 693));
+	hljs.registerLanguage('thrift', __webpack_require__(/*! ./languages/thrift */ 694));
+	hljs.registerLanguage('tp', __webpack_require__(/*! ./languages/tp */ 695));
+	hljs.registerLanguage('twig', __webpack_require__(/*! ./languages/twig */ 696));
+	hljs.registerLanguage('typescript', __webpack_require__(/*! ./languages/typescript */ 697));
+	hljs.registerLanguage('vala', __webpack_require__(/*! ./languages/vala */ 698));
+	hljs.registerLanguage('vbnet', __webpack_require__(/*! ./languages/vbnet */ 699));
+	hljs.registerLanguage('vbscript', __webpack_require__(/*! ./languages/vbscript */ 700));
+	hljs.registerLanguage('vbscript-html', __webpack_require__(/*! ./languages/vbscript-html */ 701));
+	hljs.registerLanguage('verilog', __webpack_require__(/*! ./languages/verilog */ 702));
+	hljs.registerLanguage('vhdl', __webpack_require__(/*! ./languages/vhdl */ 703));
+	hljs.registerLanguage('vim', __webpack_require__(/*! ./languages/vim */ 704));
+	hljs.registerLanguage('x86asm', __webpack_require__(/*! ./languages/x86asm */ 705));
+	hljs.registerLanguage('xl', __webpack_require__(/*! ./languages/xl */ 706));
+	hljs.registerLanguage('xquery', __webpack_require__(/*! ./languages/xquery */ 707));
+	hljs.registerLanguage('zephir', __webpack_require__(/*! ./languages/zephir */ 708));
 	
 	module.exports = hljs;
 
 /***/ },
-/* 548 */
+/* 571 */
 /*!*****************************************!*\
   !*** ./~/highlight.js/lib/highlight.js ***!
   \*****************************************/
@@ -39114,7 +39803,7 @@
 
 
 /***/ },
-/* 549 */
+/* 572 */
 /*!********************************************!*\
   !*** ./~/highlight.js/lib/languages/1c.js ***!
   \********************************************/
@@ -39207,7 +39896,7 @@
 	};
 
 /***/ },
-/* 550 */
+/* 573 */
 /*!***************************************************!*\
   !*** ./~/highlight.js/lib/languages/accesslog.js ***!
   \***************************************************/
@@ -39252,7 +39941,7 @@
 	};
 
 /***/ },
-/* 551 */
+/* 574 */
 /*!******************************************************!*\
   !*** ./~/highlight.js/lib/languages/actionscript.js ***!
   \******************************************************/
@@ -39334,7 +40023,7 @@
 	};
 
 /***/ },
-/* 552 */
+/* 575 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/apache.js ***!
   \************************************************/
@@ -39387,7 +40076,7 @@
 	};
 
 /***/ },
-/* 553 */
+/* 576 */
 /*!*****************************************************!*\
   !*** ./~/highlight.js/lib/languages/applescript.js ***!
   \*****************************************************/
@@ -39491,7 +40180,7 @@
 	};
 
 /***/ },
-/* 554 */
+/* 577 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/armasm.js ***!
   \************************************************/
@@ -39590,7 +40279,7 @@
 	};
 
 /***/ },
-/* 555 */
+/* 578 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/xml.js ***!
   \*********************************************/
@@ -39700,7 +40389,7 @@
 	};
 
 /***/ },
-/* 556 */
+/* 579 */
 /*!**************************************************!*\
   !*** ./~/highlight.js/lib/languages/asciidoc.js ***!
   \**************************************************/
@@ -39899,7 +40588,7 @@
 	};
 
 /***/ },
-/* 557 */
+/* 580 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/aspectj.js ***!
   \*************************************************/
@@ -40044,7 +40733,7 @@
 	};
 
 /***/ },
-/* 558 */
+/* 581 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/autohotkey.js ***!
   \****************************************************/
@@ -40113,7 +40802,7 @@
 	};
 
 /***/ },
-/* 559 */
+/* 582 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/autoit.js ***!
   \************************************************/
@@ -41875,7 +42564,7 @@
 	};
 
 /***/ },
-/* 560 */
+/* 583 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/avrasm.js ***!
   \************************************************/
@@ -41944,7 +42633,7 @@
 	};
 
 /***/ },
-/* 561 */
+/* 584 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/axapta.js ***!
   \************************************************/
@@ -41982,7 +42671,7 @@
 	};
 
 /***/ },
-/* 562 */
+/* 585 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/bash.js ***!
   \**********************************************/
@@ -42065,7 +42754,7 @@
 	};
 
 /***/ },
-/* 563 */
+/* 586 */
 /*!***************************************************!*\
   !*** ./~/highlight.js/lib/languages/brainfuck.js ***!
   \***************************************************/
@@ -42109,7 +42798,7 @@
 	};
 
 /***/ },
-/* 564 */
+/* 587 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/cal.js ***!
   \*********************************************/
@@ -42196,7 +42885,7 @@
 	};
 
 /***/ },
-/* 565 */
+/* 588 */
 /*!***************************************************!*\
   !*** ./~/highlight.js/lib/languages/capnproto.js ***!
   \***************************************************/
@@ -42252,7 +42941,7 @@
 	};
 
 /***/ },
-/* 566 */
+/* 589 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/ceylon.js ***!
   \************************************************/
@@ -42327,7 +43016,7 @@
 	};
 
 /***/ },
-/* 567 */
+/* 590 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/clojure.js ***!
   \*************************************************/
@@ -42431,7 +43120,7 @@
 	};
 
 /***/ },
-/* 568 */
+/* 591 */
 /*!******************************************************!*\
   !*** ./~/highlight.js/lib/languages/clojure-repl.js ***!
   \******************************************************/
@@ -42453,7 +43142,7 @@
 	};
 
 /***/ },
-/* 569 */
+/* 592 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/cmake.js ***!
   \***********************************************/
@@ -42499,7 +43188,7 @@
 	};
 
 /***/ },
-/* 570 */
+/* 593 */
 /*!******************************************************!*\
   !*** ./~/highlight.js/lib/languages/coffeescript.js ***!
   \******************************************************/
@@ -42647,7 +43336,7 @@
 	};
 
 /***/ },
-/* 571 */
+/* 594 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/cpp.js ***!
   \*********************************************/
@@ -42795,7 +43484,7 @@
 	};
 
 /***/ },
-/* 572 */
+/* 595 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/crmsh.js ***!
   \***********************************************/
@@ -42900,7 +43589,7 @@
 	};
 
 /***/ },
-/* 573 */
+/* 596 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/crystal.js ***!
   \*************************************************/
@@ -43099,7 +43788,7 @@
 	};
 
 /***/ },
-/* 574 */
+/* 597 */
 /*!********************************************!*\
   !*** ./~/highlight.js/lib/languages/cs.js ***!
   \********************************************/
@@ -43225,7 +43914,7 @@
 	};
 
 /***/ },
-/* 575 */
+/* 598 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/css.js ***!
   \*********************************************/
@@ -43334,7 +44023,7 @@
 	};
 
 /***/ },
-/* 576 */
+/* 599 */
 /*!*******************************************!*\
   !*** ./~/highlight.js/lib/languages/d.js ***!
   \*******************************************/
@@ -43599,7 +44288,7 @@
 	};
 
 /***/ },
-/* 577 */
+/* 600 */
 /*!**************************************************!*\
   !*** ./~/highlight.js/lib/languages/markdown.js ***!
   \**************************************************/
@@ -43708,7 +44397,7 @@
 	};
 
 /***/ },
-/* 578 */
+/* 601 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/dart.js ***!
   \**********************************************/
@@ -43816,7 +44505,7 @@
 	};
 
 /***/ },
-/* 579 */
+/* 602 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/delphi.js ***!
   \************************************************/
@@ -43890,7 +44579,7 @@
 	};
 
 /***/ },
-/* 580 */
+/* 603 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/diff.js ***!
   \**********************************************/
@@ -43937,7 +44626,7 @@
 	};
 
 /***/ },
-/* 581 */
+/* 604 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/django.js ***!
   \************************************************/
@@ -43994,7 +44683,7 @@
 	};
 
 /***/ },
-/* 582 */
+/* 605 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/dns.js ***!
   \*********************************************/
@@ -44029,7 +44718,7 @@
 	};
 
 /***/ },
-/* 583 */
+/* 606 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/dockerfile.js ***!
   \****************************************************/
@@ -44071,7 +44760,7 @@
 	};
 
 /***/ },
-/* 584 */
+/* 607 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/dos.js ***!
   \*********************************************/
@@ -44127,7 +44816,7 @@
 	};
 
 /***/ },
-/* 585 */
+/* 608 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/dust.js ***!
   \**********************************************/
@@ -44169,7 +44858,7 @@
 	};
 
 /***/ },
-/* 586 */
+/* 609 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/elixir.js ***!
   \************************************************/
@@ -44278,7 +44967,7 @@
 	};
 
 /***/ },
-/* 587 */
+/* 610 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/elm.js ***!
   \*********************************************/
@@ -44371,7 +45060,7 @@
 	};
 
 /***/ },
-/* 588 */
+/* 611 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/ruby.js ***!
   \**********************************************/
@@ -44548,7 +45237,7 @@
 	};
 
 /***/ },
-/* 589 */
+/* 612 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/erb.js ***!
   \*********************************************/
@@ -44570,7 +45259,7 @@
 	};
 
 /***/ },
-/* 590 */
+/* 613 */
 /*!*****************************************************!*\
   !*** ./~/highlight.js/lib/languages/erlang-repl.js ***!
   \*****************************************************/
@@ -44625,7 +45314,7 @@
 	};
 
 /***/ },
-/* 591 */
+/* 614 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/erlang.js ***!
   \************************************************/
@@ -44784,7 +45473,7 @@
 	};
 
 /***/ },
-/* 592 */
+/* 615 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/fix.js ***!
   \*********************************************/
@@ -44820,7 +45509,7 @@
 	};
 
 /***/ },
-/* 593 */
+/* 616 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/fortran.js ***!
   \*************************************************/
@@ -44898,7 +45587,7 @@
 	};
 
 /***/ },
-/* 594 */
+/* 617 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/fsharp.js ***!
   \************************************************/
@@ -44964,7 +45653,7 @@
 	};
 
 /***/ },
-/* 595 */
+/* 618 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/gams.js ***!
   \**********************************************/
@@ -45008,7 +45697,7 @@
 	};
 
 /***/ },
-/* 596 */
+/* 619 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/gcode.js ***!
   \***********************************************/
@@ -45088,7 +45777,7 @@
 	};
 
 /***/ },
-/* 597 */
+/* 620 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/gherkin.js ***!
   \*************************************************/
@@ -45128,7 +45817,7 @@
 	};
 
 /***/ },
-/* 598 */
+/* 621 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/glsl.js ***!
   \**********************************************/
@@ -45229,7 +45918,7 @@
 	};
 
 /***/ },
-/* 599 */
+/* 622 */
 /*!********************************************!*\
   !*** ./~/highlight.js/lib/languages/go.js ***!
   \********************************************/
@@ -45275,7 +45964,7 @@
 	};
 
 /***/ },
-/* 600 */
+/* 623 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/golo.js ***!
   \**********************************************/
@@ -45306,7 +45995,7 @@
 	};
 
 /***/ },
-/* 601 */
+/* 624 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/gradle.js ***!
   \************************************************/
@@ -45348,7 +46037,7 @@
 	};
 
 /***/ },
-/* 602 */
+/* 625 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/groovy.js ***!
   \************************************************/
@@ -45443,7 +46132,7 @@
 	};
 
 /***/ },
-/* 603 */
+/* 626 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/haml.js ***!
   \**********************************************/
@@ -45558,7 +46247,7 @@
 	};
 
 /***/ },
-/* 604 */
+/* 627 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/handlebars.js ***!
   \****************************************************/
@@ -45598,7 +46287,7 @@
 	};
 
 /***/ },
-/* 605 */
+/* 628 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/haskell.js ***!
   \*************************************************/
@@ -45729,7 +46418,7 @@
 	};
 
 /***/ },
-/* 606 */
+/* 629 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/haxe.js ***!
   \**********************************************/
@@ -45797,7 +46486,7 @@
 	};
 
 /***/ },
-/* 607 */
+/* 630 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/http.js ***!
   \**********************************************/
@@ -45839,7 +46528,7 @@
 	};
 
 /***/ },
-/* 608 */
+/* 631 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/inform7.js ***!
   \*************************************************/
@@ -45904,7 +46593,7 @@
 	};
 
 /***/ },
-/* 609 */
+/* 632 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/ini.js ***!
   \*********************************************/
@@ -45971,7 +46660,7 @@
 	};
 
 /***/ },
-/* 610 */
+/* 633 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/irpf90.js ***!
   \************************************************/
@@ -46054,7 +46743,7 @@
 	};
 
 /***/ },
-/* 611 */
+/* 634 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/java.js ***!
   \**********************************************/
@@ -46161,7 +46850,7 @@
 	};
 
 /***/ },
-/* 612 */
+/* 635 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/javascript.js ***!
   \****************************************************/
@@ -46280,7 +46969,7 @@
 	};
 
 /***/ },
-/* 613 */
+/* 636 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/json.js ***!
   \**********************************************/
@@ -46325,7 +47014,7 @@
 	};
 
 /***/ },
-/* 614 */
+/* 637 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/julia.js ***!
   \***********************************************/
@@ -46493,7 +47182,7 @@
 	};
 
 /***/ },
-/* 615 */
+/* 638 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/kotlin.js ***!
   \************************************************/
@@ -46601,7 +47290,7 @@
 	};
 
 /***/ },
-/* 616 */
+/* 639 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/lasso.js ***!
   \***********************************************/
@@ -46794,7 +47483,7 @@
 	};
 
 /***/ },
-/* 617 */
+/* 640 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/less.js ***!
   \**********************************************/
@@ -46938,7 +47627,7 @@
 	};
 
 /***/ },
-/* 618 */
+/* 641 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/lisp.js ***!
   \**********************************************/
@@ -47052,7 +47741,7 @@
 	};
 
 /***/ },
-/* 619 */
+/* 642 */
 /*!********************************************************!*\
   !*** ./~/highlight.js/lib/languages/livecodeserver.js ***!
   \********************************************************/
@@ -47217,7 +47906,7 @@
 	};
 
 /***/ },
-/* 620 */
+/* 643 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/livescript.js ***!
   \****************************************************/
@@ -47375,7 +48064,7 @@
 	};
 
 /***/ },
-/* 621 */
+/* 644 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/lua.js ***!
   \*********************************************/
@@ -47438,7 +48127,7 @@
 	};
 
 /***/ },
-/* 622 */
+/* 645 */
 /*!**************************************************!*\
   !*** ./~/highlight.js/lib/languages/makefile.js ***!
   \**************************************************/
@@ -47491,7 +48180,7 @@
 	};
 
 /***/ },
-/* 623 */
+/* 646 */
 /*!*****************************************************!*\
   !*** ./~/highlight.js/lib/languages/mathematica.js ***!
   \*****************************************************/
@@ -47557,7 +48246,7 @@
 	};
 
 /***/ },
-/* 624 */
+/* 647 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/matlab.js ***!
   \************************************************/
@@ -47655,7 +48344,7 @@
 	};
 
 /***/ },
-/* 625 */
+/* 648 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/mel.js ***!
   \*********************************************/
@@ -47892,7 +48581,7 @@
 	};
 
 /***/ },
-/* 626 */
+/* 649 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/mercury.js ***!
   \*************************************************/
@@ -47988,7 +48677,7 @@
 	};
 
 /***/ },
-/* 627 */
+/* 650 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/mizar.js ***!
   \***********************************************/
@@ -48014,7 +48703,7 @@
 	};
 
 /***/ },
-/* 628 */
+/* 651 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/perl.js ***!
   \**********************************************/
@@ -48178,7 +48867,7 @@
 	};
 
 /***/ },
-/* 629 */
+/* 652 */
 /*!*****************************************************!*\
   !*** ./~/highlight.js/lib/languages/mojolicious.js ***!
   \*****************************************************/
@@ -48210,7 +48899,7 @@
 	};
 
 /***/ },
-/* 630 */
+/* 653 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/monkey.js ***!
   \************************************************/
@@ -48296,7 +48985,7 @@
 	};
 
 /***/ },
-/* 631 */
+/* 654 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/nginx.js ***!
   \***********************************************/
@@ -48385,7 +49074,7 @@
 	};
 
 /***/ },
-/* 632 */
+/* 655 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/nimrod.js ***!
   \************************************************/
@@ -48444,7 +49133,7 @@
 	};
 
 /***/ },
-/* 633 */
+/* 656 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/nix.js ***!
   \*********************************************/
@@ -48502,7 +49191,7 @@
 	};
 
 /***/ },
-/* 634 */
+/* 657 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/nsis.js ***!
   \**********************************************/
@@ -48597,7 +49286,7 @@
 	};
 
 /***/ },
-/* 635 */
+/* 658 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/objectivec.js ***!
   \****************************************************/
@@ -48683,7 +49372,7 @@
 	};
 
 /***/ },
-/* 636 */
+/* 659 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/ocaml.js ***!
   \***********************************************/
@@ -48761,7 +49450,7 @@
 	};
 
 /***/ },
-/* 637 */
+/* 660 */
 /*!**************************************************!*\
   !*** ./~/highlight.js/lib/languages/openscad.js ***!
   \**************************************************/
@@ -48826,7 +49515,7 @@
 	};
 
 /***/ },
-/* 638 */
+/* 661 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/oxygene.js ***!
   \*************************************************/
@@ -48902,7 +49591,7 @@
 	};
 
 /***/ },
-/* 639 */
+/* 662 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/parser3.js ***!
   \*************************************************/
@@ -48957,7 +49646,7 @@
 	};
 
 /***/ },
-/* 640 */
+/* 663 */
 /*!********************************************!*\
   !*** ./~/highlight.js/lib/languages/pf.js ***!
   \********************************************/
@@ -49016,7 +49705,7 @@
 	};
 
 /***/ },
-/* 641 */
+/* 664 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/php.js ***!
   \*********************************************/
@@ -49148,7 +49837,7 @@
 	};
 
 /***/ },
-/* 642 */
+/* 665 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/powershell.js ***!
   \****************************************************/
@@ -49203,7 +49892,7 @@
 	};
 
 /***/ },
-/* 643 */
+/* 666 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/processing.js ***!
   \****************************************************/
@@ -49258,7 +49947,7 @@
 	};
 
 /***/ },
-/* 644 */
+/* 667 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/profile.js ***!
   \*************************************************/
@@ -49307,7 +49996,7 @@
 	};
 
 /***/ },
-/* 645 */
+/* 668 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/prolog.js ***!
   \************************************************/
@@ -49403,7 +50092,7 @@
 	};
 
 /***/ },
-/* 646 */
+/* 669 */
 /*!**************************************************!*\
   !*** ./~/highlight.js/lib/languages/protobuf.js ***!
   \**************************************************/
@@ -49447,7 +50136,7 @@
 	};
 
 /***/ },
-/* 647 */
+/* 670 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/puppet.js ***!
   \************************************************/
@@ -49562,7 +50251,7 @@
 	};
 
 /***/ },
-/* 648 */
+/* 671 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/python.js ***!
   \************************************************/
@@ -49654,7 +50343,7 @@
 	};
 
 /***/ },
-/* 649 */
+/* 672 */
 /*!*******************************************!*\
   !*** ./~/highlight.js/lib/languages/q.js ***!
   \*******************************************/
@@ -49684,7 +50373,7 @@
 	};
 
 /***/ },
-/* 650 */
+/* 673 */
 /*!*******************************************!*\
   !*** ./~/highlight.js/lib/languages/r.js ***!
   \*******************************************/
@@ -49761,7 +50450,7 @@
 	};
 
 /***/ },
-/* 651 */
+/* 674 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/rib.js ***!
   \*********************************************/
@@ -49795,7 +50484,7 @@
 	};
 
 /***/ },
-/* 652 */
+/* 675 */
 /*!**************************************************!*\
   !*** ./~/highlight.js/lib/languages/roboconf.js ***!
   \**************************************************/
@@ -49862,7 +50551,7 @@
 	};
 
 /***/ },
-/* 653 */
+/* 676 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/rsl.js ***!
   \*********************************************/
@@ -49906,7 +50595,7 @@
 	};
 
 /***/ },
-/* 654 */
+/* 677 */
 /*!*******************************************************!*\
   !*** ./~/highlight.js/lib/languages/ruleslanguage.js ***!
   \*******************************************************/
@@ -49974,7 +50663,7 @@
 	};
 
 /***/ },
-/* 655 */
+/* 678 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/rust.js ***!
   \**********************************************/
@@ -50067,7 +50756,7 @@
 	};
 
 /***/ },
-/* 656 */
+/* 679 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/scala.js ***!
   \***********************************************/
@@ -50137,7 +50826,7 @@
 	};
 
 /***/ },
-/* 657 */
+/* 680 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/scheme.js ***!
   \************************************************/
@@ -50266,7 +50955,7 @@
 	};
 
 /***/ },
-/* 658 */
+/* 681 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/scilab.js ***!
   \************************************************/
@@ -50328,7 +51017,7 @@
 	};
 
 /***/ },
-/* 659 */
+/* 682 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/scss.js ***!
   \**********************************************/
@@ -50452,7 +51141,7 @@
 	};
 
 /***/ },
-/* 660 */
+/* 683 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/smali.js ***!
   \***********************************************/
@@ -50542,7 +51231,7 @@
 	};
 
 /***/ },
-/* 661 */
+/* 684 */
 /*!***************************************************!*\
   !*** ./~/highlight.js/lib/languages/smalltalk.js ***!
   \***************************************************/
@@ -50602,7 +51291,7 @@
 	};
 
 /***/ },
-/* 662 */
+/* 685 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/sml.js ***!
   \*********************************************/
@@ -50674,7 +51363,7 @@
 	};
 
 /***/ },
-/* 663 */
+/* 686 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/sqf.js ***!
   \*********************************************/
@@ -50777,7 +51466,7 @@
 	};
 
 /***/ },
-/* 664 */
+/* 687 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/sql.js ***!
   \*********************************************/
@@ -50944,7 +51633,7 @@
 	};
 
 /***/ },
-/* 665 */
+/* 688 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/stata.js ***!
   \***********************************************/
@@ -50989,7 +51678,7 @@
 	};
 
 /***/ },
-/* 666 */
+/* 689 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/step21.js ***!
   \************************************************/
@@ -51048,7 +51737,7 @@
 	};
 
 /***/ },
-/* 667 */
+/* 690 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/stylus.js ***!
   \************************************************/
@@ -51498,7 +52187,7 @@
 	};
 
 /***/ },
-/* 668 */
+/* 691 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/swift.js ***!
   \***********************************************/
@@ -51625,7 +52314,7 @@
 	};
 
 /***/ },
-/* 669 */
+/* 692 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/tcl.js ***!
   \*********************************************/
@@ -51694,7 +52383,7 @@
 	};
 
 /***/ },
-/* 670 */
+/* 693 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/tex.js ***!
   \*********************************************/
@@ -51756,7 +52445,7 @@
 	};
 
 /***/ },
-/* 671 */
+/* 694 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/thrift.js ***!
   \************************************************/
@@ -51798,7 +52487,7 @@
 	};
 
 /***/ },
-/* 672 */
+/* 695 */
 /*!********************************************!*\
   !*** ./~/highlight.js/lib/languages/tp.js ***!
   \********************************************/
@@ -51889,7 +52578,7 @@
 	};
 
 /***/ },
-/* 673 */
+/* 696 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/twig.js ***!
   \**********************************************/
@@ -51953,7 +52642,7 @@
 	};
 
 /***/ },
-/* 674 */
+/* 697 */
 /*!****************************************************!*\
   !*** ./~/highlight.js/lib/languages/typescript.js ***!
   \****************************************************/
@@ -52058,7 +52747,7 @@
 	};
 
 /***/ },
-/* 675 */
+/* 698 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/vala.js ***!
   \**********************************************/
@@ -52120,7 +52809,7 @@
 	};
 
 /***/ },
-/* 676 */
+/* 699 */
 /*!***********************************************!*\
   !*** ./~/highlight.js/lib/languages/vbnet.js ***!
   \***********************************************/
@@ -52183,7 +52872,7 @@
 	};
 
 /***/ },
-/* 677 */
+/* 700 */
 /*!**************************************************!*\
   !*** ./~/highlight.js/lib/languages/vbscript.js ***!
   \**************************************************/
@@ -52229,7 +52918,7 @@
 	};
 
 /***/ },
-/* 678 */
+/* 701 */
 /*!*******************************************************!*\
   !*** ./~/highlight.js/lib/languages/vbscript-html.js ***!
   \*******************************************************/
@@ -52248,7 +52937,7 @@
 	};
 
 /***/ },
-/* 679 */
+/* 702 */
 /*!*************************************************!*\
   !*** ./~/highlight.js/lib/languages/verilog.js ***!
   \*************************************************/
@@ -52305,7 +52994,7 @@
 	};
 
 /***/ },
-/* 680 */
+/* 703 */
 /*!**********************************************!*\
   !*** ./~/highlight.js/lib/languages/vhdl.js ***!
   \**********************************************/
@@ -52368,7 +53057,7 @@
 	};
 
 /***/ },
-/* 681 */
+/* 704 */
 /*!*********************************************!*\
   !*** ./~/highlight.js/lib/languages/vim.js ***!
   \*********************************************/
@@ -52438,7 +53127,7 @@
 	};
 
 /***/ },
-/* 682 */
+/* 705 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/x86asm.js ***!
   \************************************************/
@@ -52581,7 +53270,7 @@
 	};
 
 /***/ },
-/* 683 */
+/* 706 */
 /*!********************************************!*\
   !*** ./~/highlight.js/lib/languages/xl.js ***!
   \********************************************/
@@ -52675,7 +53364,7 @@
 	};
 
 /***/ },
-/* 684 */
+/* 707 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/xquery.js ***!
   \************************************************/
@@ -52755,7 +53444,7 @@
 	};
 
 /***/ },
-/* 685 */
+/* 708 */
 /*!************************************************!*\
   !*** ./~/highlight.js/lib/languages/zephir.js ***!
   \************************************************/
@@ -52869,7 +53558,7 @@
 	};
 
 /***/ },
-/* 686 */
+/* 709 */
 /*!*********************************************!*\
   !*** ./wikismith/PostType/render/Body.scss ***!
   \*********************************************/
@@ -52879,7 +53568,7 @@
 	module.exports = {"paragraph":"Body__paragraph___gPXYk","codeContainer":"Body__codeContainer___p93xJ","code":"Body__code___t2ZLa","codespan":"Body__codespan___NC6Wx","section":"Body__section___3znVZ"};
 
 /***/ },
-/* 687 */
+/* 710 */
 /*!*****************************!*\
   !*** ./~/node-uuid/uuid.js ***!
   \*****************************/
@@ -52943,7 +53632,7 @@
 	    // Moderately fast, high quality
 	    if (true) {
 	      try {
-	        var _rb = __webpack_require__(/*! crypto */ 692).randomBytes;
+	        var _rb = __webpack_require__(/*! crypto */ 715).randomBytes;
 	        _nodeRNG = _rng = _rb && function() {return _rb(16);};
 	        _rng();
 	      } catch(e) {}
@@ -53158,10 +53847,10 @@
 	  }
 	})('undefined' !== typeof window ? window : null);
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 688 */
+/* 711 */
 /*!*******************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/buffer/index.js ***!
   \*******************************************************/
@@ -53177,9 +53866,9 @@
 	
 	'use strict'
 	
-	var base64 = __webpack_require__(/*! base64-js */ 689)
-	var ieee754 = __webpack_require__(/*! ieee754 */ 690)
-	var isArray = __webpack_require__(/*! isarray */ 691)
+	var base64 = __webpack_require__(/*! base64-js */ 712)
+	var ieee754 = __webpack_require__(/*! ieee754 */ 713)
+	var isArray = __webpack_require__(/*! isarray */ 714)
 	
 	exports.Buffer = Buffer
 	exports.SlowBuffer = SlowBuffer
@@ -54716,10 +55405,10 @@
 	  return i
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer, (function() { return this; }())))
 
 /***/ },
-/* 689 */
+/* 712 */
 /*!*********************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/buffer/~/base64-js/lib/b64.js ***!
   \*********************************************************************/
@@ -54852,7 +55541,7 @@
 
 
 /***/ },
-/* 690 */
+/* 713 */
 /*!*****************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/buffer/~/ieee754/index.js ***!
   \*****************************************************************/
@@ -54945,7 +55634,7 @@
 
 
 /***/ },
-/* 691 */
+/* 714 */
 /*!*****************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/buffer/~/isarray/index.js ***!
   \*****************************************************************/
@@ -54959,13 +55648,13 @@
 
 
 /***/ },
-/* 692 */
+/* 715 */
 /*!******************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/index.js ***!
   \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var rng = __webpack_require__(/*! ./rng */ 693)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var rng = __webpack_require__(/*! ./rng */ 716)
 	
 	function error () {
 	  var m = [].slice.call(arguments).join(' ')
@@ -54976,9 +55665,9 @@
 	    ].join('\n'))
 	}
 	
-	exports.createHash = __webpack_require__(/*! ./create-hash */ 695)
+	exports.createHash = __webpack_require__(/*! ./create-hash */ 718)
 	
-	exports.createHmac = __webpack_require__(/*! ./create-hmac */ 707)
+	exports.createHmac = __webpack_require__(/*! ./create-hmac */ 730)
 	
 	exports.randomBytes = function(size, callback) {
 	  if (callback && callback.call) {
@@ -54999,7 +55688,7 @@
 	  return ['sha1', 'sha256', 'sha512', 'md5', 'rmd160']
 	}
 	
-	var p = __webpack_require__(/*! ./pbkdf2 */ 708)(exports)
+	var p = __webpack_require__(/*! ./pbkdf2 */ 731)(exports)
 	exports.pbkdf2 = p.pbkdf2
 	exports.pbkdf2Sync = p.pbkdf2Sync
 	
@@ -55019,10 +55708,10 @@
 	  }
 	})
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 693 */
+/* 716 */
 /*!****************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/rng.js ***!
   \****************************************************************/
@@ -55031,7 +55720,7 @@
 	/* WEBPACK VAR INJECTION */(function(global, Buffer) {(function() {
 	  var g = ('undefined' === typeof window ? global : window) || {}
 	  _crypto = (
-	    g.crypto || g.msCrypto || __webpack_require__(/*! crypto */ 694)
+	    g.crypto || g.msCrypto || __webpack_require__(/*! crypto */ 717)
 	  )
 	  module.exports = function(size) {
 	    // Modern Browsers
@@ -55055,10 +55744,10 @@
 	  }
 	}())
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 694 */
+/* 717 */
 /*!************************!*\
   !*** crypto (ignored) ***!
   \************************/
@@ -55067,16 +55756,16 @@
 	/* (ignored) */
 
 /***/ },
-/* 695 */
+/* 718 */
 /*!************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/create-hash.js ***!
   \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! sha.js */ 696)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! sha.js */ 719)
 	
-	var md5 = toConstructor(__webpack_require__(/*! ./md5 */ 704))
-	var rmd160 = toConstructor(__webpack_require__(/*! ripemd160 */ 706))
+	var md5 = toConstructor(__webpack_require__(/*! ./md5 */ 727))
+	var rmd160 = toConstructor(__webpack_require__(/*! ripemd160 */ 729))
 	
 	function toConstructor (fn) {
 	  return function () {
@@ -55104,10 +55793,10 @@
 	  return createHash(alg)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 696 */
+/* 719 */
 /*!***************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/index.js ***!
   \***************************************************************************/
@@ -55119,16 +55808,16 @@
 	  return new Alg()
 	}
 	
-	var Buffer = __webpack_require__(/*! buffer */ 688).Buffer
-	var Hash   = __webpack_require__(/*! ./hash */ 697)(Buffer)
+	var Buffer = __webpack_require__(/*! buffer */ 711).Buffer
+	var Hash   = __webpack_require__(/*! ./hash */ 720)(Buffer)
 	
-	exports.sha1 = __webpack_require__(/*! ./sha1 */ 698)(Buffer, Hash)
-	exports.sha256 = __webpack_require__(/*! ./sha256 */ 702)(Buffer, Hash)
-	exports.sha512 = __webpack_require__(/*! ./sha512 */ 703)(Buffer, Hash)
+	exports.sha1 = __webpack_require__(/*! ./sha1 */ 721)(Buffer, Hash)
+	exports.sha256 = __webpack_require__(/*! ./sha256 */ 725)(Buffer, Hash)
+	exports.sha512 = __webpack_require__(/*! ./sha512 */ 726)(Buffer, Hash)
 
 
 /***/ },
-/* 697 */
+/* 720 */
 /*!**************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/hash.js ***!
   \**************************************************************************/
@@ -55214,7 +55903,7 @@
 
 
 /***/ },
-/* 698 */
+/* 721 */
 /*!**************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/sha1.js ***!
   \**************************************************************************/
@@ -55229,7 +55918,7 @@
 	 * See http://pajhome.org.uk/crypt/md5 for details.
 	 */
 	
-	var inherits = __webpack_require__(/*! util */ 699).inherits
+	var inherits = __webpack_require__(/*! util */ 722).inherits
 	
 	module.exports = function (Buffer, Hash) {
 	
@@ -55361,7 +56050,7 @@
 
 
 /***/ },
-/* 699 */
+/* 722 */
 /*!****************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/util/util.js ***!
   \****************************************************/
@@ -55892,7 +56581,7 @@
 	}
 	exports.isPrimitive = isPrimitive;
 	
-	exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ 700);
+	exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ 723);
 	
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -55936,7 +56625,7 @@
 	 *     prototype.
 	 * @param {function} superCtor Constructor function to inherit prototype from.
 	 */
-	exports.inherits = __webpack_require__(/*! inherits */ 701);
+	exports.inherits = __webpack_require__(/*! inherits */ 724);
 	
 	exports._extend = function(origin, add) {
 	  // Don't do anything if add isn't an object
@@ -55957,7 +56646,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 700 */
+/* 723 */
 /*!***********************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/util/support/isBufferBrowser.js ***!
   \***********************************************************************/
@@ -55971,7 +56660,7 @@
 	}
 
 /***/ },
-/* 701 */
+/* 724 */
 /*!***************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/util/~/inherits/inherits_browser.js ***!
   \***************************************************************************/
@@ -56003,7 +56692,7 @@
 
 
 /***/ },
-/* 702 */
+/* 725 */
 /*!****************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/sha256.js ***!
   \****************************************************************************/
@@ -56018,7 +56707,7 @@
 	 *
 	 */
 	
-	var inherits = __webpack_require__(/*! util */ 699).inherits
+	var inherits = __webpack_require__(/*! util */ 722).inherits
 	
 	module.exports = function (Buffer, Hash) {
 	
@@ -56159,13 +56848,13 @@
 
 
 /***/ },
-/* 703 */
+/* 726 */
 /*!****************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/sha512.js ***!
   \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(/*! util */ 699).inherits
+	var inherits = __webpack_require__(/*! util */ 722).inherits
 	
 	module.exports = function (Buffer, Hash) {
 	  var K = [
@@ -56412,7 +57101,7 @@
 
 
 /***/ },
-/* 704 */
+/* 727 */
 /*!****************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/md5.js ***!
   \****************************************************************/
@@ -56427,7 +57116,7 @@
 	 * See http://pajhome.org.uk/crypt/md5 for more info.
 	 */
 	
-	var helpers = __webpack_require__(/*! ./helpers */ 705);
+	var helpers = __webpack_require__(/*! ./helpers */ 728);
 	
 	/*
 	 * Calculate the MD5 of an array of little-endian words, and a bit length
@@ -56576,7 +57265,7 @@
 
 
 /***/ },
-/* 705 */
+/* 728 */
 /*!********************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/helpers.js ***!
   \********************************************************************/
@@ -56617,10 +57306,10 @@
 	
 	module.exports = { hash: hash };
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 706 */
+/* 729 */
 /*!**************************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/ripemd160/lib/ripemd160.js ***!
   \**************************************************************************************/
@@ -56832,16 +57521,16 @@
 	
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 707 */
+/* 730 */
 /*!************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/create-hmac.js ***!
   \************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! ./create-hash */ 695)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! ./create-hash */ 718)
 	
 	var zeroBuffer = new Buffer(128)
 	zeroBuffer.fill(0)
@@ -56885,16 +57574,16 @@
 	}
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 708 */
+/* 731 */
 /*!*******************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/pbkdf2.js ***!
   \*******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var pbkdf2Export = __webpack_require__(/*! pbkdf2-compat/pbkdf2 */ 709)
+	var pbkdf2Export = __webpack_require__(/*! pbkdf2-compat/pbkdf2 */ 732)
 	
 	module.exports = function (crypto, exports) {
 	  exports = exports || {}
@@ -56909,7 +57598,7 @@
 
 
 /***/ },
-/* 709 */
+/* 732 */
 /*!***********************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/pbkdf2-compat/pbkdf2.js ***!
   \***********************************************************************************/
@@ -57000,10 +57689,10 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 688).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 711).Buffer))
 
 /***/ },
-/* 710 */
+/* 733 */
 /*!*********************************************!*\
   !*** ./wikismith/PostType/render/Post.scss ***!
   \*********************************************/
@@ -57013,7 +57702,7 @@
 	module.exports = {"titleBox":"Post__titleBox___1GODV","publishedOn":"Post__publishedOn___1R5ZF"};
 
 /***/ },
-/* 711 */
+/* 734 */
 /*!******************************************!*\
   !*** ./wikismith/PostType/link/Post.jsx ***!
   \******************************************/
@@ -57071,7 +57760,7 @@
 	module.exports = PostLink;
 
 /***/ },
-/* 712 */
+/* 735 */
 /*!*************************************!*\
   !*** ./wikismith/TalkType/index.js ***!
   \*************************************/
@@ -57080,13 +57769,13 @@
 	'use strict';
 	
 	module.exports = {
-	  embed: __webpack_require__(/*! ./embed/Post */ 713),
-	  render: __webpack_require__(/*! ./render/Post */ 714),
-	  link: __webpack_require__(/*! ./link/Post */ 719)
+	  embed: __webpack_require__(/*! ./embed/Post */ 736),
+	  render: __webpack_require__(/*! ./render/Post */ 737),
+	  link: __webpack_require__(/*! ./link/Post */ 742)
 	};
 
 /***/ },
-/* 713 */
+/* 736 */
 /*!*******************************************!*\
   !*** ./wikismith/TalkType/embed/Post.jsx ***!
   \*******************************************/
@@ -57144,7 +57833,7 @@
 	module.exports = EmbedPost;
 
 /***/ },
-/* 714 */
+/* 737 */
 /*!********************************************!*\
   !*** ./wikismith/TalkType/render/Post.jsx ***!
   \********************************************/
@@ -57176,15 +57865,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Body = __webpack_require__(/*! ./Body */ 715);
+	var _Body = __webpack_require__(/*! ./Body */ 738);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _google = __webpack_require__(/*! google */ 717);
+	var _google = __webpack_require__(/*! google */ 740);
 	
 	var _google2 = _interopRequireDefault(_google);
 	
-	var _Post = __webpack_require__(/*! ./Post.scss */ 718);
+	var _Post = __webpack_require__(/*! ./Post.scss */ 741);
 	
 	var _Post2 = _interopRequireDefault(_Post);
 	
@@ -57319,7 +58008,7 @@
 	module.exports = Post;
 
 /***/ },
-/* 715 */
+/* 738 */
 /*!********************************************!*\
   !*** ./wikismith/TalkType/render/Body.jsx ***!
   \********************************************/
@@ -57327,7 +58016,7 @@
 
 	'use strict';
 	
-	var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 543);
+	var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 566);
 	
 	var _stringify2 = _interopRequireDefault(_stringify);
 	
@@ -57359,15 +58048,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactHighlight = __webpack_require__(/*! react-highlight */ 545);
+	var _reactHighlight = __webpack_require__(/*! react-highlight */ 568);
 	
 	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
 	
-	var _Body = __webpack_require__(/*! ./Body.scss */ 716);
+	var _Body = __webpack_require__(/*! ./Body.scss */ 739);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _nodeUuid = __webpack_require__(/*! node-uuid */ 687);
+	var _nodeUuid = __webpack_require__(/*! node-uuid */ 710);
 	
 	var _nodeUuid2 = _interopRequireDefault(_nodeUuid);
 	
@@ -57575,7 +58264,7 @@
 	module.exports = Body;
 
 /***/ },
-/* 716 */
+/* 739 */
 /*!*********************************************!*\
   !*** ./wikismith/TalkType/render/Body.scss ***!
   \*********************************************/
@@ -57585,7 +58274,7 @@
 	module.exports = {"codeContainer":"Body__codeContainer___Jjfhu","code":"Body__code___1GAEf","codespan":"Body__codespan___1CCzJ","section":"Body__section___1X7QY"};
 
 /***/ },
-/* 717 */
+/* 740 */
 /*!*************************!*\
   !*** external "google" ***!
   \*************************/
@@ -57594,7 +58283,7 @@
 	module.exports = google;
 
 /***/ },
-/* 718 */
+/* 741 */
 /*!*********************************************!*\
   !*** ./wikismith/TalkType/render/Post.scss ***!
   \*********************************************/
@@ -57604,7 +58293,7 @@
 	module.exports = {"map":"Post__map___1uG0n","titleBox":"Post__titleBox___2DgP-","publishedOn":"Post__publishedOn___mAj1r"};
 
 /***/ },
-/* 719 */
+/* 742 */
 /*!******************************************!*\
   !*** ./wikismith/TalkType/link/Post.jsx ***!
   \******************************************/
@@ -57662,7 +58351,7 @@
 	module.exports = PostLink;
 
 /***/ },
-/* 720 */
+/* 743 */
 /*!************************************!*\
   !*** ./wikismith/MapType/index.js ***!
   \************************************/
@@ -57671,13 +58360,13 @@
 	'use strict';
 	
 	module.exports = {
-	  embed: __webpack_require__(/*! ./embed/Map */ 721),
-	  render: __webpack_require__(/*! ./render/Map */ 728),
-	  link: __webpack_require__(/*! ./link/Map */ 732)
+	  embed: __webpack_require__(/*! ./embed/Map */ 744),
+	  render: __webpack_require__(/*! ./render/Map */ 751),
+	  link: __webpack_require__(/*! ./link/Map */ 755)
 	};
 
 /***/ },
-/* 721 */
+/* 744 */
 /*!*****************************************!*\
   !*** ./wikismith/MapType/embed/Map.jsx ***!
   \*****************************************/
@@ -57685,7 +58374,7 @@
 
 	'use strict';
 	
-	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 502);
+	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 505);
 	
 	var _getIterator3 = _interopRequireDefault(_getIterator2);
 	
@@ -57717,19 +58406,19 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _server = __webpack_require__(/*! react-dom/server */ 722);
+	var _server = __webpack_require__(/*! react-dom/server */ 745);
 	
 	var _server2 = _interopRequireDefault(_server);
 	
-	var _googleMapUtils = __webpack_require__(/*! ../google-map-utils */ 723);
+	var _googleMapUtils = __webpack_require__(/*! ../google-map-utils */ 746);
 	
 	var _googleMapUtils2 = _interopRequireDefault(_googleMapUtils);
 	
-	var _google = __webpack_require__(/*! google */ 717);
+	var _google = __webpack_require__(/*! google */ 740);
 	
 	var _google2 = _interopRequireDefault(_google);
 	
-	var _Map = __webpack_require__(/*! ./Map.scss */ 727);
+	var _Map = __webpack_require__(/*! ./Map.scss */ 750);
 	
 	var _Map2 = _interopRequireDefault(_Map);
 	
@@ -57900,7 +58589,7 @@
 	module.exports = Map;
 
 /***/ },
-/* 722 */
+/* 745 */
 /*!*******************************!*\
   !*** ./~/react-dom/server.js ***!
   \*******************************/
@@ -57912,7 +58601,7 @@
 
 
 /***/ },
-/* 723 */
+/* 746 */
 /*!***********************************************!*\
   !*** ./wikismith/MapType/google-map-utils.js ***!
   \***********************************************/
@@ -57924,7 +58613,7 @@
 	  value: true
 	});
 	
-	var _querystring = __webpack_require__(/*! querystring */ 724);
+	var _querystring = __webpack_require__(/*! querystring */ 747);
 	
 	var _querystring2 = _interopRequireDefault(_querystring);
 	
@@ -57977,7 +58666,7 @@
 	};
 
 /***/ },
-/* 724 */
+/* 747 */
 /*!****************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/querystring-es3/index.js ***!
   \****************************************************************/
@@ -57985,12 +58674,12 @@
 
 	'use strict';
 	
-	exports.decode = exports.parse = __webpack_require__(/*! ./decode */ 725);
-	exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ 726);
+	exports.decode = exports.parse = __webpack_require__(/*! ./decode */ 748);
+	exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ 749);
 
 
 /***/ },
-/* 725 */
+/* 748 */
 /*!*****************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/querystring-es3/decode.js ***!
   \*****************************************************************/
@@ -58083,7 +58772,7 @@
 
 
 /***/ },
-/* 726 */
+/* 749 */
 /*!*****************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/querystring-es3/encode.js ***!
   \*****************************************************************/
@@ -58177,7 +58866,7 @@
 
 
 /***/ },
-/* 727 */
+/* 750 */
 /*!******************************************!*\
   !*** ./wikismith/MapType/embed/Map.scss ***!
   \******************************************/
@@ -58187,7 +58876,7 @@
 	module.exports = {"map":"Map__map___9ud1T"};
 
 /***/ },
-/* 728 */
+/* 751 */
 /*!******************************************!*\
   !*** ./wikismith/MapType/render/Map.jsx ***!
   \******************************************/
@@ -58195,7 +58884,7 @@
 
 	'use strict';
 	
-	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 502);
+	var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 505);
 	
 	var _getIterator3 = _interopRequireDefault(_getIterator2);
 	
@@ -58223,27 +58912,27 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _server = __webpack_require__(/*! react-dom/server */ 722);
+	var _server = __webpack_require__(/*! react-dom/server */ 745);
 	
 	var _server2 = _interopRequireDefault(_server);
 	
-	var _googleMapUtils = __webpack_require__(/*! ../google-map-utils */ 723);
+	var _googleMapUtils = __webpack_require__(/*! ../google-map-utils */ 746);
 	
 	var _googleMapUtils2 = _interopRequireDefault(_googleMapUtils);
 	
-	var _google = __webpack_require__(/*! google */ 717);
+	var _google = __webpack_require__(/*! google */ 740);
 	
 	var _google2 = _interopRequireDefault(_google);
 	
-	var _nodeUuid = __webpack_require__(/*! node-uuid */ 687);
+	var _nodeUuid = __webpack_require__(/*! node-uuid */ 710);
 	
 	var _nodeUuid2 = _interopRequireDefault(_nodeUuid);
 	
-	var _Body = __webpack_require__(/*! ./Body */ 729);
+	var _Body = __webpack_require__(/*! ./Body */ 752);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _Map = __webpack_require__(/*! ./Map.scss */ 731);
+	var _Map = __webpack_require__(/*! ./Map.scss */ 754);
 	
 	var _Map2 = _interopRequireDefault(_Map);
 	
@@ -58477,7 +59166,7 @@
 	module.exports = Map;
 
 /***/ },
-/* 729 */
+/* 752 */
 /*!*******************************************!*\
   !*** ./wikismith/MapType/render/Body.jsx ***!
   \*******************************************/
@@ -58485,7 +59174,7 @@
 
 	'use strict';
 	
-	var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 543);
+	var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 566);
 	
 	var _stringify2 = _interopRequireDefault(_stringify);
 	
@@ -58517,15 +59206,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactHighlight = __webpack_require__(/*! react-highlight */ 545);
+	var _reactHighlight = __webpack_require__(/*! react-highlight */ 568);
 	
 	var _reactHighlight2 = _interopRequireDefault(_reactHighlight);
 	
-	var _Body = __webpack_require__(/*! ./Body.scss */ 730);
+	var _Body = __webpack_require__(/*! ./Body.scss */ 753);
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _nodeUuid = __webpack_require__(/*! node-uuid */ 687);
+	var _nodeUuid = __webpack_require__(/*! node-uuid */ 710);
 	
 	var _nodeUuid2 = _interopRequireDefault(_nodeUuid);
 	
@@ -58733,7 +59422,7 @@
 	module.exports = Body;
 
 /***/ },
-/* 730 */
+/* 753 */
 /*!********************************************!*\
   !*** ./wikismith/MapType/render/Body.scss ***!
   \********************************************/
@@ -58743,7 +59432,7 @@
 	module.exports = {"codeContainer":"Body__codeContainer___3shiW","code":"Body__code___bqqjl","codespan":"Body__codespan___2vKLK","section":"Body__section___2UCoE"};
 
 /***/ },
-/* 731 */
+/* 754 */
 /*!*******************************************!*\
   !*** ./wikismith/MapType/render/Map.scss ***!
   \*******************************************/
@@ -58753,7 +59442,7 @@
 	module.exports = {"map":"Map__map___rN5FT","titleBox":"Map__titleBox___27KRb","publishedOn":"Map__publishedOn___CsH0o"};
 
 /***/ },
-/* 732 */
+/* 755 */
 /*!****************************************!*\
   !*** ./wikismith/MapType/link/Map.jsx ***!
   \****************************************/
@@ -58811,7 +59500,7 @@
 	module.exports = PostLink;
 
 /***/ },
-/* 733 */
+/* 756 */
 /*!****************************************!*\
   !*** ./wikismith/SpeakerDeck/index.js ***!
   \****************************************/
@@ -58822,13 +59511,13 @@
 	// Render and Embed intentionally the same
 	
 	module.exports = {
-	  embed: __webpack_require__(/*! ./embed/SpeakerDeck */ 734),
-	  render: __webpack_require__(/*! ./embed/SpeakerDeck */ 734),
-	  link: __webpack_require__(/*! ./link/SpeakerDeck */ 735)
+	  embed: __webpack_require__(/*! ./embed/SpeakerDeck */ 757),
+	  render: __webpack_require__(/*! ./embed/SpeakerDeck */ 757),
+	  link: __webpack_require__(/*! ./link/SpeakerDeck */ 758)
 	};
 
 /***/ },
-/* 734 */
+/* 757 */
 /*!*****************************************************!*\
   !*** ./wikismith/SpeakerDeck/embed/SpeakerDeck.jsx ***!
   \*****************************************************/
@@ -58894,7 +59583,7 @@
 	module.exports = EmbedSpeakerDeck;
 
 /***/ },
-/* 735 */
+/* 758 */
 /*!****************************************************!*\
   !*** ./wikismith/SpeakerDeck/link/SpeakerDeck.jsx ***!
   \****************************************************/
@@ -58952,7 +59641,7 @@
 	module.exports = SpeakerDeck;
 
 /***/ },
-/* 736 */
+/* 759 */
 /*!**************************!*\
   !*** ./content/posts.js ***!
   \**************************/
@@ -58960,7 +59649,7 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./posts/ */ 737);
+	var req = __webpack_require__(/*! ./posts/ */ 760);
 	var posts = req.keys().map(function (k) {
 	  return req(k);
 	});
@@ -58968,21 +59657,22 @@
 	module.exports = posts;
 
 /***/ },
-/* 737 */
+/* 760 */
 /*!*****************************!*\
   !*** ./content/posts \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./arkansas-dev-hackathon-2015.md": 738,
-		"./client-side-routing-notes.md": 739,
-		"./confidently-starting-a-reactjs-project.md": 740,
-		"./intro-to-flux.md": 741,
-		"./intro-to-reactjs.md": 742,
-		"./introduction-to-es6.md": 743,
-		"./offline-flux-with-lokijs.md": 744,
-		"./react-form-generation.md": 745
+		"./arkansas-dev-hackathon-2015.md": 761,
+		"./client-side-routing-notes.md": 762,
+		"./confidently-starting-a-reactjs-project.md": 763,
+		"./intro-to-flux.md": 764,
+		"./intro-to-reactjs.md": 765,
+		"./introduction-to-es6.md": 766,
+		"./offline-flux-with-lokijs.md": 767,
+		"./react-form-generation.md": 768,
+		"./typefaces.md": 769
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -58995,11 +59685,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 737;
+	webpackContext.id = 760;
 
 
 /***/ },
-/* 738 */
+/* 761 */
 /*!******************************************************!*\
   !*** ./content/posts/arkansas-dev-hackathon-2015.md ***!
   \******************************************************/
@@ -59017,7 +59707,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f816f8a4-da3e-4af7-8840-c1e38636230a",
+	      "key": "dc7c832d-4fa7-4d69-9d02-77bcd9a78f55",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59092,7 +59782,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "160e9d9f-467d-4f76-a639-b47a93833514",
+	      "key": "decdc652-740a-470c-8e7b-ff14dd7b121e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59464,7 +60154,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "14db5b40-a40a-4b56-a929-a78de807a7ac",
+	      "key": "1af126c0-eb6f-4900-b94e-a39f58416a17",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59643,7 +60333,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b4e7f9d6-4e3a-46cf-8cc3-157964683d8b",
+	      "key": "51e21ce3-1bf1-47ea-968e-cf2f52a7d87b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59891,7 +60581,7 @@
 	}
 
 /***/ },
-/* 739 */
+/* 762 */
 /*!****************************************************!*\
   !*** ./content/posts/client-side-routing-notes.md ***!
   \****************************************************/
@@ -59909,7 +60599,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "baf56671-8f50-4eff-8ac1-5349ed4c1418",
+	      "key": "8181e706-669c-4c80-804b-9a8fe3170bbd",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59997,7 +60687,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "04ba5714-851b-4261-b0f0-2aa07786fdf2",
+	      "key": "70ac68c9-fcd5-4bf1-a946-3a60246dfdb1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60016,7 +60706,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1946fa97-5671-48eb-ac2a-f5733bdb208a",
+	      "key": "cd36757f-ad5a-4413-b7a8-f8f6d0824ae8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60060,7 +60750,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f074b2d1-1467-448a-865e-fcb67a84cc9c",
+	      "key": "b6645e7b-75b5-4fc9-97fa-095f2a4c384b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60098,7 +60788,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c22994a0-8514-4d43-a227-6c5c904de136",
+	      "key": "b0348a26-8ef8-4767-b6a9-cf6707581656",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60159,7 +60849,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "43140d34-721f-4d01-8760-4d0d2ccfb936",
+	      "key": "c4576969-2dc2-4890-b467-b4dfd16ec25d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60249,7 +60939,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03d45833-6259-4855-899e-62ee17758d32",
+	      "key": "763460a0-91f5-4b0d-b18e-e34af30ee336",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60430,7 +61120,7 @@
 	}
 
 /***/ },
-/* 740 */
+/* 763 */
 /*!*****************************************************************!*\
   !*** ./content/posts/confidently-starting-a-reactjs-project.md ***!
   \*****************************************************************/
@@ -60448,7 +61138,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "6f5f56a4-89ea-4afd-aa8c-d93fa4170633",
+	      "key": "2e2d9979-55cf-4938-b872-084784edbb1d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60488,7 +61178,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a84ab13c-5fba-49fe-86ee-f731e0434e72",
+	      "key": "2ce6f711-a588-4415-a960-2f10566b7bdf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60531,7 +61221,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c5f6abea-b92b-4c90-8e29-24d214635ca3",
+	      "key": "bbe3cc37-01e2-4dfb-8db4-566ace3333dc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60614,7 +61304,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "765eacc3-4cb6-41b7-9a23-2280f8d4ab47",
+	      "key": "7a831d75-ddf6-4a08-8952-bd50fdf01288",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60983,7 +61673,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c37decae-d51e-4c49-a394-419b74766005",
+	      "key": "3ab03d0e-1ae2-4240-a65c-62d1471410c8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61078,7 +61768,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "90f2404d-b74b-4207-b405-e439a8c6251f",
+	      "key": "99431fa8-51b0-4c08-9156-cf0bb8cd0876",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61144,7 +61834,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cf05e6b2-cbb2-4d93-96a8-b5f8f7d0c2f6",
+	      "key": "e7a91abb-82cd-44e5-a09c-b363fe3cd6fc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61293,7 +61983,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9275cc7a-6f87-4dae-b206-1863f7e1a50e",
+	      "key": "cb2f5d54-38f9-4cb8-ae0b-7d1e24aa47e1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61410,7 +62100,7 @@
 	}
 
 /***/ },
-/* 741 */
+/* 764 */
 /*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
@@ -61428,7 +62118,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "526e3f42-3626-4258-a2ca-1b845d0dd70d",
+	      "key": "1624f49f-f5bc-4e06-b42f-f3c7fe6f986b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61471,7 +62161,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "021113ef-c2c9-4781-a727-689586b05a97",
+	      "key": "b2c061c4-d1fb-44ca-ac39-ccbc0363ea1d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61491,7 +62181,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3bb876bf-ac7a-401a-af0a-5337d2053b84",
+	      "key": "416bc517-5c3a-4063-841d-2a48e29fbff9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61511,7 +62201,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7deb9d17-2740-4902-abfa-0b9daed82d96",
+	      "key": "363219bf-d8c2-4a5a-b8f9-b8fb114a534e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61537,7 +62227,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b97dceb7-70d3-45a6-b0cd-3ee1ad68fe03",
+	      "key": "e642b991-6b90-4858-8bbc-667458e3fedb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61563,7 +62253,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e2f5d73c-28e2-4da1-ae67-9c5a238c7a3d",
+	      "key": "2adfddb5-5bb0-4ae8-bd2a-59fd63c6992a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61583,7 +62273,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6ae76d33-d3f3-4fe9-bd77-cc1707a4cf91",
+	      "key": "4bed75d9-31aa-429c-abea-7896bf8efc2d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61648,7 +62338,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "364811a9-bdb9-49b2-b1ee-7d330dcac439",
+	      "key": "87eb8d04-96d0-41ba-bf05-8076b10c0c73",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61662,7 +62352,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e2e96741-af4e-4312-bc66-c9446ead2265",
+	      "key": "23d03a1c-4488-4f15-b1a9-1addce184221",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61721,7 +62411,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "962a0fac-7320-4d93-a1c0-953c4aa09199",
+	      "key": "b59d1073-fd9e-46e8-8f97-88004749e0d4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61764,7 +62454,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7e23a473-c31b-4283-90a9-afea0c654f0e",
+	      "key": "4817dc11-afbd-45c2-be6e-666e11d6f1dd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61823,7 +62513,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f06cb62f-2d35-4fdf-94fc-52852e7b5c70",
+	      "key": "2384a37c-8113-406b-b0af-5aa6f731f016",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61893,7 +62583,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "07abcca4-4967-4d30-aae1-37d5a8258e40",
+	      "key": "d18e8adc-c72d-4b9b-835b-9926a4533f5d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61956,7 +62646,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f6161816-67ab-47f3-be3f-d764405260d4",
+	      "key": "d20d2935-d0a7-4e09-aa88-dc1b4e15f6b0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62027,7 +62717,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b4a3e71c-f720-48df-a551-511ca8d7c902",
+	      "key": "01ff28a7-186b-4d84-b793-a4552b3217dd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62070,7 +62760,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a6f474c0-e04d-4885-9c99-e43ee271f861",
+	      "key": "50b0e9c6-1c58-43c2-b983-7b10c8ce8fae",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62101,7 +62791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d309a1a0-b7b0-4056-bf02-697046e619c9",
+	      "key": "0d4b0ae8-03c1-411c-a09a-051268476fa0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62134,7 +62824,7 @@
 	}
 
 /***/ },
-/* 742 */
+/* 765 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -62152,7 +62842,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8beec831-3ad6-4f5c-b4ea-18e29a7d2f13",
+	      "key": "8b9face7-46b2-4674-9a51-a31fabba1b31",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62217,7 +62907,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fe66cee1-3a7a-482e-b714-4aa6b4411407",
+	      "key": "03b3ce4f-177b-42dd-9ed0-9a0a33c9d7cd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62282,7 +62972,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03631443-38e3-485a-b7a6-49d6b6fbd99e",
+	      "key": "c0685e30-02a8-411c-947b-2fbf2165ee10",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62430,7 +63120,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "442d32d0-b416-47cb-925c-08edfb82330e",
+	      "key": "90d1103b-fcd8-4733-bbcb-d485b4b2d5fb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62668,7 +63358,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d2cd2adc-0dae-49ca-9663-71f6d774f559",
+	      "key": "42cd11f6-8d7e-4135-8223-479195dd3bfd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62767,7 +63457,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f9d95c88-0d12-419b-96ca-a48d23ffc39f",
+	      "key": "87177d68-8f84-40dc-a2b0-4faa6844b1b7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62919,7 +63609,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "885eb5af-9910-4a20-8e9b-ec2ef91c5514",
+	      "key": "85f2e2f7-0b4a-47b6-812c-feb13225e0ba",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63014,7 +63704,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2a2735f2-b180-4bbd-bb12-87501698052f",
+	      "key": "e5b484c5-75ed-4351-9520-45250c0e36c2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63152,7 +63842,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "26c49c68-f537-4567-a4a5-c3a6aa06c22d",
+	      "key": "adfa89e6-9a9b-4024-a79d-e56240050581",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63347,7 +64037,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67c4d4c9-2d79-43a4-a796-9c4c8280cc4e",
+	      "key": "35d322b3-a9a7-4683-907b-5dc8565e12b6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63472,7 +64162,7 @@
 	}
 
 /***/ },
-/* 743 */
+/* 766 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -63490,7 +64180,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f8d71d4d-b09b-41d7-b0e9-ad16d75e7d6a",
+	      "key": "17283936-9650-4ecc-bc70-f3c4b62351d9",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63502,7 +64192,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b788ce89-4412-4dfe-87c1-e9f38d460ea5",
+	      "key": "e86d9938-476e-4873-9498-a2a407f0fe65",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63611,7 +64301,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1d5dfaf4-e750-43e8-8332-4d18cc7afd81",
+	      "key": "03c80a02-3963-48b2-8aca-0b4dfbef583c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63660,7 +64350,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2050b7f0-a9c3-4368-9cf3-3327c8e765e4",
+	      "key": "dba2b310-d8e1-400d-bdc0-f9dfb1e46e28",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63732,7 +64422,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ceb3b221-2a3e-4a26-8503-d74b9b8fc7e5",
+	      "key": "0d91d233-c6e6-4231-bdb0-bbd776bbf183",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63768,7 +64458,7 @@
 	}
 
 /***/ },
-/* 744 */
+/* 767 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -63786,7 +64476,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "cf41e1ab-2a08-479c-aa13-839fd647f1d4",
+	      "key": "afde24ac-7c76-40f5-a73c-05764c195a02",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -63884,7 +64574,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d5c9ba6d-f8c0-45c8-b0a9-8515c536bf89",
+	      "key": "017da320-c802-40cc-859f-ac0f3253839b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63925,7 +64615,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d859fc39-93c1-4714-9bc4-9e63a0571e3d",
+	      "key": "96828bb0-410e-4ff0-9654-24971cc49b46",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63964,7 +64654,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "50ace043-64d4-475e-9139-ab4d0ba45ab1",
+	      "key": "83354ee7-7337-42b5-9e4f-ce9a6648f133",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63990,7 +64680,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4098bfc2-857f-4db8-8cd4-5bb5b11e0e80",
+	      "key": "9c691753-45c0-45ad-9858-78d971031831",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64068,7 +64758,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "61cea403-bbe1-460f-bd38-0cd33c91583b",
+	      "key": "0c2baa94-e426-42af-adb6-aa30aef77344",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64097,7 +64787,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cd3844de-76ca-48ce-a31d-f09aaf9a2d68",
+	      "key": "365231b5-20cd-4387-aa4e-5a63709555b8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64117,7 +64807,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "510f5346-59e6-4291-bf11-27c3a5af0707",
+	      "key": "81b3b20d-4ab2-4419-829c-731c6fad82e2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64156,7 +64846,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f43dd46e-eb1f-4973-8a4b-481c2e449103",
+	      "key": "e852cdcd-8592-4d8f-9468-8f3c5397f5e1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64190,7 +64880,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dd418ef7-8c16-4b5d-ac4c-40b64eda5b92",
+	      "key": "44278808-5805-4a09-a63a-3ad7d95558a9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64272,7 +64962,7 @@
 	}
 
 /***/ },
-/* 745 */
+/* 768 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -64290,7 +64980,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "3e0701fd-1713-442d-8ca5-8fefc382023c",
+	      "key": "a52df198-12f2-406b-a4ea-9e330042d5f1",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64309,7 +64999,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "35db6c3b-9b32-4a1e-88f4-8db75eb323e4",
+	      "key": "543856e0-cdbb-4168-b534-ef8a74390b43",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64416,7 +65106,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1e39425b-15bd-46eb-9010-7bf2aa36974e",
+	      "key": "7ebdbcf6-a770-445a-aac2-c4abba716494",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64436,7 +65126,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6e341ef7-a0f5-45f2-be15-5668f5bf5ddd",
+	      "key": "d041c928-66fb-49fe-b7d9-4ac296a61e3c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64475,7 +65165,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5a328b82-82d4-42b2-80af-748c1be1b115",
+	      "key": "8d376f7c-edd0-4bf4-80c2-5dfd3897f70e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64509,7 +65199,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f44a6825-8016-4c74-85d5-f5bed0390ced",
+	      "key": "e21c895d-11a5-410a-99e0-5bb560362097",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64541,7 +65231,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "de64e3b0-23d2-42b9-96f4-afc31e1cee92",
+	      "key": "be7465f7-6d33-4c7a-9d1f-0abf8b819ce1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64575,7 +65265,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a03039e4-3942-48ab-86d0-7a2a9ca34aa4",
+	      "key": "5bc1998e-4fb6-4bc7-96f6-c1bb03266542",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64658,7 +65348,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3693bf2d-40ff-4c28-8594-077ff0c9c18b",
+	      "key": "492dfc16-1ec2-4308-8977-b3ed818f1975",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64692,7 +65382,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "052a1070-b6ab-48ff-a3d9-5e3cce1a2663",
+	      "key": "df932718-b2db-4c5a-98df-2687eb5e4594",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64728,7 +65418,344 @@
 	}
 
 /***/ },
-/* 746 */
+/* 769 */
+/*!************************************!*\
+  !*** ./content/posts/typefaces.md ***!
+  \************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Introduction to Typeface Selection and Pairing",
+	  "slug": "typefaces",
+	  "subtitle": "At a minimum know the difference between serif and sans-serif.  Or dig just a little deeper for know-how on font selection and pairings.",
+	  "created": "Mon Mar 07 2016 09:19:12 GMT-0500 (CDT)",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "cover": true,
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "595fccb8-8f51-4df9-84e0-430281452269",
+	      "body": [
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Serifs are small lines tailing from the edges of letters.  Fonts with these are classified as Serifs.  Fonts without these strokes are classified as Sans-Serif.  (Sans meaning without)."
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Styles range from emulating classic calligraphy and features produced from old style hand writing (humanist) to increasingly abstract and geometric."
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "<img width=\"100%\" src=\"/assets/images/fontClassification.png\">"
+	          ]
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "58639584-1f9d-4809-9539-0b936e8f4469",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Serif Font Selection"
+	          ],
+	          "level": 1,
+	          "raw": "Serif Font Selection"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Humanist Serif (old style) - Journalism &amp; Historical"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Transitional Serif - Academia &amp; Legal"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Modern Serif - Arts &amp; Culture"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Egyption (slab) Serif - Authoritative, yet friendly - Marketing &amp; Promotional"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "ed5b975b-e52b-48c6-b519-ae78f3c28d44",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Sans-Serif Selection"
+	          ],
+	          "level": 1,
+	          "raw": "Sans-Serif Selection"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Humanist Sans-Serif - Government, Educational, Finance"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Transitional Sans-Serif - Technology &amp; Transportation"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Geometric Sans-Serif - Science &amp; Architecture"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "78976412-6f02-4931-8106-99b5f7664031",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Pairing Fonts"
+	          ],
+	          "level": 1,
+	          "raw": "Pairing Fonts"
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "A single typeface is okay and ideal for the &quot;beginner&quot;.  But if you must pair two fonts focus on contrast.  Be sure they don&#39;t clash.  You can do this by assuring you don&#39;t pick two different fonts from the same classification (Serif, Sans)."
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "This pairing would be okay."
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Headings in Humanist Serif"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Body in Humanist Sans-Serif"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "These would be a bad"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Headings in Humanist Serif"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Body in Egyption Serif"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "358e3c4d-638d-4c7d-a4f6-eddc4e947a36",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Additional Resources"
+	          ],
+	          "level": 1,
+	          "raw": "Additional Resources"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://design.tutsplus.com/articles/a-20-minute-intro-to-typography-basics--psd-3326",
+	                      "title": null,
+	                      "text": "http://design.tutsplus.com/articles/a-20-minute-intro-to-typography-basics--psd-3326"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://jamiewayne.com/2011/01/09/xxx-the-basics-of-typographic-families/",
+	                      "title": null,
+	                      "text": "http://jamiewayne.com/2011/01/09/xxx-the-basics-of-typographic-families/"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.designishistory.com/1450/type-classification/",
+	                      "title": null,
+	                      "text": "http://www.designishistory.com/1450/type-classification/"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.fonts.com/content/learning/fontology/level-1/type-anatomy/type-classifications",
+	                      "title": null,
+	                      "text": "http://www.fonts.com/content/learning/fontology/level-1/type-anatomy/type-classifications"
+	                    }
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 770 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -64736,7 +65763,7 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 747);
+	var req = __webpack_require__(/*! ./talks/ */ 771);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
@@ -64744,19 +65771,19 @@
 	module.exports = talks;
 
 /***/ },
-/* 747 */
+/* 771 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 748,
-		"./es-intro.md": 749,
-		"./lds-intro.md": 750,
-		"./talks.md": 751,
-		"./ui-principles-deck.md": 752,
-		"./ui-principles.md": 753
+		"./component-vs-layout.md": 772,
+		"./es-intro.md": 773,
+		"./lds-intro.md": 774,
+		"./talks.md": 775,
+		"./ui-principles-deck.md": 776,
+		"./ui-principles.md": 777
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -64769,11 +65796,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 747;
+	webpackContext.id = 771;
 
 
 /***/ },
-/* 748 */
+/* 772 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -64790,14 +65817,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0c25c243-6523-4365-a7a1-6cb291be1f30",
+	      "key": "52c4158f-aa16-40cc-bf77-5e81f35a3143",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 749 */
+/* 773 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -64819,14 +65846,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2b3901b4-c659-4206-bb65-9331305dd968",
+	      "key": "8918adf9-38a4-474c-be78-c8bfa913d59b",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 750 */
+/* 774 */
 /*!************************************!*\
   !*** ./content/talks/lds-intro.md ***!
   \************************************/
@@ -64848,14 +65875,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "5b5c1fc3-6332-4b1e-99aa-2ac46b906cdf",
+	      "key": "766f9503-ea07-49ce-ab2b-bc39140485e3",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 751 */
+/* 775 */
 /*!********************************!*\
   !*** ./content/talks/talks.md ***!
   \********************************/
@@ -64874,7 +65901,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f84d8ff8-9617-447d-80fc-f1efe8f2fb4b",
+	      "key": "0aebd44e-8f45-4f07-af37-41cebad42105",
 	      "body": [
 	        "",
 	        {
@@ -64939,7 +65966,7 @@
 	}
 
 /***/ },
-/* 752 */
+/* 776 */
 /*!*********************************************!*\
   !*** ./content/talks/ui-principles-deck.md ***!
   \*********************************************/
@@ -64958,14 +65985,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c1c73bb9-fb2a-48e8-9602-c49d2aa329f3",
+	      "key": "5c0424ac-58ba-407e-baff-e1ca2ee8c140",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 753 */
+/* 777 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -64982,13 +66009,13 @@
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
 	  "type": "post",
-	  "category": "upcoming talk",
+	  "category": "past talks",
 	  "ready": true,
 	  "video": "https://plus.google.com/hangouts/_/theironyard.com/jeff-hicks",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a5e0467f-ae01-40c6-84d7-258bceee0d83",
+	      "key": "458d2c42-4bb9-418c-ad0d-c663d9d73d89",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65026,7 +66053,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d2dcc4ba-d180-4899-880c-5b933acae595",
+	      "key": "67923a55-80f0-49d3-a400-2ab860804df9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65147,7 +66174,7 @@
 	}
 
 /***/ },
-/* 754 */
+/* 778 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -65157,7 +66184,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 755 */
+/* 779 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -65189,7 +66216,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 756);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 780);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -65240,7 +66267,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 756 */
+/* 780 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -65250,7 +66277,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 757 */
+/* 781 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -65284,13 +66311,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
-	var _reactMotion = __webpack_require__(/*! react-motion */ 758);
+	var _reactMotion = __webpack_require__(/*! react-motion */ 782);
 	
-	var _wikismith = __webpack_require__(/*! ../wikismith */ 500);
+	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 772);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 796);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -65427,7 +66454,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 758 */
+/* 782 */
 /*!********************************************!*\
   !*** ./~/react-motion/lib/react-motion.js ***!
   \********************************************/
@@ -65439,34 +66466,34 @@
 	
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 	
-	var _Motion = __webpack_require__(/*! ./Motion */ 759);
+	var _Motion = __webpack_require__(/*! ./Motion */ 783);
 	
 	exports.Motion = _interopRequire(_Motion);
 	
-	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 766);
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 790);
 	
 	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 	
-	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 767);
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 791);
 	
 	exports.TransitionMotion = _interopRequire(_TransitionMotion);
 	
-	var _spring = __webpack_require__(/*! ./spring */ 769);
+	var _spring = __webpack_require__(/*! ./spring */ 793);
 	
 	exports.spring = _interopRequire(_spring);
 	
-	var _presets = __webpack_require__(/*! ./presets */ 770);
+	var _presets = __webpack_require__(/*! ./presets */ 794);
 	
 	exports.presets = _interopRequire(_presets);
 	
 	// deprecated, dummy warning function
 	
-	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 771);
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 795);
 	
 	exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ },
-/* 759 */
+/* 783 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/Motion.js ***!
   \**************************************/
@@ -65480,27 +66507,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 760);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 784);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 761);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 785);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 762);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 786);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 763);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 787);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 764);
+	var _raf = __webpack_require__(/*! raf */ 788);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 765);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 789);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -65715,7 +66742,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 760 */
+/* 784 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mapToZero.js ***!
   \*****************************************/
@@ -65742,7 +66769,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 761 */
+/* 785 */
 /*!******************************************!*\
   !*** ./~/react-motion/lib/stripStyle.js ***!
   \******************************************/
@@ -65771,7 +66798,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 762 */
+/* 786 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/stepper.js ***!
   \***************************************/
@@ -65822,7 +66849,7 @@
 	// array reference around.
 
 /***/ },
-/* 763 */
+/* 787 */
 /*!*****************************************************************!*\
   !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
   \*****************************************************************/
@@ -65864,13 +66891,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 764 */
+/* 788 */
 /*!***************************************!*\
   !*** ./~/react-motion/~/raf/index.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 763)
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 787)
 	  , root = typeof window === 'undefined' ? global : window
 	  , vendors = ['moz', 'webkit']
 	  , suffix = 'AnimationFrame'
@@ -65946,7 +66973,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 765 */
+/* 789 */
 /*!***************************************************!*\
   !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
   \***************************************************/
@@ -65985,7 +67012,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 766 */
+/* 790 */
 /*!***********************************************!*\
   !*** ./~/react-motion/lib/StaggeredMotion.js ***!
   \***********************************************/
@@ -65999,27 +67026,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 760);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 784);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 761);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 785);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 762);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 786);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 763);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 787);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 764);
+	var _raf = __webpack_require__(/*! raf */ 788);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 765);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 789);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -66255,7 +67282,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 767 */
+/* 791 */
 /*!************************************************!*\
   !*** ./~/react-motion/lib/TransitionMotion.js ***!
   \************************************************/
@@ -66269,31 +67296,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 760);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 784);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 761);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 785);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 762);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 786);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 768);
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 792);
 	
 	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 763);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 787);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 764);
+	var _raf = __webpack_require__(/*! raf */ 788);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 765);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 789);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -66751,7 +67778,7 @@
 	// that you've unmounted but that's still animating. This is where it lives
 
 /***/ },
-/* 768 */
+/* 792 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mergeDiff.js ***!
   \*****************************************/
@@ -66867,7 +67894,7 @@
 	// to loop through and find a key's index each time), but I no longer care
 
 /***/ },
-/* 769 */
+/* 793 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/spring.js ***!
   \**************************************/
@@ -66883,7 +67910,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _presets = __webpack_require__(/*! ./presets */ 770);
+	var _presets = __webpack_require__(/*! ./presets */ 794);
 	
 	var _presets2 = _interopRequireDefault(_presets);
 	
@@ -66898,7 +67925,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 770 */
+/* 794 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/presets.js ***!
   \***************************************/
@@ -66916,7 +67943,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 771 */
+/* 795 */
 /*!*******************************************!*\
   !*** ./~/react-motion/lib/reorderKeys.js ***!
   \*******************************************/
@@ -66942,7 +67969,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 772 */
+/* 796 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -66952,7 +67979,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 773 */
+/* 797 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -66962,7 +67989,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 774 */
+/* 798 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -66972,12 +67999,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 775),
+	  component: __webpack_require__(/*! ./Content */ 799),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 775 */
+/* 799 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -67009,11 +68036,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _wikismith = __webpack_require__(/*! ../wikismith */ 500);
+	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 776);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 800);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -67048,7 +68075,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 776 */
+/* 800 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/

@@ -239,7 +239,7 @@
   }
 
   .MainPanel__panelContent___3w64X > * + * {
-    margin-left: 16px;
+    margin-left: 20px;
   }
 
   .MainPanel__panelContent___3w64X h1 {
@@ -248,12 +248,12 @@
 
   .MainPanel__blogColumn___ggwhf {
     float: left;
-    width: 334px;
+    width: 330px;
   }
 
   .MainPanel__talksColumn___3L0t8 {
     float: left;
-    width: 334px;
+    width: 330px;
   }
 
   .MainPanel__collectionOfYears___28Z2k {
@@ -400,7 +400,7 @@
   }
 
   .ProfilePanel__panelContent___20OO9 > * + * {
-    margin-left: 16px;
+    margin-left: 20px;
   }
 }
 
