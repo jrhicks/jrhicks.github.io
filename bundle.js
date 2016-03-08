@@ -59707,7 +59707,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "dc7c832d-4fa7-4d69-9d02-77bcd9a78f55",
+	      "key": "c2669cb9-e088-4c30-a2b9-a8df61629613",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59782,7 +59782,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "decdc652-740a-470c-8e7b-ff14dd7b121e",
+	      "key": "e97e9b87-2245-4f50-b696-9b4ea7f353b2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60154,7 +60154,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1af126c0-eb6f-4900-b94e-a39f58416a17",
+	      "key": "3f953e54-2a44-4db6-b22f-0093a9b779c3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60333,7 +60333,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "51e21ce3-1bf1-47ea-968e-cf2f52a7d87b",
+	      "key": "b0208e52-2b59-4c53-83ca-e6b4228cd2af",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60599,7 +60599,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8181e706-669c-4c80-804b-9a8fe3170bbd",
+	      "key": "50f6f9e4-feea-4974-81ef-90ff627fcd73",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60687,7 +60687,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "70ac68c9-fcd5-4bf1-a946-3a60246dfdb1",
+	      "key": "ac31b8ef-16e0-4801-9a95-f621694226a6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60706,7 +60706,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cd36757f-ad5a-4413-b7a8-f8f6d0824ae8",
+	      "key": "515c7f4f-ce00-4e9d-a9a2-47052d5c01a8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60750,7 +60750,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b6645e7b-75b5-4fc9-97fa-095f2a4c384b",
+	      "key": "e51afdf8-1602-4234-b589-4b24f19d827e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60788,7 +60788,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b0348a26-8ef8-4767-b6a9-cf6707581656",
+	      "key": "b08503a4-ecb9-45ca-a02b-3d53c9c7bbdf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60849,7 +60849,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c4576969-2dc2-4890-b467-b4dfd16ec25d",
+	      "key": "3bf6e6a2-ffaf-4f0e-9157-125985968285",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60939,7 +60939,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "763460a0-91f5-4b0d-b18e-e34af30ee336",
+	      "key": "adc2c731-1b14-43c4-a23a-ce852e83b59c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61138,7 +61138,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2e2d9979-55cf-4938-b872-084784edbb1d",
+	      "key": "adcd5aa3-d018-456b-b502-16151f3928c2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61178,7 +61178,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2ce6f711-a588-4415-a960-2f10566b7bdf",
+	      "key": "10fba0e1-a302-4023-87ca-aaf7a6fa82d2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61221,7 +61221,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bbe3cc37-01e2-4dfb-8db4-566ace3333dc",
+	      "key": "b3e6aa25-1fc7-41d4-8a08-b0302b26e1dd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61304,7 +61304,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7a831d75-ddf6-4a08-8952-bd50fdf01288",
+	      "key": "832eaffb-7aa1-442c-aef2-178d3493d5be",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61673,7 +61673,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3ab03d0e-1ae2-4240-a65c-62d1471410c8",
+	      "key": "711faf6d-a3a1-4d92-b634-9be2e345eef0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61768,7 +61768,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "99431fa8-51b0-4c08-9156-cf0bb8cd0876",
+	      "key": "c8f5b82a-c3fe-45a9-85c7-3abf0cfb8d96",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61834,7 +61834,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e7a91abb-82cd-44e5-a09c-b363fe3cd6fc",
+	      "key": "13b08c22-9b6f-4a87-9289-962f90b3dfed",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61983,7 +61983,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cb2f5d54-38f9-4cb8-ae0b-7d1e24aa47e1",
+	      "key": "ad0ba1fb-d6f4-4fb9-9a41-d265cddaed8d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62118,7 +62118,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1624f49f-f5bc-4e06-b42f-f3c7fe6f986b",
+	      "key": "78cee024-e840-4472-8dd1-835b301faf1f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62161,7 +62161,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b2c061c4-d1fb-44ca-ac39-ccbc0363ea1d",
+	      "key": "67b3ecc5-8913-4c4b-b0fc-e964081a31ad",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62181,7 +62181,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "416bc517-5c3a-4063-841d-2a48e29fbff9",
+	      "key": "4744e626-307d-476e-9a8b-9e17a379a47c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62201,7 +62201,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "363219bf-d8c2-4a5a-b8f9-b8fb114a534e",
+	      "key": "541619f9-6f22-41b7-b4b5-d879eff0c7ca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62227,7 +62227,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e642b991-6b90-4858-8bbc-667458e3fedb",
+	      "key": "4bd96dd6-1e52-4233-b3af-4a4dd480eb70",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62253,7 +62253,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2adfddb5-5bb0-4ae8-bd2a-59fd63c6992a",
+	      "key": "14d28a08-f01d-4036-9158-ac134853bb84",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62273,7 +62273,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4bed75d9-31aa-429c-abea-7896bf8efc2d",
+	      "key": "8641c3ba-784d-42e7-a86a-b469763bc8f5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62338,7 +62338,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "87eb8d04-96d0-41ba-bf05-8076b10c0c73",
+	      "key": "b36edab4-c59e-432b-a7b4-91e75c2f4275",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62352,7 +62352,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "23d03a1c-4488-4f15-b1a9-1addce184221",
+	      "key": "bc96d767-7983-4e14-b392-4785390c83fc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62411,7 +62411,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b59d1073-fd9e-46e8-8f97-88004749e0d4",
+	      "key": "87669d3c-3f55-410d-b6b3-040cf64602a2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62454,7 +62454,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4817dc11-afbd-45c2-be6e-666e11d6f1dd",
+	      "key": "6a43d2e6-3058-4795-8bf3-fbf9852ef517",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62513,7 +62513,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2384a37c-8113-406b-b0af-5aa6f731f016",
+	      "key": "b7a7966b-3429-4bc5-825c-e08d696f03c0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62583,7 +62583,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d18e8adc-c72d-4b9b-835b-9926a4533f5d",
+	      "key": "5aa9dafc-8045-4979-a019-9a86bc74ba0f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62646,7 +62646,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d20d2935-d0a7-4e09-aa88-dc1b4e15f6b0",
+	      "key": "7b38efae-20b4-4b3a-8b5e-51efc88564b5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62717,7 +62717,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "01ff28a7-186b-4d84-b793-a4552b3217dd",
+	      "key": "0278be3f-f80d-48cc-9497-97806fbec959",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62760,7 +62760,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "50b0e9c6-1c58-43c2-b983-7b10c8ce8fae",
+	      "key": "843d6852-e9e0-472f-96fe-3dc9bc624216",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62791,7 +62791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0d4b0ae8-03c1-411c-a09a-051268476fa0",
+	      "key": "ea257631-a7a3-45c4-9f3c-ae041d19da56",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62842,7 +62842,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8b9face7-46b2-4674-9a51-a31fabba1b31",
+	      "key": "c8a9c798-e9e7-4474-8212-d9bd86b04f43",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62907,7 +62907,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03b3ce4f-177b-42dd-9ed0-9a0a33c9d7cd",
+	      "key": "a0df2008-5dab-4930-8a3a-a803e55a56eb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62972,7 +62972,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c0685e30-02a8-411c-947b-2fbf2165ee10",
+	      "key": "9306fe30-7d3d-4a7d-bb44-44c93af0ca3c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63120,7 +63120,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "90d1103b-fcd8-4733-bbcb-d485b4b2d5fb",
+	      "key": "ff826547-80eb-407d-b653-de47206aaf57",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63358,7 +63358,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "42cd11f6-8d7e-4135-8223-479195dd3bfd",
+	      "key": "4033b76d-5054-4e40-b073-17b380d78867",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63457,7 +63457,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "87177d68-8f84-40dc-a2b0-4faa6844b1b7",
+	      "key": "a50ecf36-034f-4dbc-8077-3e3173b78116",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63609,7 +63609,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "85f2e2f7-0b4a-47b6-812c-feb13225e0ba",
+	      "key": "1ba17ff8-2a10-48b6-81e2-ff51417db7f9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63704,7 +63704,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e5b484c5-75ed-4351-9520-45250c0e36c2",
+	      "key": "fd573c6e-31fe-426b-8b91-7474cb925e4f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63842,7 +63842,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "adfa89e6-9a9b-4024-a79d-e56240050581",
+	      "key": "cfb277a8-344d-4251-b518-24b0d54d64f3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64037,7 +64037,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "35d322b3-a9a7-4683-907b-5dc8565e12b6",
+	      "key": "ffecb91d-408d-453a-a018-3a2b11062a03",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64180,7 +64180,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "17283936-9650-4ecc-bc70-f3c4b62351d9",
+	      "key": "0c71d7a8-c407-46e8-90c8-6ba5a6198b0a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64192,7 +64192,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e86d9938-476e-4873-9498-a2a407f0fe65",
+	      "key": "920658de-41e0-4a33-8918-926842f54aea",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64301,7 +64301,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03c80a02-3963-48b2-8aca-0b4dfbef583c",
+	      "key": "7e21fb2d-b929-4da6-af1d-77fb0cb0408f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64350,7 +64350,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dba2b310-d8e1-400d-bdc0-f9dfb1e46e28",
+	      "key": "31f1e75a-4a3c-4c09-bc0d-991db1440e6a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64422,7 +64422,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0d91d233-c6e6-4231-bdb0-bbd776bbf183",
+	      "key": "7a1c84c8-1b0c-48a8-adad-d5bbc27b340a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64476,7 +64476,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "afde24ac-7c76-40f5-a73c-05764c195a02",
+	      "key": "1d66ca5c-7aeb-4791-8d12-a2ac5ea63b47",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64574,7 +64574,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "017da320-c802-40cc-859f-ac0f3253839b",
+	      "key": "23a363bb-e395-44cb-8fe0-c7db45f12ca3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64615,7 +64615,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "96828bb0-410e-4ff0-9654-24971cc49b46",
+	      "key": "66623c21-29d5-44ec-8546-3fe89ee74223",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64654,7 +64654,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "83354ee7-7337-42b5-9e4f-ce9a6648f133",
+	      "key": "c16dcb01-455b-412b-9249-e33c92a1a0a5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64680,7 +64680,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9c691753-45c0-45ad-9858-78d971031831",
+	      "key": "2d6842fc-8696-4429-9681-bac2ddcabe05",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64758,7 +64758,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0c2baa94-e426-42af-adb6-aa30aef77344",
+	      "key": "33618b04-b807-4009-b12d-fde4d327462f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64787,7 +64787,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "365231b5-20cd-4387-aa4e-5a63709555b8",
+	      "key": "4dd75ded-e202-43a7-b478-b1e0fdc111fb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64807,7 +64807,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "81b3b20d-4ab2-4419-829c-731c6fad82e2",
+	      "key": "b96f8d77-8633-482a-8fe5-4b97c6178cba",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64846,7 +64846,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e852cdcd-8592-4d8f-9468-8f3c5397f5e1",
+	      "key": "24bef9cc-e9a6-4c24-9b5e-200b3e8a1378",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64880,7 +64880,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "44278808-5805-4a09-a63a-3ad7d95558a9",
+	      "key": "df57c5fb-63d3-40b0-9ccc-2e7ec73fb552",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64980,7 +64980,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a52df198-12f2-406b-a4ea-9e330042d5f1",
+	      "key": "7ec1e385-2de5-4132-8958-b86e94178aea",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64999,7 +64999,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "543856e0-cdbb-4168-b534-ef8a74390b43",
+	      "key": "9b60fd8a-d8f4-4e3e-9a88-a7f84c9cb7e6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65106,7 +65106,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7ebdbcf6-a770-445a-aac2-c4abba716494",
+	      "key": "8acfbde9-e38d-4f0d-a6d0-334cb88db046",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65126,7 +65126,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d041c928-66fb-49fe-b7d9-4ac296a61e3c",
+	      "key": "c5486ecc-6cb0-471e-b991-4dc2a9a32d48",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65165,7 +65165,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8d376f7c-edd0-4bf4-80c2-5dfd3897f70e",
+	      "key": "18016f1e-666c-4221-823e-2e4dc11441b4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65199,7 +65199,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e21c895d-11a5-410a-99e0-5bb560362097",
+	      "key": "0dbaa5e0-be1c-4006-a97b-5eadae703e01",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65231,7 +65231,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "be7465f7-6d33-4c7a-9d1f-0abf8b819ce1",
+	      "key": "352157a1-86b4-4c6d-9c8c-9cdcf67361ce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65265,7 +65265,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5bc1998e-4fb6-4bc7-96f6-c1bb03266542",
+	      "key": "28d1597d-3c38-44cb-a8cd-04bac0dea26f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65348,7 +65348,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "492dfc16-1ec2-4308-8977-b3ed818f1975",
+	      "key": "e97940cb-b1b4-4cdf-bfbc-4b4965237124",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65382,7 +65382,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "df932718-b2db-4c5a-98df-2687eb5e4594",
+	      "key": "33daaf7c-8ee8-4c06-9561-d0fc275a1a3b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65436,7 +65436,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "595fccb8-8f51-4df9-84e0-430281452269",
+	      "key": "211c06fa-2f72-4958-a569-d1436ad1969a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65460,7 +65460,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "58639584-1f9d-4809-9539-0b936e8f4469",
+	      "key": "99c736c8-e5da-4857-9701-1b9f66f06e8c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65525,7 +65525,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ed5b975b-e52b-48c6-b519-ae78f3c28d44",
+	      "key": "4d0af226-bba2-45b0-adf4-a20e7e050648",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65579,7 +65579,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "78976412-6f02-4931-8106-99b5f7664031",
+	      "key": "3db73c89-9158-4067-8de1-da85ff3f197c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65669,7 +65669,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "358e3c4d-638d-4c7d-a4f6-eddc4e947a36",
+	      "key": "7d36f203-936f-4dc1-8fe5-4ee49da5af7c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65682,6 +65682,22 @@
 	        {
 	          "type": "list",
 	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.slideshare.net/ryanlabouve/web-typography-a-long-dark",
+	                      "title": null,
+	                      "text": "http://www.slideshare.net/ryanlabouve/web-typography-a-long-dark"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
 	            {
 	              "type": "listitem",
 	              "text": [
@@ -65817,7 +65833,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "52c4158f-aa16-40cc-bf77-5e81f35a3143",
+	      "key": "90aee5a3-42ba-4dc7-9837-2c89a47eca91",
 	      "body": []
 	    }
 	  ]
@@ -65846,7 +65862,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8918adf9-38a4-474c-be78-c8bfa913d59b",
+	      "key": "a1473775-939a-4622-a903-623915282aa2",
 	      "body": []
 	    }
 	  ]
@@ -65875,7 +65891,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "766f9503-ea07-49ce-ab2b-bc39140485e3",
+	      "key": "578c88d3-75f2-4fef-bcd3-fe1ab29bcde8",
 	      "body": []
 	    }
 	  ]
@@ -65901,7 +65917,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0aebd44e-8f45-4f07-af37-41cebad42105",
+	      "key": "06f32124-4bc4-4562-ae45-3ad6af2c305e",
 	      "body": [
 	        "",
 	        {
@@ -65985,7 +66001,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "5c0424ac-58ba-407e-baff-e1ca2ee8c140",
+	      "key": "412d214b-6283-43b8-876c-4684b0fab7bc",
 	      "body": []
 	    }
 	  ]
@@ -66015,7 +66031,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "458d2c42-4bb9-418c-ad0d-c663d9d73d89",
+	      "key": "c38e447a-8ae0-4815-a6e4-a60b0548578a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66040,7 +66056,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "This presentation will help someone with a basic understanding of CSS to both identify the patterns used in and be able to code a site like the following:"
+	            "This presentation will help someone with a basic understanding of CSS to both identify the patterns used in and be able to code a site like the following.  An exercise has been linked below."
 	          ]
 	        },
 	        {
@@ -66053,7 +66069,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67923a55-80f0-49d3-a400-2ab860804df9",
+	      "key": "a843975c-5ac1-4963-ab26-69fd37f4471b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66162,11 +66178,45 @@
 	                  "text": [
 	                    "Masonry Layout Pattern groups the tweets and right hand content while providing a soft grey to cover the majority of the screen real-estate while providing a high-contrast white for the content."
 	                  ]
-	                }
+	                },
+	                ""
 	              ]
 	            }
 	          ],
 	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "d9f114d8-3106-49f0-992d-9a9725902883",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Exercise"
+	          ],
+	          "level": 2,
+	          "raw": "Exercise"
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "As an exercise clone the repo at ",
+	            {
+	              "type": "link",
+	              "href": "https://github.com/jrhicks/css-layout-patterns-example",
+	              "title": null,
+	              "text": "https://github.com/jrhicks/css-layout-patterns-example"
+	            },
+	            " and update the CSS to produce:"
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "<img width=\"100%\" src=\"https://raw.githubusercontent.com/jrhicks/css-layout-patterns-example/master/img/finished.png\" />"
+	          ]
 	        }
 	      ]
 	    }
