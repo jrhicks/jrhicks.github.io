@@ -34409,7 +34409,7 @@
 	        for (var _iterator = (0, _getIterator3.default)(items), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 	          var p = _step.value;
 	
-	          y = new Date(p.created).getYear() + 1990;
+	          y = new Date(p.created).getYear() + 1900;
 	          if (results.get(y) === undefined) {
 	            results.set(y, [p]);
 	          } else {
@@ -59572,7 +59572,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'speakerdeck-embed', 'data-id': '5305bc1ee0854460a21a9fb6a81bd6b9' },
+	        { className: 'speakerdeck-embed', 'data-id': this.props.content['data-id'] },
 	        'Loading Slides ...'
 	      );
 	    }
@@ -59707,7 +59707,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c2669cb9-e088-4c30-a2b9-a8df61629613",
+	      "key": "d8306727-f3d7-4d55-8134-c001be8bd350",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59782,7 +59782,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e97e9b87-2245-4f50-b696-9b4ea7f353b2",
+	      "key": "ec7c0d89-0cb1-4144-ab63-dcb14795c158",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60154,7 +60154,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3f953e54-2a44-4db6-b22f-0093a9b779c3",
+	      "key": "01357667-63de-4ce2-8d56-ec30f042f194",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60333,7 +60333,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b0208e52-2b59-4c53-83ca-e6b4228cd2af",
+	      "key": "a0c02de2-59d5-4582-93f4-acddc18fec28",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60599,7 +60599,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "50f6f9e4-feea-4974-81ef-90ff627fcd73",
+	      "key": "0494d7e1-7abc-4193-91b2-f128605d2f95",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60687,7 +60687,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ac31b8ef-16e0-4801-9a95-f621694226a6",
+	      "key": "4949a00d-9ec4-4ff6-8a4e-0a789a66a866",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60706,7 +60706,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "515c7f4f-ce00-4e9d-a9a2-47052d5c01a8",
+	      "key": "821e997b-5a48-4241-9efc-6a01c753c50d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60750,7 +60750,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e51afdf8-1602-4234-b589-4b24f19d827e",
+	      "key": "05d860bd-1057-4bb6-ae0c-62761d2db102",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60788,7 +60788,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b08503a4-ecb9-45ca-a02b-3d53c9c7bbdf",
+	      "key": "92d2fb50-e4d7-42bb-904a-022a87e79792",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60849,7 +60849,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3bf6e6a2-ffaf-4f0e-9157-125985968285",
+	      "key": "564220e2-9b21-494d-ac95-36caadcbb196",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60939,7 +60939,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "adc2c731-1b14-43c4-a23a-ce852e83b59c",
+	      "key": "de0abaa2-67e2-49c8-8542-7dd39dbf980b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61138,7 +61138,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "adcd5aa3-d018-456b-b502-16151f3928c2",
+	      "key": "6a4f750f-9b62-4aa5-9d18-02a8f070cd90",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61178,7 +61178,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "10fba0e1-a302-4023-87ca-aaf7a6fa82d2",
+	      "key": "8c4a72d9-c668-4cec-a75c-a86e74de0dad",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61221,7 +61221,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b3e6aa25-1fc7-41d4-8a08-b0302b26e1dd",
+	      "key": "e3e0eb91-eaba-4098-98eb-961aa9048d8c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61304,7 +61304,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "832eaffb-7aa1-442c-aef2-178d3493d5be",
+	      "key": "5f57cad7-bb47-4e06-9cfa-b3a592570959",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61673,7 +61673,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "711faf6d-a3a1-4d92-b634-9be2e345eef0",
+	      "key": "e4f7e7a6-de89-4776-9e8c-ba283d3f03bd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61768,7 +61768,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c8f5b82a-c3fe-45a9-85c7-3abf0cfb8d96",
+	      "key": "688817fe-4e04-4438-be79-812ffad5857a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61834,7 +61834,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "13b08c22-9b6f-4a87-9289-962f90b3dfed",
+	      "key": "90a96dde-4125-49a6-8c0e-eb960f1a03ec",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61983,7 +61983,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ad0ba1fb-d6f4-4fb9-9a41-d265cddaed8d",
+	      "key": "8f170dff-10bc-48a4-8c19-9b68415a146b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62118,7 +62118,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "78cee024-e840-4472-8dd1-835b301faf1f",
+	      "key": "eff09f11-5247-4719-a6a7-a5008227daf5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62161,7 +62161,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67b3ecc5-8913-4c4b-b0fc-e964081a31ad",
+	      "key": "961b6d8b-f24c-42d8-8292-8b6745c4a0d9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62181,7 +62181,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4744e626-307d-476e-9a8b-9e17a379a47c",
+	      "key": "2b88915b-c179-4595-9db9-04b3ad3bfdc6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62201,7 +62201,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "541619f9-6f22-41b7-b4b5-d879eff0c7ca",
+	      "key": "32c5ac27-3c3e-4abc-a8f2-524bb2639475",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62227,7 +62227,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4bd96dd6-1e52-4233-b3af-4a4dd480eb70",
+	      "key": "03a12d42-e261-4f84-9030-bed046a7dfa3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62253,7 +62253,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "14d28a08-f01d-4036-9158-ac134853bb84",
+	      "key": "d00d636b-7ba4-42f8-a860-0d602328b93c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62273,7 +62273,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8641c3ba-784d-42e7-a86a-b469763bc8f5",
+	      "key": "97567fab-b1a2-4394-ad43-3ee1411ba70e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62338,7 +62338,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b36edab4-c59e-432b-a7b4-91e75c2f4275",
+	      "key": "ef557b13-dbba-4685-be06-13f52bb624c4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62352,7 +62352,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bc96d767-7983-4e14-b392-4785390c83fc",
+	      "key": "1e6cfcd8-cde9-425e-aa39-20fa60676391",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62411,7 +62411,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "87669d3c-3f55-410d-b6b3-040cf64602a2",
+	      "key": "d7b6d008-8e41-4643-8ab6-794f01afbf02",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62454,7 +62454,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6a43d2e6-3058-4795-8bf3-fbf9852ef517",
+	      "key": "8443af09-180b-4159-9d94-dc88ec0e8fed",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62513,7 +62513,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b7a7966b-3429-4bc5-825c-e08d696f03c0",
+	      "key": "65d79ec6-7eb2-4dee-b4e7-8c2c0d6d229d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62583,7 +62583,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5aa9dafc-8045-4979-a019-9a86bc74ba0f",
+	      "key": "9998952a-3acd-473d-8fff-7052d8bbd506",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62646,7 +62646,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7b38efae-20b4-4b3a-8b5e-51efc88564b5",
+	      "key": "83a51d51-2eab-48f5-90f3-69a0b5192fd8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62717,7 +62717,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0278be3f-f80d-48cc-9497-97806fbec959",
+	      "key": "804bb172-cbb2-48b9-be91-d927c5d3b148",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62760,7 +62760,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "843d6852-e9e0-472f-96fe-3dc9bc624216",
+	      "key": "f6a7a280-5fd3-4647-bf33-28810ad6a8be",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62791,7 +62791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ea257631-a7a3-45c4-9f3c-ae041d19da56",
+	      "key": "abbc1a74-a6d9-4f41-bd5c-eba53a99a897",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62842,7 +62842,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c8a9c798-e9e7-4474-8212-d9bd86b04f43",
+	      "key": "e719e2c7-41c5-4f73-b578-42aac331b722",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62907,7 +62907,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a0df2008-5dab-4930-8a3a-a803e55a56eb",
+	      "key": "18fd0a2d-5299-4713-ac43-ec90d6568c9c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62972,7 +62972,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9306fe30-7d3d-4a7d-bb44-44c93af0ca3c",
+	      "key": "80d4c07a-e80e-4f23-b053-2edbc051ebff",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63120,7 +63120,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ff826547-80eb-407d-b653-de47206aaf57",
+	      "key": "767d4d98-1934-4b48-81cc-947108738a63",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63358,7 +63358,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4033b76d-5054-4e40-b073-17b380d78867",
+	      "key": "34b40287-d79f-44de-b5fc-e22311af76f1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63457,7 +63457,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a50ecf36-034f-4dbc-8077-3e3173b78116",
+	      "key": "086ed66e-ae22-4c0a-a3d4-bfe67d8eb35c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63609,7 +63609,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1ba17ff8-2a10-48b6-81e2-ff51417db7f9",
+	      "key": "2c10e66a-626f-4258-ab9c-e0c14189968f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63704,7 +63704,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fd573c6e-31fe-426b-8b91-7474cb925e4f",
+	      "key": "06f77297-84ed-4521-9b76-5327c7f5d4c5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63842,7 +63842,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cfb277a8-344d-4251-b518-24b0d54d64f3",
+	      "key": "db7dc39b-2752-42b9-91b8-ca487c911345",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64037,7 +64037,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ffecb91d-408d-453a-a018-3a2b11062a03",
+	      "key": "edb455c4-cb9c-428e-a0d7-2c9dec78a7bf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64180,7 +64180,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0c71d7a8-c407-46e8-90c8-6ba5a6198b0a",
+	      "key": "3b53a624-df40-413c-a5d9-1c35ef5cbc18",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64192,7 +64192,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "920658de-41e0-4a33-8918-926842f54aea",
+	      "key": "9a695022-1f02-4a55-a633-cfd7e0afea3b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64301,7 +64301,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7e21fb2d-b929-4da6-af1d-77fb0cb0408f",
+	      "key": "70e3c7e6-53f2-49a6-bab6-ade696224ea1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64350,7 +64350,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "31f1e75a-4a3c-4c09-bc0d-991db1440e6a",
+	      "key": "e148be12-41c5-4451-89ae-ea1488903357",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64422,7 +64422,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7a1c84c8-1b0c-48a8-adad-d5bbc27b340a",
+	      "key": "c2a0320e-e754-4ec0-9784-7c2d5d032c4a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64476,7 +64476,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1d66ca5c-7aeb-4791-8d12-a2ac5ea63b47",
+	      "key": "a973c84d-06a2-41ab-80bd-b2d6e9023779",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64574,7 +64574,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "23a363bb-e395-44cb-8fe0-c7db45f12ca3",
+	      "key": "a3864b14-4b67-45f8-b68a-e066526dbbcc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64615,7 +64615,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "66623c21-29d5-44ec-8546-3fe89ee74223",
+	      "key": "984efbd3-a630-4c03-b3a0-87ba5a2c1e05",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64654,7 +64654,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c16dcb01-455b-412b-9249-e33c92a1a0a5",
+	      "key": "696ce91b-59ac-4ff4-8fdf-0bcfc88786c3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64680,7 +64680,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2d6842fc-8696-4429-9681-bac2ddcabe05",
+	      "key": "b9cfa427-8be5-400e-914e-3792553bba80",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64758,7 +64758,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "33618b04-b807-4009-b12d-fde4d327462f",
+	      "key": "85775d19-66a1-4d83-ba7b-5da2b601819e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64787,7 +64787,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4dd75ded-e202-43a7-b478-b1e0fdc111fb",
+	      "key": "856af21e-7aaa-4c67-9f3f-251ac0cc5d5e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64807,7 +64807,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b96f8d77-8633-482a-8fe5-4b97c6178cba",
+	      "key": "1e14f24c-82ac-4a15-903a-37129400d636",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64846,7 +64846,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "24bef9cc-e9a6-4c24-9b5e-200b3e8a1378",
+	      "key": "5785917f-5470-42fe-a7d8-63a7b242ba82",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64880,7 +64880,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "df57c5fb-63d3-40b0-9ccc-2e7ec73fb552",
+	      "key": "ef8da548-bfe6-4c57-a811-6d45fcab9741",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64980,7 +64980,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "7ec1e385-2de5-4132-8958-b86e94178aea",
+	      "key": "203b720d-5989-4bde-b021-be577a05f7ae",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64999,7 +64999,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9b60fd8a-d8f4-4e3e-9a88-a7f84c9cb7e6",
+	      "key": "4133f583-6b74-46f3-83e1-8cf680dda49e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65106,7 +65106,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8acfbde9-e38d-4f0d-a6d0-334cb88db046",
+	      "key": "f8f7728b-7b95-4ea0-b3cd-071fcca00ac9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65126,7 +65126,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c5486ecc-6cb0-471e-b991-4dc2a9a32d48",
+	      "key": "c1bf9a7b-f3cc-4f71-9f93-f845b1a75959",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65165,7 +65165,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "18016f1e-666c-4221-823e-2e4dc11441b4",
+	      "key": "f7866251-299d-4b98-afa4-5c81e21be825",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65199,7 +65199,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0dbaa5e0-be1c-4006-a97b-5eadae703e01",
+	      "key": "448a1fc0-8991-47ab-b3e1-28c836367cc0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65231,7 +65231,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "352157a1-86b4-4c6d-9c8c-9cdcf67361ce",
+	      "key": "983abc97-7578-4336-a0c1-ca3bda588f40",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65265,7 +65265,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "28d1597d-3c38-44cb-a8cd-04bac0dea26f",
+	      "key": "20990bf9-96bb-4901-b093-a90d42341eef",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65348,7 +65348,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e97940cb-b1b4-4cdf-bfbc-4b4965237124",
+	      "key": "cedfbb24-5ad9-4a56-a9b8-187a1e8ed53e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65382,7 +65382,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "33daaf7c-8ee8-4c06-9561-d0fc275a1a3b",
+	      "key": "d03c7650-23bb-4a69-bc73-475ec1ddbbee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65436,7 +65436,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "211c06fa-2f72-4958-a569-d1436ad1969a",
+	      "key": "7a0dedf5-7394-4d35-ab21-ec8f568acfdb",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65460,7 +65460,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "99c736c8-e5da-4857-9701-1b9f66f06e8c",
+	      "key": "ad9fb9b7-723c-4e46-8b82-3862a172e530",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65525,7 +65525,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4d0af226-bba2-45b0-adf4-a20e7e050648",
+	      "key": "a6389c0b-8500-40fb-b022-c53d178bd86a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65579,7 +65579,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3db73c89-9158-4067-8de1-da85ff3f197c",
+	      "key": "67458f8b-d142-47d8-b76f-c22a88cfc7e2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65669,7 +65669,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7d36f203-936f-4dc1-8fe5-4ee49da5af7c",
+	      "key": "680c0756-9db6-435d-8084-199793073682",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65795,9 +65795,9 @@
 
 	var map = {
 		"./component-vs-layout.md": 772,
-		"./es-intro.md": 773,
-		"./lds-intro.md": 774,
-		"./talks.md": 775,
+		"./es-intro-deck.md": 773,
+		"./es-intro.md": 774,
+		"./lds-intro.md": 775,
 		"./ui-principles-deck.md": 776,
 		"./ui-principles.md": 777
 	};
@@ -65833,7 +65833,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "90aee5a3-42ba-4dc7-9837-2c89a47eca91",
+	      "key": "8bbe21e9-6c1c-45f8-8658-bee85c7d1098",
 	      "body": []
 	    }
 	  ]
@@ -65841,28 +65841,24 @@
 
 /***/ },
 /* 773 */
-/*!***********************************!*\
-  !*** ./content/talks/es-intro.md ***!
-  \***********************************/
+/*!****************************************!*\
+  !*** ./content/talks/es-intro-deck.md ***!
+  \****************************************/
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "title": "Radical Data Mgmt With Event Sourcing",
-	  "slug": "es-intro",
+	  "title": "es-intro-deck",
+	  "slug": "es-intro-deck",
 	  "subtitle": null,
-	  "event": "Meetup",
-	  "location": "Iron Yard",
-	  "date": "2016/03/18 12:00 CST",
-	  "created": "2016-03-01T05:16:37.449Z",
+	  "created": "2016-03-04T01:28:50.039Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
-	  "type": "post",
-	  "category": "upcoming talk",
-	  "register": "http://www.meetup.com/Little-Rock-ReactJS-Meetup/events/226981566/",
+	  "type": "speakerdeck",
+	  "data-id": "6eb0b02563724efa9698831d1179ecd4",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a1473775-939a-4622-a903-623915282aa2",
+	      "key": "e6cecf2e-2bd2-4856-8de6-9cbdccc4097a",
 	      "body": []
 	    }
 	  ]
@@ -65870,6 +65866,288 @@
 
 /***/ },
 /* 774 */
+/*!***********************************!*\
+  !*** ./content/talks/es-intro.md ***!
+  \***********************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Radical Data Management With Event Sourcing",
+	  "slug": "es-intro",
+	  "subtitle": "Crash Introduction to Event Sourcing, CQRS, and DDD with the intent of gaining clarity around Flux/Redux",
+	  "event": "Meetup",
+	  "location": "Iron Yard",
+	  "date": "2016/03/18 12:00 CST",
+	  "created": "2016-03-01T05:16:37.449Z",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "type": "post",
+	  "category": "past talks",
+	  "register": "http://www.meetup.com/Little-Rock-ReactJS-Meetup/events/226981566/",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "29e604d1-0baf-4b7b-b9ba-65ce249a77d3",
+	      "body": [
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "By using MVC web frameworks we inherit the ",
+	            {
+	              "type": "link",
+	              "href": "https://en.wikipedia.org/wiki/Active_record_pattern",
+	              "title": null,
+	              "text": [
+	                "Active Record Pattern"
+	              ]
+	            },
+	            " where an ORM interfaces with an RDMBS.  When connecting Client-side MVC frameworks to these back-ends, tools like like Ember-Data and ",
+	            {
+	              "type": "link",
+	              "href": "http://www.js-data.io/",
+	              "title": null,
+	              "text": [
+	                "js-data"
+	              ]
+	            },
+	            " (that have ",
+	            {
+	              "type": "link",
+	              "href": "http://www.js-data.io/docs/dshttpadapter",
+	              "title": null,
+	              "text": [
+	                "http-adapters"
+	              ]
+	            },
+	            ") work well with the CRUD api&#39;s offered by our MVC web frameworks, but connecting our ",
+	            {
+	              "type": "link",
+	              "href": "https://facebook.github.io/flux/docs/overview.html",
+	              "title": null,
+	              "text": [
+	                "Flux"
+	              ]
+	            },
+	            "/",
+	            {
+	              "type": "link",
+	              "href": "http://redux.js.org/",
+	              "title": null,
+	              "text": [
+	                "Redux"
+	              ]
+	            },
+	            " applications to these backends may feel awkward."
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "This talk introduces a competing architecture to ActiveRecord known as ",
+	            {
+	              "type": "link",
+	              "href": "http://martinfowler.com/eaaDev/EventSourcing.html",
+	              "title": null,
+	              "text": [
+	                "EventSourcing"
+	              ]
+	            },
+	            " and highlights its influences on Flux/Redux.  It concludes with a theory that a ",
+	            {
+	              "type": "link",
+	              "href": "http://verraes.net/2013/12/fighting-bottlenecks-with-cqrs/",
+	              "title": null,
+	              "text": [
+	                "2013 presentation from Mathias Verreas"
+	              ]
+	            },
+	            " may well be the inspiration behind the naming of Flux."
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            [
+	              "",
+	              {
+	                "type": "wikismith",
+	                "slug": "es-intro-deck",
+	                "method": "embed"
+	              },
+	              ""
+	            ]
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Event Sourcing Resources"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.youtube.com/watch?v=hv2dKtPq0ME",
+	                      "title": null,
+	                      "text": [
+	                        "Polyglot Data"
+	                      ]
+	                    },
+	                    " - Greg Young - Aug 2014"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://verraes.net/2015/05/towards-modelling-processes/",
+	                      "title": null,
+	                      "text": [
+	                        "Towards Modeling Processes"
+	                      ]
+	                    },
+	                    " - @mathiasverraes - May 2015"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://verraes.net/2014/03/practical-event-sourcing/",
+	                      "title": null,
+	                      "text": [
+	                        "Practical Event Sourcing"
+	                      ]
+	                    },
+	                    " - @mathiasverraes - March 2014"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://verraes.net/2014/05/functional-foundation-for-cqrs-event-sourcing/",
+	                      "title": null,
+	                      "text": [
+	                        "Functional Foundation for CQRS &amp; Event Sourcing"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "DDD Resources"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://verraes.net/2014/02/buzzword-free-bounded-contexts/",
+	                      "title": null,
+	                      "text": [
+	                        "Buzzword-free Bounded Contexts"
+	                      ]
+	                    },
+	                    " - Feb 2014"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.youtube.com/watch?v=rbmxV5i18iI",
+	                      "title": null,
+	                      "text": [
+	                        "Object Reorientation"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Almost Relevant Resources"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "link",
+	                  "href": "https://vimeo.com/108441214",
+	                  "title": null,
+	                  "text": [
+	                    "The Art Of Destroying Software"
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 775 */
 /*!************************************!*\
   !*** ./content/talks/lds-intro.md ***!
   \************************************/
@@ -65891,92 +66169,8 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "578c88d3-75f2-4fef-bcd3-fe1ab29bcde8",
+	      "key": "1fc491bd-1288-47b3-be7a-b0907ee07109",
 	      "body": []
-	    }
-	  ]
-	}
-
-/***/ },
-/* 775 */
-/*!********************************!*\
-  !*** ./content/talks/talks.md ***!
-  \********************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "title": "Talks",
-	  "slug": "talks",
-	  "subtitle": null,
-	  "location": "Iron Yard",
-	  "address": "500 President Clinton Ave. Little Rock, AR 72201",
-	  "created": "2016-02-29T05:22:51.440Z",
-	  "author": "Jeffrey R. Hicks",
-	  "twitter": "jrhicks",
-	  "type": "post",
-	  "ast": [
-	    {
-	      "type": "section",
-	      "key": "06f32124-4bc4-4562-ae45-3ad6af2c305e",
-	      "body": [
-	        "",
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "ui-principles",
-	                "method": "reference"
-	              },
-	              ""
-	            ]
-	          ]
-	        },
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "es-intro",
-	                "method": "reference"
-	              },
-	              ""
-	            ]
-	          ]
-	        },
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "component-vs-layout",
-	                "method": "reference"
-	              },
-	              ""
-	            ]
-	          ]
-	        },
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "lds-intro",
-	                "method": "reference"
-	              },
-	              ""
-	            ]
-	          ]
-	        }
-	      ]
 	    }
 	  ]
 	}
@@ -65995,13 +66189,12 @@
 	  "created": "2016-03-04T01:28:50.039Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
-	  "type": [
-	    "speakerdeck"
-	  ],
+	  "type": "speakerdeck",
+	  "data-id": "5305bc1ee0854460a21a9fb6a81bd6b9",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "412d214b-6283-43b8-876c-4684b0fab7bc",
+	      "key": "4767a05c-852a-4778-b082-f944db945152",
 	      "body": []
 	    }
 	  ]
@@ -66031,7 +66224,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c38e447a-8ae0-4815-a6e4-a60b0548578a",
+	      "key": "ea45fed9-5823-42ea-a77a-becf760a8435",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66069,7 +66262,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a843975c-5ac1-4963-ab26-69fd37f4471b",
+	      "key": "ec1682d2-a154-4e71-882e-b1b609257a85",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66189,7 +66382,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d9f114d8-3106-49f0-992d-9a9725902883",
+	      "key": "9e8f8fb0-7e3e-490a-a7be-95398b9a375b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66303,7 +66496,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: _ProfilePanel2.default.description },
-	                'Developer, designer, & mentor'
+	                'Developer, designer, & presenter'
 	              )
 	            )
 	          )
@@ -66434,7 +66627,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: _AgendaPanel2.default.heading },
-	            'Upcoming Hangouts'
+	            'Lets Meetup'
 	          ),
 	          _react2.default.createElement(
 	            'table',
