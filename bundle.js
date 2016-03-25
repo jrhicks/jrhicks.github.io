@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 798)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 799)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 779);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 780);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 781);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 782);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 797);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 798);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34366,7 +34366,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 778);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 779);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -35281,11 +35281,11 @@
 	
 	var _SpeakerDeck2 = _interopRequireDefault(_SpeakerDeck);
 	
-	var _posts = __webpack_require__(/*! ../content/posts.js */ 759);
+	var _posts = __webpack_require__(/*! ../content/posts.js */ 760);
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 770);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 771);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -38498,27 +38498,31 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: _Post2.default.root },
 	        _react2.default.createElement(
 	          'div',
 	          { className: _Post2.default.titleBox },
 	          _react2.default.createElement(
-	            'h1',
-	            null,
+	            'div',
+	            { className: _Post2.default.title },
 	            this.props.content.title
 	          ),
 	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            this.props.content.subtitle
-	          ),
-	          _react2.default.createElement(
 	            'div',
-	            { className: _Post2.default.publishedOn },
-	            this.renderPublishedOn(this.props.content),
+	            { className: _Post2.default.byLine },
 	            'By ',
 	            this.renderAuthor(this.props.content)
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: _Post2.default.summary },
+	          _react2.default.createElement(
+	            'em',
+	            null,
+	            'Summary: '
+	          ),
+	          this.props.content.summary
 	        ),
 	        _react2.default.createElement(_Body2.default, { ast: this.props.content.ast })
 	      );
@@ -57699,7 +57703,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"titleBox":"Post__titleBox___1GODV","publishedOn":"Post__publishedOn___1R5ZF"};
+	module.exports = {"root":"Post__root___1A8Yc","summary":"Post__summary___XdJwC","titleBox":"Post__titleBox___1GODV","title":"Post__title___3K__b","byLine":"Post__byLine___3H0ov"};
 
 /***/ },
 /* 734 */
@@ -57987,7 +57991,7 @@
 	          _react2.default.createElement(
 	            'h3',
 	            null,
-	            this.props.content.subtitle
+	            this.props.content.summary
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -59144,7 +59148,7 @@
 	          _react2.default.createElement(
 	            'h3',
 	            null,
-	            this.props.content.subtitle
+	            this.props.content.summary
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -59513,7 +59517,7 @@
 	module.exports = {
 	  embed: __webpack_require__(/*! ./embed/SpeakerDeck */ 757),
 	  render: __webpack_require__(/*! ./embed/SpeakerDeck */ 757),
-	  link: __webpack_require__(/*! ./link/SpeakerDeck */ 758)
+	  link: __webpack_require__(/*! ./link/SpeakerDeck */ 759)
 	};
 
 /***/ },
@@ -59549,6 +59553,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _SpeakerDeck = __webpack_require__(/*! ./SpeakerDeck.scss */ 758);
+	
+	var _SpeakerDeck2 = _interopRequireDefault(_SpeakerDeck);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var EmbedSpeakerDeck = function (_React$Component) {
@@ -59572,8 +59580,12 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'speakerdeck-embed', 'data-id': this.props.content['data-id'] },
-	        'Loading Slides ...'
+	        { className: _SpeakerDeck2.default.root },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'speakerdeck-embed', 'data-id': this.props.content['data-id'] },
+	          'Loading Slides ...'
+	        )
 	      );
 	    }
 	  }]);
@@ -59584,6 +59596,16 @@
 
 /***/ },
 /* 758 */
+/*!******************************************************!*\
+  !*** ./wikismith/SpeakerDeck/embed/SpeakerDeck.scss ***!
+  \******************************************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"root":"SpeakerDeck__root___34-TP"};
+
+/***/ },
+/* 759 */
 /*!****************************************************!*\
   !*** ./wikismith/SpeakerDeck/link/SpeakerDeck.jsx ***!
   \****************************************************/
@@ -59641,7 +59663,7 @@
 	module.exports = SpeakerDeck;
 
 /***/ },
-/* 759 */
+/* 760 */
 /*!**************************!*\
   !*** ./content/posts.js ***!
   \**************************/
@@ -59649,7 +59671,7 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./posts/ */ 760);
+	var req = __webpack_require__(/*! ./posts/ */ 761);
 	var posts = req.keys().map(function (k) {
 	  return req(k);
 	});
@@ -59657,22 +59679,22 @@
 	module.exports = posts;
 
 /***/ },
-/* 760 */
+/* 761 */
 /*!*****************************!*\
   !*** ./content/posts \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./arkansas-dev-hackathon-2015.md": 761,
-		"./client-side-routing-notes.md": 762,
-		"./confidently-starting-a-reactjs-project.md": 763,
-		"./intro-to-flux.md": 764,
-		"./intro-to-reactjs.md": 765,
-		"./introduction-to-es6.md": 766,
-		"./offline-flux-with-lokijs.md": 767,
-		"./react-form-generation.md": 768,
-		"./typefaces.md": 769
+		"./arkansas-dev-hackathon-2015.md": 762,
+		"./client-side-routing-notes.md": 763,
+		"./confidently-starting-a-reactjs-project.md": 764,
+		"./intro-to-flux.md": 765,
+		"./intro-to-reactjs.md": 766,
+		"./introduction-to-es6.md": 767,
+		"./offline-flux-with-lokijs.md": 768,
+		"./react-form-generation.md": 769,
+		"./typefaces.md": 770
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -59685,11 +59707,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 760;
+	webpackContext.id = 761;
 
 
 /***/ },
-/* 761 */
+/* 762 */
 /*!******************************************************!*\
   !*** ./content/posts/arkansas-dev-hackathon-2015.md ***!
   \******************************************************/
@@ -59698,7 +59720,7 @@
 	module.exports = {
 	  "title": "Arkansas Dev. Hackathon 2015",
 	  "slug": "arkansas-dev-hackathon-2015",
-	  "subtitle": "April 18th from 11 AM to 7 PM",
+	  "summary": "April 18th from 11 AM to 7 PM",
 	  "created": "Sat Apr 18 2015 12:35:13 GMT-0500 (CDT)",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -59707,7 +59729,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d8306727-f3d7-4d55-8134-c001be8bd350",
+	      "key": "90418e2d-951a-4acc-88e4-e751cbbe2a77",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59782,7 +59804,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ec7c0d89-0cb1-4144-ab63-dcb14795c158",
+	      "key": "c7fe9c94-bb21-41c4-ae98-d2b81955bbab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60154,7 +60176,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "01357667-63de-4ce2-8d56-ec30f042f194",
+	      "key": "6a37cf23-bd08-4c5d-9799-68efcfde2cb3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60333,7 +60355,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a0c02de2-59d5-4582-93f4-acddc18fec28",
+	      "key": "c47bd561-1da3-4858-94f4-42cad084eda0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60581,7 +60603,7 @@
 	}
 
 /***/ },
-/* 762 */
+/* 763 */
 /*!****************************************************!*\
   !*** ./content/posts/client-side-routing-notes.md ***!
   \****************************************************/
@@ -60590,7 +60612,7 @@
 	module.exports = {
 	  "title": "Client Side Routing Notes",
 	  "slug": "client-side-routing-notes",
-	  "subtitle": "Navigating Screens and Data In A React Flux App",
+	  "summary": "Navigating Screens and Data In A React Flux App",
 	  "created": "Sat Mar 14 2015 13:22:14 GMT-0500 (CDT)",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -60599,7 +60621,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0494d7e1-7abc-4193-91b2-f128605d2f95",
+	      "key": "ddf3ac8a-a9d3-49c7-b6bb-2ee5b3480d2a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60687,7 +60709,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4949a00d-9ec4-4ff6-8a4e-0a789a66a866",
+	      "key": "6dbbd2d2-dbe3-4288-88cb-8c08e35fc2da",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60706,7 +60728,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "821e997b-5a48-4241-9efc-6a01c753c50d",
+	      "key": "9f3ebe13-4a6d-40ff-85dc-2cf715fd7701",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60750,7 +60772,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "05d860bd-1057-4bb6-ae0c-62761d2db102",
+	      "key": "c49f7db4-c2e0-43a6-aff6-5fe54b66f2d9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60788,7 +60810,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "92d2fb50-e4d7-42bb-904a-022a87e79792",
+	      "key": "49265a53-d5f3-4f77-900e-4fa8a0e47c84",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60849,7 +60871,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "564220e2-9b21-494d-ac95-36caadcbb196",
+	      "key": "207fac5b-6fdb-4467-9d35-b967771cc4d8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60939,7 +60961,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "de0abaa2-67e2-49c8-8542-7dd39dbf980b",
+	      "key": "651a52d9-362d-4ca4-9205-219cfa4f4914",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61120,7 +61142,7 @@
 	}
 
 /***/ },
-/* 763 */
+/* 764 */
 /*!*****************************************************************!*\
   !*** ./content/posts/confidently-starting-a-reactjs-project.md ***!
   \*****************************************************************/
@@ -61129,7 +61151,7 @@
 	module.exports = {
 	  "title": "Confidently Starting A React Project",
 	  "slug": "confidently-starting-a-react-project",
-	  "subtitle": "A case for building your own boilerplate",
+	  "summary": "A case for building your own boilerplate",
 	  "created": "Wed Jan 06 2016 15:46:39 GMT-0600 (CST)",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -61138,7 +61160,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "6a4f750f-9b62-4aa5-9d18-02a8f070cd90",
+	      "key": "ec131165-0edd-47c5-b87e-9cb1b335f19c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61178,7 +61200,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8c4a72d9-c668-4cec-a75c-a86e74de0dad",
+	      "key": "86994a7b-c5cb-46ac-8c1e-4f5a201f1ae8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61221,7 +61243,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e3e0eb91-eaba-4098-98eb-961aa9048d8c",
+	      "key": "56a4d06e-c83a-46a8-a3fa-f76992791aaf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61304,7 +61326,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5f57cad7-bb47-4e06-9cfa-b3a592570959",
+	      "key": "1cd77f7e-072c-4623-8ecd-cecc2211cbcf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61673,7 +61695,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e4f7e7a6-de89-4776-9e8c-ba283d3f03bd",
+	      "key": "18f4478c-4262-4b01-9f52-20b0cfb49796",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61768,7 +61790,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "688817fe-4e04-4438-be79-812ffad5857a",
+	      "key": "a25ab7a0-2fa5-47e7-a2c7-8e5e4b5898b8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61834,7 +61856,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "90a96dde-4125-49a6-8c0e-eb960f1a03ec",
+	      "key": "bf7a9570-031f-4f07-bd65-4065cdc0381d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61983,7 +62005,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8f170dff-10bc-48a4-8c19-9b68415a146b",
+	      "key": "01380351-8326-4643-bc85-7854f7a9dccd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62100,7 +62122,7 @@
 	}
 
 /***/ },
-/* 764 */
+/* 765 */
 /*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
@@ -62109,7 +62131,7 @@
 	module.exports = {
 	  "title": "Intro to Flux",
 	  "slug": "intro-to-flux",
-	  "subtitle": "Notes for meetup presentation",
+	  "summary": "Notes for meetup presentation",
 	  "created": "Thu Dec 17 2015 20:47:06 GMT-0600 (CST)",
 	  "author": "Jeffrey R. Hicks",
 	  "type": "post",
@@ -62118,7 +62140,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "eff09f11-5247-4719-a6a7-a5008227daf5",
+	      "key": "a179d4ca-f618-4278-aabb-e0398018bc6a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62161,7 +62183,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "961b6d8b-f24c-42d8-8292-8b6745c4a0d9",
+	      "key": "618390e4-143b-4d0f-9b08-181c2278bca0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62181,7 +62203,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2b88915b-c179-4595-9db9-04b3ad3bfdc6",
+	      "key": "b41edf45-ed2b-42ca-bbc6-f0f90c391444",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62201,7 +62223,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "32c5ac27-3c3e-4abc-a8f2-524bb2639475",
+	      "key": "5d81b2e6-9747-4b66-8f7c-3e0a42b67946",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62227,7 +62249,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03a12d42-e261-4f84-9030-bed046a7dfa3",
+	      "key": "692e48d3-1152-4449-8bb4-1744fdbd7ac7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62253,7 +62275,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d00d636b-7ba4-42f8-a860-0d602328b93c",
+	      "key": "22cee7c8-5cf4-439c-ad98-0674dec087e4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62273,7 +62295,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "97567fab-b1a2-4394-ad43-3ee1411ba70e",
+	      "key": "76553339-c4c5-4f86-8525-5339e2a024ee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62338,7 +62360,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ef557b13-dbba-4685-be06-13f52bb624c4",
+	      "key": "5bafd09e-4f57-461e-b516-ab973d7db5bc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62352,7 +62374,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1e6cfcd8-cde9-425e-aa39-20fa60676391",
+	      "key": "34a4d098-00e7-4d75-8cff-eac1d6a7979e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62411,7 +62433,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d7b6d008-8e41-4643-8ab6-794f01afbf02",
+	      "key": "ec67a498-4333-41f6-8b42-4d8a10f372a8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62454,7 +62476,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8443af09-180b-4159-9d94-dc88ec0e8fed",
+	      "key": "7b088e60-ce26-4848-ba71-fe3c4f0adc2f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62513,7 +62535,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "65d79ec6-7eb2-4dee-b4e7-8c2c0d6d229d",
+	      "key": "be60b1a0-ee06-418e-ae36-fbe5b2e31897",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62583,7 +62605,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9998952a-3acd-473d-8fff-7052d8bbd506",
+	      "key": "7508d09e-3696-481a-9019-9584b660f33b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62646,7 +62668,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "83a51d51-2eab-48f5-90f3-69a0b5192fd8",
+	      "key": "39292b3f-1553-4e9a-9911-9ba210958a2e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62717,7 +62739,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "804bb172-cbb2-48b9-be91-d927c5d3b148",
+	      "key": "7c02cfb3-294b-4b1a-baa4-9b7f6dac52f8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62760,7 +62782,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f6a7a280-5fd3-4647-bf33-28810ad6a8be",
+	      "key": "4d4f8f84-d36a-45c0-a971-bb1ea8748b54",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62791,7 +62813,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "abbc1a74-a6d9-4f41-bd5c-eba53a99a897",
+	      "key": "1d61d9fa-d844-434d-a6be-c55402ea40c2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62824,7 +62846,7 @@
 	}
 
 /***/ },
-/* 765 */
+/* 766 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -62833,7 +62855,7 @@
 	module.exports = {
 	  "title": "Intro to ReactJS - Lab",
 	  "slug": "intro-to-reactjs",
-	  "subtitle": "Notes for a Meetup Presentation",
+	  "summary": "Notes for a Meetup Presentation",
 	  "created": "Thu Nov 19 2015 17:12:40 GMT-0600 (CST)",
 	  "author": "Jeffrey R. Hicks",
 	  "type": "post",
@@ -62842,7 +62864,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e719e2c7-41c5-4f73-b578-42aac331b722",
+	      "key": "4c131a00-1941-45e9-af05-00f0953e8826",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62907,7 +62929,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "18fd0a2d-5299-4713-ac43-ec90d6568c9c",
+	      "key": "1c51710a-57ee-427b-b649-d5df64e57295",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62972,7 +62994,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "80d4c07a-e80e-4f23-b053-2edbc051ebff",
+	      "key": "adb8a51c-4647-4e41-ac92-b0e1e338cf45",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63120,7 +63142,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "767d4d98-1934-4b48-81cc-947108738a63",
+	      "key": "0588e042-2b38-4d02-a998-65f723199c6d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63358,7 +63380,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "34b40287-d79f-44de-b5fc-e22311af76f1",
+	      "key": "0400140d-f2f4-4036-88e9-439450514790",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63457,7 +63479,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "086ed66e-ae22-4c0a-a3d4-bfe67d8eb35c",
+	      "key": "cd0e6fd6-8f8c-429b-b3ba-347e85848b64",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63609,7 +63631,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2c10e66a-626f-4258-ab9c-e0c14189968f",
+	      "key": "2f7186c3-c727-44bd-b4d6-b91114615080",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63704,7 +63726,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "06f77297-84ed-4521-9b76-5327c7f5d4c5",
+	      "key": "0a9a0159-9a70-4626-8705-d8e12ba096bb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63842,7 +63864,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "db7dc39b-2752-42b9-91b8-ca487c911345",
+	      "key": "c43ec712-9264-4981-8091-757b4e59e410",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64037,7 +64059,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "edb455c4-cb9c-428e-a0d7-2c9dec78a7bf",
+	      "key": "452b6da1-5916-470a-8624-d13ff1feb48a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64162,7 +64184,7 @@
 	}
 
 /***/ },
-/* 766 */
+/* 767 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -64171,7 +64193,7 @@
 	module.exports = {
 	  "title": "Introduction to ES6",
 	  "slug": "introduction-to-es6",
-	  "subtitle": "Understanding, Building, Linting and Tooling for ES6",
+	  "summary": "Understanding, Building, Linting and Tooling for ES6",
 	  "created": "Mon Feb 23 2015 08:40:59 GMT-0600 (CST)",
 	  "author": "Jeffrey R. Hicks",
 	  "type": "post",
@@ -64180,7 +64202,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "3b53a624-df40-413c-a5d9-1c35ef5cbc18",
+	      "key": "aee2bd9b-d88c-4777-9412-dd6e8d03b043",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64192,7 +64214,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9a695022-1f02-4a55-a633-cfd7e0afea3b",
+	      "key": "205687d7-e63c-493b-a200-aefceec86fe8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64301,7 +64323,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "70e3c7e6-53f2-49a6-bab6-ade696224ea1",
+	      "key": "1841ce11-06e8-4233-a9a0-67fe50782131",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64350,7 +64372,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e148be12-41c5-4451-89ae-ea1488903357",
+	      "key": "f162baef-6518-4e9e-8e70-76874df27121",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64422,7 +64444,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c2a0320e-e754-4ec0-9784-7c2d5d032c4a",
+	      "key": "d489ba9a-0e8b-467f-9fdd-800dddf2dada",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64458,7 +64480,7 @@
 	}
 
 /***/ },
-/* 767 */
+/* 768 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -64467,7 +64489,7 @@
 	module.exports = {
 	  "title": "Offline Flux with LokiJS",
 	  "slug": "offline-flux-with-lokijs",
-	  "subtitle": "Data fetching and replication for Offline React Single Page Applications",
+	  "summary": "Data fetching and replication for Offline React Single Page Applications",
 	  "created": "Thu Mar 19 2015 20:14:25 GMT-0500 (CDT)",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -64476,7 +64498,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a973c84d-06a2-41ab-80bd-b2d6e9023779",
+	      "key": "7af79145-d5c3-41bd-93ac-a9a8a1594c11",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64574,7 +64596,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a3864b14-4b67-45f8-b68a-e066526dbbcc",
+	      "key": "9595e1a0-903a-40ea-942d-f115f04e2683",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64615,7 +64637,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "984efbd3-a630-4c03-b3a0-87ba5a2c1e05",
+	      "key": "79a655b4-ef4a-4e22-b962-f63fe1a989a6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64654,7 +64676,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "696ce91b-59ac-4ff4-8fdf-0bcfc88786c3",
+	      "key": "d342c765-a247-4517-b3f3-86ac53d1e060",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64680,7 +64702,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b9cfa427-8be5-400e-914e-3792553bba80",
+	      "key": "9d54d1d1-3888-4d5e-b60c-2dc24948cb2b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64758,7 +64780,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "85775d19-66a1-4d83-ba7b-5da2b601819e",
+	      "key": "0ea8c0bf-1879-44f2-95a6-80ee8ae90f83",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64787,7 +64809,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "856af21e-7aaa-4c67-9f3f-251ac0cc5d5e",
+	      "key": "7cd9e1ce-51ae-4c22-bc15-84a6d76f8a30",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64807,7 +64829,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1e14f24c-82ac-4a15-903a-37129400d636",
+	      "key": "141043a8-5c41-4b6b-833e-9e3936aab2fa",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64846,7 +64868,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5785917f-5470-42fe-a7d8-63a7b242ba82",
+	      "key": "2751669f-8a2c-4c21-8778-9a365ff22057",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64880,7 +64902,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ef8da548-bfe6-4c57-a811-6d45fcab9741",
+	      "key": "18071705-0976-4b6f-a5be-b276a2037d9c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64962,7 +64984,7 @@
 	}
 
 /***/ },
-/* 768 */
+/* 769 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -64971,7 +64993,7 @@
 	module.exports = {
 	  "title": "Schema Driven React Form Generation",
 	  "slug": "react-form-generation",
-	  "subtitle": "A case for data introspection standards in the React Ecosystem.",
+	  "summary": "A case for data introspection standards in the React Ecosystem.",
 	  "created": "Mon Mar 30 2015 09:19:12 GMT-0500 (CDT)",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -64980,7 +65002,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "203b720d-5989-4bde-b021-be577a05f7ae",
+	      "key": "81bb7dba-8ce4-4039-b467-48764bc778fd",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64999,7 +65021,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4133f583-6b74-46f3-83e1-8cf680dda49e",
+	      "key": "30acea05-7cac-410c-88e1-55383c7879fb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65106,7 +65128,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f8f7728b-7b95-4ea0-b3cd-071fcca00ac9",
+	      "key": "fdc781a3-4c6e-4281-a05a-3b7319c6c124",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65126,7 +65148,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c1bf9a7b-f3cc-4f71-9f93-f845b1a75959",
+	      "key": "d183180a-96a2-401f-8a64-ba8820c0f263",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65165,7 +65187,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f7866251-299d-4b98-afa4-5c81e21be825",
+	      "key": "8b0af6be-d638-49ec-b394-abebc47566ce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65199,7 +65221,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "448a1fc0-8991-47ab-b3e1-28c836367cc0",
+	      "key": "edd1e082-e323-431b-abf5-da79037330dc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65231,7 +65253,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "983abc97-7578-4336-a0c1-ca3bda588f40",
+	      "key": "74141246-b8eb-4cff-960a-af4589243d6e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65265,7 +65287,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "20990bf9-96bb-4901-b093-a90d42341eef",
+	      "key": "d014ce46-62e3-48fc-9210-badc8fe1ddf5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65348,7 +65370,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cedfbb24-5ad9-4a56-a9b8-187a1e8ed53e",
+	      "key": "f5193f50-79c6-4641-a596-1c46d6c30b65",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65382,7 +65404,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d03c7650-23bb-4a69-bc73-475ec1ddbbee",
+	      "key": "5a6816b2-81aa-4d97-a528-8ca8be4cff93",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65418,7 +65440,7 @@
 	}
 
 /***/ },
-/* 769 */
+/* 770 */
 /*!************************************!*\
   !*** ./content/posts/typefaces.md ***!
   \************************************/
@@ -65436,7 +65458,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "7a0dedf5-7394-4d35-ab21-ec8f568acfdb",
+	      "key": "f0b415ad-3489-4573-ac79-333e6081152f",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65460,7 +65482,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ad9fb9b7-723c-4e46-8b82-3862a172e530",
+	      "key": "5a94dddd-8fc6-4928-aa1a-6cd2baaed800",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65525,7 +65547,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a6389c0b-8500-40fb-b022-c53d178bd86a",
+	      "key": "c037c328-01d7-485f-8c80-c17609516e11",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65579,7 +65601,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67458f8b-d142-47d8-b76f-c22a88cfc7e2",
+	      "key": "25901ce5-8916-4309-aa9c-09c754f9d07b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65669,7 +65691,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "680c0756-9db6-435d-8084-199793073682",
+	      "key": "35e0e5ff-8ca6-4b78-b538-59d8eda7a135",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65771,7 +65793,7 @@
 	}
 
 /***/ },
-/* 770 */
+/* 771 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -65779,7 +65801,7 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 771);
+	var req = __webpack_require__(/*! ./talks/ */ 772);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
@@ -65787,19 +65809,19 @@
 	module.exports = talks;
 
 /***/ },
-/* 771 */
+/* 772 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 772,
-		"./es-intro-deck.md": 773,
-		"./es-intro.md": 774,
-		"./lds-intro.md": 775,
-		"./ui-principles-deck.md": 776,
-		"./ui-principles.md": 777
+		"./component-vs-layout.md": 773,
+		"./es-intro-deck.md": 774,
+		"./es-intro.md": 775,
+		"./lds-intro.md": 776,
+		"./ui-principles-deck.md": 777,
+		"./ui-principles.md": 778
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -65812,11 +65834,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 771;
+	webpackContext.id = 772;
 
 
 /***/ },
-/* 772 */
+/* 773 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -65825,7 +65847,7 @@
 	module.exports = {
 	  "title": "Component vs Layout",
 	  "slug": "component-vs-layout",
-	  "subtitle": null,
+	  "summary": null,
 	  "created": "2016-03-04T00:33:12.666Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -65833,14 +65855,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8bbe21e9-6c1c-45f8-8658-bee85c7d1098",
+	      "key": "a35888e3-656d-421c-a26b-17c570d29993",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 773 */
+/* 774 */
 /*!****************************************!*\
   !*** ./content/talks/es-intro-deck.md ***!
   \****************************************/
@@ -65849,7 +65871,7 @@
 	module.exports = {
 	  "title": "es-intro-deck",
 	  "slug": "es-intro-deck",
-	  "subtitle": null,
+	  "summary": null,
 	  "created": "2016-03-04T01:28:50.039Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -65858,14 +65880,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e6cecf2e-2bd2-4856-8de6-9cbdccc4097a",
+	      "key": "8888d409-f536-4681-a08d-0af3624fe8f0",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 774 */
+/* 775 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -65874,7 +65896,7 @@
 	module.exports = {
 	  "title": "Radical Data Management With Event Sourcing",
 	  "slug": "es-intro",
-	  "subtitle": "Crash Introduction to Event Sourcing, CQRS, and DDD with the intent of gaining clarity around Flux/Redux",
+	  "summary": "Popular MVC Web Applications use an ActiveRecord pattern while Flux/Redux is more closely motivated by an Event Sourcing architecture.  This does NOT present an incompatibility, but learning about Event Sourcing may support clarity of our application design.",
 	  "event": "Meetup",
 	  "location": "Iron Yard",
 	  "date": "2016/03/18 12:00 CST",
@@ -65887,7 +65909,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "29e604d1-0baf-4b7b-b9ba-65ce249a77d3",
+	      "key": "595a185c-8038-4d6f-bba9-243f1541acb0",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65901,7 +65923,7 @@
 	                "Active Record Pattern"
 	              ]
 	            },
-	            " where an ORM interfaces with an RDMBS.  When connecting Client-side MVC frameworks to these back-ends, tools like like Ember-Data and ",
+	            " where an ORM interfaces with an RDBMS.  When connecting Client-side MVC frameworks to these back-ends, tools like like Ember-Data and ",
 	            {
 	              "type": "link",
 	              "href": "http://www.js-data.io/",
@@ -65910,7 +65932,7 @@
 	                "js-data"
 	              ]
 	            },
-	            " (that have ",
+	            " have ",
 	            {
 	              "type": "link",
 	              "href": "http://www.js-data.io/docs/dshttpadapter",
@@ -65919,7 +65941,7 @@
 	                "http-adapters"
 	              ]
 	            },
-	            ") work well with the CRUD api&#39;s offered by our MVC web frameworks, but connecting our ",
+	            " that work well with the CRUD api&#39;s offered by our MVC web frameworks, but connecting our ",
 	            {
 	              "type": "link",
 	              "href": "https://facebook.github.io/flux/docs/overview.html",
@@ -65981,7 +66003,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Event Sourcing Resources"
+	            "Event Sourcing Background Resources"
 	          ]
 	        },
 	        {
@@ -66059,6 +66081,25 @@
 	                      ]
 	                    }
 	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://cqrs.nu/tutorial/cs/01-design",
+	                      "title": null,
+	                      "text": [
+	                        "CQRS introduces"
+	                      ]
+	                    },
+	                    " - Edument"
+	                  ]
 	                },
 	                ""
 	              ]
@@ -66069,7 +66110,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "DDD Resources"
+	            "DDD Background Resources"
 	          ]
 	        },
 	        {
@@ -66119,7 +66160,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Almost Relevant Resources"
+	            "Other Comparisons"
 	          ]
 	        },
 	        {
@@ -66129,11 +66170,35 @@
 	              "type": "listitem",
 	              "text": [
 	                {
-	                  "type": "link",
-	                  "href": "https://vimeo.com/108441214",
-	                  "title": null,
+	                  "type": "paragraph",
 	                  "text": [
-	                    "The Art Of Destroying Software"
+	                    {
+	                      "type": "link",
+	                      "href": "http://jaysoo.ca/2015/02/06/what-the-flux/",
+	                      "title": null,
+	                      "text": [
+	                        "What the flux"
+	                      ]
+	                    },
+	                    " - On Flux, DDD, and CQRS"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/reactjs/redux/issues/351",
+	                      "title": null,
+	                      "text": [
+	                        "Redux and it&#39;s relation to CQRS"
+	                      ]
+	                    }
 	                  ]
 	                }
 	              ]
@@ -66147,7 +66212,7 @@
 	}
 
 /***/ },
-/* 775 */
+/* 776 */
 /*!************************************!*\
   !*** ./content/talks/lds-intro.md ***!
   \************************************/
@@ -66156,7 +66221,7 @@
 	module.exports = {
 	  "title": "Lightning Design Systems In React",
 	  "slug": "lds-intro",
-	  "subtitle": null,
+	  "summary": null,
 	  "event": "Meetup",
 	  "location": "Iron Yard",
 	  "date": "2016/04/15 12:00 CST",
@@ -66169,14 +66234,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1fc491bd-1288-47b3-be7a-b0907ee07109",
+	      "key": "09a6c27a-a041-42ea-b9b8-234a18888bc1",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 776 */
+/* 777 */
 /*!*********************************************!*\
   !*** ./content/talks/ui-principles-deck.md ***!
   \*********************************************/
@@ -66185,7 +66250,7 @@
 	module.exports = {
 	  "title": "ui principles deck",
 	  "slug": "ui-principles-deck",
-	  "subtitle": null,
+	  "summary": null,
 	  "created": "2016-03-04T01:28:50.039Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -66194,14 +66259,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "4767a05c-852a-4778-b082-f944db945152",
+	      "key": "0380225c-e41d-49aa-bdce-87f0870e540b",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 777 */
+/* 778 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -66210,7 +66275,7 @@
 	module.exports = {
 	  "title": "Style Design Patterns & Disciplines",
 	  "slug": "ui-principles",
-	  "subtitle": "Re-usable CSS solutions to commonly occurring problems",
+	  "summary": "Re-usable CSS solutions to commonly occurring problems",
 	  "event": "Guest Lecture",
 	  "location": "Iron Yard",
 	  "date": "2016/03/04 10:00 CST",
@@ -66224,7 +66289,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "ea45fed9-5823-42ea-a77a-becf760a8435",
+	      "key": "56f9ae28-d454-45b7-8ed0-400e3e43022f",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66262,7 +66327,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ec1682d2-a154-4e71-882e-b1b609257a85",
+	      "key": "ec322d3f-3dca-4551-a436-83442be0b8cf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66382,7 +66447,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9e8f8fb0-7e3e-490a-a7be-95398b9a375b",
+	      "key": "94ff9650-9dc4-4e14-9150-5a09a2b92f90",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66417,7 +66482,7 @@
 	}
 
 /***/ },
-/* 778 */
+/* 779 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -66427,7 +66492,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 779 */
+/* 780 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -66459,7 +66524,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 780);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 781);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -66496,7 +66561,7 @@
 	              _react2.default.createElement(
 	                'div',
 	                { className: _ProfilePanel2.default.description },
-	                'Developer, designer, & presenter'
+	                'Software Developer & Instructor'
 	              )
 	            )
 	          )
@@ -66510,7 +66575,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 780 */
+/* 781 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -66520,7 +66585,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 781 */
+/* 782 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -66554,13 +66619,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
-	var _reactMotion = __webpack_require__(/*! react-motion */ 782);
+	var _reactMotion = __webpack_require__(/*! react-motion */ 783);
 	
 	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 796);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 797);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -66697,7 +66762,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 782 */
+/* 783 */
 /*!********************************************!*\
   !*** ./~/react-motion/lib/react-motion.js ***!
   \********************************************/
@@ -66709,34 +66774,34 @@
 	
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 	
-	var _Motion = __webpack_require__(/*! ./Motion */ 783);
+	var _Motion = __webpack_require__(/*! ./Motion */ 784);
 	
 	exports.Motion = _interopRequire(_Motion);
 	
-	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 790);
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 791);
 	
 	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 	
-	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 791);
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 792);
 	
 	exports.TransitionMotion = _interopRequire(_TransitionMotion);
 	
-	var _spring = __webpack_require__(/*! ./spring */ 793);
+	var _spring = __webpack_require__(/*! ./spring */ 794);
 	
 	exports.spring = _interopRequire(_spring);
 	
-	var _presets = __webpack_require__(/*! ./presets */ 794);
+	var _presets = __webpack_require__(/*! ./presets */ 795);
 	
 	exports.presets = _interopRequire(_presets);
 	
 	// deprecated, dummy warning function
 	
-	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 795);
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 796);
 	
 	exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ },
-/* 783 */
+/* 784 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/Motion.js ***!
   \**************************************/
@@ -66750,27 +66815,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 784);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 785);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 785);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 786);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 786);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 787);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 787);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 788);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 788);
+	var _raf = __webpack_require__(/*! raf */ 789);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 789);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 790);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -66985,7 +67050,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 784 */
+/* 785 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mapToZero.js ***!
   \*****************************************/
@@ -67012,7 +67077,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 785 */
+/* 786 */
 /*!******************************************!*\
   !*** ./~/react-motion/lib/stripStyle.js ***!
   \******************************************/
@@ -67041,7 +67106,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 786 */
+/* 787 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/stepper.js ***!
   \***************************************/
@@ -67092,7 +67157,7 @@
 	// array reference around.
 
 /***/ },
-/* 787 */
+/* 788 */
 /*!*****************************************************************!*\
   !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
   \*****************************************************************/
@@ -67134,13 +67199,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 788 */
+/* 789 */
 /*!***************************************!*\
   !*** ./~/react-motion/~/raf/index.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 787)
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 788)
 	  , root = typeof window === 'undefined' ? global : window
 	  , vendors = ['moz', 'webkit']
 	  , suffix = 'AnimationFrame'
@@ -67216,7 +67281,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 789 */
+/* 790 */
 /*!***************************************************!*\
   !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
   \***************************************************/
@@ -67255,7 +67320,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 790 */
+/* 791 */
 /*!***********************************************!*\
   !*** ./~/react-motion/lib/StaggeredMotion.js ***!
   \***********************************************/
@@ -67269,27 +67334,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 784);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 785);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 785);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 786);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 786);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 787);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 787);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 788);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 788);
+	var _raf = __webpack_require__(/*! raf */ 789);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 789);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 790);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -67525,7 +67590,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 791 */
+/* 792 */
 /*!************************************************!*\
   !*** ./~/react-motion/lib/TransitionMotion.js ***!
   \************************************************/
@@ -67539,31 +67604,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 784);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 785);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 785);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 786);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 786);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 787);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 792);
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 793);
 	
 	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 787);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 788);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 788);
+	var _raf = __webpack_require__(/*! raf */ 789);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 789);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 790);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -68021,7 +68086,7 @@
 	// that you've unmounted but that's still animating. This is where it lives
 
 /***/ },
-/* 792 */
+/* 793 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mergeDiff.js ***!
   \*****************************************/
@@ -68137,7 +68202,7 @@
 	// to loop through and find a key's index each time), but I no longer care
 
 /***/ },
-/* 793 */
+/* 794 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/spring.js ***!
   \**************************************/
@@ -68153,7 +68218,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _presets = __webpack_require__(/*! ./presets */ 794);
+	var _presets = __webpack_require__(/*! ./presets */ 795);
 	
 	var _presets2 = _interopRequireDefault(_presets);
 	
@@ -68168,7 +68233,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 794 */
+/* 795 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/presets.js ***!
   \***************************************/
@@ -68186,7 +68251,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 795 */
+/* 796 */
 /*!*******************************************!*\
   !*** ./~/react-motion/lib/reorderKeys.js ***!
   \*******************************************/
@@ -68212,7 +68277,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 796 */
+/* 797 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -68222,7 +68287,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 797 */
+/* 798 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -68232,7 +68297,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 798 */
+/* 799 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -68242,12 +68307,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 799),
+	  component: __webpack_require__(/*! ./Content */ 800),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 799 */
+/* 800 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -68283,7 +68348,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 800);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 801);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -68318,7 +68383,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 800 */
+/* 801 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
