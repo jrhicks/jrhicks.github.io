@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 799)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 800)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 780);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 781);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 782);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 783);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 798);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 799);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34366,7 +34366,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 779);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 780);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -35285,7 +35285,7 @@
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 771);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 772);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -59692,9 +59692,10 @@
 		"./intro-to-flux.md": 765,
 		"./intro-to-reactjs.md": 766,
 		"./introduction-to-es6.md": 767,
-		"./offline-flux-with-lokijs.md": 768,
-		"./react-form-generation.md": 769,
-		"./typefaces.md": 770
+		"./node-deployment.md": 768,
+		"./offline-flux-with-lokijs.md": 769,
+		"./react-form-generation.md": 770,
+		"./typefaces.md": 771
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -59729,7 +59730,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b1327ad1-fc77-4998-b482-0149571c5685",
+	      "key": "bd2f5749-b61b-4d6a-8689-dbf6f38faae3",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59804,7 +59805,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a33d21e1-28c5-4786-9b7b-6b7ac23c63f5",
+	      "key": "7ed46abb-07a4-4f7d-af79-eb7c8c50c182",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60176,7 +60177,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5c0202ff-7f97-47b5-b7f2-cad46fe783fe",
+	      "key": "221238a0-d758-405e-a7f8-141c5100327e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60355,7 +60356,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "29f46492-db4f-4846-8214-93e71a1dcaaa",
+	      "key": "61c82bf5-53e3-4944-b667-48368630f852",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60621,7 +60622,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8a3c3aa1-659d-4c31-b172-87b2438b97ab",
+	      "key": "71dc14dd-fe13-4a1a-8bc0-56a91af42d90",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60709,7 +60710,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "57b0b15b-392f-460d-8d3c-c4541e985842",
+	      "key": "9b9a962e-309c-4745-ab07-3083646ab82c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60728,7 +60729,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "89250f16-e49c-47ae-9679-653ea4bf609c",
+	      "key": "e442642a-59a9-45d0-aa6e-167c15a39aaa",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60772,7 +60773,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b613fc04-e041-48f7-8ebf-8505afb22f82",
+	      "key": "1524b458-61a6-4580-a1fc-4caa778317bd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60810,7 +60811,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8147dcaf-5609-4949-ad56-1db4103b0ee4",
+	      "key": "22c839d4-476b-4e01-b7b4-6dc914d60a5a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60871,7 +60872,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "add9d0d0-ff0a-4311-8491-b9172e1ea68f",
+	      "key": "201fd5fb-c77c-473e-bc8e-d8e217de5a24",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60961,7 +60962,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6de7d2cd-cdac-4963-b879-2cb252ea5a97",
+	      "key": "13b4ab9c-1763-47c7-8ade-2d2a95aa4999",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61160,7 +61161,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "4827cef7-d3c9-4c36-901b-bcbd1da890b8",
+	      "key": "2c04e1f4-96e4-4dbf-b21b-24ce378b7d93",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61200,7 +61201,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8098263a-2e73-402a-847c-a7d2be38969a",
+	      "key": "8ef7dd99-d140-419d-bf9c-1c39cce3b879",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61243,7 +61244,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6db72bd4-5b10-47b2-b40f-09f9ff20bd3c",
+	      "key": "4238dc04-3da0-4871-8268-f3d2803d7957",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61326,7 +61327,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0428a154-a11c-4438-9ab0-a036b295426f",
+	      "key": "8c4fe502-ac8e-4ed6-9a56-8529dfa8eedb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61695,7 +61696,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3cb1621d-ca5d-4e51-9c6a-e43ef9f4112a",
+	      "key": "f67e0b78-9053-4b26-b869-652a74cfbac7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61790,7 +61791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "39e812be-28c3-4e89-9cb5-4f310d49c6e5",
+	      "key": "4f73182b-1c30-4033-9c9f-c644a0b1b19f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61856,7 +61857,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e603f0e7-d6a0-4262-87a3-2c414036f029",
+	      "key": "08329e90-a0c9-4603-8d22-8af126891ae9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62005,7 +62006,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dba98eb3-9662-45e6-93ef-1ff491a4cbae",
+	      "key": "deae1015-6a3c-43a0-a6ae-a4c21a65ec98",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62140,7 +62141,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b818488b-1d1d-4325-aceb-3ea89406e6c7",
+	      "key": "94049042-cde6-4ddc-8876-cb8d4df107db",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62183,7 +62184,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "66067e62-1a0e-49a7-80cd-b0502ad80a08",
+	      "key": "84a0ffc8-d0b6-4786-8f6c-ac0157ca313d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62203,7 +62204,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8fbfba1b-d85d-4db9-baac-2fdcfb34ecc9",
+	      "key": "09f0fdf2-f1e9-4c60-8b6b-a201aa5ff7ea",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62223,7 +62224,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8c2d4e42-e190-42b2-a5a5-c5dd92b17081",
+	      "key": "166047d7-321e-4868-ab18-d1404f1edc92",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62249,7 +62250,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aa366510-261b-4fec-a62b-2995ad5c2114",
+	      "key": "457b949e-9f44-4f37-958a-d4ac8d609831",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62275,7 +62276,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2f980f48-2b78-41f2-85d2-32ca89ef16fb",
+	      "key": "a732d27c-2b65-4b67-962b-8f9ee5cd4e82",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62295,7 +62296,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "200eca25-ab3a-44d7-8815-642fa79a949f",
+	      "key": "fefbee1f-69d0-480d-b516-087a91690e01",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62360,7 +62361,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b21d9e7b-ae22-482a-874f-9c685ebc7ab5",
+	      "key": "76618dda-25d7-45d1-a0e9-2eab9ec40a0d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62374,7 +62375,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b4be360f-6081-4a0a-b009-0206c5d1370c",
+	      "key": "f703794e-2e32-4ffd-83e9-ff98d2a5711c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62433,7 +62434,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8c56ee18-65b4-4932-8782-4443d18566b4",
+	      "key": "dd7d62fc-a3c8-4223-aa19-616961b96f97",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62476,7 +62477,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bc5da7f5-48bc-40b6-bd42-d787dbd60851",
+	      "key": "f7c6df51-de49-41dd-b4e9-cfde26876098",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62535,7 +62536,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "803fc9f2-2562-45cd-9baf-41049e689d29",
+	      "key": "0282d08e-8fdb-4bff-9e28-44efb83f36b5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62605,7 +62606,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "30c41b79-ce61-4aea-9406-9352bbfeff51",
+	      "key": "4be5cb48-d1c1-47be-bdcc-182f74c1c943",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62668,7 +62669,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f3565e06-ee7c-40b4-ad0e-75941f7b3606",
+	      "key": "cece2c5a-fec7-449f-bcb3-f8efcec38f3b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62739,7 +62740,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "05362501-2527-4e76-bbc4-4801be7b6ac8",
+	      "key": "7125edb2-d863-4cb7-bda9-920e49d3b156",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62782,7 +62783,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03cc1dba-6ed1-45b5-9b48-61cb80a11f04",
+	      "key": "80f2dbe0-6051-4c72-85fa-079f80f15030",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62813,7 +62814,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4119cf73-b087-4203-a14c-9fe1b73a42f4",
+	      "key": "7715e99e-51dc-4692-aa8f-651320e49260",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62864,7 +62865,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "7b1e20b7-4ca4-4c5f-adf2-43c4a76525ca",
+	      "key": "60e4f5d7-ab6a-4f1a-beaf-3c4ba447f15e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62929,7 +62930,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c09ba267-1a54-434c-827d-519df7bc9b09",
+	      "key": "7b67f31c-c6ca-4b47-bd32-f7b9d4c8c02a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62994,7 +62995,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "85fca9b1-3040-446a-912e-9c9858005dc2",
+	      "key": "6463eff1-4117-4b26-a41a-49a70985ed94",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63142,7 +63143,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ae862e86-7b03-409b-bae3-e43f26db27b3",
+	      "key": "175c0304-2ead-42e3-badc-d333a542bdc8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63380,7 +63381,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d8067e24-2bd8-473b-b98e-de7e0b77c0fd",
+	      "key": "7cff3ccb-495c-47d0-a492-f12d0fd35fa1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63479,7 +63480,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7c60dee4-8ca7-4a03-a61e-92fa415deaca",
+	      "key": "0950bf82-b99e-45d6-9865-b788b071cce0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63631,7 +63632,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a3659cd4-a13e-43d7-8840-044d58c14ad2",
+	      "key": "2912763e-5191-46d7-b1d0-c6b53686d5a4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63726,7 +63727,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "16660602-38a1-4cae-bc44-e87316d8c635",
+	      "key": "91915333-4083-44e4-9f63-f035c4e865c8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63864,7 +63865,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ff86c0ee-0c7e-4c18-b563-aae549718ece",
+	      "key": "2b95c64a-5cbe-466c-993e-b8a5d5a35b6b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64059,7 +64060,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "94244216-72dc-499c-9f13-41a5ea1598e9",
+	      "key": "73739089-1bf1-4440-b23a-8f8979049090",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64202,7 +64203,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0e57c861-ded2-42fd-8a68-472ba0c7cee7",
+	      "key": "6a0065f2-c1ec-421b-8a77-399aa3724176",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64214,7 +64215,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dd0efdfd-7208-4920-9beb-b8061e06b356",
+	      "key": "dcf59417-0a80-4c00-ba81-c2e3a210f98f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64323,7 +64324,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4d62cd66-3821-43cb-affd-0777039519e6",
+	      "key": "eb0dedfd-0a89-4849-b9f7-e2446076105b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64372,7 +64373,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f84ab8b5-7294-4094-af7c-120e7b21df4d",
+	      "key": "ed958667-fa67-40d4-afc3-4fab5291bcce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64444,7 +64445,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "69e860ea-855a-4b53-ad7f-13fe513666b3",
+	      "key": "83aa971c-8e64-4b73-8375-25d5de96e1a6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64481,6 +64482,831 @@
 
 /***/ },
 /* 768 */
+/*!******************************************!*\
+  !*** ./content/posts/node-deployment.md ***!
+  \******************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "2016 Devops Review",
+	  "slug": "node-deployment",
+	  "summary": "Personal notes for reviewing devops",
+	  "created": "April 07 2016",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "cover": true,
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "d00b75de-91b1-4e65-87ad-6c2f8e2c9c38",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Overview Resources"
+	          ],
+	          "level": 2,
+	          "raw": "Overview Resources"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://shop.oreilly.com/product/0636920039297.do",
+	                      "title": null,
+	                      "text": [
+	                        "Infrastructure as Code"
+	                      ]
+	                    },
+	                    " - O&#39;Reilly Book"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "link",
+	                          "href": "https://www.youtube.com/watch?v=a4PuAkI7uGg&amp;index=6&amp;list=PLK4VB0cauli7-_RIvpmn651ePtddw9_Fp",
+	                          "title": null,
+	                          "text": [
+	                            "Operability.io Talk"
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://en.wikipedia.org/wiki/DevOps",
+	                      "title": null,
+	                      "text": [
+	                        "Devops"
+	                      ]
+	                    },
+	                    " - Wikipedia"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://devopsconferences.org/regions/usa-canada",
+	                      "title": null,
+	                      "text": [
+	                        "2016 Devops Conferences"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "b2a72de6-4fc8-4e01-974f-c0d205e92011",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Configuration Management &amp; Deployment"
+	          ],
+	          "level": 2,
+	          "raw": "Configuration Management & Deployment"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://capistranorb.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Capistrano"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "http://railscasts.com/episodes/133-capistrano-tasks",
+	                              "title": null,
+	                              "text": [
+	                                "Ryan Bates railscasts on Capistrano Tasks"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://spin.atomicobject.com/2012/07/26/standalone-puppet-with-capistrano/",
+	                              "title": null,
+	                              "text": [
+	                                "Standalone Puppet with Capistrano"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://puppet.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Puppet"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://vimeo.com/60768300",
+	                              "title": null,
+	                              "text": [
+	                                "What is Puppet?"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://learn.puppet.com/catalog",
+	                              "title": null,
+	                              "text": [
+	                                "eLearning Catalog"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.terraform.io/intro/use-cases.html",
+	                      "title": null,
+	                      "text": [
+	                        "Terraform"
+	                      ]
+	                    },
+	                    " - Cloud configuration"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.ansible.com",
+	                      "title": null,
+	                      "text": [
+	                        "Ansible"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://saltstack.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Salt"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://puppet.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Chef"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "6f50db50-76bb-4d22-aaae-ab38f3d838b9",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Continuous Integrations Tools"
+	          ],
+	          "level": 2,
+	          "raw": "Continuous Integrations Tools"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://jenkins.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Jenkins"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.atlassian.com/software/bamboo",
+	                      "title": null,
+	                      "text": [
+	                        "Bamboo"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://travis-ci.org/",
+	                      "title": null,
+	                      "text": [
+	                        "Travis CI"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://concourse.ci/",
+	                      "title": null,
+	                      "text": [
+	                        "Concourse CI"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.go.cd/",
+	                      "title": null,
+	                      "text": [
+	                        "Go.CD"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://loadimpact.com/",
+	                      "title": null,
+	                      "text": [
+	                        "LoadImpact"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "c78f86df-bbfe-49e6-a937-f1333dabbaed",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Containerization"
+	          ],
+	          "level": 2,
+	          "raw": "Containerization"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.docker.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Docker"
+	                      ]
+	                    },
+	                    " - Mechanism"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://mesos.apache.org/",
+	                      "title": null,
+	                      "text": [
+	                        "Mesos"
+	                      ]
+	                    },
+	                    " - Imperative"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://kubernetes.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Kubernetes"
+	                      ]
+	                    },
+	                    " - Declarative"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://getcarina.com/",
+	                      "title": null,
+	                      "text": [
+	                        "GetCarina"
+	                      ]
+	                    },
+	                    " - Rackspace Container Service"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "73c25eb3-6cc2-4b53-97f0-7150ef5d81b1",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Monitoring, Security"
+	          ],
+	          "level": 2,
+	          "raw": "Monitoring, Security"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://serverspec.org/",
+	                      "title": null,
+	                      "text": [
+	                        "ServerSpec"
+	                      ]
+	                    },
+	                    " - Configuration verification"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.upguard.com/",
+	                      "title": null,
+	                      "text": [
+	                        "upguard"
+	                      ]
+	                    },
+	                    " - Configuration &amp; threat monitoring"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.vaultproject.io/",
+	                      "title": null,
+	                      "text": [
+	                        "HashiCorp Vault"
+	                      ]
+	                    },
+	                    " - Secret key management"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://letsencrypt.org/",
+	                      "title": null,
+	                      "text": [
+	                        "Lets Encrypt"
+	                      ]
+	                    },
+	                    " - Free SSL Certificates?"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://pm2.keymetrics.io/",
+	                      "title": null,
+	                      "text": [
+	                        "PM2"
+	                      ]
+	                    },
+	                    " - Production process manager"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://prometheus.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Prometheus"
+	                      ]
+	                    },
+	                    " - Monitor server load"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.sysdig.org/",
+	                      "title": null,
+	                      "text": [
+	                        "Sysdig"
+	                      ]
+	                    },
+	                    " - Universal System Visibility\nWith Native Container Support"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.owasp.org/index.php/OWASP_Dependency_Check",
+	                      "title": null,
+	                      "text": [
+	                        "OWASP Dependency Check"
+	                      ]
+	                    },
+	                    " - Scan source code dependencies for known vulnerabilities"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/michenriksen/gitrob",
+	                      "title": null,
+	                      "text": [
+	                        "Gitrob"
+	                      ]
+	                    },
+	                    " - Scan source code for secret key leaks"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "95e13010-33ef-43ac-9457-777523e7246e",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Configuration Guides"
+	          ],
+	          "level": 2,
+	          "raw": "Configuration Guides"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.upguard.com/articles/the-7-configuration-management-tools-you-need-to-know",
+	                      "title": null,
+	                      "text": [
+	                        "7 CM Tools you need to know about"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://certsimple.com/blog/deploy-node-on-linux",
+	                      "title": null,
+	                      "text": [
+	                        "How to deploy your node app on Linux, 2016 edition"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-14-04",
+	                      "title": null,
+	                      "text": [
+	                        "How To Set Up a Node.js Application for Production on Ubuntu 14.04"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 769 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -64498,7 +65324,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c298a1c5-5c09-4665-8920-1cbcdc2f2d87",
+	      "key": "403a61d4-7982-4fff-929d-cefb4d41e717",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64596,7 +65422,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f8f642b9-f076-4655-b807-407ce47a7bfa",
+	      "key": "fc4fbff6-c760-4396-bd6c-6135d56c9a04",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64637,7 +65463,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a24b6b49-f6b4-4d11-a94a-fbeba7f48285",
+	      "key": "163a6a65-ad42-4943-be8a-6656770ae8d8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64676,7 +65502,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "664269c8-cbe1-45c3-886e-3c7abad0744f",
+	      "key": "ec80b0bf-46a1-46a4-b1b9-c22117a2be6e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64702,7 +65528,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3b91944e-6f89-45b0-9147-b46592784729",
+	      "key": "99c5a32d-d426-48ee-80d7-d7710c1ea4bf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64780,7 +65606,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d6257a9e-64cd-4451-9835-95d49c74cdac",
+	      "key": "10656082-7513-4583-86ae-c65a18b842b2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64809,7 +65635,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9329eaf4-8dfe-4320-9f26-e2eb588068cf",
+	      "key": "6b494442-e35b-4715-850a-7067f963d330",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64829,7 +65655,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cee04a6a-5765-4650-b15a-3c2961e4fcac",
+	      "key": "27797310-5203-474b-a18d-32b541e4791c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64868,7 +65694,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bf39991c-1feb-4cf3-8705-8f5d4e25d350",
+	      "key": "c500df49-d116-4c4c-be08-b66f54247953",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64902,7 +65728,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b585df1c-75ae-46fe-b311-88d224ad46d0",
+	      "key": "b70213d4-0fb3-4d51-aa66-3e8df4b439c3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64984,7 +65810,7 @@
 	}
 
 /***/ },
-/* 769 */
+/* 770 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -65002,7 +65828,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e603f71b-456f-4a66-86c0-2d96400f3d5b",
+	      "key": "ecaf93b8-71e8-4b80-9e90-95c4651026f8",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65021,7 +65847,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "96176d09-03b1-4667-8cda-8106d6bfdba6",
+	      "key": "8ee515c5-4ade-4ba7-ab68-7385df84d22c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65128,7 +65954,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "32e92573-9b32-4eb1-a4f0-e84c5b1d0b97",
+	      "key": "21fbf9d0-c0e7-47a9-b7ed-fbbfd74ac2cf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65148,7 +65974,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7486429e-8fbe-4376-bb5e-96d22dcbd7d4",
+	      "key": "2915f034-b321-43b8-a44a-f22251dc9da4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65187,7 +66013,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3be0d6f1-b1bc-4e75-b035-9b3c2c9bee18",
+	      "key": "7f78d65c-db0a-4e83-bb64-6b510f884f21",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65221,7 +66047,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2fe768f1-6c5e-4cd3-9f99-eadd1bfd7c64",
+	      "key": "4b1b809d-138c-47ff-a13c-fe658872dec0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65253,7 +66079,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7d35c723-c097-4148-9ce5-968a2496d1c8",
+	      "key": "a1ad63ca-6664-4d3c-bb23-78c29e50637f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65287,7 +66113,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1e4a070f-7692-4eb9-8f66-b34089dc725e",
+	      "key": "6597668d-f506-4667-ac31-d4c773df12e6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65370,7 +66196,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5a160956-aae2-4dcb-a40e-407c94ade126",
+	      "key": "9ba7a7ca-ae7f-4e22-a4e5-a508670b2d84",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65404,7 +66230,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8d805d6d-cd58-4b04-9473-cbb41636f34a",
+	      "key": "2a348db1-5c4f-4a61-9f47-75b6c01a1a19",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65440,7 +66266,7 @@
 	}
 
 /***/ },
-/* 770 */
+/* 771 */
 /*!************************************!*\
   !*** ./content/posts/typefaces.md ***!
   \************************************/
@@ -65458,7 +66284,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "acc6f03b-9505-4b38-bc09-03aef1fa728f",
+	      "key": "771af03c-6713-44ff-900f-86859074d73a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65482,7 +66308,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9aed8fd7-8243-41fb-809a-0a87bc7a1368",
+	      "key": "0820e56e-2f4a-484e-ab2a-41acf8d218bf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65547,7 +66373,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b798db64-6fc5-41ce-9d30-5d3c829072e9",
+	      "key": "400bb5b8-1c64-4dcb-bbba-43114fc03bf4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65601,7 +66427,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4a81ac67-2626-46a0-a4b6-6b4cbe564ecc",
+	      "key": "45603aa1-9563-49a7-a175-43463ba974dd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65691,7 +66517,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0b8bf68f-5e86-4cb7-aec1-b8328e6a540e",
+	      "key": "af4d02dd-2312-44b6-bd44-cfc00b7de504",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65793,7 +66619,7 @@
 	}
 
 /***/ },
-/* 771 */
+/* 772 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -65801,7 +66627,7 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 772);
+	var req = __webpack_require__(/*! ./talks/ */ 773);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
@@ -65809,19 +66635,19 @@
 	module.exports = talks;
 
 /***/ },
-/* 772 */
+/* 773 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 773,
-		"./es-intro-deck.md": 774,
-		"./es-intro.md": 775,
-		"./lds-intro.md": 776,
-		"./ui-principles-deck.md": 777,
-		"./ui-principles.md": 778
+		"./component-vs-layout.md": 774,
+		"./es-intro-deck.md": 775,
+		"./es-intro.md": 776,
+		"./lds-intro.md": 777,
+		"./ui-principles-deck.md": 778,
+		"./ui-principles.md": 779
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -65834,11 +66660,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 772;
+	webpackContext.id = 773;
 
 
 /***/ },
-/* 773 */
+/* 774 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -65855,14 +66681,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "262ed2f9-143c-4126-be02-0dc2b16e37c8",
+	      "key": "26faf0e8-e7c5-49e2-9bfa-650ee3bd924a",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 774 */
+/* 775 */
 /*!****************************************!*\
   !*** ./content/talks/es-intro-deck.md ***!
   \****************************************/
@@ -65880,14 +66706,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8db52454-bcd1-4e82-bed4-d685a3002dc3",
+	      "key": "c8f81db0-7b67-488f-a213-cba219523aed",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 775 */
+/* 776 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -65909,7 +66735,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "9b000c0b-fc89-4d78-8070-4031066ab81e",
+	      "key": "dd36ae73-9f4f-4e3e-8f12-bd8445201561",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66212,7 +67038,7 @@
 	}
 
 /***/ },
-/* 776 */
+/* 777 */
 /*!************************************!*\
   !*** ./content/talks/lds-intro.md ***!
   \************************************/
@@ -66234,14 +67060,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "bb8e4b3d-bfc0-4a99-9d06-0d1968738a07",
+	      "key": "06012e9b-d696-4c27-bb3c-17bef87b8cc1",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 777 */
+/* 778 */
 /*!*********************************************!*\
   !*** ./content/talks/ui-principles-deck.md ***!
   \*********************************************/
@@ -66259,14 +67085,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8d20a9b4-e00f-4c1d-8213-5b0998a46fde",
+	      "key": "5255341e-084a-4573-a143-2ab26fe0f54b",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 778 */
+/* 779 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -66289,7 +67115,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "04661ade-7267-4954-8484-11bd27d210ee",
+	      "key": "ad1db6f1-2b1c-4afa-a1a0-3ed3a32f3336",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66327,7 +67153,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "698532d5-4e00-48f8-9de5-c86dd1984f63",
+	      "key": "3667256a-56b4-42bb-bbc6-3f506864680f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66447,7 +67273,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2a8c84c1-2d69-495b-b456-41c49d1986b9",
+	      "key": "68e24ada-7a1d-4a94-b37b-010d7497b425",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66482,7 +67308,7 @@
 	}
 
 /***/ },
-/* 779 */
+/* 780 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -66492,7 +67318,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 780 */
+/* 781 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -66524,7 +67350,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 781);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 782);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -66575,7 +67401,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 781 */
+/* 782 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -66585,7 +67411,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 782 */
+/* 783 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -66619,13 +67445,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
-	var _reactMotion = __webpack_require__(/*! react-motion */ 783);
+	var _reactMotion = __webpack_require__(/*! react-motion */ 784);
 	
 	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 797);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 798);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -66762,7 +67588,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 783 */
+/* 784 */
 /*!********************************************!*\
   !*** ./~/react-motion/lib/react-motion.js ***!
   \********************************************/
@@ -66774,34 +67600,34 @@
 	
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 	
-	var _Motion = __webpack_require__(/*! ./Motion */ 784);
+	var _Motion = __webpack_require__(/*! ./Motion */ 785);
 	
 	exports.Motion = _interopRequire(_Motion);
 	
-	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 791);
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 792);
 	
 	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 	
-	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 792);
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 793);
 	
 	exports.TransitionMotion = _interopRequire(_TransitionMotion);
 	
-	var _spring = __webpack_require__(/*! ./spring */ 794);
+	var _spring = __webpack_require__(/*! ./spring */ 795);
 	
 	exports.spring = _interopRequire(_spring);
 	
-	var _presets = __webpack_require__(/*! ./presets */ 795);
+	var _presets = __webpack_require__(/*! ./presets */ 796);
 	
 	exports.presets = _interopRequire(_presets);
 	
 	// deprecated, dummy warning function
 	
-	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 796);
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 797);
 	
 	exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ },
-/* 784 */
+/* 785 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/Motion.js ***!
   \**************************************/
@@ -66815,27 +67641,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 785);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 786);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 786);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 787);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 787);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 788);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 788);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 789);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 789);
+	var _raf = __webpack_require__(/*! raf */ 790);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 790);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 791);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -67050,7 +67876,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 785 */
+/* 786 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mapToZero.js ***!
   \*****************************************/
@@ -67077,7 +67903,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 786 */
+/* 787 */
 /*!******************************************!*\
   !*** ./~/react-motion/lib/stripStyle.js ***!
   \******************************************/
@@ -67106,7 +67932,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 787 */
+/* 788 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/stepper.js ***!
   \***************************************/
@@ -67157,7 +67983,7 @@
 	// array reference around.
 
 /***/ },
-/* 788 */
+/* 789 */
 /*!*****************************************************************!*\
   !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
   \*****************************************************************/
@@ -67199,13 +68025,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 789 */
+/* 790 */
 /*!***************************************!*\
   !*** ./~/react-motion/~/raf/index.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 788)
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 789)
 	  , root = typeof window === 'undefined' ? global : window
 	  , vendors = ['moz', 'webkit']
 	  , suffix = 'AnimationFrame'
@@ -67281,7 +68107,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 790 */
+/* 791 */
 /*!***************************************************!*\
   !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
   \***************************************************/
@@ -67320,7 +68146,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 791 */
+/* 792 */
 /*!***********************************************!*\
   !*** ./~/react-motion/lib/StaggeredMotion.js ***!
   \***********************************************/
@@ -67334,27 +68160,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 785);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 786);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 786);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 787);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 787);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 788);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 788);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 789);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 789);
+	var _raf = __webpack_require__(/*! raf */ 790);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 790);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 791);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -67590,7 +68416,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 792 */
+/* 793 */
 /*!************************************************!*\
   !*** ./~/react-motion/lib/TransitionMotion.js ***!
   \************************************************/
@@ -67604,31 +68430,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 785);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 786);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 786);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 787);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 787);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 788);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 793);
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 794);
 	
 	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 788);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 789);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 789);
+	var _raf = __webpack_require__(/*! raf */ 790);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 790);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 791);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -68086,7 +68912,7 @@
 	// that you've unmounted but that's still animating. This is where it lives
 
 /***/ },
-/* 793 */
+/* 794 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mergeDiff.js ***!
   \*****************************************/
@@ -68202,7 +69028,7 @@
 	// to loop through and find a key's index each time), but I no longer care
 
 /***/ },
-/* 794 */
+/* 795 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/spring.js ***!
   \**************************************/
@@ -68218,7 +69044,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _presets = __webpack_require__(/*! ./presets */ 795);
+	var _presets = __webpack_require__(/*! ./presets */ 796);
 	
 	var _presets2 = _interopRequireDefault(_presets);
 	
@@ -68233,7 +69059,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 795 */
+/* 796 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/presets.js ***!
   \***************************************/
@@ -68251,7 +69077,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 796 */
+/* 797 */
 /*!*******************************************!*\
   !*** ./~/react-motion/lib/reorderKeys.js ***!
   \*******************************************/
@@ -68277,7 +69103,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 797 */
+/* 798 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -68287,7 +69113,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 798 */
+/* 799 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -68297,7 +69123,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 799 */
+/* 800 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -68307,12 +69133,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 800),
+	  component: __webpack_require__(/*! ./Content */ 801),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 800 */
+/* 801 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -68348,7 +69174,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 801);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 802);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -68383,7 +69209,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 801 */
+/* 802 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
