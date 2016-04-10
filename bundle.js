@@ -59730,7 +59730,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "cca76755-820b-4dca-a9c7-f61baaac637d",
+	      "key": "40ae0957-04d1-4f3e-aa9c-4625ebd508f8",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59805,7 +59805,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5ba6728b-8035-42d0-a711-081ab443dac3",
+	      "key": "8a1ff960-04bf-4875-a003-50eb5a596ac5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60177,7 +60177,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "89ccd068-49a3-4fd8-8899-6bee92768794",
+	      "key": "86a674bb-dfbd-4d61-8ecd-8d751766d30b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60356,7 +60356,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "98b9cb25-76b1-4e49-af2e-2e3adc528e31",
+	      "key": "e51b65d2-6018-4d56-b7c7-497b6e6321af",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60622,7 +60622,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "97157213-3c41-4903-8ff6-4d4ab3c0d57b",
+	      "key": "f8232ca3-90c8-46c3-887b-54e2d70783f6",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60710,7 +60710,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "32120007-b509-4c28-bfd2-630d3be8e1e0",
+	      "key": "ddaf96e7-f41c-4b39-819f-14c48b186c8b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60729,7 +60729,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7b637ea6-8b00-41c0-872b-670ee4cf5e29",
+	      "key": "5f8c067c-9a5e-4f29-b31d-d294513288cb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60773,7 +60773,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ea266a40-1e1d-48a4-89f2-c4e506d46c7f",
+	      "key": "7913c98f-71a0-4441-9597-1ae7055ee372",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60811,7 +60811,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "63518de0-a14d-41c2-bd65-c8d92e9c53d0",
+	      "key": "3ea82eee-09eb-4ca4-9005-4011f52af3a5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60872,7 +60872,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4078fbc8-5ae0-40c7-a2cc-d5a22c188125",
+	      "key": "b6bc4545-9c05-4bcc-9cc9-8380f11e8bd6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60962,7 +60962,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8cad8880-9bd8-4d30-b6c0-55138caf387b",
+	      "key": "b682280b-4145-44fe-beca-7fc8d6ed8c79",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61161,7 +61161,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "6ceac4ee-5f60-4bb7-8730-a2fe7a10bd2c",
+	      "key": "bba168f0-078c-4f95-b0d8-2f8ca398531d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61201,7 +61201,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "34420763-3663-4af3-8709-5efdde428ae9",
+	      "key": "40ef83ad-a69f-407a-87e6-cf5ee6f493ed",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61244,7 +61244,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e8504ec6-f56d-4a8d-ad56-976dcd8c2d01",
+	      "key": "d9925b0c-c4ee-484b-b8cd-1fb4538ca628",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61327,7 +61327,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "52dbcc9e-78a7-4a4f-b3e0-c7bc1701ae42",
+	      "key": "eed1bd38-1584-4bf9-b182-f63c3b53871b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61696,7 +61696,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "783b7688-d25c-4ceb-8e39-de91b6edffc3",
+	      "key": "a8913a94-8372-452b-8097-d3b20affdeb2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61791,7 +61791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d1ba3097-3f91-442b-ba50-8ead363786d1",
+	      "key": "19eb0f74-76ed-48da-bb5b-87165cb96d61",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61857,7 +61857,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3ffa2bf1-bdb2-4407-b3bd-fe58c9b5d82e",
+	      "key": "88cd1411-719e-46f5-af37-83d5250f38b2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62006,7 +62006,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d34a6aa7-21ce-4e8b-b3e4-b85ba71187d4",
+	      "key": "ca0a9dc3-0e77-44bc-8fe9-b43d6d40c42c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62141,7 +62141,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "fa21bff9-8136-4c27-9418-104b6c4b28ec",
+	      "key": "c9c25c41-2377-4142-a8e8-7c60f3ac2218",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62184,7 +62184,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "545cfb50-10c6-4021-b638-dcbcdebfda9d",
+	      "key": "b9ba844e-7f2f-4627-a178-e8ec21ba292f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62204,7 +62204,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "23165bb5-3342-4565-a4fa-5013beaac573",
+	      "key": "fa401d55-bfc6-4b48-bc4f-a172877dc2c5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62224,7 +62224,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f2093fb0-d1cd-4e53-b50b-3b2f22252e82",
+	      "key": "d6d65a64-8ac8-4a90-bc79-ff797540ad9d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62250,7 +62250,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e35d5374-393e-4532-98c0-f02d731cf568",
+	      "key": "db0311c9-1164-40f9-a160-a74ed05c2bbd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62276,7 +62276,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "403b129d-86dc-47ce-81d1-98854ad83a57",
+	      "key": "5d83faa6-eb99-4d29-bbee-d5bccb8a0170",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62296,7 +62296,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3cc02c90-e624-49c0-bd6d-17fcc3e73d94",
+	      "key": "5fdec0ee-5e6d-448c-889f-a39bfd6fd0ab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62361,7 +62361,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "85a55d54-e975-40a8-97e6-6209b951018b",
+	      "key": "f3dbd996-5e0b-4527-8316-f9957052d4cd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62375,7 +62375,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "de8158b0-8b27-4d8e-b5c6-e1152c51d089",
+	      "key": "e3af32bf-736c-4a3b-8459-bbba147a9b27",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62434,7 +62434,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bf2ecd31-41cf-4076-9128-1699dc475fb5",
+	      "key": "ec358f0c-660e-4e15-bc25-58ba00ab3360",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62477,7 +62477,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4606c55a-720a-4d23-b129-1603e7babcbb",
+	      "key": "b3b01074-5c5f-4881-a8f0-01795c1cf8b2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62536,7 +62536,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c0253164-9f74-4914-9f87-c542d22e18e0",
+	      "key": "1210078b-5f2d-49a9-bb3d-1d5b8d9bc32c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62606,7 +62606,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "00892b4d-1932-4e7b-9e2a-00d7de1c3861",
+	      "key": "6bbf0c45-431b-4454-a826-b628be2e87de",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62669,7 +62669,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4e0d6dd4-1f8f-4dac-9b5c-c9c587b55d60",
+	      "key": "5f0b9a5a-1338-4237-bbc9-9cc8710e3dd1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62740,7 +62740,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ba1cbc4f-f61f-48a4-a5ea-efae9b820bbe",
+	      "key": "3bc07bf1-e774-4837-9488-b8d60e13747e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62783,7 +62783,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5025f638-ec90-4e70-a90f-db43b87a3866",
+	      "key": "b8042414-b8a6-4bcc-972d-9a515b3488b4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62814,7 +62814,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b067b9a7-573e-408e-96f6-2912c6f56390",
+	      "key": "da334637-ddca-4317-bc64-b848f6977b92",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62865,7 +62865,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "858ec3e4-ff22-4ce5-b6ba-86d541aa1a86",
+	      "key": "6405a163-26c3-42e7-b9f1-84266a13c075",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62930,7 +62930,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b27f3620-568b-4f49-86d8-70d09734db29",
+	      "key": "84683f39-1d55-4b55-9d81-187c438aa126",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62995,7 +62995,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9ca5570f-90f6-464c-8f95-4ac1622faf9e",
+	      "key": "6a89e2de-9610-47d2-9b6c-19f11fdfe850",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63143,7 +63143,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4e650138-4da1-4877-bae8-d23cc17924dd",
+	      "key": "e1f5d2c5-ade0-4e14-a0a6-2f0553dfdee4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63381,7 +63381,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a167e5c2-d125-4c54-990c-e50e93e41127",
+	      "key": "aa71556c-3498-442e-bf47-0f34c60f8366",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63480,7 +63480,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c41ae1f3-9445-4861-9d5d-cdb0cae78814",
+	      "key": "e2a6102f-524b-4ec1-b931-4157c2d0fb23",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63632,7 +63632,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9b8f253d-d9d9-4193-ac07-0b6583a7ff39",
+	      "key": "62de0c72-8bd1-467c-8c81-2775bffdfef2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63727,7 +63727,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "917228f0-11bc-4aa1-8319-c5a7c9f8a7a3",
+	      "key": "39c375c2-061e-4dcf-9d2d-c465ca34de31",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63865,7 +63865,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f4f57c22-db15-46ff-b77b-e04e42455ad7",
+	      "key": "0a40ce5b-0c6d-425b-8893-594c7d38076d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64060,7 +64060,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7d127604-d48f-4f3c-88d3-1d86f3785201",
+	      "key": "78dbd618-3473-4c46-aa58-7f1c6fa438c5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64203,7 +64203,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c743e6c2-e5f7-497e-8cfb-1f0cfd42477b",
+	      "key": "b15b567b-fea7-4c54-a041-15b0e31423f4",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64215,7 +64215,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a55b42bf-43de-4290-b91c-475e75a85fc1",
+	      "key": "63d4312a-b98b-4498-9432-719d9ae6d347",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64324,7 +64324,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9c1e4e69-b40c-4a5c-88e1-a520d2c6a069",
+	      "key": "2c3e00f4-6541-4b8a-86e5-091ae0b7020b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64373,7 +64373,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "855bf8f8-89ed-4ae7-8b88-8c7c389eb699",
+	      "key": "22bb0903-1e4d-47cc-bf3d-488dbe0dc6a0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64445,7 +64445,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f1686143-afae-47b2-ad4c-2448c53e01bc",
+	      "key": "e6a84a0f-2e56-4f69-aebc-98b8fb767439",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64499,140 +64499,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1d0c244d-d20f-431b-aaf7-7b3e226cbcab",
-	      "body": [
-	        {
-	          "type": "heading",
-	          "text": [
-	            "Books, Conferences &amp; Overviews"
-	          ],
-	          "level": 2,
-	          "raw": "Books, Conferences & Overviews"
-	        },
-	        {
-	          "type": "list",
-	          "body": [
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://shop.oreilly.com/product/0636920039297.do",
-	                      "title": null,
-	                      "text": [
-	                        "Infrastructure as Code"
-	                      ]
-	                    },
-	                    " - O&#39;Reilly Book"
-	                  ]
-	                },
-	                "",
-	                {
-	                  "type": "list",
-	                  "body": [
-	                    {
-	                      "type": "listitem",
-	                      "text": [
-	                        {
-	                          "type": "link",
-	                          "href": "https://www.youtube.com/watch?v=a4PuAkI7uGg&amp;index=6&amp;list=PLK4VB0cauli7-_RIvpmn651ePtddw9_Fp",
-	                          "title": null,
-	                          "text": [
-	                            "Operability.io Talk"
-	                          ]
-	                        }
-	                      ]
-	                    }
-	                  ],
-	                  "ordered": false
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://www.thoughtworks.com/radar/tools",
-	                      "title": null,
-	                      "text": [
-	                        "ThoughtWorks Tech Radar"
-	                      ]
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://www.amazon.com/gp/product/0321601912",
-	                      "title": null,
-	                      "text": [
-	                        "Continuous Delivery Book"
-	                      ]
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://devopsconferences.org/regions/usa-canada",
-	                      "title": null,
-	                      "text": [
-	                        "2016 Devops Conferences"
-	                      ]
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://en.wikipedia.org/wiki/DevOps",
-	                      "title": null,
-	                      "text": [
-	                        "Devops"
-	                      ]
-	                    },
-	                    " - Wikipedia"
-	                  ]
-	                },
-	                ""
-	              ]
-	            }
-	          ],
-	          "ordered": false
-	        }
-	      ]
-	    },
-	    {
-	      "type": "section",
-	      "key": "50b0a300-04a3-4288-a83f-54c7061a2344",
+	      "key": "d70298b1-709b-4193-afbc-b70661e40a8e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64645,6 +64512,158 @@
 	        {
 	          "type": "list",
 	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.ansible.com",
+	                      "title": null,
+	                      "text": [
+	                        "Ansible"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.thoughtworks.com/radar/tools/ansible",
+	                              "title": null,
+	                              "text": [
+	                                "ThoughtWorks Adopt Blip"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://sysadmincasts.com/episodes/47-zero-downtime-deployments-with-ansible-part-4-4",
+	                              "title": null,
+	                              "text": [
+	                                "Rolling Deployments with Ansible"
+	                              ]
+	                            },
+	                            " - Wow!"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "http://slash4.net/blog/deployment-automation/howto-use-ansible-to-setup-a-nodejs-gaming-application.html",
+	                              "title": null,
+	                              "text": [
+	                                "Use Ansible To Setup Node.js Application"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "http://docs.ansible.com/ansible/playbooks_vault.html",
+	                              "title": null,
+	                              "text": [
+	                                "Ansible Vault"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://github.com/jhaals/ansible-vault",
+	                              "title": null,
+	                              "text": [
+	                                "Ansible with HashiCorp Vault"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "http://docs.ansible.com/ansible/playbooks_best_practices.html",
+	                              "title": null,
+	                              "text": [
+	                                "Ansible Best Practices"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.youtube.com/watch?v=fwGrKXzocg4",
+	                              "title": null,
+	                              "text": [
+	                                "How Twitter Uses Ansible"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
 	            {
 	              "type": "listitem",
 	              "text": [
@@ -64697,6 +64716,25 @@
 	                                "Standalone Puppet with Capistrano"
 	                              ]
 	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://github.com/shipitjs/shipit",
+	                              "title": null,
+	                              "text": [
+	                                "Ship-it"
+	                              ]
+	                            },
+	                            " - Node.js Capistrano Clone"
 	                          ]
 	                        }
 	                      ]
@@ -64761,6 +64799,24 @@
 	                          ]
 	                        }
 	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.thoughtworks.com/radar/tools/puppet",
+	                              "title": null,
+	                              "text": [
+	                                "ThoughtWorks Trial Blip"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
 	                    }
 	                  ],
 	                  "ordered": false
@@ -64820,6 +64876,26 @@
 	                              ]
 	                            }
 	                          ]
+	                        },
+	                        "",
+	                        {
+	                          "type": "list",
+	                          "body": [
+	                            {
+	                              "type": "listitem",
+	                              "text": [
+	                                {
+	                                  "type": "link",
+	                                  "href": "https://www.thoughtworks.com/radar/tools/terraform",
+	                                  "title": null,
+	                                  "text": [
+	                                    "ThoughtWorks Assess Blip"
+	                                  ]
+	                                }
+	                              ]
+	                            }
+	                          ],
+	                          "ordered": false
 	                        }
 	                      ]
 	                    },
@@ -64839,6 +64915,26 @@
 	                            },
 	                            " - Secret key management"
 	                          ]
+	                        },
+	                        "",
+	                        {
+	                          "type": "list",
+	                          "body": [
+	                            {
+	                              "type": "listitem",
+	                              "text": [
+	                                {
+	                                  "type": "link",
+	                                  "href": "https://www.thoughtworks.com/radar/tools/hashicorp-vault",
+	                                  "title": null,
+	                                  "text": [
+	                                    "ThoughtWorks Assess Blip"
+	                                  ]
+	                                }
+	                              ]
+	                            }
+	                          ],
+	                          "ordered": false
 	                        }
 	                      ]
 	                    },
@@ -64875,29 +64971,31 @@
 	                              ]
 	                            }
 	                          ]
+	                        },
+	                        "",
+	                        {
+	                          "type": "list",
+	                          "body": [
+	                            {
+	                              "type": "listitem",
+	                              "text": [
+	                                {
+	                                  "type": "link",
+	                                  "href": "https://www.thoughtworks.com/radar/tools/consul",
+	                                  "title": null,
+	                                  "text": [
+	                                    "ThoughtWorks Adopt Blip"
+	                                  ]
+	                                }
+	                              ]
+	                            }
+	                          ],
+	                          "ordered": false
 	                        }
 	                      ]
 	                    }
 	                  ],
 	                  "ordered": false
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://www.ansible.com",
-	                      "title": null,
-	                      "text": [
-	                        "Ansible"
-	                      ]
-	                    }
-	                  ]
 	                }
 	              ]
 	            },
@@ -64945,7 +65043,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ca4a64e3-efe7-4901-b688-791dc1187564",
+	      "key": "3ec764e3-c538-49e4-8249-1e90f847e110",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64970,43 +65068,6 @@
 	                      "title": null,
 	                      "text": [
 	                        "Practices and Benefits"
-	                      ]
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://jenkins.io/",
-	                      "title": null,
-	                      "text": [
-	                        "Jenkins"
-	                      ]
-	                    },
-	                    " - Free"
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://www.atlassian.com/software/bamboo",
-	                      "title": null,
-	                      "text": [
-	                        "Bamboo"
 	                      ]
 	                    }
 	                  ]
@@ -65059,6 +65120,62 @@
 	                  "text": [
 	                    {
 	                      "type": "link",
+	                      "href": "https://github.com/Strider-CD",
+	                      "title": null,
+	                      "text": [
+	                        "Strider.CD"
+	                      ]
+	                    },
+	                    " - Node.js open source"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://jenkins.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Jenkins"
+	                      ]
+	                    },
+	                    " - Free"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.atlassian.com/software/bamboo",
+	                      "title": null,
+	                      "text": [
+	                        "Bamboo"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
 	                      "href": "http://concourse.ci/",
 	                      "title": null,
 	                      "text": [
@@ -65066,6 +65183,49 @@
 	                      ]
 	                    }
 	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.thoughtworks.com/radar/tools/concourse-ci",
+	                              "title": null,
+	                              "text": [
+	                                "ThoughtWorks CI Assess"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.youtube.com/watch?v=mYTn3qBxPhQ",
+	                              "title": null,
+	                              "text": [
+	                                "CI That Scales with your Project"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
 	                }
 	              ]
 	            },
@@ -65084,46 +65244,6 @@
 	                      ]
 	                    }
 	                  ]
-	                },
-	                ""
-	              ]
-	            }
-	          ],
-	          "ordered": false
-	        }
-	      ]
-	    },
-	    {
-	      "type": "section",
-	      "key": "cee91027-f9f1-46ec-a678-2a2a1cc74428",
-	      "body": [
-	        {
-	          "type": "heading",
-	          "text": [
-	            "Containerization"
-	          ],
-	          "level": 2,
-	          "raw": "Containerization"
-	        },
-	        {
-	          "type": "list",
-	          "body": [
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://www.docker.com/",
-	                      "title": null,
-	                      "text": [
-	                        "Docker"
-	                      ]
-	                    },
-	                    " - Mechanism"
-	                  ]
 	                }
 	              ]
 	            },
@@ -65135,51 +65255,13 @@
 	                  "text": [
 	                    {
 	                      "type": "link",
-	                      "href": "http://mesos.apache.org/",
+	                      "href": "https://drone.io/",
 	                      "title": null,
 	                      "text": [
-	                        "Mesos"
+	                        "Drone.io"
 	                      ]
 	                    },
-	                    " - Imperative"
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://kubernetes.io/",
-	                      "title": null,
-	                      "text": [
-	                        "Kubernetes"
-	                      ]
-	                    },
-	                    " - Declarative"
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://getcarina.com/",
-	                      "title": null,
-	                      "text": [
-	                        "GetCarina"
-	                      ]
-	                    },
-	                    " - Rackspace Container Service"
+	                    " - $25/month for 5 private repos"
 	                  ]
 	                },
 	                ""
@@ -65192,7 +65274,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "56aa9e2e-3b55-40e8-ac2d-d6f092c0f425",
+	      "key": "611b7eba-5971-4d92-a5cf-14ad7f9c9678",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65383,7 +65465,287 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3262452f-362d-4645-88c2-c46188b1797f",
+	      "key": "bb4541bd-7bcd-413a-bf98-0ac329a5d0b6",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Containerization"
+	          ],
+	          "level": 2,
+	          "raw": "Containerization"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://sysadmincasts.com/episodes/31-introduction-to-docker",
+	                      "title": null,
+	                      "text": [
+	                        "Introduction to Docker"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.docker.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Docker"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://mesos.apache.org/",
+	                      "title": null,
+	                      "text": [
+	                        "Mesos"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://kubernetes.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Kubernetes"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://getcarina.com/",
+	                      "title": null,
+	                      "text": [
+	                        "GetCarina"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "b5c3e214-a473-49a2-9b56-857557a3dfbb",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Books, Conferences &amp; Overviews"
+	          ],
+	          "level": 2,
+	          "raw": "Books, Conferences & Overviews"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://shop.oreilly.com/product/0636920039297.do",
+	                      "title": null,
+	                      "text": [
+	                        "Infrastructure as Code"
+	                      ]
+	                    },
+	                    " - O&#39;Reilly Book"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "link",
+	                          "href": "https://www.youtube.com/watch?v=a4PuAkI7uGg&amp;index=6&amp;list=PLK4VB0cauli7-_RIvpmn651ePtddw9_Fp",
+	                          "title": null,
+	                          "text": [
+	                            "Operability.io Talk"
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.thoughtworks.com/radar/tools",
+	                      "title": null,
+	                      "text": [
+	                        "ThoughtWorks Tech Radar"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://stackshare.io/server-configuration-and-automation",
+	                      "title": null,
+	                      "text": [
+	                        "stackshare server configuration and automation"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.amazon.com/gp/product/0321601912",
+	                      "title": null,
+	                      "text": [
+	                        "Continuous Delivery Book"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://devopsconferences.org/regions/usa-canada",
+	                      "title": null,
+	                      "text": [
+	                        "2016 Devops Conferences"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://en.wikipedia.org/wiki/DevOps",
+	                      "title": null,
+	                      "text": [
+	                        "Devops"
+	                      ]
+	                    },
+	                    " - Wikipedia"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://sysadmincasts.com/episodes/",
+	                      "title": null,
+	                      "text": [
+	                        "Sysadmin Casts"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "087aadcd-ce35-4d3f-97ec-a8a0bc29c738",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65477,7 +65839,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "7c9a0334-31bc-48e7-982d-3b22769db347",
+	      "key": "324353e2-bfd7-47e8-ba65-03918abce035",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65575,7 +65937,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c343ea1f-e6f6-4eb2-a2e7-492b2c5fd28c",
+	      "key": "706e6495-8cc2-44a9-8c73-49d3a8a1edfb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65616,7 +65978,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6343f04f-a9b4-4d49-9e32-8f718c4a040c",
+	      "key": "3ef81d52-c76d-4744-b01d-6c6953c79c13",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65655,7 +66017,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a6f0ad90-aefb-4353-8b31-c2d6716a0b7a",
+	      "key": "348282ce-6fac-4ca5-ab12-846b3cb11c40",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65681,7 +66043,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aaaec89a-3f2b-43a3-97e5-3546224645a9",
+	      "key": "a30cbe63-8fec-4656-87e4-0d9c597c9012",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65759,7 +66121,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "37b4c7de-db2e-41c0-9d64-f9473756b617",
+	      "key": "053907e4-09c6-4940-beb2-e7e1226e74c7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65788,7 +66150,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "da420212-2663-4855-9b07-003862ecb304",
+	      "key": "15876135-bba0-490a-9b49-e1e98a9e65ee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65808,7 +66170,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aba64f5b-db3f-4898-98b6-a797060fc4f9",
+	      "key": "5ef58322-22f8-4b30-aced-4027b82bb22d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65847,7 +66209,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67485267-0b34-44e8-b1b6-4503d1baf0e8",
+	      "key": "64bbd2f9-49db-42a5-8102-dc6a2b7a4cc9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65881,7 +66243,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2f0a91da-38cc-4485-a480-95162924ccb7",
+	      "key": "8a5eadd1-4b2c-4782-9484-aebc07600ab8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65981,7 +66343,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "6ac59435-daf4-47bb-bfed-80328eb1f604",
+	      "key": "eef99e99-4ea9-4c76-9faa-657d544d2600",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66000,7 +66362,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "77b76e75-5693-4047-86ef-72864dbcbee0",
+	      "key": "2b979f62-c4d4-4ee2-a2e6-14dd39eb2e42",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66107,7 +66469,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "36c93238-30b5-442b-9519-c88d44a3400b",
+	      "key": "c9159396-0f1b-4bb4-81ed-999f94885236",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66127,7 +66489,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c01dbfb8-c276-4ad1-8868-5bbb8f6c5378",
+	      "key": "9b7e4a84-90dc-4eb8-9b97-28c2f9038654",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66166,7 +66528,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4f3c74de-0698-4d2b-ae16-d8dc207dddd8",
+	      "key": "2248044c-5d33-450f-a348-aaf22f0780cb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66200,7 +66562,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a07e57dc-eb5c-4bd2-9eeb-6ee6d85e9322",
+	      "key": "72a6a900-86a1-434a-b350-c2adf1b81950",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66232,7 +66594,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7ff617a4-c7c3-47ef-9d5d-a34681b069b0",
+	      "key": "18f6c711-b55e-4bf1-87a6-057b6d9de094",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66266,7 +66628,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6d566940-74f5-404b-968c-31a7c34fac39",
+	      "key": "c68d9816-f56d-46b7-a912-51b518d69b77",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66349,7 +66711,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a236b7ad-85ff-4946-8327-c052871569e7",
+	      "key": "305d1419-0ddf-4cf6-b839-2af10f9af267",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66383,7 +66745,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "41c7eb18-5caa-4e18-a6e4-ea3f6f912df7",
+	      "key": "8608d011-9482-4acf-a871-f85f61b400c2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66437,7 +66799,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8e068a3c-3287-4c10-b384-dd7f4fe9eee6",
+	      "key": "e92beed2-b7ed-4f12-95f6-bc8d6e7ec63a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66461,7 +66823,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d989666b-5f6d-4fa6-8967-032572a36a44",
+	      "key": "bb468e8e-9d1c-4fad-9182-e77b1427faf6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66526,7 +66888,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4d0ef14e-5700-4372-8331-41bef117d860",
+	      "key": "c332c517-283a-4219-a4cb-12aab29929d6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66580,7 +66942,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5926a977-4d1e-40ba-a00a-9489573de450",
+	      "key": "c0b972c4-ba5e-437c-bd5d-8ee608b78288",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66670,7 +67032,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aacb70cd-ae8f-4569-a4ff-3d5be0a064f4",
+	      "key": "cf9e7f21-720f-4524-9a82-58e733e7ec25",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66834,7 +67196,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "eb347557-4d7d-4e36-85ea-74ce4af3e068",
+	      "key": "41e035c6-cbb6-40a1-b1c9-274ea107f3bc",
 	      "body": []
 	    }
 	  ]
@@ -66859,7 +67221,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "abf66eda-f2af-46c8-ab12-9073a7f87ce3",
+	      "key": "1b69359e-fe14-4452-bf8d-4255eea72325",
 	      "body": []
 	    }
 	  ]
@@ -66888,7 +67250,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "09fbf68f-032f-4eb2-899a-0daabb0a7636",
+	      "key": "e485b707-b92e-4ad9-9916-56a9e4e14664",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67213,7 +67575,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "88b52cbb-4c0b-42e0-9338-d321032bacda",
+	      "key": "83a4fb1b-4ac8-430f-9651-bf4970f70096",
 	      "body": []
 	    }
 	  ]
@@ -67238,7 +67600,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "497ed3f5-21a8-4e0e-b778-9061e61c5bde",
+	      "key": "18d76c5d-b095-4d23-b8e2-585e36d0c284",
 	      "body": []
 	    }
 	  ]
@@ -67268,7 +67630,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c32022fd-e9f3-4567-871f-1e7e07e622fb",
+	      "key": "efc2b8a1-424c-4846-8590-5e131593d718",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67306,7 +67668,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8e3a7fc8-2ca2-4976-82b4-fade0b88f256",
+	      "key": "a3be042b-cc03-4fd4-a026-47af7ea45f38",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67426,7 +67788,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "61f3c627-8c93-4ead-99c6-91fd26ff6937",
+	      "key": "0f387130-db5b-4342-aa9b-ca25ff2c9c7a",
 	      "body": [
 	        {
 	          "type": "heading",
