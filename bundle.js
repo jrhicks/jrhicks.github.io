@@ -59730,7 +59730,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "40ae0957-04d1-4f3e-aa9c-4625ebd508f8",
+	      "key": "b9701bd2-e8c1-46ee-8619-00a92c11ed0e",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59805,7 +59805,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8a1ff960-04bf-4875-a003-50eb5a596ac5",
+	      "key": "8ea9401b-95e7-4e2b-baf0-8487cfb23a4e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60177,7 +60177,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "86a674bb-dfbd-4d61-8ecd-8d751766d30b",
+	      "key": "c05ce03e-83e2-4891-b23d-5a5a361b87a0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60356,7 +60356,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e51b65d2-6018-4d56-b7c7-497b6e6321af",
+	      "key": "72208a27-18f9-43a5-a47f-a166ee00ebce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60622,7 +60622,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f8232ca3-90c8-46c3-887b-54e2d70783f6",
+	      "key": "ffde3a9a-5d5a-48f5-8369-84c0f7f8c129",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60710,7 +60710,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ddaf96e7-f41c-4b39-819f-14c48b186c8b",
+	      "key": "9cc3cc91-8446-4881-b32e-8f680889e485",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60729,7 +60729,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5f8c067c-9a5e-4f29-b31d-d294513288cb",
+	      "key": "7b6fb428-193d-4986-b4c4-6009cd5c751a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60773,7 +60773,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7913c98f-71a0-4441-9597-1ae7055ee372",
+	      "key": "1723530b-2159-4976-a1fb-d09bbf97a739",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60811,7 +60811,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3ea82eee-09eb-4ca4-9005-4011f52af3a5",
+	      "key": "0436803f-8cd3-400e-9c67-6627fc2b474e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60872,7 +60872,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b6bc4545-9c05-4bcc-9cc9-8380f11e8bd6",
+	      "key": "2729ced7-e77a-4b5d-8c92-68d780c2356b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60962,7 +60962,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b682280b-4145-44fe-beca-7fc8d6ed8c79",
+	      "key": "9f3a5d6f-e035-46ef-96a2-8bc7d5bf412b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61161,7 +61161,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "bba168f0-078c-4f95-b0d8-2f8ca398531d",
+	      "key": "9dd22695-1a9b-4244-9957-aad1a5cb575a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61201,7 +61201,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "40ef83ad-a69f-407a-87e6-cf5ee6f493ed",
+	      "key": "9560715a-4e15-4904-9c50-dacca84f603e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61244,7 +61244,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d9925b0c-c4ee-484b-b8cd-1fb4538ca628",
+	      "key": "294e6079-6db9-4d42-9ffd-4ae4e90991cb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61327,7 +61327,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "eed1bd38-1584-4bf9-b182-f63c3b53871b",
+	      "key": "db966505-f85a-46b6-82ba-9af20abd4ad4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61696,7 +61696,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a8913a94-8372-452b-8097-d3b20affdeb2",
+	      "key": "2d752849-8ae7-455e-baa8-26ca9f971663",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61791,7 +61791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "19eb0f74-76ed-48da-bb5b-87165cb96d61",
+	      "key": "bc2cb61b-7d7e-4c58-904b-8153b2f01cd6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61857,7 +61857,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "88cd1411-719e-46f5-af37-83d5250f38b2",
+	      "key": "fb276be2-abf8-47c2-8988-a8f4e57ec662",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62006,7 +62006,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ca0a9dc3-0e77-44bc-8fe9-b43d6d40c42c",
+	      "key": "2e18e1e9-e2c4-4713-a8ea-3f1149fb994f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62141,7 +62141,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c9c25c41-2377-4142-a8e8-7c60f3ac2218",
+	      "key": "17a00e9d-f060-466a-829b-44d21649ed3e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62184,7 +62184,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b9ba844e-7f2f-4627-a178-e8ec21ba292f",
+	      "key": "61a31cdd-03ee-4e32-ad9b-21a4f0294e96",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62204,7 +62204,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fa401d55-bfc6-4b48-bc4f-a172877dc2c5",
+	      "key": "4578b22d-c7c0-4096-ac24-30ca9e999e15",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62224,7 +62224,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d6d65a64-8ac8-4a90-bc79-ff797540ad9d",
+	      "key": "5c1c673a-0f7c-4b66-acbd-069e128a20fc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62250,7 +62250,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "db0311c9-1164-40f9-a160-a74ed05c2bbd",
+	      "key": "3a126fc2-2424-45b6-a3e1-981c5c6130b3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62276,7 +62276,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5d83faa6-eb99-4d29-bbee-d5bccb8a0170",
+	      "key": "a1ba4bd9-7f41-4619-871c-d55bde886cbe",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62296,7 +62296,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5fdec0ee-5e6d-448c-889f-a39bfd6fd0ab",
+	      "key": "1677af43-a821-4540-a96e-094daf7675e9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62361,7 +62361,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f3dbd996-5e0b-4527-8316-f9957052d4cd",
+	      "key": "ca303784-81dc-4468-a496-c30544b0d04a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62375,7 +62375,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e3af32bf-736c-4a3b-8459-bbba147a9b27",
+	      "key": "326abf59-0fe0-43ee-ae40-8d6621539dbf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62434,7 +62434,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ec358f0c-660e-4e15-bc25-58ba00ab3360",
+	      "key": "aa85e6b1-fee3-4f72-89fd-c59d929967ac",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62477,7 +62477,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b3b01074-5c5f-4881-a8f0-01795c1cf8b2",
+	      "key": "34deeb6a-d555-486b-a011-230af70bb02b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62536,7 +62536,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1210078b-5f2d-49a9-bb3d-1d5b8d9bc32c",
+	      "key": "7dac1c05-d565-4585-b258-6e05f98bb47f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62606,7 +62606,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6bbf0c45-431b-4454-a826-b628be2e87de",
+	      "key": "02439306-7b88-4045-8efa-afe3bdebc409",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62669,7 +62669,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5f0b9a5a-1338-4237-bbc9-9cc8710e3dd1",
+	      "key": "202e2039-6f8e-46b4-9169-6cc3ac5845ac",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62740,7 +62740,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3bc07bf1-e774-4837-9488-b8d60e13747e",
+	      "key": "b404af85-4761-456c-bdb3-1eaccdc1b204",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62783,7 +62783,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b8042414-b8a6-4bcc-972d-9a515b3488b4",
+	      "key": "fbb9aa6f-2b9d-403d-af8d-b5be59cf2b48",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62814,7 +62814,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "da334637-ddca-4317-bc64-b848f6977b92",
+	      "key": "850133ee-31d2-4493-8bc8-b9d806eaea40",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62865,7 +62865,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "6405a163-26c3-42e7-b9f1-84266a13c075",
+	      "key": "a69fb38c-924c-427e-88df-c67793f0920b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62930,7 +62930,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "84683f39-1d55-4b55-9d81-187c438aa126",
+	      "key": "96736441-5f06-4990-85de-fb787a17d4b8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62995,7 +62995,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6a89e2de-9610-47d2-9b6c-19f11fdfe850",
+	      "key": "767ce928-6018-437c-973e-44ef5b8c0b8b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63143,7 +63143,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e1f5d2c5-ade0-4e14-a0a6-2f0553dfdee4",
+	      "key": "7176202e-35e6-4cae-a5f3-3c413f790464",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63381,7 +63381,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aa71556c-3498-442e-bf47-0f34c60f8366",
+	      "key": "f98085fe-5117-43bc-b71d-1ea0795e1b80",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63480,7 +63480,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e2a6102f-524b-4ec1-b931-4157c2d0fb23",
+	      "key": "abc97410-2815-4ed3-962c-85b58b674b81",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63632,7 +63632,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "62de0c72-8bd1-467c-8c81-2775bffdfef2",
+	      "key": "bc3478b8-1f2e-47e9-a728-9bcfc24a97ad",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63727,7 +63727,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "39c375c2-061e-4dcf-9d2d-c465ca34de31",
+	      "key": "17ca0970-ab69-4a8a-b1b2-faf2e05cc012",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63865,7 +63865,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0a40ce5b-0c6d-425b-8893-594c7d38076d",
+	      "key": "20314eb5-d0dc-4aad-9039-fdf161e92c5a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64060,7 +64060,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "78dbd618-3473-4c46-aa58-7f1c6fa438c5",
+	      "key": "4576b237-a4aa-4ac1-98b4-1e839741e8b2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64203,7 +64203,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b15b567b-fea7-4c54-a041-15b0e31423f4",
+	      "key": "13b93f75-566a-4917-86e5-67beb65b384f",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64215,7 +64215,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "63d4312a-b98b-4498-9432-719d9ae6d347",
+	      "key": "8fff819f-bf75-443a-aa67-6c45b660e8a0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64324,7 +64324,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2c3e00f4-6541-4b8a-86e5-091ae0b7020b",
+	      "key": "cac52a9a-ff5a-40bd-a8f9-7ed23c5b6684",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64373,7 +64373,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "22bb0903-1e4d-47cc-bf3d-488dbe0dc6a0",
+	      "key": "02271101-e8b0-421b-9a5d-78f52e5bb178",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64445,7 +64445,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e6a84a0f-2e56-4f69-aebc-98b8fb767439",
+	      "key": "ef4f18e0-a2e9-46d6-837c-0c789d10d2b8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64499,7 +64499,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d70298b1-709b-4193-afbc-b70661e40a8e",
+	      "key": "87732ed5-a668-4c41-8c60-4d89ca3fef19",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64512,6 +64512,67 @@
 	        {
 	          "type": "list",
 	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://puppet.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Puppet"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://vimeo.com/60768300",
+	                              "title": null,
+	                              "text": [
+	                                "What is Puppet?"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.thoughtworks.com/radar/tools/puppet",
+	                              "title": null,
+	                              "text": [
+	                                "ThoughtWorks Trial Blip"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
 	            {
 	              "type": "listitem",
 	              "text": [
@@ -64564,7 +64625,34 @@
 	                                "Rolling Deployments with Ansible"
 	                              ]
 	                            },
-	                            " - Wow!"
+	                            " - Wow!  Ryan Bates Quality Instructions"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.ansible.com/blog/another-good-year-for-ansible-users",
+	                              "title": null,
+	                              "text": [
+	                                "Ansible is Trending"
+	                              ]
+	                            },
+	                            " and ",
+	                            {
+	                              "type": "link",
+	                              "href": "http://stackshare.io/server-configuration-and-automation",
+	                              "title": null,
+	                              "text": [
+	                                "Winning on StackShare"
+	                              ]
+	                            }
 	                          ]
 	                        }
 	                      ]
@@ -64649,12 +64737,67 @@
 	                          "text": [
 	                            {
 	                              "type": "link",
+	                              "href": "https://www.ansible.com/docker",
+	                              "title": null,
+	                              "text": [
+	                                "Ansible and Docker"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
 	                              "href": "https://www.youtube.com/watch?v=fwGrKXzocg4",
 	                              "title": null,
 	                              "text": [
 	                                "How Twitter Uses Ansible"
 	                              ]
-	                            }
+	                            },
+	                            " - They mention ",
+	                            {
+	                              "type": "link",
+	                              "href": "https://pantsbuild.github.io/",
+	                              "title": null,
+	                              "text": [
+	                                "Pants Build"
+	                              ]
+	                            },
+	                            " to drive adoption.  And ",
+	                            {
+	                              "type": "link",
+	                              "href": "https://tumblr.github.io/collins/index.html#links",
+	                              "title": null,
+	                              "text": [
+	                                "Collins"
+	                              ]
+	                            },
+	                            " as a single point of truth. Shout-outs to ",
+	                            {
+	                              "type": "link",
+	                              "href": "http://aurora.apache.org/",
+	                              "title": null,
+	                              "text": [
+	                                "Aurora"
+	                              ]
+	                            },
+	                            " and ",
+	                            {
+	                              "type": "link",
+	                              "href": "http://mesos.apache.org/",
+	                              "title": null,
+	                              "text": [
+	                                "Mesos"
+	                              ]
+	                            },
+	                            ".  They don&#39;t seem to use the commercial ansible-tower.  They record playbook run details centrally."
 	                          ]
 	                        }
 	                      ]
@@ -64735,85 +64878,6 @@
 	                              ]
 	                            },
 	                            " - Node.js Capistrano Clone"
-	                          ]
-	                        }
-	                      ]
-	                    }
-	                  ],
-	                  "ordered": false
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://puppet.com/",
-	                      "title": null,
-	                      "text": [
-	                        "Puppet"
-	                      ]
-	                    }
-	                  ]
-	                },
-	                "",
-	                {
-	                  "type": "list",
-	                  "body": [
-	                    {
-	                      "type": "listitem",
-	                      "text": [
-	                        {
-	                          "type": "paragraph",
-	                          "text": [
-	                            {
-	                              "type": "link",
-	                              "href": "https://vimeo.com/60768300",
-	                              "title": null,
-	                              "text": [
-	                                "What is Puppet?"
-	                              ]
-	                            }
-	                          ]
-	                        }
-	                      ]
-	                    },
-	                    {
-	                      "type": "listitem",
-	                      "text": [
-	                        {
-	                          "type": "paragraph",
-	                          "text": [
-	                            {
-	                              "type": "link",
-	                              "href": "https://learn.puppet.com/catalog",
-	                              "title": null,
-	                              "text": [
-	                                "eLearning Catalog"
-	                              ]
-	                            }
-	                          ]
-	                        }
-	                      ]
-	                    },
-	                    {
-	                      "type": "listitem",
-	                      "text": [
-	                        {
-	                          "type": "paragraph",
-	                          "text": [
-	                            {
-	                              "type": "link",
-	                              "href": "https://www.thoughtworks.com/radar/tools/puppet",
-	                              "title": null,
-	                              "text": [
-	                                "ThoughtWorks Trial Blip"
-	                              ]
-	                            }
 	                          ]
 	                        }
 	                      ]
@@ -65032,6 +65096,25 @@
 	                      ]
 	                    }
 	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.azk.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Azk"
+	                      ]
+	                    },
+	                    " - Developer Machine Configuration"
+	                  ]
 	                },
 	                ""
 	              ]
@@ -65043,7 +65126,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3ec764e3-c538-49e4-8249-1e90f847e110",
+	      "key": "fea72db5-8a64-4610-bc4b-fac638806265",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65082,13 +65165,212 @@
 	                  "text": [
 	                    {
 	                      "type": "link",
+	                      "href": "https://jenkins.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Jenkins"
+	                      ]
+	                    },
+	                    " - Free, Hosted Internally"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
 	                      "href": "https://travis-ci.org/",
 	                      "title": null,
 	                      "text": [
 	                        "Travis CI"
 	                      ]
 	                    },
-	                    " - $129/month 2 concurrent builds"
+	                    " - $120/month 2 concurrent builds"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://codeship.com/",
+	                      "title": null,
+	                      "text": [
+	                        "CodeShip"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://circleci.com",
+	                      "title": null,
+	                      "text": [
+	                        "CircleCI"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://wercker.com/",
+	                      "title": null,
+	                      "text": [
+	                        "Wercker"
+	                      ]
+	                    },
+	                    " - Container Centric"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://drone.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Drone.io"
+	                      ]
+	                    },
+	                    " -  $25/month for 5 private repos, ",
+	                    {
+	                      "type": "strong",
+	                      "text": [
+	                        "ONLY"
+	                      ]
+	                    },
+	                    " $49/month unlimited"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://github.com/drone/drone",
+	                              "title": null,
+	                              "text": [
+	                                "Drone"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "http://tech.willandskill.se/w-s-devops-part-2-setting-up-a-continuous-integration-ci-server-using-docker-and-drone-io/",
+	                              "title": null,
+	                              "text": [
+	                                "Create a Drone with Ansible"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://semaphoreci.com",
+	                      "title": null,
+	                      "text": [
+	                        "Sempaphore CI"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "link",
+	                          "href": "https://semaphoreci.com/community/tutorials",
+	                          "title": null,
+	                          "text": [
+	                            "Good Tutorials"
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.go.cd/",
+	                      "title": null,
+	                      "text": [
+	                        "Go.CD"
+	                      ]
+	                    }
 	                  ]
 	                }
 	              ]
@@ -65126,26 +65408,7 @@
 	                        "Strider.CD"
 	                      ]
 	                    },
-	                    " - Node.js open source"
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://jenkins.io/",
-	                      "title": null,
-	                      "text": [
-	                        "Jenkins"
-	                      ]
-	                    },
-	                    " - Free"
+	                    " - Free, Hosted Internally - Node.js"
 	                  ]
 	                }
 	              ]
@@ -65163,8 +65426,29 @@
 	                      "text": [
 	                        "Bamboo"
 	                      ]
-	                    }
+	                    },
+	                    " - $10/month for up to 10 jobs"
 	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "link",
+	                          "href": "https://www.atlassian.com/continuous-delivery/continuous-delivery-workflows-with-feature-branching-and-gitflow",
+	                          "title": null,
+	                          "text": [
+	                            "Branch Per Issue Workflow"
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
 	                }
 	              ]
 	            },
@@ -65221,50 +65505,13 @@
 	                              ]
 	                            }
 	                          ]
-	                        }
+	                        },
+	                        ""
 	                      ]
 	                    }
 	                  ],
 	                  "ordered": false
 	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://www.go.cd/",
-	                      "title": null,
-	                      "text": [
-	                        "Go.CD"
-	                      ]
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://drone.io/",
-	                      "title": null,
-	                      "text": [
-	                        "Drone.io"
-	                      ]
-	                    },
-	                    " - $25/month for 5 private repos"
-	                  ]
-	                },
-	                ""
 	              ]
 	            }
 	          ],
@@ -65274,7 +65521,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "611b7eba-5971-4d92-a5cf-14ad7f9c9678",
+	      "key": "5f80b60e-0eb4-4a82-9946-f61376d41cbe",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65465,7 +65712,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bb4541bd-7bcd-413a-bf98-0ac329a5d0b6",
+	      "key": "0898db5c-fa9c-47e0-b267-b08228e1b6c0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65510,6 +65757,45 @@
 	                        "Docker"
 	                      ]
 	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "link",
+	                          "href": "https://semaphoreci.com/community/tutorials/dockerizing-a-node-js-web-application",
+	                          "title": null,
+	                          "text": [
+	                            "Dockerizing a Node.js App"
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://mantl.io/",
+	                      "title": null,
+	                      "text": [
+	                        "Mantl.io"
+	                      ]
+	                    },
+	                    " - Wow!"
 	                  ]
 	                }
 	              ]
@@ -65576,7 +65862,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b5c3e214-a473-49a2-9b56-857557a3dfbb",
+	      "key": "87888419-c4b5-4f5c-8c1f-50820a3111af",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65640,24 +65926,6 @@
 	                      "title": null,
 	                      "text": [
 	                        "ThoughtWorks Tech Radar"
-	                      ]
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://stackshare.io/server-configuration-and-automation",
-	                      "title": null,
-	                      "text": [
-	                        "stackshare server configuration and automation"
 	                      ]
 	                    }
 	                  ]
@@ -65745,7 +66013,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "087aadcd-ce35-4d3f-97ec-a8a0bc29c738",
+	      "key": "f6473c06-e1de-4713-a894-ef52742d8d57",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65839,7 +66107,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "324353e2-bfd7-47e8-ba65-03918abce035",
+	      "key": "3559f277-903c-4c6d-b9f3-bd4a66bb8776",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65937,7 +66205,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "706e6495-8cc2-44a9-8c73-49d3a8a1edfb",
+	      "key": "88f5690b-41aa-43f8-9863-e838a437f47d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65978,7 +66246,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3ef81d52-c76d-4744-b01d-6c6953c79c13",
+	      "key": "e83750b2-9dc8-46c1-ad71-28445d6cea20",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66017,7 +66285,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "348282ce-6fac-4ca5-ab12-846b3cb11c40",
+	      "key": "b0f01d5c-e0b2-44dc-bb42-31f13b257aac",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66043,7 +66311,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a30cbe63-8fec-4656-87e4-0d9c597c9012",
+	      "key": "ce1cd367-0127-4bd6-b49e-ea6d282cf0ec",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66121,7 +66389,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "053907e4-09c6-4940-beb2-e7e1226e74c7",
+	      "key": "877330a0-0114-4389-8085-87b01a475f37",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66150,7 +66418,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "15876135-bba0-490a-9b49-e1e98a9e65ee",
+	      "key": "428399df-83be-43d2-a728-f4b97dbfab89",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66170,7 +66438,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5ef58322-22f8-4b30-aced-4027b82bb22d",
+	      "key": "3f0f1d6f-22ab-49b4-8e9c-d900f14062a9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66209,7 +66477,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "64bbd2f9-49db-42a5-8102-dc6a2b7a4cc9",
+	      "key": "26778b98-90e0-46db-9db7-1344d0894108",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66243,7 +66511,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8a5eadd1-4b2c-4782-9484-aebc07600ab8",
+	      "key": "83e78288-90fb-484a-b8c1-e8d003659693",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66343,7 +66611,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "eef99e99-4ea9-4c76-9faa-657d544d2600",
+	      "key": "ec5812c7-5b1b-458f-8431-4bfae3e67006",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66362,7 +66630,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2b979f62-c4d4-4ee2-a2e6-14dd39eb2e42",
+	      "key": "91b12b53-ef43-43f0-bf09-c918684acada",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66469,7 +66737,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c9159396-0f1b-4bb4-81ed-999f94885236",
+	      "key": "3fd14f13-436d-45b2-b3f1-3f3e0b3ec736",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66489,7 +66757,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9b7e4a84-90dc-4eb8-9b97-28c2f9038654",
+	      "key": "437b091b-299e-4496-a3ca-09dee695a7fb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66528,7 +66796,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2248044c-5d33-450f-a348-aaf22f0780cb",
+	      "key": "e46b3a95-eaee-4d35-bdf1-7e8eadafe9e8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66562,7 +66830,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "72a6a900-86a1-434a-b350-c2adf1b81950",
+	      "key": "fa833a92-af56-4abe-b3e1-0abbe8812f3b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66594,7 +66862,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "18f6c711-b55e-4bf1-87a6-057b6d9de094",
+	      "key": "e9585577-57c4-4e9c-abc0-d73050f76480",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66628,7 +66896,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c68d9816-f56d-46b7-a912-51b518d69b77",
+	      "key": "f22fd5c5-89d2-4773-9b12-2fde07415823",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66711,7 +66979,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "305d1419-0ddf-4cf6-b839-2af10f9af267",
+	      "key": "8e671f55-99c5-48f4-a14a-d90a21ddd46b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66745,7 +67013,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8608d011-9482-4acf-a871-f85f61b400c2",
+	      "key": "00545581-7508-48c7-9f83-9f01e6d4d897",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66799,7 +67067,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e92beed2-b7ed-4f12-95f6-bc8d6e7ec63a",
+	      "key": "b77e5c70-111d-4488-9e54-f4ececef4647",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66823,7 +67091,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bb468e8e-9d1c-4fad-9182-e77b1427faf6",
+	      "key": "1814cb75-855d-4d0e-b021-122305e2fb19",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66888,7 +67156,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c332c517-283a-4219-a4cb-12aab29929d6",
+	      "key": "b1fbfe32-4988-4744-babd-899e3ac64d08",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66942,7 +67210,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c0b972c4-ba5e-437c-bd5d-8ee608b78288",
+	      "key": "25291a71-5a5e-47b3-afb8-3ad34d57b421",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67032,7 +67300,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cf9e7f21-720f-4524-9a82-58e733e7ec25",
+	      "key": "3b3f254c-51cb-4472-8aea-275143da373f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67196,7 +67464,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "41e035c6-cbb6-40a1-b1c9-274ea107f3bc",
+	      "key": "6fc9c8ea-6357-4223-a367-0dcfdb7f132c",
 	      "body": []
 	    }
 	  ]
@@ -67221,7 +67489,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1b69359e-fe14-4452-bf8d-4255eea72325",
+	      "key": "08bd11bf-902f-4b35-892a-87b531443033",
 	      "body": []
 	    }
 	  ]
@@ -67250,7 +67518,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e485b707-b92e-4ad9-9916-56a9e4e14664",
+	      "key": "2f5a01fd-a626-43c5-b30c-859320ddb75b",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67575,7 +67843,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "83a4fb1b-4ac8-430f-9651-bf4970f70096",
+	      "key": "f276e0d2-cdbc-4233-a536-6eec3334f29b",
 	      "body": []
 	    }
 	  ]
@@ -67600,7 +67868,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "18d76c5d-b095-4d23-b8e2-585e36d0c284",
+	      "key": "0f11d7b2-110d-49bb-bad1-8c3586b210a3",
 	      "body": []
 	    }
 	  ]
@@ -67630,7 +67898,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "efc2b8a1-424c-4846-8590-5e131593d718",
+	      "key": "085ecf18-9f7f-4e3f-a56c-5ef73db0466a",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67668,7 +67936,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a3be042b-cc03-4fd4-a026-47af7ea45f38",
+	      "key": "e440cb0e-8ed0-4284-b601-aa63c019e8b6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67788,7 +68056,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0f387130-db5b-4342-aa9b-ca25ff2c9c7a",
+	      "key": "4d7d9d1e-68d5-49b0-98ba-7f3e243738a9",
 	      "body": [
 	        {
 	          "type": "heading",
