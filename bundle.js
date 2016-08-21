@@ -48,7 +48,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! babel-polyfill */1);
-	module.exports = __webpack_require__(/*! /Users/jrhicks/sandbox/jrhicks.github.source/app/App.jsx */191);
+	module.exports = __webpack_require__(/*! /Users/jrhicks/jrhicks.github.source/app/App.jsx */191);
 
 
 /***/ },
@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 800)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 802)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 781);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 783);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 783);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 785);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 799);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 801);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34366,7 +34366,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 780);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 782);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -35285,7 +35285,7 @@
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 772);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 774);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -59686,16 +59686,18 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./arkansas-dev-hackathon-2015.md": 762,
-		"./client-side-routing-notes.md": 763,
-		"./confidently-starting-a-reactjs-project.md": 764,
-		"./intro-to-flux.md": 765,
-		"./intro-to-reactjs.md": 766,
-		"./introduction-to-es6.md": 767,
-		"./node-deployment.md": 768,
-		"./offline-flux-with-lokijs.md": 769,
-		"./react-form-generation.md": 770,
-		"./typefaces.md": 771
+		"./ansible-notes.md": 762,
+		"./arkansas-dev-hackathon-2015.md": 763,
+		"./client-side-routing-notes.md": 764,
+		"./confidently-starting-a-reactjs-project.md": 765,
+		"./intro-to-flux.md": 766,
+		"./intro-to-reactjs.md": 767,
+		"./introduction-to-es6.md": 768,
+		"./kubernetes-notes.md": 769,
+		"./node-deployment.md": 770,
+		"./offline-flux-with-lokijs.md": 771,
+		"./react-form-generation.md": 772,
+		"./typefaces.md": 773
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -59713,6 +59715,64 @@
 
 /***/ },
 /* 762 */
+/*!****************************************!*\
+  !*** ./content/posts/ansible-notes.md ***!
+  \****************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Ansible Notes",
+	  "slug": "ansible-notes",
+	  "summary": "Personal notes for Ansible",
+	  "created": "April 09 2016",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "cover": true,
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "cbbeed84-023f-4cc4-9d3e-f8b05166373f",
+	      "body": [
+	        "",
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Learning Ansible with Vagrant (Part 2/4)"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                "Watch ",
+	                {
+	                  "type": "link",
+	                  "href": "https://sysadmincasts.com/episodes/45-learning-ansible-with-vagrant-part-2-4",
+	                  "title": null,
+	                  "text": "https://sysadmincasts.com/episodes/45-learning-ansible-with-vagrant-part-2-4"
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "code",
+	          "code": "wget https://d1cg27r99kkbpq.cloudfront.net/static/extra/e45-supporting-material.tar.gz\n\ntar -xvf e45-supporting-material.tar.gz\n\ncd e45-supporting-material\n\nvagrant up\n\ncd ~\n\nssh-keyscan lb web1 web2 >> .ssh/known_hosts\n\nssh-keygen -t rsa -b 2048\n\nansible-playbook e45-ssh-addkey.yml",
+	          "lang": "bash",
+	          "fenced": true
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 763 */
 /*!******************************************************!*\
   !*** ./content/posts/arkansas-dev-hackathon-2015.md ***!
   \******************************************************/
@@ -59730,7 +59790,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b9701bd2-e8c1-46ee-8619-00a92c11ed0e",
+	      "key": "8b542436-13ff-487c-8ea6-ffca015776ce",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59798,14 +59858,15 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Please comment below with stuff you saw and heard and any attendees on twitter I missed.  Thanks!"
+	            "Please comment below with stuff you saw and heard and any attendees on twitter I missed.  Thanks",
+	            "!"
 	          ]
 	        }
 	      ]
 	    },
 	    {
 	      "type": "section",
-	      "key": "8ea9401b-95e7-4e2b-baf0-8487cfb23a4e",
+	      "key": "e5470dd4-4ed9-43b1-bfc2-e1fc835d511b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59889,7 +59950,9 @@
 	                        "Python Artists Of Arkansas"
 	                      ]
 	                    },
-	                    " - Whether just curious, a new programmer, or you remember clearing the moths out of your vacuum tubes, we want to see YOU! Primarily about the Python programming language, we want to encourage all &quot;programming&quot; and &quot;technology&quot; discussions - COME GEEK OUT!"
+	                    " - Whether just curious, a new programmer, or you remember clearing the moths out of your vacuum tubes, we want to see YOU",
+	                    "! Primarily about the Python programming language, we want to encourage all &quot;programming&quot; and &quot;technology&quot; discussions - COME GEEK OUT",
+	                    "!"
 	                  ]
 	                }
 	              ]
@@ -59927,7 +59990,10 @@
 	                        "iBeacon"
 	                      ]
 	                    },
-	                    " is a new technology described by Apple Inc. as &quot;a new class of low-powered, low-cost transmitters that can notify nearby iOS 7 or 8 devices of their presence.&quot;[1] The technology enables a smart phone or other device to perform actions when in close proximity to an iBeacon.["
+	                    " is a new technology described by Apple Inc. as &quot;a new class of low-powered, low-cost transmitters that can notify nearby iOS 7 or 8 devices of their presence.&quot;",
+	                    "[",
+	                    "1] The technology enables a smart phone or other device to perform actions when in close proximity to an iBeacon.",
+	                    "["
 	                  ]
 	                }
 	              ]
@@ -60177,7 +60243,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c05ce03e-83e2-4891-b23d-5a5a361b87a0",
+	      "key": "c317d69d-c13f-4abb-a0ad-8f2a15e129bd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60196,7 +60262,8 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@bcagnina - Britt Cagnina - Creating - Learning - Understanding - Enjoying!"
+	            "@bcagnina - Britt Cagnina - Creating - Learning - Understanding - Enjoying",
+	            "!"
 	          ]
 	        },
 	        {
@@ -60226,7 +60293,8 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@abby_sims - Abby Sims - Owner of Idestini Dev Studio. Web and mobile developer into design and usability. I&#39;ll work with just about anything."
+	            "@abby",
+	            "_sims - Abby Sims - Owner of Idestini Dev Studio. Web and mobile developer into design and usability. I&#39;ll work with just about anything."
 	          ]
 	        },
 	        {
@@ -60238,7 +60306,8 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@kenny_cason - Kenny Cason - CTO of @datarank, linguist: Japanese, Chinese"
+	            "@kenny",
+	            "_cason - Kenny Cason - CTO of @datarank, linguist: Japanese, Chinese"
 	          ]
 	        },
 	        {
@@ -60250,7 +60319,8 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@ARGeekCentral - Geeks of Arkansas, Unite! Getting the word out to Geeks about AR Groups &amp; Events"
+	            "@ARGeekCentral - Geeks of Arkansas, Unite",
+	            "! Getting the word out to Geeks about AR Groups &amp; Events"
 	          ]
 	        },
 	        {
@@ -60310,7 +60380,8 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@thelukeirvin - Luke Irvin - @52_inc // ",
+	            "@thelukeirvin - Luke Irvin - @52",
+	            "_inc // ",
 	            {
 	              "type": "link",
 	              "href": "http://52inc.com",
@@ -60356,7 +60427,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "72208a27-18f9-43a5-a47f-a166ee00ebce",
+	      "key": "e8edc35b-c933-4208-b949-9aecb1242c9b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60604,7 +60675,7 @@
 	}
 
 /***/ },
-/* 763 */
+/* 764 */
 /*!****************************************************!*\
   !*** ./content/posts/client-side-routing-notes.md ***!
   \****************************************************/
@@ -60622,7 +60693,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "ffde3a9a-5d5a-48f5-8369-84c0f7f8c129",
+	      "key": "e91aa694-fb44-452b-95a8-bed661ed23f8",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60710,7 +60781,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9cc3cc91-8446-4881-b32e-8f680889e485",
+	      "key": "292280d3-760e-4e0a-b18b-6ab8e550b2ab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60729,7 +60800,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7b6fb428-193d-4986-b4c4-6009cd5c751a",
+	      "key": "fca47d17-50ef-4abc-aeb5-05c7730bf640",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60773,7 +60844,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1723530b-2159-4976-a1fb-d09bbf97a739",
+	      "key": "ad6bec85-4d4b-4236-b91e-317c49cf352f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60811,7 +60882,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0436803f-8cd3-400e-9c67-6627fc2b474e",
+	      "key": "29b3f4be-898a-42e5-90c1-8375d5dc859d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60872,7 +60943,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2729ced7-e77a-4b5d-8c92-68d780c2356b",
+	      "key": "5c486ec3-6379-4cb6-8db5-dd81986bfa6a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60962,7 +61033,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9f3a5d6f-e035-46ef-96a2-8bc7d5bf412b",
+	      "key": "df977be7-653d-4e0f-a6cf-cf56d896cb97",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61031,7 +61102,8 @@
 	            {
 	              "type": "strong",
 	              "text": [
-	                "updated_at ascending"
+	                "updated",
+	                "_at ascending"
 	              ]
 	            },
 	            ".  It hits a generic server endpoint and passes its partition params\nand lastUpdatedCursor to the server.  The server would respond with the next page of records\nand an indication if this was all that remains."
@@ -61143,7 +61215,7 @@
 	}
 
 /***/ },
-/* 764 */
+/* 765 */
 /*!*****************************************************************!*\
   !*** ./content/posts/confidently-starting-a-reactjs-project.md ***!
   \*****************************************************************/
@@ -61161,7 +61233,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "9dd22695-1a9b-4244-9957-aad1a5cb575a",
+	      "key": "c863e95e-8875-4228-a4b2-ba5bb9a1ca7d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61201,7 +61273,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9560715a-4e15-4904-9c50-dacca84f603e",
+	      "key": "f616e2a5-2857-4b38-9ae8-54b81fa646ee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61244,7 +61316,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "294e6079-6db9-4d42-9ffd-4ae4e90991cb",
+	      "key": "7fd72615-e163-4f27-8953-90f0908f0af6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61257,7 +61329,8 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Once your ready to get serious you might be lured into downloading a professional boilerplate.  I DO NOT recommend this!  Other people&#39;s setup are difficult to troubleshoot and terrifying to adapt to your needs.  Once you spend an afternoon following a good guide to setup your own boilerplate you will have the confidence you need to extend and troubleshoot.  Here are some good guides."
+	            "Once your ready to get serious you might be lured into downloading a professional boilerplate.  I DO NOT recommend this",
+	            "!  Other people&#39;s setup are difficult to troubleshoot and terrifying to adapt to your needs.  Once you spend an afternoon following a good guide to setup your own boilerplate you will have the confidence you need to extend and troubleshoot.  Here are some good guides."
 	          ]
 	        },
 	        {
@@ -61327,7 +61400,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "db966505-f85a-46b6-82ba-9af20abd4ad4",
+	      "key": "cf5b327f-b597-46b4-bdc5-96b55cb70bc2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61512,7 +61585,8 @@
 	                  "type": "codespan",
 	                  "text": "scripts"
 	                },
-	                " field if none exist"
+	                " field if none exist",
+	                ""
 	              ]
 	            }
 	          ],
@@ -61696,7 +61770,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2d752849-8ae7-455e-baa8-26ca9f971663",
+	      "key": "791e32fd-bc00-4460-b4a9-acb4994a2bc3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61791,7 +61865,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bc2cb61b-7d7e-4c58-904b-8153b2f01cd6",
+	      "key": "9414c483-e6d3-46c1-89c0-dec9155bdfc4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61857,7 +61931,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fb276be2-abf8-47c2-8988-a8f4e57ec662",
+	      "key": "9e8b993d-0014-4e18-9161-3a955cb51365",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61941,7 +62015,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Course -&gt; Announcements -&gt; Announcement"
+	                "Course -&gt; Announcements -&gt; Announcement",
+	                ""
 	              ]
 	            }
 	          ],
@@ -62006,7 +62081,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2e18e1e9-e2c4-4713-a8ea-3f1149fb994f",
+	      "key": "07619a58-3277-4e90-b523-a662be7402e2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62036,7 +62111,8 @@
 	                    "React Toolbox"
 	                  ]
 	                },
-	                " - Material Design Component Library"
+	                " - Material Design Component Library",
+	                ""
 	              ]
 	            }
 	          ],
@@ -62123,7 +62199,7 @@
 	}
 
 /***/ },
-/* 765 */
+/* 766 */
 /*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
@@ -62141,7 +62217,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "17a00e9d-f060-466a-829b-44d21649ed3e",
+	      "key": "af905174-3d45-4e84-87e9-3c97ada0f7cf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62184,7 +62260,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "61a31cdd-03ee-4e32-ad9b-21a4f0294e96",
+	      "key": "cc6330e5-cad2-47c5-9e57-865a781516a9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62204,7 +62280,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4578b22d-c7c0-4096-ac24-30ca9e999e15",
+	      "key": "264d8d3a-5bb8-441f-b5a7-c298fc542544",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62224,7 +62300,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5c1c673a-0f7c-4b66-acbd-069e128a20fc",
+	      "key": "3a96c1df-e033-4d37-9631-e244b27fbf47",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62250,7 +62326,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3a126fc2-2424-45b6-a3e1-981c5c6130b3",
+	      "key": "7f142360-f6ca-4897-a447-33dccaa9934d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62276,7 +62352,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a1ba4bd9-7f41-4619-871c-d55bde886cbe",
+	      "key": "518de4f4-8a98-4386-a0a8-f654f99fa306",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62296,7 +62372,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1677af43-a821-4540-a96e-094daf7675e9",
+	      "key": "54a4de68-4290-43c2-9b13-f823483ce536",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62361,7 +62437,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ca303784-81dc-4468-a496-c30544b0d04a",
+	      "key": "2daa3f63-a8a4-4f39-a84a-c80a0a53df31",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62375,7 +62451,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "326abf59-0fe0-43ee-ae40-8d6621539dbf",
+	      "key": "6e04d937-1231-4983-ac9e-33ab3d831551",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62434,7 +62510,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aa85e6b1-fee3-4f72-89fd-c59d929967ac",
+	      "key": "8ea671a2-db7c-4286-9756-f81be09d3bf0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62477,7 +62553,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "34deeb6a-d555-486b-a011-230af70bb02b",
+	      "key": "b98d7744-8e6d-4936-a841-956a943a3ded",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62536,7 +62612,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7dac1c05-d565-4585-b258-6e05f98bb47f",
+	      "key": "fb947f45-2f36-4a48-a443-83e0ae47f94a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62606,7 +62682,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "02439306-7b88-4045-8efa-afe3bdebc409",
+	      "key": "8c8dc280-9714-4590-98bc-7cd9b5b7c071",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62669,7 +62745,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "202e2039-6f8e-46b4-9169-6cc3ac5845ac",
+	      "key": "0a66a75a-c987-488e-9088-ea4532a5cbd2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62705,7 +62781,10 @@
 	                {
 	                  "type": "paragraph",
 	                  "text": [
-	                    "cd flux_alt_immutable_todolist"
+	                    "cd flux",
+	                    "_alt",
+	                    "_immutable",
+	                    "_todolist"
 	                  ]
 	                }
 	              ]
@@ -62740,7 +62819,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b404af85-4761-456c-bdb3-1eaccdc1b204",
+	      "key": "9a62a876-1659-4e50-9900-10fc9a98f9a4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62783,7 +62862,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fbb9aa6f-2b9d-403d-af8d-b5be59cf2b48",
+	      "key": "62769cf4-9f90-4c1e-bfa8-ab0cddef47e5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62814,7 +62893,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "850133ee-31d2-4493-8bc8-b9d806eaea40",
+	      "key": "61f2a406-3c0d-4b6a-a97b-3134959a8019",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62830,7 +62909,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Create class -vs- ES6 Classes"
+	                "Create class -vs- ES6 Classes",
+	                ""
 	              ]
 	            }
 	          ],
@@ -62847,7 +62927,7 @@
 	}
 
 /***/ },
-/* 766 */
+/* 767 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -62865,7 +62945,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a69fb38c-924c-427e-88df-c67793f0920b",
+	      "key": "ed83d4fb-2b8b-40a3-8a51-9164d14be5b3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62930,7 +63010,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "96736441-5f06-4990-85de-fb787a17d4b8",
+	      "key": "211ea786-eee1-4fd5-b4b6-ef01c351b127",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62946,7 +63026,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Create index.html"
+	                "Create index.html",
+	                ""
 	              ]
 	            }
 	          ],
@@ -62963,7 +63044,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add react libraries."
+	                "Add react libraries.",
+	                ""
 	              ]
 	            }
 	          ],
@@ -62980,7 +63062,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add Hello World Code."
+	                "Add Hello World Code.",
+	                ""
 	              ]
 	            }
 	          ],
@@ -62995,7 +63078,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "767ce928-6018-437c-973e-44ef5b8c0b8b",
+	      "key": "152b1e0b-175e-4aaf-84fe-fc7ab675bb01",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63064,7 +63147,9 @@
 	                    {
 	                      "type": "listitem",
 	                      "text": [
-	                        "/node_modules/http-server/bin/http-server"
+	                        "/node",
+	                        "_modules/http-server/bin/http-server",
+	                        ""
 	                      ]
 	                    }
 	                  ],
@@ -63143,7 +63228,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7176202e-35e6-4cae-a5f3-3c413f790464",
+	      "key": "39754a55-3aab-40f1-a36e-ecf437fb9ff2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63332,7 +63417,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "SearchBar"
+	                "SearchBar",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63349,7 +63435,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "EmployeeList has subcomponents, but lets just keep it simple for now"
+	                "EmployeeList has subcomponents, but lets just keep it simple for now",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63366,7 +63453,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Replace Hello World with HomePage"
+	                "Replace Hello World with HomePage",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63381,7 +63469,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f98085fe-5117-43bc-b71d-1ea0795e1b80",
+	      "key": "f52f8a79-af30-40c7-aecf-357f990086d2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63397,7 +63485,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets add some data.  Put this in HomePage component, right in the render function."
+	                "Lets add some data.  Put this in HomePage component, right in the render function.",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63414,7 +63503,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Now pass the employees to the EmployeeList component."
+	                "Now pass the employees to the EmployeeList component.",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63431,7 +63521,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Now lets fix the Employee List Component"
+	                "Now lets fix the Employee List Component",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63448,7 +63539,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets create an EmployeeListItem component"
+	                "Lets create an EmployeeListItem component",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63465,7 +63557,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets tweak EmployeeList"
+	                "Lets tweak EmployeeList",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63480,7 +63573,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "abc97410-2815-4ed3-962c-85b58b674b81",
+	      "key": "558bd830-1c7c-4b33-8c0a-8128088cc1ad",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63496,7 +63589,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add a searchHandler to our HomePage component"
+	                "Add a searchHandler to our HomePage component",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63513,7 +63607,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "And pass it as a property to our SearchBar"
+	                "And pass it as a property to our SearchBar",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63600,7 +63695,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Define our components searchHandler"
+	                "Define our components searchHandler",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63617,7 +63713,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Have the input call our SearchBar&#39;s searchHandler"
+	                "Have the input call our SearchBar&#39;s searchHandler",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63632,7 +63729,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bc3478b8-1f2e-47e9-a728-9bcfc24a97ad",
+	      "key": "0e7d524a-64bc-48b5-9d79-114f6c3ce368",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63695,7 +63792,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Remove static list of employees and add state"
+	                "Remove static list of employees and add state",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63712,7 +63810,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets replace the search handler with something that sets the state\nusing our employeeService"
+	                "Lets replace the search handler with something that sets the state\nusing our employeeService",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63727,7 +63826,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "17ca0970-ab69-4a8a-b1b2-faf2e05cc012",
+	      "key": "ea16d2fa-f3be-4587-93f7-19e535c44257",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63865,7 +63964,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "20314eb5-d0dc-4aad-9039-fdf161e92c5a",
+	      "key": "d5310d39-d8a3-48c7-9e01-6445054c01ec",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63929,7 +64028,9 @@
 	                {
 	                  "type": "paragraph",
 	                  "text": [
-	                    "cd lr_meetup_11202015"
+	                    "cd lr",
+	                    "_meetup",
+	                    "_11202015"
 	                  ]
 	                }
 	              ]
@@ -63960,7 +64061,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Update Header"
+	                "Update Header",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63977,7 +64079,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Update SearchBar"
+	                "Update SearchBar",
+	                ""
 	              ]
 	            }
 	          ],
@@ -63994,7 +64097,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Update EmployeeListItem"
+	                "Update EmployeeListItem",
+	                ""
 	              ]
 	            }
 	          ],
@@ -64011,7 +64115,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add class to EmployeeList"
+	                "Add class to EmployeeList",
+	                ""
 	              ]
 	            }
 	          ],
@@ -64028,7 +64133,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add some class to the HomePage"
+	                "Add some class to the HomePage",
+	                ""
 	              ]
 	            }
 	          ],
@@ -64045,7 +64151,8 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Style Up the EmployeePage"
+	                "Style Up the EmployeePage",
+	                ""
 	              ]
 	            }
 	          ],
@@ -64060,7 +64167,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4576b237-a4aa-4ac1-98b4-1e839741e8b2",
+	      "key": "605735df-04d2-46c3-8a3d-0d070113ee74",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64185,7 +64292,7 @@
 	}
 
 /***/ },
-/* 767 */
+/* 768 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -64203,7 +64310,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "13b93f75-566a-4917-86e5-67beb65b384f",
+	      "key": "e379d2a2-047b-4b82-8301-95399ad21dc9",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64215,7 +64322,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8fff819f-bf75-443a-aa67-6c45b660e8a0",
+	      "key": "9cb83996-5a19-455c-9297-99b2684373bc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64324,7 +64431,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cac52a9a-ff5a-40bd-a8f9-7ed23c5b6684",
+	      "key": "b74a5be8-cea1-4255-b90d-9247bf0161ad",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64363,7 +64470,8 @@
 	                    "Using Babel"
 	                  ]
 	                },
-	                " - Guides on how to setup babel in whatever environment you might be working in."
+	                " - Guides on how to setup babel in whatever environment you might be working in.",
+	                ""
 	              ]
 	            }
 	          ],
@@ -64373,7 +64481,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "02271101-e8b0-421b-9a5d-78f52e5bb178",
+	      "key": "463f53c1-e7d5-42f5-8c2a-4fe6833e3361",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64445,7 +64553,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ef4f18e0-a2e9-46d6-837c-0c789d10d2b8",
+	      "key": "8733140a-d799-4e52-b8b1-c3fbbdb43b1d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64481,7 +64589,801 @@
 	}
 
 /***/ },
-/* 768 */
+/* 769 */
+/*!*******************************************!*\
+  !*** ./content/posts/kubernetes-notes.md ***!
+  \*******************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Easily Learn Kubernetes on GCE",
+	  "slug": "kubernetes-notes",
+	  "summary": "I've reworked demos and user guides to work on GCE and use publicly available resources.",
+	  "created": "August 19 2016",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "cover": true,
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "eadac52e-e5de-4dc6-92ff-d33503b1ee8a",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Requirements"
+	          ],
+	          "level": 1,
+	          "raw": "Requirements"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/kelseyhightower/craft-kubernetes-workshop/blob/master/labs/create-gce-account.md",
+	                      "title": null,
+	                      "text": [
+	                        "Create a GCE Account"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/kelseyhightower/craft-kubernetes-workshop/blob/master/labs/enable-and-explore-cloud-shell.md",
+	                      "title": null,
+	                      "text": [
+	                        "Enable and Explore Google Cloud Shell"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "8d6ebf61-4597-4ee1-a26f-f4d0b6c5dad4",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Hello NGINX"
+	          ],
+	          "level": 1,
+	          "raw": "Hello NGINX"
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Kelsey Hightower has a great Introduction to Kubernetes in his ",
+	            {
+	              "type": "link",
+	              "href": "https://www.youtube.com/watch?v=Wyl4O3CHzV0",
+	              "title": null,
+	              "text": [
+	                "KubeCon Keynote Presentation"
+	              ]
+	            },
+	            " that uses command lines instead of YAML files.  Similar to this ",
+	            {
+	              "type": "link",
+	              "href": "http://kubernetes.io/docs/user-guide/simple-nginx/",
+	              "title": null,
+	              "text": [
+	                "User&#39;s Guide"
+	              ]
+	            },
+	            ", the command line is less intimidating to new users than YAML files."
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "I&#39;ve adapted it slightly to work on GCE."
+	          ]
+	        },
+	        {
+	          "type": "code",
+	          "code": "kubectl run mynginx  \\\n  --image=nginx:1.9.12\n\nkubectl expose deployment mynginx \\\n  --port 80 \\\n  --type=LoadBalancer\n\nkubectl get svc",
+	          "lang": "bash",
+	          "fenced": true
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Paste EXTERNAL-IP address of my-nginx into browser."
+	          ]
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "692c199d-7ac3-4356-b427-787868844623",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Hello Ghost"
+	          ],
+	          "level": 1,
+	          "raw": "Hello Ghost"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://youtu.be/Wyl4O3CHzV0?t=6m44s",
+	                      "title": null,
+	                      "text": [
+	                        "Parts of Ghost"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "nginx &amp; ghost"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "mysql"
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://youtu.be/Wyl4O3CHzV0?t=7m25s",
+	                      "title": null,
+	                      "text": [
+	                        "Scale nginx &amp; ghost"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "e7e090fb-94e7-4a5c-89af-70aacf5a8072",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Alone with Docker"
+	          ],
+	          "level": 1,
+	          "raw": "Alone with Docker"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Tightly coupled containers difficult to orchestrate"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://youtu.be/Wyl4O3CHzV0?t=8m42s",
+	                              "title": null,
+	                              "text": [
+	                                "Balance"
+	                              ]
+	                            },
+	                            " - Need to have equal number of nginx and ghost."
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://youtu.be/Wyl4O3CHzV0?t=8m10s",
+	                              "title": null,
+	                              "text": [
+	                                "Container Networking"
+	                              ]
+	                            },
+	                            " - Nginx and ghost need to connect without &#39;clever&#39; ",
+	                            {
+	                              "type": "link",
+	                              "href": "https://youtu.be/Wyl4O3CHzV0?t=9m12s",
+	                              "title": null,
+	                              "text": [
+	                                "EntryPoint.sh work-arounds"
+	                              ]
+	                            }
+	                          ]
+	                        },
+	                        ""
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "8148e17d-1f69-4df5-a1f5-86cc2401a91f",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Pods"
+	          ],
+	          "level": 1,
+	          "raw": "Pods"
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Pods are a kubernetes primitive that represents a logical application."
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://youtu.be/Wyl4O3CHzV0?t=9m48s",
+	                      "title": null,
+	                      "text": [
+	                        "Pods"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "One or more containers and volumes"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Shared Namespaces"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "One IP per Pod"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://youtu.be/Wyl4O3CHzV0?t=7m25s",
+	                              "title": null,
+	                              "text": [
+	                                "Better Balance"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://youtu.be/Wyl4O3CHzV0?t=10m28s",
+	                              "title": null,
+	                              "text": [
+	                                "Networking on LocalHost"
+	                              ]
+	                            }
+	                          ]
+	                        },
+	                        ""
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "3d175ee6-10da-4318-8542-e853ebeb5932",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Deployments"
+	          ],
+	          "level": 1,
+	          "raw": "Deployments"
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Deployments drives current state towards desired state."
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://youtu.be/Wyl4O3CHzV0?t=11m38s",
+	                      "title": null,
+	                      "text": [
+	                        "Declarative"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Desired state stored on server"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Ansible Tower"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Puppet Enterprise"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            {
+	                              "type": "link",
+	                              "href": "https://youtu.be/Wyl4O3CHzV0?t=12m18s",
+	                              "title": null,
+	                              "text": [
+	                                "Self Healing"
+	                              ]
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Scheduler maintains state"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "AWS Auto-Scaling Group"
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "GCE Instance Group Manager"
+	                          ]
+	                        },
+	                        ""
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "f12b58d1-927c-492e-bb67-87695927b5c1",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Secrets &amp; Config Maps"
+	          ],
+	          "level": 2,
+	          "raw": "Secrets & Config Maps"
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Secrets keep passwords, sensitive config files, and\nssl certifies out of builds."
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Kubernetes Approach"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://youtu.be/Wyl4O3CHzV0?t=13m9s",
+	                      "title": null,
+	                      "text": [
+	                        "Load secret into Kubernetes master"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://youtu.be/Wyl4O3CHzV0?t=14m35s",
+	                      "title": null,
+	                      "text": [
+	                        "Consume secrets as mounted volumes or env variables"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "code",
+	          "code": "kubectl create secret mysecretconfig \\\n  --from-file config.json\n\nkubectl create secret mysecret database-yml \\\n  --from-literal=password=opensesame",
+	          "fenced": true
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "2d2fcee8-8a70-4384-a243-3bf5a056632a",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Consume secret as mounted volume"
+	          ],
+	          "level": 3,
+	          "raw": "Consume secret as mounted volume"
+	        },
+	        {
+	          "type": "code",
+	          "code": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: mypod\n  namespace: myns\nspec:\n  containers:\n  - name: mypod\n    image: redis\n    volumeMounts:\n    - name: foo\n      mountPath: \"/etc/foo\"\n      readOnly: true\n  volumes:\n  - name: foo\n    secret:\n      secretName: mysecretconfig",
+	          "lang": "yaml",
+	          "fenced": true
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "73d9e09f-fcb9-4eed-a575-3f528bcdc141",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Consume secret as Env. Variables"
+	          ],
+	          "level": 3,
+	          "raw": "Consume secret as Env. Variables"
+	        },
+	        {
+	          "type": "code",
+	          "code": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: secret-env-pod\nspec:\n  containers:\n    - name: mycontainer\n      image: redis\n      env:\n        - name: SECRET_USERNAME\n          valueFrom:\n            secretKeyRef:\n              name: mysecret\n              key: username\n        - name: SECRET_PASSWORD\n          valueFrom:\n            secretKeyRef:\n              name: mysecret\n              key: password\n  restartPolicy: Never",
+	          "lang": "yaml",
+	          "fenced": true
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "12eac44f-384c-4cb0-9f5d-9d3a84527dff",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Resources"
+	          ],
+	          "level": 1,
+	          "raw": "Resources"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://clusterhq.com/2016/03/30/kubecon-keynote-kelsey-hightower/#transcript",
+	                      "title": null,
+	                      "text": [
+	                        "KubeCon Opening Keynote"
+	                      ]
+	                    },
+	                    " - Transcript"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/kelseyhightower/talks/tree/master/kubecon-eu-2016/demo",
+	                      "title": null,
+	                      "text": [
+	                        "KubeCon Opening Keynote"
+	                      ]
+	                    },
+	                    " - Github Source"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "63f58013-5e9f-4463-bb91-451df3778900",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Jokes"
+	          ],
+	          "level": 1,
+	          "raw": "Jokes"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "(when describing the problem of container connectivity) The whole startup-economy was built up around this, 100s were funded 3 survived."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "(when showing an entrypoint.sh) &quot;Did you guise hear that ring?&quot;  That was the 90s calling for their tooling back."
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "(when discussing deployments) &quot;Human Schedulers or have some&quot;.\nAsk someone in operations to And when a server goes down, sleep deprivation kicks in.  We give them pagers, they wake up in the middle of the night."
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 770 */
 /*!******************************************!*\
   !*** ./content/posts/node-deployment.md ***!
   \******************************************/
@@ -64499,7 +65401,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "87732ed5-a668-4c41-8c60-4d89ca3fef19",
+	      "key": "d96a94bb-0555-4ee3-96a3-f2236af4b899",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64625,7 +65527,8 @@
 	                                "Rolling Deployments with Ansible"
 	                              ]
 	                            },
-	                            " - Wow!  Ryan Bates Quality Instructions"
+	                            " - Wow",
+	                            "!  Ryan Bates Quality Instructions"
 	                          ]
 	                        }
 	                      ]
@@ -65126,7 +66029,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fea72db5-8a64-4610-bc4b-fac638806265",
+	      "key": "08e94aa6-7e64-4ee0-96a3-0889111cb5fd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65521,7 +66424,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5f80b60e-0eb4-4a82-9946-f61376d41cbe",
+	      "key": "6b143590-a1f0-4215-9400-73e2bbdc5a39",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65712,7 +66615,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0898db5c-fa9c-47e0-b267-b08228e1b6c0",
+	      "key": "fb847e9e-0cb7-49fb-aa27-f874806523a8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65795,7 +66698,8 @@
 	                        "Mantl.io"
 	                      ]
 	                    },
-	                    " - Wow!"
+	                    " - Wow",
+	                    "!"
 	                  ]
 	                }
 	              ]
@@ -65862,7 +66766,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "87888419-c4b5-4f5c-8c1f-50820a3111af",
+	      "key": "46b275ab-c67d-4b72-8231-3473d1688efc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66013,7 +66917,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f6473c06-e1de-4713-a894-ef52742d8d57",
+	      "key": "679f5be2-66fa-4f2f-b8b9-4af71bc4ad25",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66089,7 +66993,7 @@
 	}
 
 /***/ },
-/* 769 */
+/* 771 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -66107,7 +67011,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "3559f277-903c-4c6d-b9f3-bd4a66bb8776",
+	      "key": "d40e934b-49fb-495d-8651-e06a31c581c9",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66205,7 +67109,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "88f5690b-41aa-43f8-9863-e838a437f47d",
+	      "key": "c62ae2ab-01a3-4c09-8624-2bad0915fb47",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66236,7 +67140,8 @@
 	                    "Content Stores"
 	                  ]
 	                },
-	                " approach is pure flux!"
+	                " approach is pure flux",
+	                "!"
 	              ]
 	            },
 	            "  We have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed."
@@ -66246,7 +67151,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e83750b2-9dc8-46c1-ad71-28445d6cea20",
+	      "key": "5d6d7675-769b-4e45-a9e1-e1139db2cf40",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66262,7 +67167,8 @@
 	            {
 	              "type": "strong",
 	              "text": [
-	                "Facebook&#39;s Relay approach is pure decoupling!"
+	                "Facebook&#39;s Relay approach is pure decoupling",
+	                "!"
 	              ]
 	            },
 	            "  Statically declare the data needs of a component within itself.  Eliminate creating and ",
@@ -66285,7 +67191,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b0f01d5c-e0b2-44dc-bb42-31f13b257aac",
+	      "key": "614ee2db-ba57-4818-b5be-1b761aea0ec1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66311,7 +67217,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ce1cd367-0127-4bd6-b49e-ea6d282cf0ec",
+	      "key": "cbc53b43-128e-4bcf-bfac-bb772a10309d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66389,7 +67295,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "877330a0-0114-4389-8085-87b01a475f37",
+	      "key": "18bfb625-afab-4778-a5a5-5e3a7e702c1b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66418,7 +67324,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "428399df-83be-43d2-a728-f4b97dbfab89",
+	      "key": "d49b587f-c8ca-4a1d-9a96-860408b69f30",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66438,7 +67344,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3f0f1d6f-22ab-49b4-8e9c-d900f14062a9",
+	      "key": "2f583f1d-e675-4ad5-880d-05e7b3095c5f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66451,7 +67357,8 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project."
+	            "Similar to Relay, the components control what data is fetched",
+	            "!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project."
 	          ]
 	        },
 	        {
@@ -66462,7 +67369,9 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Similar to Relay, your server can have one generic server end point!  Which is awesome!  But you don&#39;t need GQL magic on the server, ",
+	            "Similar to Relay, your server can have one generic server end point",
+	            "!  Which is awesome",
+	            "!  But you don&#39;t need GQL magic on the server, ",
 	            {
 	              "type": "link",
 	              "href": "https://github.com/jrhicks/LokiJS-Flux-Example/blob/master/app/controllers/offline_controller.rb",
@@ -66477,7 +67386,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "26778b98-90e0-46db-9db7-1344d0894108",
+	      "key": "aa877d1b-22d7-4d47-8de2-15c23507e93f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66490,7 +67399,9 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Its fast!   Thanks React and Loki!  In this video, I sync (download and insert into an offline database) over 10,000 records.  I&#39;m using Flux to manage the replication\nprocess and update the React view component to display progress."
+	            "Its fast",
+	            "!   Thanks React and Loki",
+	            "!  In this video, I sync (download and insert into an offline database) over 10,000 records.  I&#39;m using Flux to manage the replication\nprocess and update the React view component to display progress."
 	          ]
 	        },
 	        {
@@ -66511,7 +67422,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "83e78288-90fb-484a-b8c1-e8d003659693",
+	      "key": "58d777ab-8734-4e85-917b-be965e8e9578",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66593,7 +67504,7 @@
 	}
 
 /***/ },
-/* 770 */
+/* 772 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -66611,7 +67522,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "ec5812c7-5b1b-458f-8431-4bfae3e67006",
+	      "key": "4f841ad8-be5f-40b8-ba82-b4afc4749520",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -66620,7 +67531,8 @@
 	            {
 	              "type": "strong",
 	              "text": [
-	                "form_for"
+	                "form",
+	                "_for"
 	              ]
 	            },
 	            " and it works because it can introspect the shape of the data with ActiveRecord.  Maybe we don&#39;t have or need an ORM for our front-end.  But a data introspection standard would benefit the component ecosystem."
@@ -66630,7 +67542,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "91b12b53-ef43-43f0-bf09-c918684acada",
+	      "key": "e5093046-7b98-46ef-b4b5-dc731c6067b9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66737,7 +67649,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3fd14f13-436d-45b2-b3f1-3f3e0b3ec736",
+	      "key": "18b5f9b3-19ef-45fa-b2f0-ecc4f8290013",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66757,7 +67669,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "437b091b-299e-4496-a3ca-09dee695a7fb",
+	      "key": "ff93e533-f214-48d8-bbbe-fb7e3dc0577f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66796,7 +67708,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e46b3a95-eaee-4d35-bdf1-7e8eadafe9e8",
+	      "key": "cd80b57e-1a41-4f50-a191-2d4507b60c63",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66830,7 +67742,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fa833a92-af56-4abe-b3e1-0abbe8812f3b",
+	      "key": "ea63bd05-aecc-432c-bf8f-b6205f49d27f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66862,7 +67774,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e9585577-57c4-4e9c-abc0-d73050f76480",
+	      "key": "c6ae5a08-6898-421f-81bc-177b1da78fc2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66896,7 +67808,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f22fd5c5-89d2-4773-9b12-2fde07415823",
+	      "key": "762615e5-a79b-41ba-acea-6b9c4983e1ab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66979,7 +67891,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8e671f55-99c5-48f4-a14a-d90a21ddd46b",
+	      "key": "d94020dc-5323-4b84-811d-ece6e5be5d31",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67003,7 +67915,8 @@
 	                    "tcomb-form-native"
 	                  ]
 	                },
-	                " - react-native powered form-handling"
+	                " - react-native powered form-handling",
+	                ""
 	              ]
 	            }
 	          ],
@@ -67013,7 +67926,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "00545581-7508-48c7-9f83-9f01e6d4d897",
+	      "key": "2b7ceb41-c790-4d3c-a8e9-9d6fbfb891db",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67049,7 +67962,7 @@
 	}
 
 /***/ },
-/* 771 */
+/* 773 */
 /*!************************************!*\
   !*** ./content/posts/typefaces.md ***!
   \************************************/
@@ -67067,7 +67980,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b77e5c70-111d-4488-9e54-f4ececef4647",
+	      "key": "88ded710-ceeb-40f7-b574-d26529262252",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67091,7 +68004,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1814cb75-855d-4d0e-b021-122305e2fb19",
+	      "key": "5255776a-3d3f-491a-b495-324743f2a5aa",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67156,7 +68069,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b1fbfe32-4988-4744-babd-899e3ac64d08",
+	      "key": "7602af6b-9c63-4438-bcc1-10fd5dcc93fc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67210,7 +68123,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "25291a71-5a5e-47b3-afb8-3ad34d57b421",
+	      "key": "e12337b3-6ad1-4502-9bd4-29ea4761019c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67300,7 +68213,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3b3f254c-51cb-4472-8aea-275143da373f",
+	      "key": "07f232f4-7b75-4481-9a80-280b7fd914d5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67402,7 +68315,7 @@
 	}
 
 /***/ },
-/* 772 */
+/* 774 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -67410,27 +68323,26 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 773);
+	var req = __webpack_require__(/*! ./talks/ */ 775);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
-	
 	module.exports = talks;
 
 /***/ },
-/* 773 */
+/* 775 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 774,
-		"./es-intro-deck.md": 775,
-		"./es-intro.md": 776,
-		"./lds-intro.md": 777,
-		"./ui-principles-deck.md": 778,
-		"./ui-principles.md": 779
+		"./component-vs-layout.md": 776,
+		"./es-intro-deck.md": 777,
+		"./es-intro.md": 778,
+		"./lds-intro.md": 779,
+		"./ui-principles-deck.md": 780,
+		"./ui-principles.md": 781
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -67443,11 +68355,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 773;
+	webpackContext.id = 775;
 
 
 /***/ },
-/* 774 */
+/* 776 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -67464,14 +68376,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "6fc9c8ea-6357-4223-a367-0dcfdb7f132c",
+	      "key": "fa6cc230-a193-4f07-8010-17fc12a05974",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 775 */
+/* 777 */
 /*!****************************************!*\
   !*** ./content/talks/es-intro-deck.md ***!
   \****************************************/
@@ -67489,14 +68401,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "08bd11bf-902f-4b35-892a-87b531443033",
+	      "key": "e2700ed8-7cae-499d-914f-3d502aff7d63",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 776 */
+/* 778 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -67518,7 +68430,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2f5a01fd-a626-43c5-b30c-859320ddb75b",
+	      "key": "168673f7-d8f6-485f-93a0-80d6e86fd0d7",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67598,15 +68510,10 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "es-intro-deck",
-	                "method": "embed"
-	              },
-	              ""
-	            ]
+	            "[",
+	            "[",
+	            "[",
+	            "es-intro-deck]]]"
 	          ]
 	        },
 	        {
@@ -67821,7 +68728,7 @@
 	}
 
 /***/ },
-/* 777 */
+/* 779 */
 /*!************************************!*\
   !*** ./content/talks/lds-intro.md ***!
   \************************************/
@@ -67843,14 +68750,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f276e0d2-cdbc-4233-a536-6eec3334f29b",
+	      "key": "3cb52783-27a9-4d59-9551-2f4876f0ac10",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 778 */
+/* 780 */
 /*!*********************************************!*\
   !*** ./content/talks/ui-principles-deck.md ***!
   \*********************************************/
@@ -67868,14 +68775,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0f11d7b2-110d-49bb-bad1-8c3586b210a3",
+	      "key": "a185bca8-de1b-4465-b9fd-771d688decd7",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 779 */
+/* 781 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -67898,7 +68805,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "085ecf18-9f7f-4e3f-a56c-5ef73db0466a",
+	      "key": "f9df28eb-7fa1-42d5-a380-fdd5e8baa512",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67909,15 +68816,10 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "ui-principles-deck",
-	                "method": "embed"
-	              },
-	              ""
-	            ]
+	            "[",
+	            "[",
+	            "[",
+	            "ui principles deck]]]"
 	          ]
 	        },
 	        {
@@ -67936,7 +68838,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e440cb0e-8ed0-4284-b601-aa63c019e8b6",
+	      "key": "19d13ff1-9e4d-402c-bc3b-f818b5c975e5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68056,7 +68958,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4d7d9d1e-68d5-49b0-98ba-7f3e243738a9",
+	      "key": "1c684350-b9ad-4216-ae3c-9489baa99254",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68091,7 +68993,7 @@
 	}
 
 /***/ },
-/* 780 */
+/* 782 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -68101,7 +69003,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 781 */
+/* 783 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -68133,7 +69035,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 782);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 784);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -68184,7 +69086,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 782 */
+/* 784 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -68194,7 +69096,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 783 */
+/* 785 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -68228,13 +69130,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
-	var _reactMotion = __webpack_require__(/*! react-motion */ 784);
+	var _reactMotion = __webpack_require__(/*! react-motion */ 786);
 	
 	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 798);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 800);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -68371,7 +69273,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 784 */
+/* 786 */
 /*!********************************************!*\
   !*** ./~/react-motion/lib/react-motion.js ***!
   \********************************************/
@@ -68383,34 +69285,34 @@
 	
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 	
-	var _Motion = __webpack_require__(/*! ./Motion */ 785);
+	var _Motion = __webpack_require__(/*! ./Motion */ 787);
 	
 	exports.Motion = _interopRequire(_Motion);
 	
-	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 792);
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 794);
 	
 	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 	
-	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 793);
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 795);
 	
 	exports.TransitionMotion = _interopRequire(_TransitionMotion);
 	
-	var _spring = __webpack_require__(/*! ./spring */ 795);
+	var _spring = __webpack_require__(/*! ./spring */ 797);
 	
 	exports.spring = _interopRequire(_spring);
 	
-	var _presets = __webpack_require__(/*! ./presets */ 796);
+	var _presets = __webpack_require__(/*! ./presets */ 798);
 	
 	exports.presets = _interopRequire(_presets);
 	
 	// deprecated, dummy warning function
 	
-	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 797);
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 799);
 	
 	exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ },
-/* 785 */
+/* 787 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/Motion.js ***!
   \**************************************/
@@ -68424,27 +69326,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 786);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 788);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 787);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 789);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 788);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 790);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 789);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 791);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 790);
+	var _raf = __webpack_require__(/*! raf */ 792);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 791);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 793);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -68659,7 +69561,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 786 */
+/* 788 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mapToZero.js ***!
   \*****************************************/
@@ -68686,7 +69588,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 787 */
+/* 789 */
 /*!******************************************!*\
   !*** ./~/react-motion/lib/stripStyle.js ***!
   \******************************************/
@@ -68715,7 +69617,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 788 */
+/* 790 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/stepper.js ***!
   \***************************************/
@@ -68766,7 +69668,7 @@
 	// array reference around.
 
 /***/ },
-/* 789 */
+/* 791 */
 /*!*****************************************************************!*\
   !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
   \*****************************************************************/
@@ -68808,13 +69710,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 790 */
+/* 792 */
 /*!***************************************!*\
   !*** ./~/react-motion/~/raf/index.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 789)
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 791)
 	  , root = typeof window === 'undefined' ? global : window
 	  , vendors = ['moz', 'webkit']
 	  , suffix = 'AnimationFrame'
@@ -68890,7 +69792,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 791 */
+/* 793 */
 /*!***************************************************!*\
   !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
   \***************************************************/
@@ -68929,7 +69831,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 792 */
+/* 794 */
 /*!***********************************************!*\
   !*** ./~/react-motion/lib/StaggeredMotion.js ***!
   \***********************************************/
@@ -68943,27 +69845,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 786);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 788);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 787);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 789);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 788);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 790);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 789);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 791);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 790);
+	var _raf = __webpack_require__(/*! raf */ 792);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 791);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 793);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -69199,7 +70101,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 793 */
+/* 795 */
 /*!************************************************!*\
   !*** ./~/react-motion/lib/TransitionMotion.js ***!
   \************************************************/
@@ -69213,31 +70115,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 786);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 788);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 787);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 789);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 788);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 790);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 794);
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 796);
 	
 	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 789);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 791);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 790);
+	var _raf = __webpack_require__(/*! raf */ 792);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 791);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 793);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -69695,7 +70597,7 @@
 	// that you've unmounted but that's still animating. This is where it lives
 
 /***/ },
-/* 794 */
+/* 796 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mergeDiff.js ***!
   \*****************************************/
@@ -69811,7 +70713,7 @@
 	// to loop through and find a key's index each time), but I no longer care
 
 /***/ },
-/* 795 */
+/* 797 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/spring.js ***!
   \**************************************/
@@ -69827,7 +70729,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _presets = __webpack_require__(/*! ./presets */ 796);
+	var _presets = __webpack_require__(/*! ./presets */ 798);
 	
 	var _presets2 = _interopRequireDefault(_presets);
 	
@@ -69842,7 +70744,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 796 */
+/* 798 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/presets.js ***!
   \***************************************/
@@ -69860,7 +70762,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 797 */
+/* 799 */
 /*!*******************************************!*\
   !*** ./~/react-motion/lib/reorderKeys.js ***!
   \*******************************************/
@@ -69886,7 +70788,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 798 */
+/* 800 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -69896,7 +70798,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 799 */
+/* 801 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -69906,7 +70808,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 800 */
+/* 802 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -69916,12 +70818,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 801),
+	  component: __webpack_require__(/*! ./Content */ 803),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 801 */
+/* 803 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -69957,7 +70859,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 802);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 804);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -69992,7 +70894,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 802 */
+/* 804 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
