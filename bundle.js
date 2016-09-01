@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 802)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 804)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 783);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 785);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 785);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 787);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 801);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 803);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34366,7 +34366,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 782);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 784);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -35285,7 +35285,7 @@
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 774);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 776);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -59690,14 +59690,16 @@
 		"./arkansas-dev-hackathon-2015.md": 763,
 		"./client-side-routing-notes.md": 764,
 		"./confidently-starting-a-reactjs-project.md": 765,
-		"./intro-to-flux.md": 766,
-		"./intro-to-reactjs.md": 767,
-		"./introduction-to-es6.md": 768,
-		"./kubernetes-notes.md": 769,
-		"./node-deployment.md": 770,
-		"./offline-flux-with-lokijs.md": 771,
-		"./react-form-generation.md": 772,
-		"./typefaces.md": 773
+		"./hello-k8-node-with-wercker.md": 766,
+		"./hightower-presentations.md": 767,
+		"./intro-to-flux.md": 768,
+		"./intro-to-reactjs.md": 769,
+		"./introduction-to-es6.md": 770,
+		"./kubernetes-notes.md": 771,
+		"./node-deployment.md": 772,
+		"./offline-flux-with-lokijs.md": 773,
+		"./react-form-generation.md": 774,
+		"./typefaces.md": 775
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -59732,7 +59734,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "cbbeed84-023f-4cc4-9d3e-f8b05166373f",
+	      "key": "d1ba1734-3986-43bc-9c35-8cc49c169019",
 	      "body": [
 	        "",
 	        {
@@ -59790,7 +59792,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8b542436-13ff-487c-8ea6-ffca015776ce",
+	      "key": "019054e3-d497-4bef-bd85-c9e15bf87dba",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59858,15 +59860,14 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Please comment below with stuff you saw and heard and any attendees on twitter I missed.  Thanks",
-	            "!"
+	            "Please comment below with stuff you saw and heard and any attendees on twitter I missed.  Thanks!"
 	          ]
 	        }
 	      ]
 	    },
 	    {
 	      "type": "section",
-	      "key": "e5470dd4-4ed9-43b1-bfc2-e1fc835d511b",
+	      "key": "e45ee33e-e7eb-48ae-9d0e-3bc0d718a3ee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -59950,9 +59951,7 @@
 	                        "Python Artists Of Arkansas"
 	                      ]
 	                    },
-	                    " - Whether just curious, a new programmer, or you remember clearing the moths out of your vacuum tubes, we want to see YOU",
-	                    "! Primarily about the Python programming language, we want to encourage all &quot;programming&quot; and &quot;technology&quot; discussions - COME GEEK OUT",
-	                    "!"
+	                    " - Whether just curious, a new programmer, or you remember clearing the moths out of your vacuum tubes, we want to see YOU! Primarily about the Python programming language, we want to encourage all &quot;programming&quot; and &quot;technology&quot; discussions - COME GEEK OUT!"
 	                  ]
 	                }
 	              ]
@@ -59990,10 +59989,7 @@
 	                        "iBeacon"
 	                      ]
 	                    },
-	                    " is a new technology described by Apple Inc. as &quot;a new class of low-powered, low-cost transmitters that can notify nearby iOS 7 or 8 devices of their presence.&quot;",
-	                    "[",
-	                    "1] The technology enables a smart phone or other device to perform actions when in close proximity to an iBeacon.",
-	                    "["
+	                    " is a new technology described by Apple Inc. as &quot;a new class of low-powered, low-cost transmitters that can notify nearby iOS 7 or 8 devices of their presence.&quot;[1] The technology enables a smart phone or other device to perform actions when in close proximity to an iBeacon.["
 	                  ]
 	                }
 	              ]
@@ -60243,7 +60239,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c317d69d-c13f-4abb-a0ad-8f2a15e129bd",
+	      "key": "81b0d79b-9e86-4ebe-82e2-f069bcade6fb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60262,8 +60258,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@bcagnina - Britt Cagnina - Creating - Learning - Understanding - Enjoying",
-	            "!"
+	            "@bcagnina - Britt Cagnina - Creating - Learning - Understanding - Enjoying!"
 	          ]
 	        },
 	        {
@@ -60293,8 +60288,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@abby",
-	            "_sims - Abby Sims - Owner of Idestini Dev Studio. Web and mobile developer into design and usability. I&#39;ll work with just about anything."
+	            "@abby_sims - Abby Sims - Owner of Idestini Dev Studio. Web and mobile developer into design and usability. I&#39;ll work with just about anything."
 	          ]
 	        },
 	        {
@@ -60306,8 +60300,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@kenny",
-	            "_cason - Kenny Cason - CTO of @datarank, linguist: Japanese, Chinese"
+	            "@kenny_cason - Kenny Cason - CTO of @datarank, linguist: Japanese, Chinese"
 	          ]
 	        },
 	        {
@@ -60319,8 +60312,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@ARGeekCentral - Geeks of Arkansas, Unite",
-	            "! Getting the word out to Geeks about AR Groups &amp; Events"
+	            "@ARGeekCentral - Geeks of Arkansas, Unite! Getting the word out to Geeks about AR Groups &amp; Events"
 	          ]
 	        },
 	        {
@@ -60380,8 +60372,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "@thelukeirvin - Luke Irvin - @52",
-	            "_inc // ",
+	            "@thelukeirvin - Luke Irvin - @52_inc // ",
 	            {
 	              "type": "link",
 	              "href": "http://52inc.com",
@@ -60427,7 +60418,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e8edc35b-c933-4208-b949-9aecb1242c9b",
+	      "key": "a6583036-ef11-4e8d-a696-d232bf551bd9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60693,7 +60684,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e91aa694-fb44-452b-95a8-bed661ed23f8",
+	      "key": "9174d2e0-4934-478a-9a7e-5b09b2dedd66",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60781,7 +60772,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "292280d3-760e-4e0a-b18b-6ab8e550b2ab",
+	      "key": "428a1197-c000-4e26-9a1d-9873edb71576",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60800,7 +60791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fca47d17-50ef-4abc-aeb5-05c7730bf640",
+	      "key": "8f7dc044-9757-4d91-a932-43809378dbe2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60844,7 +60835,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ad6bec85-4d4b-4236-b91e-317c49cf352f",
+	      "key": "402e6ad9-ad9a-49e8-8cb4-871cd1d44c72",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60882,7 +60873,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "29b3f4be-898a-42e5-90c1-8375d5dc859d",
+	      "key": "cab94494-c821-4979-bbf9-b6a165d7ceb1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60943,7 +60934,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5c486ec3-6379-4cb6-8db5-dd81986bfa6a",
+	      "key": "69cbf800-9c35-4a73-8263-acae28ab933e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61033,7 +61024,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "df977be7-653d-4e0f-a6cf-cf56d896cb97",
+	      "key": "f190b89f-e6a7-485c-b6f8-8cf9bb03563d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61102,8 +61093,7 @@
 	            {
 	              "type": "strong",
 	              "text": [
-	                "updated",
-	                "_at ascending"
+	                "updated_at ascending"
 	              ]
 	            },
 	            ".  It hits a generic server endpoint and passes its partition params\nand lastUpdatedCursor to the server.  The server would respond with the next page of records\nand an indication if this was all that remains."
@@ -61233,7 +61223,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c863e95e-8875-4228-a4b2-ba5bb9a1ca7d",
+	      "key": "03ae9a41-7a8c-49ec-a6db-247424a1e91f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61273,7 +61263,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f616e2a5-2857-4b38-9ae8-54b81fa646ee",
+	      "key": "f473c408-394c-4741-b481-95f3d4725336",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61316,7 +61306,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7fd72615-e163-4f27-8953-90f0908f0af6",
+	      "key": "375202d1-794c-47c6-a504-4fe904d2b2a7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61329,8 +61319,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Once your ready to get serious you might be lured into downloading a professional boilerplate.  I DO NOT recommend this",
-	            "!  Other people&#39;s setup are difficult to troubleshoot and terrifying to adapt to your needs.  Once you spend an afternoon following a good guide to setup your own boilerplate you will have the confidence you need to extend and troubleshoot.  Here are some good guides."
+	            "Once your ready to get serious you might be lured into downloading a professional boilerplate.  I DO NOT recommend this!  Other people&#39;s setup are difficult to troubleshoot and terrifying to adapt to your needs.  Once you spend an afternoon following a good guide to setup your own boilerplate you will have the confidence you need to extend and troubleshoot.  Here are some good guides."
 	          ]
 	        },
 	        {
@@ -61400,7 +61389,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cf5b327f-b597-46b4-bdc5-96b55cb70bc2",
+	      "key": "acd452bb-0dc5-409b-ac9d-ae6b4cc51cca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61585,8 +61574,7 @@
 	                  "type": "codespan",
 	                  "text": "scripts"
 	                },
-	                " field if none exist",
-	                ""
+	                " field if none exist"
 	              ]
 	            }
 	          ],
@@ -61770,7 +61758,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "791e32fd-bc00-4460-b4a9-acb4994a2bc3",
+	      "key": "23c1ed59-b4f7-4c7f-b2cf-34198005ac8d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61865,7 +61853,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9414c483-e6d3-46c1-89c0-dec9155bdfc4",
+	      "key": "0d6cc254-104b-4c7f-9eed-ddeaced69b4b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61931,7 +61919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9e8b993d-0014-4e18-9161-3a955cb51365",
+	      "key": "c5f2e9cd-7c95-4b88-bad4-2598b02f17ab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62015,8 +62003,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Course -&gt; Announcements -&gt; Announcement",
-	                ""
+	                "Course -&gt; Announcements -&gt; Announcement"
 	              ]
 	            }
 	          ],
@@ -62081,7 +62068,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "07619a58-3277-4e90-b523-a662be7402e2",
+	      "key": "ced7a308-56ea-4b8c-9329-46fafecc908e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62111,8 +62098,7 @@
 	                    "React Toolbox"
 	                  ]
 	                },
-	                " - Material Design Component Library",
-	                ""
+	                " - Material Design Component Library"
 	              ]
 	            }
 	          ],
@@ -62200,6 +62186,344 @@
 
 /***/ },
 /* 766 */
+/*!*****************************************************!*\
+  !*** ./content/posts/hello-k8-node-with-wercker.md ***!
+  \*****************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Hello Node.js on K8 and Wercker",
+	  "slug": "hello-k8-node-with-wercker",
+	  "summary": "Personal notes while walking through a tutorial on settup up k8 for a basic Node.js application and applying a Wercker pipeline",
+	  "created": "August 29 2016",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "cover": true,
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "77f5899a-6432-4b93-8959-3a395b71a28d",
+	      "body": []
+	    }
+	  ]
+	}
+
+/***/ },
+/* 767 */
+/*!**************************************************!*\
+  !*** ./content/posts/hightower-presentations.md ***!
+  \**************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Kelsey Hightower Presentations",
+	  "slug": "kelsey-hightower-presentations",
+	  "summary": "Running collection of Kelsey Hightower presentations",
+	  "created": "August 29 2016",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "cover": true,
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "2a7aeca9-cdf3-477f-8857-b678d92734be",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Jun 2016 - Get your ship together. Containers are here to stay."
+	          ],
+	          "level": 3,
+	          "raw": "Jun 2016 - Get your ship together. Containers are here to stay."
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "ContainerSched 2016 - London"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://skillsmatter.com/skillscasts/7897-keynote-get-your-ship-together-containers-are-here-to-stay",
+	                      "title": null,
+	                      "text": [
+	                        "Video"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Schedulers use Web API."
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "9da76400-efcc-4a6a-ab58-c7a2db7627ca",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "May 10th, 2016 - Managing Redis with Kubernetes"
+	          ],
+	          "level": 3,
+	          "raw": "May 10th, 2016 - Managing Redis with Kubernetes"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Redis Conf - San Francisco"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.youtube.com/watch?v=0hlv9iIncik",
+	                      "title": null,
+	                      "text": [
+	                        "Video"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.slideshare.net/RedisLabs/managing-redis-with-kubernetes-kelsey-hightower",
+	                      "title": null,
+	                      "text": [
+	                        "Slides"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Automated deployment without scheduling is like unattended Tetris"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "229e00e1-ffc7-4bf7-b4f4-7e6b4e520207",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Mar 25, 2016 - Day 1 - Opening Keynote: Kubernetes Update"
+	          ],
+	          "level": 3,
+	          "raw": "Mar 25, 2016 - Day 1 - Opening Keynote: Kubernetes Update"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.youtube.com/watch?v=Wyl4O3CHzV0",
+	                      "title": null,
+	                      "text": [
+	                        "Video"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://clusterhq.com/2016/03/30/kubecon-keynote-kelsey-hightower/#transcript",
+	                      "title": null,
+	                      "text": [
+	                        "Transcript"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/kelseyhightower/talks/tree/master/kubecon-eu-2016/demo",
+	                      "title": null,
+	                      "text": [
+	                        "Github Source"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "K8 CLI is best way to introduce Kubernetes (not Yaml)"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "0753137e-851b-4751-ad77-01646e020dfb",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Nov 4, 2015 - Rocket and the App Container Spec"
+	          ],
+	          "level": 3,
+	          "raw": "Nov 4, 2015 - Rocket and the App Container Spec"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "GOTO Conference  - Amsterdam"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.youtube.com/watch?v=M6B9BMYciIw&amp;feature=youtu.be&amp;list=PLEx5khR4g7PKDEtX5URRnc3xah2I0D1_1",
+	                      "title": null,
+	                      "text": [
+	                        "Video"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://gotocon.com/dl/goto-amsterdam-2015/slides/KelseyHightower_RocketAndTheAppContainerSpec.pdf",
+	                      "title": null,
+	                      "text": [
+	                        "Slides"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 768 */
 /*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
@@ -62217,7 +62541,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "af905174-3d45-4e84-87e9-3c97ada0f7cf",
+	      "key": "17e0f258-e713-4c24-a881-4267919b3c9f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62260,7 +62584,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cc6330e5-cad2-47c5-9e57-865a781516a9",
+	      "key": "43db2e22-8eff-49fb-9865-9c209dc96d20",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62280,7 +62604,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "264d8d3a-5bb8-441f-b5a7-c298fc542544",
+	      "key": "7c7aa43f-b16c-4b87-92fd-d6581d6b0f2e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62300,7 +62624,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3a96c1df-e033-4d37-9631-e244b27fbf47",
+	      "key": "93c3e7b1-2067-4096-ad10-80d7fc654e54",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62326,7 +62650,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7f142360-f6ca-4897-a447-33dccaa9934d",
+	      "key": "4bb88260-0e3a-4a8c-80ea-acb869cd26b6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62352,7 +62676,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "518de4f4-8a98-4386-a0a8-f654f99fa306",
+	      "key": "a0126db7-1a87-4974-bde6-7ab8efde3fe3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62372,7 +62696,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "54a4de68-4290-43c2-9b13-f823483ce536",
+	      "key": "25895c45-6abe-43f0-80cc-5214907cdda2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62437,7 +62761,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2daa3f63-a8a4-4f39-a84a-c80a0a53df31",
+	      "key": "f3b7fc74-d940-46a9-b0b7-77d03a9621e0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62451,7 +62775,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6e04d937-1231-4983-ac9e-33ab3d831551",
+	      "key": "bd9be585-7975-4028-b460-a165cd26dcc7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62510,7 +62834,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8ea671a2-db7c-4286-9756-f81be09d3bf0",
+	      "key": "bd117e88-7d34-416f-aa4f-173f91b30362",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62553,7 +62877,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b98d7744-8e6d-4936-a841-956a943a3ded",
+	      "key": "2cd0fe53-da1d-4325-88fd-17f4b6c1568b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62612,7 +62936,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fb947f45-2f36-4a48-a443-83e0ae47f94a",
+	      "key": "989e527d-48bd-436a-969c-b590a99f9527",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62682,7 +63006,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8c8dc280-9714-4590-98bc-7cd9b5b7c071",
+	      "key": "5e3f8364-ad30-466a-b7d7-34f419ffded8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62745,7 +63069,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0a66a75a-c987-488e-9088-ea4532a5cbd2",
+	      "key": "91bc22a7-39ae-453e-bdea-351d9bd97fee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62781,10 +63105,7 @@
 	                {
 	                  "type": "paragraph",
 	                  "text": [
-	                    "cd flux",
-	                    "_alt",
-	                    "_immutable",
-	                    "_todolist"
+	                    "cd flux_alt_immutable_todolist"
 	                  ]
 	                }
 	              ]
@@ -62819,7 +63140,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9a62a876-1659-4e50-9900-10fc9a98f9a4",
+	      "key": "471cb786-e857-4047-894e-36063c93e5b9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62862,7 +63183,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "62769cf4-9f90-4c1e-bfa8-ab0cddef47e5",
+	      "key": "bce53fd9-bb57-4188-8f9f-c9073391e758",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62893,7 +63214,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "61f2a406-3c0d-4b6a-a97b-3134959a8019",
+	      "key": "5c8eba7b-b4bb-4d27-a7e6-348bf27d10f7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62909,8 +63230,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Create class -vs- ES6 Classes",
-	                ""
+	                "Create class -vs- ES6 Classes"
 	              ]
 	            }
 	          ],
@@ -62927,7 +63247,7 @@
 	}
 
 /***/ },
-/* 767 */
+/* 769 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -62945,7 +63265,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "ed83d4fb-2b8b-40a3-8a51-9164d14be5b3",
+	      "key": "3d85b721-0ed5-42a8-8002-3487850e323f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63010,7 +63330,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "211ea786-eee1-4fd5-b4b6-ef01c351b127",
+	      "key": "441ad1bd-0e04-48da-aa25-c7f15a2c34d4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63026,8 +63346,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Create index.html",
-	                ""
+	                "Create index.html"
 	              ]
 	            }
 	          ],
@@ -63044,8 +63363,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add react libraries.",
-	                ""
+	                "Add react libraries."
 	              ]
 	            }
 	          ],
@@ -63062,8 +63380,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add Hello World Code.",
-	                ""
+	                "Add Hello World Code."
 	              ]
 	            }
 	          ],
@@ -63078,7 +63395,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "152b1e0b-175e-4aaf-84fe-fc7ab675bb01",
+	      "key": "99b9a334-2431-4b60-93f2-c53264734658",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63147,9 +63464,7 @@
 	                    {
 	                      "type": "listitem",
 	                      "text": [
-	                        "/node",
-	                        "_modules/http-server/bin/http-server",
-	                        ""
+	                        "/node_modules/http-server/bin/http-server"
 	                      ]
 	                    }
 	                  ],
@@ -63228,7 +63543,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "39754a55-3aab-40f1-a36e-ecf437fb9ff2",
+	      "key": "3858dba2-3a95-42b5-b378-7d85858bb2bc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63417,8 +63732,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "SearchBar",
-	                ""
+	                "SearchBar"
 	              ]
 	            }
 	          ],
@@ -63435,8 +63749,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "EmployeeList has subcomponents, but lets just keep it simple for now",
-	                ""
+	                "EmployeeList has subcomponents, but lets just keep it simple for now"
 	              ]
 	            }
 	          ],
@@ -63453,8 +63766,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Replace Hello World with HomePage",
-	                ""
+	                "Replace Hello World with HomePage"
 	              ]
 	            }
 	          ],
@@ -63469,7 +63781,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f52f8a79-af30-40c7-aecf-357f990086d2",
+	      "key": "115130ad-e92e-42af-9730-a01a9ac3aaae",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63485,8 +63797,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets add some data.  Put this in HomePage component, right in the render function.",
-	                ""
+	                "Lets add some data.  Put this in HomePage component, right in the render function."
 	              ]
 	            }
 	          ],
@@ -63503,8 +63814,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Now pass the employees to the EmployeeList component.",
-	                ""
+	                "Now pass the employees to the EmployeeList component."
 	              ]
 	            }
 	          ],
@@ -63521,8 +63831,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Now lets fix the Employee List Component",
-	                ""
+	                "Now lets fix the Employee List Component"
 	              ]
 	            }
 	          ],
@@ -63539,8 +63848,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets create an EmployeeListItem component",
-	                ""
+	                "Lets create an EmployeeListItem component"
 	              ]
 	            }
 	          ],
@@ -63557,8 +63865,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets tweak EmployeeList",
-	                ""
+	                "Lets tweak EmployeeList"
 	              ]
 	            }
 	          ],
@@ -63573,7 +63880,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "558bd830-1c7c-4b33-8c0a-8128088cc1ad",
+	      "key": "bea269c2-3c91-414e-83ba-3878c4b80705",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63589,8 +63896,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add a searchHandler to our HomePage component",
-	                ""
+	                "Add a searchHandler to our HomePage component"
 	              ]
 	            }
 	          ],
@@ -63607,8 +63913,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "And pass it as a property to our SearchBar",
-	                ""
+	                "And pass it as a property to our SearchBar"
 	              ]
 	            }
 	          ],
@@ -63695,8 +64000,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Define our components searchHandler",
-	                ""
+	                "Define our components searchHandler"
 	              ]
 	            }
 	          ],
@@ -63713,8 +64017,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Have the input call our SearchBar&#39;s searchHandler",
-	                ""
+	                "Have the input call our SearchBar&#39;s searchHandler"
 	              ]
 	            }
 	          ],
@@ -63729,7 +64032,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0e7d524a-64bc-48b5-9d79-114f6c3ce368",
+	      "key": "2de6be19-231f-4c19-9973-8869f874a802",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63792,8 +64095,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Remove static list of employees and add state",
-	                ""
+	                "Remove static list of employees and add state"
 	              ]
 	            }
 	          ],
@@ -63810,8 +64112,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Lets replace the search handler with something that sets the state\nusing our employeeService",
-	                ""
+	                "Lets replace the search handler with something that sets the state\nusing our employeeService"
 	              ]
 	            }
 	          ],
@@ -63826,7 +64127,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ea16d2fa-f3be-4587-93f7-19e535c44257",
+	      "key": "8515f47f-bdb1-4e21-9123-100fd814a57e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63964,7 +64265,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d5310d39-d8a3-48c7-9e01-6445054c01ec",
+	      "key": "e5d60fda-4307-4b3f-b65a-121d5650a030",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64028,9 +64329,7 @@
 	                {
 	                  "type": "paragraph",
 	                  "text": [
-	                    "cd lr",
-	                    "_meetup",
-	                    "_11202015"
+	                    "cd lr_meetup_11202015"
 	                  ]
 	                }
 	              ]
@@ -64061,8 +64360,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Update Header",
-	                ""
+	                "Update Header"
 	              ]
 	            }
 	          ],
@@ -64079,8 +64377,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Update SearchBar",
-	                ""
+	                "Update SearchBar"
 	              ]
 	            }
 	          ],
@@ -64097,8 +64394,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Update EmployeeListItem",
-	                ""
+	                "Update EmployeeListItem"
 	              ]
 	            }
 	          ],
@@ -64115,8 +64411,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add class to EmployeeList",
-	                ""
+	                "Add class to EmployeeList"
 	              ]
 	            }
 	          ],
@@ -64133,8 +64428,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Add some class to the HomePage",
-	                ""
+	                "Add some class to the HomePage"
 	              ]
 	            }
 	          ],
@@ -64151,8 +64445,7 @@
 	            {
 	              "type": "listitem",
 	              "text": [
-	                "Style Up the EmployeePage",
-	                ""
+	                "Style Up the EmployeePage"
 	              ]
 	            }
 	          ],
@@ -64167,7 +64460,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "605735df-04d2-46c3-8a3d-0d070113ee74",
+	      "key": "90dbeba8-b723-4604-9425-898531af22a7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64292,7 +64585,7 @@
 	}
 
 /***/ },
-/* 768 */
+/* 770 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -64310,7 +64603,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e379d2a2-047b-4b82-8301-95399ad21dc9",
+	      "key": "0f289877-f978-4bd7-be6e-7038a123fffc",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64322,7 +64615,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9cb83996-5a19-455c-9297-99b2684373bc",
+	      "key": "810a3b52-fd74-488a-bc0e-e3cc3fe456fc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64431,7 +64724,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b74a5be8-cea1-4255-b90d-9247bf0161ad",
+	      "key": "a3356d3f-7009-482c-b8c3-bec49430dcd5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64470,8 +64763,7 @@
 	                    "Using Babel"
 	                  ]
 	                },
-	                " - Guides on how to setup babel in whatever environment you might be working in.",
-	                ""
+	                " - Guides on how to setup babel in whatever environment you might be working in."
 	              ]
 	            }
 	          ],
@@ -64481,7 +64773,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "463f53c1-e7d5-42f5-8c2a-4fe6833e3361",
+	      "key": "17c59099-746d-4b3a-a726-58604ac2d40a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64553,7 +64845,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8733140a-d799-4e52-b8b1-c3fbbdb43b1d",
+	      "key": "563e26a5-e300-4caa-b85f-3c0bca56bd66",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64589,7 +64881,7 @@
 	}
 
 /***/ },
-/* 769 */
+/* 771 */
 /*!*******************************************!*\
   !*** ./content/posts/kubernetes-notes.md ***!
   \*******************************************/
@@ -64598,7 +64890,7 @@
 	module.exports = {
 	  "title": "Easily Learn Kubernetes on GCE",
 	  "slug": "kubernetes-notes",
-	  "summary": "I've reworked demos and user guides to work on GCE and use publicly available resources.",
+	  "summary": "Notes from Kelsey Hightower Presentation",
 	  "created": "August 19 2016",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
@@ -64607,7 +64899,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "eadac52e-e5de-4dc6-92ff-d33503b1ee8a",
+	      "key": "2abb1016-ad1f-4fef-aac3-fd7decc5de61",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64664,7 +64956,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8d6ebf61-4597-4ee1-a26f-f4d0b6c5dad4",
+	      "key": "bc06fd42-b29e-4b24-bc70-dfbe1ed9b47f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64720,7 +65012,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "692c199d-7ac3-4356-b427-787868844623",
+	      "key": "1df9375b-2403-4674-9432-c03b800e6db9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64806,7 +65098,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e7e090fb-94e7-4a5c-89af-70aacf5a8072",
+	      "key": "798236c3-b39f-4b08-8907-9e47c80f581b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64891,7 +65183,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8148e17d-1f69-4df5-a1f5-86cc2401a91f",
+	      "key": "46c38ff6-353b-46e1-8949-9efa62d5527b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65012,7 +65304,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3d175ee6-10da-4318-8542-e853ebeb5932",
+	      "key": "625e9936-b137-41d4-9707-61b2803de1e4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65155,7 +65447,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f12b58d1-927c-492e-bb67-87695927b5c1",
+	      "key": "0c659fa3-dc5d-4a19-8d3b-06a2cd3dddcb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65229,7 +65521,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2d2fcee8-8a70-4384-a243-3bf5a056632a",
+	      "key": "c178d67f-967f-40a9-8e57-8f37dede32bc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65249,7 +65541,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "73d9e09f-fcb9-4eed-a575-3f528bcdc141",
+	      "key": "d4543174-d528-49f3-991a-d376e7b1c0a5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65269,7 +65561,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "12eac44f-384c-4cb0-9f5d-9d3a84527dff",
+	      "key": "63558ecd-075d-4eee-9973-b2ae9321b981",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65317,6 +65609,96 @@
 	                    },
 	                    " - Github Source"
 	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/GoogleCloudPlatform/nginx-ssl-proxy",
+	                      "title": null,
+	                      "text": [
+	                        "NGINX SSL Proxy"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://kubernetes.io/docs/hellonode/",
+	                      "title": null,
+	                      "text": [
+	                        "Hello Node"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/drone-demos/drone-on-kubernetes/tree/drone-0.5/gke-with-https",
+	                      "title": null,
+	                      "text": [
+	                        "Drone on Kubernetes"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://kubernetes.io/docs/user-guide/ingress/#tls",
+	                      "title": null,
+	                      "text": [
+	                        "TLS Ingress"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://skillsmatter.com/skillscasts/7897-keynote-get-your-ship-together-containers-are-here-to-stay#showModal?modal-signup-complete",
+	                      "title": null,
+	                      "text": [
+	                        "Get your ship together. Containers are here to stay"
+	                      ]
+	                    }
+	                  ]
 	                },
 	                ""
 	              ]
@@ -65328,7 +65710,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "63f58013-5e9f-4463-bb91-451df3778900",
+	      "key": "eed015f5-5d42-424e-8901-9afc6f0de2a1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65383,7 +65765,7 @@
 	}
 
 /***/ },
-/* 770 */
+/* 772 */
 /*!******************************************!*\
   !*** ./content/posts/node-deployment.md ***!
   \******************************************/
@@ -65401,7 +65783,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d96a94bb-0555-4ee3-96a3-f2236af4b899",
+	      "key": "44764c73-153c-42ca-b552-ee316e11fce2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65527,8 +65909,7 @@
 	                                "Rolling Deployments with Ansible"
 	                              ]
 	                            },
-	                            " - Wow",
-	                            "!  Ryan Bates Quality Instructions"
+	                            " - Wow!  Ryan Bates Quality Instructions"
 	                          ]
 	                        }
 	                      ]
@@ -66029,7 +66410,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "08e94aa6-7e64-4ee0-96a3-0889111cb5fd",
+	      "key": "e2a61530-26ed-47af-8faf-2c9f32f9c51a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66424,7 +66805,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6b143590-a1f0-4215-9400-73e2bbdc5a39",
+	      "key": "ea4f612a-5932-477d-adca-4efad6d5f21a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66615,7 +66996,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fb847e9e-0cb7-49fb-aa27-f874806523a8",
+	      "key": "a3d06975-6c46-4c38-991d-027871556188",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66698,8 +67079,7 @@
 	                        "Mantl.io"
 	                      ]
 	                    },
-	                    " - Wow",
-	                    "!"
+	                    " - Wow!"
 	                  ]
 	                }
 	              ]
@@ -66766,7 +67146,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "46b275ab-c67d-4b72-8231-3473d1688efc",
+	      "key": "9c8afaa0-e2cf-47a9-ab61-fbb696516cde",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66917,7 +67297,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "679f5be2-66fa-4f2f-b8b9-4af71bc4ad25",
+	      "key": "37da5b3f-0ecd-4226-b1a8-1d18518fb886",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66993,7 +67373,7 @@
 	}
 
 /***/ },
-/* 771 */
+/* 773 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -67011,7 +67391,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d40e934b-49fb-495d-8651-e06a31c581c9",
+	      "key": "09399201-a069-45a2-8eb1-5f8e12149ee4",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67109,7 +67489,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c62ae2ab-01a3-4c09-8624-2bad0915fb47",
+	      "key": "dc06792c-4ba4-41a6-9649-96957c54feee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67140,8 +67520,7 @@
 	                    "Content Stores"
 	                  ]
 	                },
-	                " approach is pure flux",
-	                "!"
+	                " approach is pure flux!"
 	              ]
 	            },
 	            "  We have a content store for each entity type.  Server actions dispatch to all stores, the stores inspect the response and harvest any data that pertains to them.  The views listen to stores and render as needed."
@@ -67151,7 +67530,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5d6d7675-769b-4e45-a9e1-e1139db2cf40",
+	      "key": "ca90e74a-31b3-4c95-bf4e-da43712bc49d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67167,8 +67546,7 @@
 	            {
 	              "type": "strong",
 	              "text": [
-	                "Facebook&#39;s Relay approach is pure decoupling",
-	                "!"
+	                "Facebook&#39;s Relay approach is pure decoupling!"
 	              ]
 	            },
 	            "  Statically declare the data needs of a component within itself.  Eliminate creating and ",
@@ -67191,7 +67569,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "614ee2db-ba57-4818-b5be-1b761aea0ec1",
+	      "key": "1513a6f0-ea42-4319-9447-ed37881dc4da",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67217,7 +67595,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cbc53b43-128e-4bcf-bfac-bb772a10309d",
+	      "key": "d90d1a7a-5765-43fa-a595-2f1b6eb55bf3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67295,7 +67673,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "18bfb625-afab-4778-a5a5-5e3a7e702c1b",
+	      "key": "3927c948-9e92-4281-87bc-8a87551637f1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67324,7 +67702,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d49b587f-c8ca-4a1d-9a96-860408b69f30",
+	      "key": "51ae8be6-3a11-4bf3-bced-d10e17edcb4b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67344,7 +67722,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2f583f1d-e675-4ad5-880d-05e7b3095c5f",
+	      "key": "526359fb-be4c-4b79-8413-5284cca90677",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67357,8 +67735,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Similar to Relay, the components control what data is fetched",
-	            "!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project."
+	            "Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project."
 	          ]
 	        },
 	        {
@@ -67369,9 +67746,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Similar to Relay, your server can have one generic server end point",
-	            "!  Which is awesome",
-	            "!  But you don&#39;t need GQL magic on the server, ",
+	            "Similar to Relay, your server can have one generic server end point!  Which is awesome!  But you don&#39;t need GQL magic on the server, ",
 	            {
 	              "type": "link",
 	              "href": "https://github.com/jrhicks/LokiJS-Flux-Example/blob/master/app/controllers/offline_controller.rb",
@@ -67386,7 +67761,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "aa877d1b-22d7-4d47-8de2-15c23507e93f",
+	      "key": "dc661025-918d-42e0-a18c-82923a0696d4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67399,9 +67774,7 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "Its fast",
-	            "!   Thanks React and Loki",
-	            "!  In this video, I sync (download and insert into an offline database) over 10,000 records.  I&#39;m using Flux to manage the replication\nprocess and update the React view component to display progress."
+	            "Its fast!   Thanks React and Loki!  In this video, I sync (download and insert into an offline database) over 10,000 records.  I&#39;m using Flux to manage the replication\nprocess and update the React view component to display progress."
 	          ]
 	        },
 	        {
@@ -67422,7 +67795,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "58d777ab-8734-4e85-917b-be965e8e9578",
+	      "key": "e3b68f3b-5911-4347-9b25-d49f8b372be0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67504,7 +67877,7 @@
 	}
 
 /***/ },
-/* 772 */
+/* 774 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -67522,7 +67895,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "4f841ad8-be5f-40b8-ba82-b4afc4749520",
+	      "key": "e16e7cd3-149d-4f75-bef3-347781141026",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67531,8 +67904,7 @@
 	            {
 	              "type": "strong",
 	              "text": [
-	                "form",
-	                "_for"
+	                "form_for"
 	              ]
 	            },
 	            " and it works because it can introspect the shape of the data with ActiveRecord.  Maybe we don&#39;t have or need an ORM for our front-end.  But a data introspection standard would benefit the component ecosystem."
@@ -67542,7 +67914,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e5093046-7b98-46ef-b4b5-dc731c6067b9",
+	      "key": "bb51e1d3-b0ec-4edf-97f5-e6d0012bb89e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67649,7 +68021,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "18b5f9b3-19ef-45fa-b2f0-ecc4f8290013",
+	      "key": "d7e6315f-4320-4b44-9b0d-cbbb47b216ad",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67669,7 +68041,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ff93e533-f214-48d8-bbbe-fb7e3dc0577f",
+	      "key": "be0f9128-1055-48b7-9855-d103f1d2915f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67708,7 +68080,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cd80b57e-1a41-4f50-a191-2d4507b60c63",
+	      "key": "cb1a1f1a-b636-410d-8c77-7bd29b84a461",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67742,7 +68114,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ea63bd05-aecc-432c-bf8f-b6205f49d27f",
+	      "key": "39790232-bc3a-4cba-b4f0-7978dd985541",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67774,7 +68146,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c6ae5a08-6898-421f-81bc-177b1da78fc2",
+	      "key": "9d0f3820-7a12-4a73-b2eb-efc27fd94ef2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67808,7 +68180,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "762615e5-a79b-41ba-acea-6b9c4983e1ab",
+	      "key": "be924e37-8804-4782-b283-863fd44695ab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67891,7 +68263,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d94020dc-5323-4b84-811d-ece6e5be5d31",
+	      "key": "ab8086e0-56f3-48f0-acea-6cf16df310f2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67915,8 +68287,7 @@
 	                    "tcomb-form-native"
 	                  ]
 	                },
-	                " - react-native powered form-handling",
-	                ""
+	                " - react-native powered form-handling"
 	              ]
 	            }
 	          ],
@@ -67926,7 +68297,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2b7ceb41-c790-4d3c-a8e9-9d6fbfb891db",
+	      "key": "9e0bb9e8-90d1-45d5-9716-2807fbe36c85",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67962,7 +68333,7 @@
 	}
 
 /***/ },
-/* 773 */
+/* 775 */
 /*!************************************!*\
   !*** ./content/posts/typefaces.md ***!
   \************************************/
@@ -67980,7 +68351,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "88ded710-ceeb-40f7-b574-d26529262252",
+	      "key": "d72bbba0-5580-49c8-814f-29c3a01c6861",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68004,7 +68375,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5255776a-3d3f-491a-b495-324743f2a5aa",
+	      "key": "3bb41d4f-4a8c-4ffa-bac4-0c005abd8763",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68069,7 +68440,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7602af6b-9c63-4438-bcc1-10fd5dcc93fc",
+	      "key": "7ad6ee47-c8d2-4114-9c46-e6150eb34d0c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68123,7 +68494,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e12337b3-6ad1-4502-9bd4-29ea4761019c",
+	      "key": "51d1197e-b4f2-450a-8799-33fbff76e5f7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68213,7 +68584,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "07f232f4-7b75-4481-9a80-280b7fd914d5",
+	      "key": "f1b3b3f2-06eb-4146-a7d5-ef789ae47761",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68315,7 +68686,7 @@
 	}
 
 /***/ },
-/* 774 */
+/* 776 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -68323,26 +68694,26 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 775);
+	var req = __webpack_require__(/*! ./talks/ */ 777);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
 	module.exports = talks;
 
 /***/ },
-/* 775 */
+/* 777 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 776,
-		"./es-intro-deck.md": 777,
-		"./es-intro.md": 778,
-		"./lds-intro.md": 779,
-		"./ui-principles-deck.md": 780,
-		"./ui-principles.md": 781
+		"./component-vs-layout.md": 778,
+		"./es-intro-deck.md": 779,
+		"./es-intro.md": 780,
+		"./lds-intro.md": 781,
+		"./ui-principles-deck.md": 782,
+		"./ui-principles.md": 783
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -68355,11 +68726,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 775;
+	webpackContext.id = 777;
 
 
 /***/ },
-/* 776 */
+/* 778 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -68376,14 +68747,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "fa6cc230-a193-4f07-8010-17fc12a05974",
+	      "key": "be5bed59-f176-4b9d-b5ce-20f1a81afe9f",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 777 */
+/* 779 */
 /*!****************************************!*\
   !*** ./content/talks/es-intro-deck.md ***!
   \****************************************/
@@ -68401,14 +68772,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e2700ed8-7cae-499d-914f-3d502aff7d63",
+	      "key": "68f332ad-aeeb-4ac1-993a-8c27e60daf33",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 778 */
+/* 780 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -68430,7 +68801,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "168673f7-d8f6-485f-93a0-80d6e86fd0d7",
+	      "key": "c915bfe7-4378-4291-b790-83546b139854",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68510,10 +68881,15 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "[",
-	            "[",
-	            "[",
-	            "es-intro-deck]]]"
+	            [
+	              "",
+	              {
+	                "type": "wikismith",
+	                "slug": "es-intro-deck",
+	                "method": "embed"
+	              },
+	              ""
+	            ]
 	          ]
 	        },
 	        {
@@ -68728,7 +69104,7 @@
 	}
 
 /***/ },
-/* 779 */
+/* 781 */
 /*!************************************!*\
   !*** ./content/talks/lds-intro.md ***!
   \************************************/
@@ -68750,14 +69126,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "3cb52783-27a9-4d59-9551-2f4876f0ac10",
+	      "key": "d4cb76eb-fee9-4ba9-a11b-fd19682d97c5",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 780 */
+/* 782 */
 /*!*********************************************!*\
   !*** ./content/talks/ui-principles-deck.md ***!
   \*********************************************/
@@ -68775,14 +69151,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a185bca8-de1b-4465-b9fd-771d688decd7",
+	      "key": "671e1272-d503-4d0b-94c0-bf26a0bd4f03",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 781 */
+/* 783 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -68805,7 +69181,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f9df28eb-7fa1-42d5-a380-fdd5e8baa512",
+	      "key": "8767e34f-e897-4b7d-b06b-6580b8794be4",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68816,10 +69192,15 @@
 	        {
 	          "type": "paragraph",
 	          "text": [
-	            "[",
-	            "[",
-	            "[",
-	            "ui principles deck]]]"
+	            [
+	              "",
+	              {
+	                "type": "wikismith",
+	                "slug": "ui-principles-deck",
+	                "method": "embed"
+	              },
+	              ""
+	            ]
 	          ]
 	        },
 	        {
@@ -68838,7 +69219,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "19d13ff1-9e4d-402c-bc3b-f818b5c975e5",
+	      "key": "037cd427-5096-438c-b851-3ea3059fb53b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68958,7 +69339,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1c684350-b9ad-4216-ae3c-9489baa99254",
+	      "key": "0fdc0452-30dc-4faa-b020-f232ee35e8be",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68993,7 +69374,7 @@
 	}
 
 /***/ },
-/* 782 */
+/* 784 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -69003,7 +69384,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 783 */
+/* 785 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -69035,7 +69416,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 784);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 786);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -69086,7 +69467,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 784 */
+/* 786 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -69096,7 +69477,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 785 */
+/* 787 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -69130,13 +69511,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
-	var _reactMotion = __webpack_require__(/*! react-motion */ 786);
+	var _reactMotion = __webpack_require__(/*! react-motion */ 788);
 	
 	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 800);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 802);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -69273,7 +69654,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 786 */
+/* 788 */
 /*!********************************************!*\
   !*** ./~/react-motion/lib/react-motion.js ***!
   \********************************************/
@@ -69285,34 +69666,34 @@
 	
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 	
-	var _Motion = __webpack_require__(/*! ./Motion */ 787);
+	var _Motion = __webpack_require__(/*! ./Motion */ 789);
 	
 	exports.Motion = _interopRequire(_Motion);
 	
-	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 794);
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 796);
 	
 	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 	
-	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 795);
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 797);
 	
 	exports.TransitionMotion = _interopRequire(_TransitionMotion);
 	
-	var _spring = __webpack_require__(/*! ./spring */ 797);
+	var _spring = __webpack_require__(/*! ./spring */ 799);
 	
 	exports.spring = _interopRequire(_spring);
 	
-	var _presets = __webpack_require__(/*! ./presets */ 798);
+	var _presets = __webpack_require__(/*! ./presets */ 800);
 	
 	exports.presets = _interopRequire(_presets);
 	
 	// deprecated, dummy warning function
 	
-	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 799);
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 801);
 	
 	exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ },
-/* 787 */
+/* 789 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/Motion.js ***!
   \**************************************/
@@ -69326,27 +69707,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 788);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 790);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 789);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 791);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 790);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 792);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 791);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 793);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 792);
+	var _raf = __webpack_require__(/*! raf */ 794);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 793);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 795);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -69561,7 +69942,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 788 */
+/* 790 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mapToZero.js ***!
   \*****************************************/
@@ -69588,7 +69969,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 789 */
+/* 791 */
 /*!******************************************!*\
   !*** ./~/react-motion/lib/stripStyle.js ***!
   \******************************************/
@@ -69617,7 +69998,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 790 */
+/* 792 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/stepper.js ***!
   \***************************************/
@@ -69668,7 +70049,7 @@
 	// array reference around.
 
 /***/ },
-/* 791 */
+/* 793 */
 /*!*****************************************************************!*\
   !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
   \*****************************************************************/
@@ -69710,13 +70091,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 792 */
+/* 794 */
 /*!***************************************!*\
   !*** ./~/react-motion/~/raf/index.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 791)
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 793)
 	  , root = typeof window === 'undefined' ? global : window
 	  , vendors = ['moz', 'webkit']
 	  , suffix = 'AnimationFrame'
@@ -69792,7 +70173,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 793 */
+/* 795 */
 /*!***************************************************!*\
   !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
   \***************************************************/
@@ -69831,7 +70212,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 794 */
+/* 796 */
 /*!***********************************************!*\
   !*** ./~/react-motion/lib/StaggeredMotion.js ***!
   \***********************************************/
@@ -69845,27 +70226,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 788);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 790);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 789);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 791);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 790);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 792);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 791);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 793);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 792);
+	var _raf = __webpack_require__(/*! raf */ 794);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 793);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 795);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -70101,7 +70482,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 795 */
+/* 797 */
 /*!************************************************!*\
   !*** ./~/react-motion/lib/TransitionMotion.js ***!
   \************************************************/
@@ -70115,31 +70496,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 788);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 790);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 789);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 791);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 790);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 792);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 796);
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 798);
 	
 	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 791);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 793);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 792);
+	var _raf = __webpack_require__(/*! raf */ 794);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 793);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 795);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -70597,7 +70978,7 @@
 	// that you've unmounted but that's still animating. This is where it lives
 
 /***/ },
-/* 796 */
+/* 798 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mergeDiff.js ***!
   \*****************************************/
@@ -70713,7 +71094,7 @@
 	// to loop through and find a key's index each time), but I no longer care
 
 /***/ },
-/* 797 */
+/* 799 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/spring.js ***!
   \**************************************/
@@ -70729,7 +71110,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _presets = __webpack_require__(/*! ./presets */ 798);
+	var _presets = __webpack_require__(/*! ./presets */ 800);
 	
 	var _presets2 = _interopRequireDefault(_presets);
 	
@@ -70744,7 +71125,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 798 */
+/* 800 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/presets.js ***!
   \***************************************/
@@ -70762,7 +71143,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 799 */
+/* 801 */
 /*!*******************************************!*\
   !*** ./~/react-motion/lib/reorderKeys.js ***!
   \*******************************************/
@@ -70788,7 +71169,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 800 */
+/* 802 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -70798,7 +71179,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 801 */
+/* 803 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -70808,7 +71189,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 802 */
+/* 804 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -70818,12 +71199,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 803),
+	  component: __webpack_require__(/*! ./Content */ 805),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 803 */
+/* 805 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -70859,7 +71240,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 804);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 806);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -70894,7 +71275,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 804 */
+/* 806 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
