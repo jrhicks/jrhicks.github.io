@@ -35285,7 +35285,7 @@
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 777);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 776);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -59690,17 +59690,16 @@
 		"./arkansas-dev-hackathon-2015.md": 763,
 		"./client-side-routing-notes.md": 764,
 		"./confidently-starting-a-reactjs-project.md": 765,
-		"./hello-k8-node-with-wercker.md": 766,
-		"./hightower-presentations.md": 767,
-		"./intro-to-flux.md": 768,
-		"./intro-to-reactjs.md": 769,
-		"./introduction-to-es6.md": 770,
-		"./kubernetes-notes.md": 771,
-		"./my-kubecon-2016-keynote-notes.md": 772,
-		"./node-deployment.md": 773,
-		"./offline-flux-with-lokijs.md": 774,
-		"./react-form-generation.md": 775,
-		"./typefaces.md": 776
+		"./hightower-presentations.md": 766,
+		"./intro-to-flux.md": 767,
+		"./intro-to-reactjs.md": 768,
+		"./introduction-to-es6.md": 769,
+		"./kubernetes-notes.md": 770,
+		"./my-kubecon-2016-keynote-notes.md": 771,
+		"./node-deployment.md": 772,
+		"./offline-flux-with-lokijs.md": 773,
+		"./react-form-generation.md": 774,
+		"./typefaces.md": 775
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -59735,7 +59734,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "95c3e270-13aa-49ba-aa13-5d1dd8bc8e42",
+	      "key": "5a6c3431-d7d8-49d3-8994-96ff9ee2fcc2",
 	      "body": [
 	        "",
 	        {
@@ -59793,7 +59792,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "9af6a0be-b364-461b-bbdb-d26dff90792a",
+	      "key": "c5024615-8705-4e09-91ea-8938b50979f8",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59868,7 +59867,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2bb7f05c-c3f0-4360-a7cd-c963c6e8bb16",
+	      "key": "7b553b03-2296-4957-b35e-2003ac918891",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60240,7 +60239,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6ccebfad-4fe7-4975-8a2c-544dccb901b6",
+	      "key": "fdcf8450-1aac-413e-8e49-a8e0979cc7a7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60419,7 +60418,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ab91ea47-62d8-4c6b-97ae-99af6d1870d4",
+	      "key": "6887f997-dcb5-4a46-9cee-77382d0afed6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60685,7 +60684,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f434b444-6908-4c49-82d8-e299e2ba4257",
+	      "key": "2542d255-7de8-4cc8-9143-0d47d7a63a87",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60773,7 +60772,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9f0ce3b8-30e4-4b57-b83a-4713dcf7d742",
+	      "key": "269ddf24-5c38-4832-9cdf-7ffb9f8a9602",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60792,7 +60791,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9d853a8f-b494-4d9d-92e7-86ba387db14e",
+	      "key": "44065af1-481b-4835-8bb6-91eb29055fca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60836,7 +60835,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b38451e0-0d60-4c05-974e-32ffd6f98d35",
+	      "key": "c1d2a27f-fe29-4f68-98e2-6fc77cfac583",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60874,7 +60873,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d2da508a-8a70-45f2-a600-67e709228aee",
+	      "key": "21b27099-c8ba-4ddd-809d-335702ef98ca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60935,7 +60934,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1908b6e4-2fec-486b-b252-4d73490afc2b",
+	      "key": "17741e2b-02b7-4d03-abb4-57a790074cd8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61025,7 +61024,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3f191b3b-af87-4acc-af21-bc0a4a8126e2",
+	      "key": "08bc1dd0-46b9-457d-bc3c-db78f4a199f2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61224,7 +61223,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "933fe039-d7b7-446e-968b-0c4dfe98d545",
+	      "key": "cfd89d61-2dc8-4f8a-a79e-48e28ef929a6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61264,7 +61263,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f7ad2fd8-c3d7-40a8-b087-7d4e4053f064",
+	      "key": "cb1e8fe9-5f24-495e-a0dd-ded275b781b0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61307,7 +61306,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "202d16a3-6b74-4ff6-aff0-c563bd93b937",
+	      "key": "9fb664dc-516f-4898-90f8-a1e318d2ca2c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61390,7 +61389,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3ef6467b-3e09-4d07-9f0e-ed668083eacf",
+	      "key": "c461969b-6b6b-4bbf-a6ab-167adde72075",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61759,7 +61758,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bbd0fd98-5add-4637-9f57-43943aeba804",
+	      "key": "8c0bd73e-979e-4caa-868d-d0aacce824a5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61854,7 +61853,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "39052a91-6a0d-4b92-bd71-9d6649a82b4f",
+	      "key": "e3f47b60-9621-4029-958f-ecb764636911",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61920,7 +61919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b858c5bc-d194-448c-998d-927638b7060a",
+	      "key": "6b468e55-16b8-4899-b13e-a12d21de19fd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62069,7 +62068,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fb78f430-ecf8-4def-8df1-af2d13c393bd",
+	      "key": "a3fc22f0-2c99-47a1-9139-c877acc7f5fd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62187,59 +62186,6 @@
 
 /***/ },
 /* 766 */
-/*!*****************************************************!*\
-  !*** ./content/posts/hello-k8-node-with-wercker.md ***!
-  \*****************************************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "title": "Hello Node.js on K8 and Wercker",
-	  "slug": "hello-k8-node-with-wercker",
-	  "summary": "Personal notes while walking through a tutorial on settup up k8 for a basic Node.js application and applying a Wercker pipeline",
-	  "created": "August 29 2016",
-	  "author": "Jeffrey R. Hicks",
-	  "twitter": "jrhicks",
-	  "cover": true,
-	  "type": "post",
-	  "ast": [
-	    {
-	      "type": "section",
-	      "key": "9d35e692-7bb8-402b-a6a6-7e78643612fd",
-	      "body": [
-	        {
-	          "type": "heading",
-	          "text": [
-	            "Resources"
-	          ],
-	          "level": 2,
-	          "raw": "Resources"
-	        },
-	        {
-	          "type": "list",
-	          "body": [
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "link",
-	                  "href": "http://kubernetes.io/docs/hellonode/",
-	                  "title": null,
-	                  "text": [
-	                    "Hello World Walkthrough"
-	                  ]
-	                }
-	              ]
-	            }
-	          ],
-	          "ordered": false
-	        }
-	      ]
-	    }
-	  ]
-	}
-
-/***/ },
-/* 767 */
 /*!**************************************************!*\
   !*** ./content/posts/hightower-presentations.md ***!
   \**************************************************/
@@ -62257,7 +62203,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8a3dbc5e-bfab-4811-9a3a-fccd7c1657a8",
+	      "key": "4a46b419-087e-4dd3-a7a7-c32d0df39d00",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62307,7 +62253,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3ff49930-f5cd-4ae7-92c6-ed0ccdf82ba8",
+	      "key": "ccb99995-3de3-4792-bab7-93391a60e2ee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62368,7 +62314,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0a0a8017-6275-4089-b13c-5a8d33e34f69",
+	      "key": "1d5e77e8-5609-43b1-9f2f-05bf561b3868",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62447,7 +62393,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b7171507-56c2-4d19-911a-5313ed2a1888",
+	      "key": "0ae158f4-a436-4b4a-9ccb-c3b06e1e90c3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62552,7 +62498,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9ebd4f15-de9f-456b-8a3e-9e88b0e9c5ea",
+	      "key": "a2f18fc6-4561-4928-a9d8-0e480b5b6e99",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62620,7 +62566,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e69a9c2a-25b6-417f-a699-fe6aa806ccf3",
+	      "key": "8bbecee6-39cb-4dde-b8a2-080eb15ad9dc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62670,7 +62616,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "09b579e3-07ef-4a99-9e94-62bf0eb4569d",
+	      "key": "04413996-f020-4634-95c0-dc6b040a9e3e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62705,7 +62651,7 @@
 	}
 
 /***/ },
-/* 768 */
+/* 767 */
 /*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
@@ -62723,7 +62669,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0dd481b0-e90b-443f-90ba-bbed1c5c5486",
+	      "key": "f43b5f87-52cf-4a87-a139-7b452274d394",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62766,7 +62712,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2ba0345d-505d-4fe9-8d05-1b1aa368f63e",
+	      "key": "d2b6bd3f-a6c2-42d9-848d-6793372a068b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62786,7 +62732,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "81124dc8-375a-4c34-ad24-f36c3574fde9",
+	      "key": "671491b2-ab52-43ba-976e-5845d1ae0f50",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62806,7 +62752,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "65bd2314-7e18-4151-8d3b-d40f6d9a7a8a",
+	      "key": "c49500a8-202a-4fa3-aaa1-154bc8180929",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62832,7 +62778,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1116285a-cee0-40cd-9cfb-81196b75725f",
+	      "key": "30c3ed01-a732-42e9-8d4d-6789487f824e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62858,7 +62804,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8d973aa5-0876-4f08-9128-634e6a4c8a21",
+	      "key": "d5a5df7b-5727-49a4-9bf6-7790c77b8e85",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62878,7 +62824,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "12f3b7fc-0889-4f7a-b687-110d5f8c88ab",
+	      "key": "2c45e172-377d-4795-a2f5-a890390b234c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62943,7 +62889,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e9d1482d-f35d-42f0-8f2d-a0bff3860350",
+	      "key": "970dfde5-eab0-4360-99be-8737f323b695",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62957,7 +62903,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67f9c00e-556b-444b-8569-9ef110d011e8",
+	      "key": "17e38b78-04b5-4d02-a0b1-fa6e8c08c6b6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63016,7 +62962,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f33fc032-4eee-4783-a886-45f76cc4f339",
+	      "key": "f486b59b-89f4-4cf5-b3e9-df078817bbea",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63059,7 +63005,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bb077e9f-f6a1-4962-94dd-e793487b4fd3",
+	      "key": "4d8e98af-7342-49b6-838c-8632f8da0c37",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63118,7 +63064,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ecd5a0e2-e44a-471e-8f94-ac10c82a09bc",
+	      "key": "fa773ef6-9674-4c1a-af6b-7572dd5e8a6b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63188,7 +63134,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3eeb7ff9-4d95-4634-a651-0e0b9b0dc577",
+	      "key": "f48db4f6-20d8-4747-a406-1f3aac7b720d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63251,7 +63197,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c630d408-60f4-46b5-bbc4-ff4e33c9e87a",
+	      "key": "c05716a8-c4a9-43cc-85e7-44fa175e08b2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63322,7 +63268,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "63db905e-97de-42f1-912a-a9af566b9ab4",
+	      "key": "87df0bc8-083c-458b-a02d-d02d77e541b9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63365,7 +63311,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dd9b5836-975f-4722-b9db-e1ecb22aed11",
+	      "key": "c002e5f7-1f0f-4589-82f2-32aa61f1db55",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63396,7 +63342,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "344244ce-2a86-4a2a-be07-b0d8dafad940",
+	      "key": "c3ba2308-98ac-4198-92c3-715a947c0807",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63429,7 +63375,7 @@
 	}
 
 /***/ },
-/* 769 */
+/* 768 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -63447,7 +63393,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "58232902-0a77-409a-ba0a-bcfb3e24f2f5",
+	      "key": "6b2b1c15-0eca-4198-8229-043c4bff3b92",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63512,7 +63458,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5956e68c-2118-4fbc-acb3-eea8da90d12d",
+	      "key": "ff103a84-163d-4ce2-b747-4d7d6a11099a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63577,7 +63523,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b7de40b8-6304-4345-b226-e890bbdc94c7",
+	      "key": "1ad7edb1-a358-4e30-95ca-94c9fc43fe29",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63725,7 +63671,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "72369346-5c99-4c44-a582-f95fe4fdc949",
+	      "key": "72041360-8690-4262-bfd1-f74f28c928ca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63963,7 +63909,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2a5f43a4-2fe5-42b5-bf0e-0074d84737b7",
+	      "key": "b84e41b2-9661-4bc2-9273-44631c9725c6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64062,7 +64008,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3575c951-fc5e-4d63-a24c-61224771ca60",
+	      "key": "538db89f-27e2-4600-a54d-de726ba60d01",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64214,7 +64160,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dd554138-f4fd-4bf8-addd-1585b4fd9e14",
+	      "key": "43cf9a27-7d20-4c8b-8c56-b1b50ed0b7c6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64309,7 +64255,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "61702aa8-f659-4ea3-b66f-4d6a660f9fc8",
+	      "key": "0bf772a9-02b4-4354-8c4d-ff8bdf579351",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64447,7 +64393,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7215f562-8a72-4fa9-8bbc-2364ba7bc804",
+	      "key": "fa870671-a833-45b8-b25e-677cea6f5fdf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64642,7 +64588,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5ed459df-6252-4e1c-866d-b2439f900661",
+	      "key": "075e02bc-dba3-4990-a9cf-c2651c2f6953",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64767,7 +64713,7 @@
 	}
 
 /***/ },
-/* 770 */
+/* 769 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -64785,7 +64731,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2b6e4d20-1fca-4ffe-bd3a-293bc6b0fb42",
+	      "key": "d5500484-55ec-4170-909e-e9710d06fc92",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64797,7 +64743,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6c18941a-13ee-4a45-8a0a-e5e4f015b902",
+	      "key": "fc3cf881-94a3-4459-a13d-691773db9f49",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64906,7 +64852,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c8cd077b-7c0c-4c5c-a53c-56859c385eb1",
+	      "key": "664805c5-ca09-44ec-b4df-a88d178b4580",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64955,7 +64901,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ec480c1b-1401-42f5-9684-00faf2c2a82d",
+	      "key": "a4989391-794c-4ba0-ad68-aba635b5f508",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65027,7 +64973,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "078635eb-0cd0-40ac-bb4a-8447a1e5d82d",
+	      "key": "10d94d1b-5994-4b62-9252-d01e81973d00",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65063,7 +65009,7 @@
 	}
 
 /***/ },
-/* 771 */
+/* 770 */
 /*!*******************************************!*\
   !*** ./content/posts/kubernetes-notes.md ***!
   \*******************************************/
@@ -65080,14 +65026,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b95e891d-17a1-4a4a-921f-3b6851b9a1f5",
+	      "key": "24d31c09-68e3-467e-99ef-e32908883d36",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 772 */
+/* 771 */
 /*!********************************************************!*\
   !*** ./content/posts/my-kubecon-2016-keynote-notes.md ***!
   \********************************************************/
@@ -65105,7 +65051,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "54e607f2-662d-4f9c-b5d3-56e1dc8a9857",
+	      "key": "99e76892-bcad-4c5a-8323-65188e0496dc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65162,7 +65108,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ab971447-7356-423a-9ecc-603efca9ab39",
+	      "key": "0d8a0b47-a6b2-4d0b-9dc6-d50a711f7bc2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65218,7 +65164,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0ede7b91-8974-41ce-a507-9887b1cbc32c",
+	      "key": "364c8b02-f2dc-4b4d-ab21-1c93f95c44df",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65304,7 +65250,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b072c564-53cb-41b2-83ef-606187a254ec",
+	      "key": "c1d596a5-1439-4ee6-8cff-d6a4d611a220",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65389,7 +65335,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "704f804e-16ce-493f-ac1d-be5070ad7b1b",
+	      "key": "26c09aa2-dd7b-45c7-a751-2a8d41aeb08f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65510,7 +65456,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "59353111-b40c-4d63-a5fb-11a66805a000",
+	      "key": "e8d847b3-34eb-4167-89ad-1f44f7124739",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65653,7 +65599,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "529fd38e-65f0-4c70-a1a8-f53dd1c783b4",
+	      "key": "d2b5469b-090b-42fe-841e-74432aa4efee",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65727,7 +65673,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "17f95c67-7375-4fe4-ab8f-eebb25fb4b2e",
+	      "key": "1753c00c-e00d-4cb7-95a5-4907b4b7e6eb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65747,7 +65693,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2cc09680-afa3-40a0-913d-652d5138a500",
+	      "key": "9bf12e2a-e18d-404e-97b2-a4096034d8b7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65767,7 +65713,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f059e36c-e857-4748-934a-d186327b417d",
+	      "key": "ab64f30e-1029-41af-901d-391231acc145",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65916,7 +65862,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ace4b002-b6b2-46ef-81a0-7c71eb67ec87",
+	      "key": "219b5e56-f049-4051-891e-9e35fbac6355",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65971,7 +65917,7 @@
 	}
 
 /***/ },
-/* 773 */
+/* 772 */
 /*!******************************************!*\
   !*** ./content/posts/node-deployment.md ***!
   \******************************************/
@@ -65989,7 +65935,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1f55a022-7893-43f3-9d3a-1c590f6c7d48",
+	      "key": "62f27b8a-05b9-48ac-9535-86c10165060f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66616,7 +66562,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1a2f5832-2302-4b1d-897d-7eb653d99afd",
+	      "key": "ceca1e6c-4df1-433b-89e4-089b39b89038",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67011,7 +66957,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "051d63d6-acb8-466b-a16f-f0eff9390198",
+	      "key": "441c53f5-9bfc-48e8-b63d-238e15309aea",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67202,7 +67148,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2bb9b533-73d8-4c42-ab1a-f12843fd1fe9",
+	      "key": "988b8a03-268a-4ccc-a90a-8551eb18f009",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67352,7 +67298,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4a4add66-4339-41bd-8318-54a5e7170b65",
+	      "key": "8c339c46-a738-4c09-8659-408e232fa192",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67503,7 +67449,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d4c7ac4b-a117-43d4-86cd-b8d16e2e3103",
+	      "key": "386c5ed0-673d-49e8-a212-7eec1afd6f1e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67579,7 +67525,7 @@
 	}
 
 /***/ },
-/* 774 */
+/* 773 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -67597,7 +67543,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "83972a4c-1387-44db-93ed-a5e45159bcd7",
+	      "key": "49bce5c3-5422-437d-bbde-ad547c5792f7",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67695,7 +67641,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a7ec7ad4-e9e7-4f13-a20c-75b7efc46324",
+	      "key": "932c912f-cfec-4ba1-8233-cfc7b4e52baf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67736,7 +67682,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dac49a2f-18aa-48f2-8a50-f74213273770",
+	      "key": "c011fecd-b981-44ee-87bf-4dddfe2c4c8f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67775,7 +67721,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "62ec660d-4a97-47c5-8c30-67880c2965b2",
+	      "key": "a8f48a2f-d4a8-46ad-b1bc-77e3eaafb034",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67801,7 +67747,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fe9a5478-123d-47af-aa53-2338597c254d",
+	      "key": "908e83d6-ddd6-4d58-b202-9aef41e00d5d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67879,7 +67825,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "50130bf9-43ad-47aa-976e-67b5daa232f4",
+	      "key": "c792d542-c452-4282-b35f-689c1a116ebf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67908,7 +67854,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b3667371-74db-4917-8a0d-6f8da2acdb56",
+	      "key": "fd2c814a-099c-478e-8459-3b289850e4e5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67928,7 +67874,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "72870ea8-f45b-462f-8eb2-ca4a7f791d90",
+	      "key": "5a9a380b-b451-49c2-b5a5-137bee3e0b6e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67967,7 +67913,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7f8ea752-82a8-48f0-86c2-ae86e05ae44e",
+	      "key": "18f20ea0-1054-4d66-a422-c695ed24edef",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68001,7 +67947,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "39697a70-be1f-422c-a7e3-9b902135e8c2",
+	      "key": "03e2a94e-a51b-4c42-bc51-7fafbcab8820",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68083,7 +68029,7 @@
 	}
 
 /***/ },
-/* 775 */
+/* 774 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -68101,7 +68047,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "beaa9fdc-8183-4912-9ba1-5f0b3f69a5bf",
+	      "key": "f4c9d7b7-a7f2-484d-acd1-ad1c6ecc3495",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68120,7 +68066,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5868009d-0812-492a-b336-e6fb06599b29",
+	      "key": "91386610-1c6d-4d7b-8f7f-d160babf6c1e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68227,7 +68173,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ec6bd56a-e904-42ad-9279-ada4b65424b0",
+	      "key": "82fd6c4b-f94b-439a-bb94-679e903a3bbc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68247,7 +68193,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "60cbe2b5-fb71-4802-a6b5-6c0ce43511fc",
+	      "key": "bc34c5ca-817e-492a-85db-cd3d1d137e6a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68286,7 +68232,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5b76e4c1-2b76-4932-b061-d6c9ed923490",
+	      "key": "1523d147-0762-419f-b137-d85ecd156466",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68320,7 +68266,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "be541926-92db-4b47-b378-9e0a679c78ae",
+	      "key": "a414abaa-7d69-40f9-8969-4248d313c87a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68352,7 +68298,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "be86f027-8029-4123-82d9-d2d51fc712ee",
+	      "key": "378507f8-52ef-4dfc-816e-fbcc34a039c3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68386,7 +68332,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c64a5085-225e-4dae-8336-dd4639cebe76",
+	      "key": "f2891f87-c384-49c9-864b-4eed637f20a9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68469,7 +68415,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7c28a291-c0da-4609-9f1d-8a0dc012cd6a",
+	      "key": "aecf780c-ee50-4feb-a5ca-7c2f40a20d36",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68503,7 +68449,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "953a8bc7-d51e-49fa-a295-05c3bf1d6690",
+	      "key": "25728760-6041-457c-8f6e-d47b710178cb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68539,7 +68485,7 @@
 	}
 
 /***/ },
-/* 776 */
+/* 775 */
 /*!************************************!*\
   !*** ./content/posts/typefaces.md ***!
   \************************************/
@@ -68557,7 +68503,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b118a040-9da6-491a-8c3c-41775a403105",
+	      "key": "df9c186f-a185-4150-9073-248f60ee9ebf",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68581,7 +68527,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1706fd9d-9d11-475b-ac7d-3fbf459e0838",
+	      "key": "ec1d278d-f8b0-4493-ae02-62fe8b8e3f73",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68646,7 +68592,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "43b3665c-cf68-4faa-925b-3274cf174cef",
+	      "key": "332d6af1-3890-4392-afa9-2c2266ce5e24",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68700,7 +68646,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a6a3ae4d-df28-4741-bb09-50743b7c2083",
+	      "key": "237a6e69-cf09-4cd1-a4ca-f0a444542daa",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68790,7 +68736,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "34524681-5cf9-4e51-bedb-d628b76397e3",
+	      "key": "3cdce156-472c-4662-aeae-e419ea01ece4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68892,7 +68838,7 @@
 	}
 
 /***/ },
-/* 777 */
+/* 776 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -68900,24 +68846,25 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 778);
+	var req = __webpack_require__(/*! ./talks/ */ 777);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
 	module.exports = talks;
 
 /***/ },
-/* 778 */
+/* 777 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 779,
-		"./es-intro-deck.md": 780,
-		"./es-intro.md": 781,
-		"./lds-intro.md": 782,
+		"./component-vs-layout.md": 778,
+		"./es-intro-deck.md": 779,
+		"./es-intro.md": 780,
+		"./from-zero-to-docker-deck.md": 781,
+		"./from-zero-to-production-docker.md": 782,
 		"./ui-principles-deck.md": 783,
 		"./ui-principles.md": 784
 	};
@@ -68932,11 +68879,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 778;
+	webpackContext.id = 777;
 
 
 /***/ },
-/* 779 */
+/* 778 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -68953,14 +68900,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b9c8bdbc-7c06-4122-916a-6f761ebed07d",
+	      "key": "1a7dc922-b735-4ec8-8115-9584400b0891",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 780 */
+/* 779 */
 /*!****************************************!*\
   !*** ./content/talks/es-intro-deck.md ***!
   \****************************************/
@@ -68978,14 +68925,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "96a1a27a-a53e-4ae5-8625-6467c5fab19f",
+	      "key": "6f1e2ac1-8afc-4a4b-8297-a554bd71ad7d",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 781 */
+/* 780 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -69007,7 +68954,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "aa16b5d8-26ea-451e-9b9b-df1d22f63b37",
+	      "key": "25f9152e-a4f4-472f-9460-817d95017392",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -69310,30 +69257,71 @@
 	}
 
 /***/ },
-/* 782 */
-/*!************************************!*\
-  !*** ./content/talks/lds-intro.md ***!
-  \************************************/
+/* 781 */
+/*!***************************************************!*\
+  !*** ./content/talks/from-zero-to-docker-deck.md ***!
+  \***************************************************/
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "title": "Lightning Design Systems In React",
-	  "slug": "lds-intro",
+	  "title": "from-zero-to-docker-deck",
+	  "slug": "from-zero-to-docker-deck",
 	  "summary": null,
-	  "event": "Meetup",
-	  "location": "Iron Yard",
-	  "date": "2016/04/15 12:00 CST",
-	  "created": "2016-03-01T05:16:37.450Z",
+	  "created": "2016-10-19T01:28:50.039Z",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "type": "speakerdeck",
+	  "data-id": "3e2f394209264722b9db364e1166058b",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "602c38d4-b1f8-485f-a98e-87d1c3bf8b64",
+	      "body": []
+	    }
+	  ]
+	}
+
+/***/ },
+/* 782 */
+/*!*********************************************************!*\
+  !*** ./content/talks/from-zero-to-production-docker.md ***!
+  \*********************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "From Zero To Production Docker With Kubernetes",
+	  "slug": "from-0-to-production-docker",
+	  "summary": "Data shows docker adoption is real and motivated by speeding up application development; but persistent storage, networking, and security present challenges to adopters.  Learn about Kubernetes and see how it solves this problems.",
+	  "event": "Little Rock Tech Fest",
+	  "location": "Statehouse Convention Center - Ballroom C",
+	  "date": "Oct 20, 2017 09:00 AM",
+	  "created": "2016-09-01T05:16:37.449Z",
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
 	  "type": "post",
 	  "category": "upcoming talk",
-	  "register": "http://www.meetup.com/Little-Rock-ReactJS-Meetup/events/229161092/",
+	  "ready": true,
+	  "register": "http://www.lrtechfest.com/#tickets",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "10527388-bf80-45cc-beac-e849a308cb59",
-	      "body": []
+	      "key": "895a073b-ee63-4dd4-8e26-1c905e9ca942",
+	      "body": [
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            [
+	              "",
+	              {
+	                "type": "wikismith",
+	                "slug": "from-zero-to-docker-deck",
+	                "method": "embed"
+	              },
+	              ""
+	            ]
+	          ]
+	        }
+	      ]
 	    }
 	  ]
 	}
@@ -69357,7 +69345,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "01158f0d-7f6e-45b2-b408-e69f43f3baaf",
+	      "key": "a308d937-1a3d-4dff-b886-1bf7e6bab211",
 	      "body": []
 	    }
 	  ]
@@ -69387,7 +69375,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "8e32153c-5956-4919-af5e-dbb5823121c1",
+	      "key": "8d32da2b-546b-4691-b962-23a657399b34",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -69425,7 +69413,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8a659e39-dab6-40f7-8485-4a07e47821f3",
+	      "key": "d1a6cf92-99ba-4ac5-af7c-f5d43c982a21",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69545,7 +69533,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a7e8aaee-10f1-4f35-8de7-db9b18a806ed",
+	      "key": "8e08a4ee-427c-412a-8a17-d107cfa42221",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69764,7 +69752,7 @@
 	        results.push(_react2.default.createElement(
 	          'a',
 	          { className: _AgendaPanel2.default.button, href: t.register },
-	          'Meetup'
+	          'Register'
 	        ));
 	      }
 	      if (t.video) {
