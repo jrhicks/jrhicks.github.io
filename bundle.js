@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 805)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 808)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 786);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 789);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 788);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 791);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 804);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 807);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34366,7 +34366,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 785);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 788);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -35285,7 +35285,7 @@
 	
 	var _posts2 = _interopRequireDefault(_posts);
 	
-	var _talks = __webpack_require__(/*! ../content/talks.js */ 776);
+	var _talks = __webpack_require__(/*! ../content/talks.js */ 778);
 	
 	var _talks2 = _interopRequireDefault(_talks);
 	
@@ -59688,18 +59688,20 @@
 	var map = {
 		"./ansible-notes.md": 762,
 		"./arkansas-dev-hackathon-2015.md": 763,
-		"./client-side-routing-notes.md": 764,
-		"./confidently-starting-a-reactjs-project.md": 765,
-		"./hightower-presentations.md": 766,
-		"./intro-to-flux.md": 767,
-		"./intro-to-reactjs.md": 768,
-		"./introduction-to-es6.md": 769,
-		"./kubernetes-notes.md": 770,
-		"./my-kubecon-2016-keynote-notes.md": 771,
-		"./node-deployment.md": 772,
-		"./offline-flux-with-lokijs.md": 773,
-		"./react-form-generation.md": 774,
-		"./typefaces.md": 775
+		"./bpm-notes.md": 764,
+		"./client-side-routing-notes.md": 765,
+		"./confidently-starting-a-reactjs-project.md": 766,
+		"./event-store-on-kubernetes.md": 767,
+		"./hightower-presentations.md": 768,
+		"./intro-to-flux.md": 769,
+		"./intro-to-reactjs.md": 770,
+		"./introduction-to-es6.md": 771,
+		"./kubernetes-notes.md": 772,
+		"./my-kubecon-2016-keynote-notes.md": 773,
+		"./node-deployment.md": 774,
+		"./offline-flux-with-lokijs.md": 775,
+		"./react-form-generation.md": 776,
+		"./typefaces.md": 777
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -59734,7 +59736,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a161402c-9d98-43af-b5d5-9986fd3beadf",
+	      "key": "88c48f15-0422-4c57-9d5a-bf36c24b8c15",
 	      "body": [
 	        "",
 	        {
@@ -59792,7 +59794,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2bcb83a9-d5ac-4849-a763-b7eb492f5bc0",
+	      "key": "471838e8-f44a-4089-a7a2-78720e4978f1",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59867,7 +59869,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9ece9ada-eea2-4d3f-9267-f2886ee7efae",
+	      "key": "31010741-4a2c-4c14-bb8e-4cafb3ed9497",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60239,7 +60241,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f4881753-c85c-4c29-956f-575087d63cf7",
+	      "key": "a1be447c-59af-48b8-a948-a00f9affa933",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60418,7 +60420,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "04b28396-1fad-41fc-acbd-87a91fd5c873",
+	      "key": "f5944433-87af-4146-ac33-43c9bdc4262c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60667,6 +60669,498 @@
 
 /***/ },
 /* 764 */
+/*!************************************!*\
+  !*** ./content/posts/bpm-notes.md ***!
+  \************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "BPM Notes",
+	  "slug": "bpm-notes",
+	  "summary": "Business Process Modeling Notes",
+	  "created": "Sat Mar 14 2015 13:22:14 GMT-0500 (CDT)",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "cover": false,
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "ac5853fe-f5df-4ab4-b240-de3745f29d12",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Overview"
+	          ],
+	          "level": 2,
+	          "raw": "Overview"
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Setup Spring Mavern Project"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Setup a Java Project for BPMN 2.0"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "list",
+	                  "body": [
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Download Eclipse ",
+	                            {
+	                              "type": "link",
+	                              "href": "https://www.eclipse.org/downloads/",
+	                              "title": null,
+	                              "text": "https://www.eclipse.org/downloads/"
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Install Java ",
+	                            {
+	                              "type": "link",
+	                              "href": "http://www.oracle.com/technetwork/java/javase/downloads/index.html",
+	                              "title": null,
+	                              "text": "http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Using Shared Process Engine ",
+	                            {
+	                              "type": "link",
+	                              "href": "https://docs.camunda.org/get-started/spring/shared-process-engine/",
+	                              "title": null,
+	                              "text": "https://docs.camunda.org/get-started/spring/shared-process-engine/"
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Set Build Path ",
+	                            {
+	                              "type": "link",
+	                              "href": "http://screencast.com/t/TnNS9MbS0FAK",
+	                              "title": null,
+	                              "text": "http://screencast.com/t/TnNS9MbS0FAK"
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Setting up a Maven project ",
+	                            {
+	                              "type": "link",
+	                              "href": "https://docs.camunda.org/get-started/bpmn20/project-setup/",
+	                              "title": null,
+	                              "text": "https://docs.camunda.org/get-started/bpmn20/project-setup/"
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    },
+	                    {
+	                      "type": "listitem",
+	                      "text": [
+	                        {
+	                          "type": "paragraph",
+	                          "text": [
+	                            "Spring Project Setup ",
+	                            {
+	                              "type": "link",
+	                              "href": "https://docs.camunda.org/get-started/spring/project-setup/",
+	                              "title": null,
+	                              "text": "https://docs.camunda.org/get-started/spring/project-setup/"
+	                            }
+	                          ]
+	                        }
+	                      ]
+	                    }
+	                  ],
+	                  "ordered": false
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Tomcat"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                "From Docker add /usr/local/tomcat/conf/tomcat-users.xml then test access at ",
+	                {
+	                  "type": "link",
+	                  "href": "http://localhost:8888/manager/html",
+	                  "title": null,
+	                  "text": "http://localhost:8888/manager/html"
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Setting Up Camunda for Basic HTTP authentication"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/camunda/camunda-bpm-examples/tree/master/deployment/embedded-spring-rest",
+	                      "title": null,
+	                      "text": [
+	                        "embedded-spring-rest"
+	                      ]
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": true
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "docker exec -i -t camundaui_camunda_1 /bin/bash"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "docker exec -i -t hungry_hodgkin /bin/bash"
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Creating a docker image with basic authentication"
+	                  ]
+	                },
+	                "",
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://docs.camunda.org/manual/7.4/reference/rest/overview/authentication/",
+	                      "title": null,
+	                      "text": "https://docs.camunda.org/manual/7.4/reference/rest/overview/authentication/"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/camunda/camunda-bpm-platform",
+	                      "title": null,
+	                      "text": "https://github.com/camunda/camunda-bpm-platform"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    "Attach and inspect"
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "code",
+	          "code": "docker run -it -d camunda/camunda-bpm-platform:tomcat-7.6.0-alpha5 /bin/bash\ndocker run -it -d camundaui_camunda_1 /bin/bash",
+	          "fenced": true
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "Test URL"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "link",
+	                  "href": "http://demo:demo@localhost:8080/camunda/api/engine/engine/default/user/demo/profile",
+	                  "title": null,
+	                  "text": "http://demo:demo@localhost:8080/camunda/api/engine/engine/default/user/demo/profile"
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "5c9483db-4be1-4e64-afbb-483ae1ffe527",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "API Examples"
+	          ],
+	          "level": 2,
+	          "raw": "API Examples"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "link",
+	                  "href": "http://localhost:8080/camunda/api/engine/engine/default/user/demo/profile",
+	                  "title": null,
+	                  "text": "http://localhost:8080/camunda/api/engine/engine/default/user/demo/profile"
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "51a666a8-7a87-40a6-bbd9-ef45be69d448",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Camunda &amp; Docker"
+	          ],
+	          "level": 2,
+	          "raw": "Camunda & Docker"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/camunda/docker-camunda-bpm-platform",
+	                      "title": null,
+	                      "text": "https://github.com/camunda/docker-camunda-bpm-platform"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://localhost:8080/camunda-welcome/index.html",
+	                      "title": null,
+	                      "text": "http://localhost:8080/camunda-welcome/index.html"
+	                    }
+	                  ]
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "78fb21cc-96c8-477c-be70-712a1fb45052",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Business Case"
+	          ],
+	          "level": 2,
+	          "raw": "Business Case"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                "[Performing Gap Analysis, Estimating Value, Projecting ROI]&quot;",
+	                {
+	                  "type": "link",
+	                  "href": "http://www.oracle.com/us/corporate/insight/business-case-bpm-wp-171710.pdf",
+	                  "title": null,
+	                  "text": "http://www.oracle.com/us/corporate/insight/business-case-bpm-wp-171710.pdf"
+	                },
+	                "&quot;"
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    },
+	    {
+	      "type": "section",
+	      "key": "42ff1207-c8be-44f5-94ab-29c423699d5b",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "UX"
+	          ],
+	          "level": 2,
+	          "raw": "UX"
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                "&quot;Page Flow -vs- Process Flow, UI Mediator Pattern&quot;[",
+	                {
+	                  "type": "link",
+	                  "href": "http://www.bpm-guide.de/2012/04/04/pageflow-vs-process-flow-and-ui-mediator-pattern/",
+	                  "title": null,
+	                  "text": "http://www.bpm-guide.de/2012/04/04/pageflow-vs-process-flow-and-ui-mediator-pattern/"
+	                },
+	                "]"
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 765 */
 /*!****************************************************!*\
   !*** ./content/posts/client-side-routing-notes.md ***!
   \****************************************************/
@@ -60684,7 +61178,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "648b7ac8-2f2c-464c-ab56-d01b541a5ac7",
+	      "key": "6a8ed124-38ab-4253-adbc-a69d751f0683",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -60772,7 +61266,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "07383ed9-39ff-41be-bb2f-939498afdcdb",
+	      "key": "aee1e76b-41c5-48f8-a60d-1dfdd76e42a8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60791,7 +61285,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bd959a34-4604-4799-99f5-703b396675e8",
+	      "key": "e7b98ed9-0b2c-4a47-9f00-81f691821565",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60835,7 +61329,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f607db92-cdc2-4122-a089-0fdc19521519",
+	      "key": "f4d702d3-6924-462a-aa45-3ee4e44b3821",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60873,7 +61367,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "127a643e-32c7-4a96-8b2a-5cf3bc0f492c",
+	      "key": "16c1b278-ace2-4aba-901c-df1db46a4811",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60934,7 +61428,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7e9641d2-92b4-4030-94e0-b01131a30d1b",
+	      "key": "eb06f6be-1cdc-4145-8df6-9fe902a07151",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61024,7 +61518,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ed3a3288-a627-4033-a2db-df5bc2e401c4",
+	      "key": "1edddde6-e7ad-4ee1-91f8-8a86d3de8bb5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61205,7 +61699,7 @@
 	}
 
 /***/ },
-/* 765 */
+/* 766 */
 /*!*****************************************************************!*\
   !*** ./content/posts/confidently-starting-a-reactjs-project.md ***!
   \*****************************************************************/
@@ -61223,7 +61717,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "67910bbf-ff11-43bc-854e-37d2fd34c805",
+	      "key": "db9f035e-fa89-4a1c-99c8-56ddadad3061",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61263,7 +61757,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d34f177c-6016-4b6d-bc71-9adc26fcfc6e",
+	      "key": "0b40d267-a7d3-49f7-9d0d-19b515171973",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61306,7 +61800,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ebc2cdd0-49fa-45f0-886c-6ccfe566a84b",
+	      "key": "d02ffdbe-9397-4163-9630-832bf50eb8e3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61389,7 +61883,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "29f5712c-f2b0-4d6b-b401-d55193bdf2d3",
+	      "key": "e6603c58-0aef-4c9e-81eb-10414d0f5f42",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61758,7 +62252,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7293c2f1-666e-45d4-914a-7479317c66e4",
+	      "key": "b9b9803b-d5f3-4eab-a261-a6193daffa25",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61853,7 +62347,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9d8d7d85-c104-4bbf-992d-9971291e438f",
+	      "key": "b7e92e58-7ede-4308-ac2d-184e4ad859bb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61919,7 +62413,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "dbf2dc19-efa4-4c6c-bd2e-a93d58bdcc88",
+	      "key": "fc7a2a2d-03b0-4070-98f2-e0b0f05a17ce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62068,7 +62562,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "735ead40-fe0e-439c-9e84-93ab856460bc",
+	      "key": "c77134b6-e571-4cfc-9383-15c80e7bef5f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62185,7 +62679,39 @@
 	}
 
 /***/ },
-/* 766 */
+/* 767 */
+/*!****************************************************!*\
+  !*** ./content/posts/event-store-on-kubernetes.md ***!
+  \****************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "GetEventStore on Kubernetes",
+	  "slug": "get-eventstore-on-kubernetes",
+	  "summary": "Notes for deploying, replicating, and backing up GetEventStore on Kubernetes.",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "type": "post",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "0b297ce6-d39d-438f-b3a7-8b1133e00b97",
+	      "body": [
+	        {
+	          "type": "heading",
+	          "text": [
+	            "Single Database (Not Cluster)"
+	          ],
+	          "level": 2,
+	          "raw": "Single Database (Not Cluster)"
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 768 */
 /*!**************************************************!*\
   !*** ./content/posts/hightower-presentations.md ***!
   \**************************************************/
@@ -62203,7 +62729,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "11f3606d-0f24-4a67-beae-7f2983085489",
+	      "key": "339e329b-31f0-4bcd-b677-06a7394d37a5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62253,7 +62779,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2a964a4a-8231-486a-a221-1df4cae448d9",
+	      "key": "11184e84-ecde-43e0-af55-6d6875c45b07",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62314,7 +62840,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f9cfcb60-34c8-4e99-855f-622f3248526e",
+	      "key": "ece63f76-6b98-43f4-9a3f-d69d6bb97cc9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62393,7 +62919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3a234fe6-81d3-40dc-97d9-23a4ffc206ad",
+	      "key": "0cf09553-8bb4-4ddb-a79f-e480cf5524f4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62498,7 +63024,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6600a196-fdcd-4bff-9f4e-16faaed932bf",
+	      "key": "542ba9c0-30d4-4340-b684-09ff42a488b1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62566,7 +63092,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "77357799-73f8-4aee-a817-627f281db668",
+	      "key": "f0228e0e-d0be-4236-9352-e3eec460834f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62616,7 +63142,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "941ba723-8d23-4aea-9949-2398af19e79e",
+	      "key": "ecd5afe1-5815-487d-aea2-d097418e2f75",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62651,7 +63177,7 @@
 	}
 
 /***/ },
-/* 767 */
+/* 769 */
 /*!****************************************!*\
   !*** ./content/posts/intro-to-flux.md ***!
   \****************************************/
@@ -62669,7 +63195,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "4d6d05ff-4e20-4de8-aa86-6262c5e3921a",
+	      "key": "f82a3c65-c4c9-4795-b345-747a5feb7e24",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62712,7 +63238,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d70919dd-755f-48f2-a0de-8479f2522523",
+	      "key": "7a7f6312-4297-4a97-9df2-68c477ea2d1f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62732,7 +63258,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "afeec4b0-ef03-4143-aa41-55afd2266287",
+	      "key": "0138deba-9cb1-4ffb-a56f-e27bdf3a5073",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62752,7 +63278,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "eb6ac5b0-79ec-4df3-be45-bdcd3565fe3a",
+	      "key": "30d7968d-f9d5-4bcc-a694-0a91f46d65be",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62778,7 +63304,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "114f25e4-83ed-4860-9351-69ce8666ddd5",
+	      "key": "63703b1a-57d5-4dba-a8a3-ed07960c51f9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62804,7 +63330,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c2516204-30cb-44b8-9c97-8e89e259ba62",
+	      "key": "a21f1413-afb8-4fbb-aa2e-882385b212cc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62824,7 +63350,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9ab50142-abe3-40aa-ba30-0b2cab702c92",
+	      "key": "4f28a8ee-d3d8-4818-a675-3fd7f706ee70",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62889,7 +63415,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1fa7ec40-e256-41db-a343-64ea23449ef1",
+	      "key": "63e6030e-c755-48e3-96bf-9d64d60a0eac",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62903,7 +63429,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bc6d7210-9338-45e0-b7d0-591938c14db9",
+	      "key": "483e1842-316c-4fb5-80f0-0f7b6d96ae95",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62962,7 +63488,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "31044538-f91c-46c1-b512-ab5b5fbbe665",
+	      "key": "5cc56991-40b4-4526-a3ad-160c9bc533a0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63005,7 +63531,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fc2d6d9b-2dd2-4f6b-959e-865c2e10badf",
+	      "key": "f9a80511-4ef2-494c-b84e-cfcc3fe82d06",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63064,7 +63590,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "17d0643f-3b46-454f-aba7-929e1cf6956b",
+	      "key": "c71960f9-d985-4328-8639-6c5628d7628d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63134,7 +63660,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6f88807e-dd64-4e68-85f2-a402acb86c07",
+	      "key": "98742add-b7a5-419c-b16f-9bd4b2e291f9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63197,7 +63723,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "33ef8d56-d52f-436b-953d-dde50133c64e",
+	      "key": "4431f412-2620-4970-816d-7d2461cf444e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63268,7 +63794,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "97b09a06-5107-435d-bdb4-a913e85d7a4e",
+	      "key": "27abb143-7a95-42d3-a9a0-3b99d7d430e8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63311,7 +63837,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "132141d9-8653-4e1c-8975-2248266395dc",
+	      "key": "4fff6d88-3bde-4b34-b555-a88883705b46",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63342,7 +63868,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "24de687d-f90e-4ee2-8e8e-81c7227381ac",
+	      "key": "5619ae17-a6ba-4473-bf0b-789d8ee3aa09",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63375,7 +63901,7 @@
 	}
 
 /***/ },
-/* 768 */
+/* 770 */
 /*!*******************************************!*\
   !*** ./content/posts/intro-to-reactjs.md ***!
   \*******************************************/
@@ -63393,7 +63919,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "a114d136-7536-44cc-8439-ccab1906f491",
+	      "key": "eda71b44-b4a6-4b0d-ab13-620697762ca6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63458,7 +63984,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "db6326bd-fabe-46df-9e16-6ca199b37473",
+	      "key": "563c78df-ee8c-4327-82d4-e1891877a0f6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63523,7 +64049,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5a19dd7a-778a-4348-9f91-9ea52537ab59",
+	      "key": "541009e4-762e-497f-a601-700ea2223540",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63671,7 +64197,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d28fd6f2-d763-4af8-a57f-13c3f5d17144",
+	      "key": "42be5795-dc0c-4ad5-b2f5-b696616658c7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63909,7 +64435,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4d91b1e4-22f3-487b-8454-7318cb9615c2",
+	      "key": "4ca18781-f448-4c01-a973-88d2c5d5dda8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64008,7 +64534,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7a71da00-4b90-4473-84eb-fed354af9522",
+	      "key": "48b720da-e6d0-450d-bab6-fe6da86e24ec",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64160,7 +64686,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3650c624-e646-4d3a-ae06-c45c84e701b8",
+	      "key": "2f4efa94-7b40-490b-9fa5-3f6dd281d36b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64255,7 +64781,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c5d224a0-9397-400b-91be-131599a2a16d",
+	      "key": "40f2c8a8-db41-4051-8f43-493d09d417eb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64393,7 +64919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fd1ce684-94a5-41ab-ac4d-ab6ceed62fab",
+	      "key": "8ec07b44-6169-4dd1-a20a-6b21560ce3e3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64588,7 +65114,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "eda75805-cd42-49c8-82af-8fb9ffe7fabf",
+	      "key": "ba10f26d-37d3-49ba-9936-d709eebcf318",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64713,7 +65239,7 @@
 	}
 
 /***/ },
-/* 769 */
+/* 771 */
 /*!**********************************************!*\
   !*** ./content/posts/introduction-to-es6.md ***!
   \**********************************************/
@@ -64731,7 +65257,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "54ac4edd-bafa-4494-a173-b815208cf138",
+	      "key": "c7dc9eeb-7ff7-4ef1-a617-78bf33c1fac6",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -64743,7 +65269,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3432d116-d587-424f-837c-9703dfe40377",
+	      "key": "dabbc132-143f-43e4-a2ce-f8c9a4423828",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64852,7 +65378,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7df1e469-64db-4f00-a2f8-b00e8a173e98",
+	      "key": "755f3f65-075f-46ab-85bd-a1e74e6d5666",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64901,7 +65427,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5671a313-5dd0-43d5-856e-ea735f46a927",
+	      "key": "e3a0fe72-e3b4-4fb3-8485-7ae4f3caa4e9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64973,7 +65499,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8aff6d12-fe67-416e-b1a6-aca1e8a110bc",
+	      "key": "7de70e16-aa26-4ecd-9350-b4e06d430095",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65009,7 +65535,7 @@
 	}
 
 /***/ },
-/* 770 */
+/* 772 */
 /*!*******************************************!*\
   !*** ./content/posts/kubernetes-notes.md ***!
   \*******************************************/
@@ -65026,14 +65552,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "fa39222c-cad6-4200-9aeb-9d4cbbb512a0",
+	      "key": "75623c72-a884-468c-a3f8-8cf4e01e3627",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 771 */
+/* 773 */
 /*!********************************************************!*\
   !*** ./content/posts/my-kubecon-2016-keynote-notes.md ***!
   \********************************************************/
@@ -65051,7 +65577,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "7d4cb325-8f6f-4434-8be8-88185e85785c",
+	      "key": "c69b9bc0-c484-48b4-9ed4-3b2fbc02fd83",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65108,7 +65634,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "afe668b7-69b9-4828-9728-ec63d47cfd05",
+	      "key": "991b8255-e716-4a00-8da5-1b6307ce894e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65164,7 +65690,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ae35f8c2-254a-44cd-b800-34d8b7d1a6f7",
+	      "key": "ae99a60a-2c27-489e-ab75-55c74a505395",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65250,7 +65776,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3e62d114-2023-42be-bb73-0cabe7cf17ed",
+	      "key": "1dedfbd4-6cba-4b43-bd4f-d7d628680fec",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65335,7 +65861,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cd74de43-5ea5-447d-8571-fff29b81c808",
+	      "key": "41ab3db1-25e3-4f83-ae57-d93046587210",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65456,7 +65982,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "06e641fd-81af-452e-9933-5524128bd3a1",
+	      "key": "739b1aef-e3b8-4dbd-bf47-bd980d054334",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65599,7 +66125,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6eb30833-1e84-4891-963d-67e35a462df7",
+	      "key": "e1730b2b-baf9-401e-8e1b-155a643105b5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65673,7 +66199,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fb764988-f774-4813-9be5-ba4f81807f23",
+	      "key": "3b48147d-3770-444a-9bd4-b18959cebf50",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65693,7 +66219,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "123e345a-33a4-4be1-a89b-3f82d5be1d28",
+	      "key": "23804d23-e7b0-49c1-8fc0-050d9b1112cc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65713,7 +66239,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9e770e16-e4b8-4aff-a1cd-6a934117ba0d",
+	      "key": "06e928a7-d294-437e-8ecd-f3001ec1614a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65862,7 +66388,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b641570d-c947-4d01-bb6e-eadd46b8f4f0",
+	      "key": "64d6f9cb-e148-4ab0-84b5-cdcba050adc8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65917,7 +66443,7 @@
 	}
 
 /***/ },
-/* 772 */
+/* 774 */
 /*!******************************************!*\
   !*** ./content/posts/node-deployment.md ***!
   \******************************************/
@@ -65935,7 +66461,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "526cec8e-4930-430d-bc2a-5761ff263d49",
+	      "key": "d1c876e0-35ae-4670-afdb-dfd63ae89fa5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66562,7 +67088,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e235fe17-91b6-45fa-bd6e-58513ba59ba0",
+	      "key": "79ec6a87-1366-4ed0-a1fd-996ee912cdbc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66957,7 +67483,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a97e7aeb-27bf-4de3-9a5b-42349479a9ff",
+	      "key": "bc6ba704-40a3-4126-abc8-0a8c60b72f5e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67148,7 +67674,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4ded3b02-39b3-432c-9a13-71b23d0b6795",
+	      "key": "00c3ee1c-4a71-439e-9005-e0ca850fc24a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67298,7 +67824,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b3d38e9a-b14b-4a4d-88d5-2b9394c0aaaa",
+	      "key": "b932924a-00ef-4f11-9cfd-c7b6049fc17e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67449,7 +67975,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "98c74bfd-3620-43b8-b654-9c39bc7fda1a",
+	      "key": "e6381cc9-c375-41fc-89b6-add147dea129",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67525,7 +68051,7 @@
 	}
 
 /***/ },
-/* 773 */
+/* 775 */
 /*!***************************************************!*\
   !*** ./content/posts/offline-flux-with-lokijs.md ***!
   \***************************************************/
@@ -67543,7 +68069,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "cb423dcd-d4e2-481b-8b45-1bea3ba627a6",
+	      "key": "3a1a244d-bcb3-4da2-b75e-f40369531e3c",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -67641,7 +68167,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "06540de8-9262-4542-945f-db67b8b7152c",
+	      "key": "626f097d-cf97-486a-b03f-daaf66d6b6d2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67682,7 +68208,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8f391221-857c-48fd-8113-01f1f4720f89",
+	      "key": "810080a3-23c7-4ea5-a893-e1237c0c6c55",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67721,7 +68247,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "df8c9e86-206d-4789-81b5-32e8ac584a5a",
+	      "key": "028b4e1e-8a4d-4686-8f3e-bf26d271022d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67747,7 +68273,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b1e330a7-e14d-4f43-b670-39fe3b859f5f",
+	      "key": "a9cdab46-138b-405f-b7c6-1b4c05891a74",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67825,7 +68351,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "860c9a7c-75af-46dc-b129-9a19e2c98576",
+	      "key": "a888641b-db13-4b34-9f6b-a8408005ac25",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67854,7 +68380,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ea826543-9d1c-40a8-8d14-da787cb5fb47",
+	      "key": "f2ca2254-2f1d-420c-9bc9-be6253158dd6",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67874,7 +68400,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d3a6df80-05cb-45d6-8d0f-4f1d60cd70d5",
+	      "key": "f6179bca-8ac0-4d05-a5e4-73d4b2ad1065",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67913,7 +68439,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2632881c-3831-4ad5-acf1-86a4aa39bf49",
+	      "key": "207d8833-96e0-44af-b6f3-be9958b4b57c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67947,7 +68473,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1a40e547-6d5d-4827-b188-b0f377bf25e3",
+	      "key": "5e6c9a2a-c3cc-45ac-8cb0-dd5d413070d5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68029,7 +68555,7 @@
 	}
 
 /***/ },
-/* 774 */
+/* 776 */
 /*!************************************************!*\
   !*** ./content/posts/react-form-generation.md ***!
   \************************************************/
@@ -68047,7 +68573,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c241612a-76a1-459f-a3c7-927e6c9b9046",
+	      "key": "30fda965-43a4-46c0-adab-90a4efc70663",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68066,7 +68592,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "24d8e844-2aa1-4676-96b8-148c968cdfc4",
+	      "key": "2169fcd2-60df-44fc-9407-e9b3bb38f128",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68173,7 +68699,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "06136525-870f-41b1-b756-1a980595e5ea",
+	      "key": "7aaeff8e-96c0-4ba4-af4e-3661f28555ef",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68193,7 +68719,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "8103575f-9f6d-49b1-b9ff-ff60feb1842c",
+	      "key": "345ea645-1884-47c3-b848-a58ab7e526d5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68232,7 +68758,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1b36ad7e-e17a-49e6-b18f-01af015c1346",
+	      "key": "41058d37-ca0b-4651-ad49-c507e610f4ab",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68266,7 +68792,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "76cc20fc-93dc-4627-922d-cdb02455cdf0",
+	      "key": "4d4c8f44-961a-4324-86df-5ff2866c5f21",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68298,7 +68824,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "922e7971-0b53-4b21-98d3-87dcef375073",
+	      "key": "6256dbd5-6695-4335-ba43-c986fdd72e6f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68332,7 +68858,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1d434df4-d86d-4a33-aee6-7a3b947181e9",
+	      "key": "dbcb27ae-7805-4df6-8294-a8c2b8afb8f1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68415,7 +68941,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "662f799b-ed12-48f9-8b03-aeb9cb492bea",
+	      "key": "588f31ae-deed-4f29-ab16-7b601cb28d0e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68449,7 +68975,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "beb91915-5634-4836-8707-6641eae22af6",
+	      "key": "f6688ce5-409f-4273-86f9-43cad428e942",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68485,7 +69011,7 @@
 	}
 
 /***/ },
-/* 775 */
+/* 777 */
 /*!************************************!*\
   !*** ./content/posts/typefaces.md ***!
   \************************************/
@@ -68503,7 +69029,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "13d246f7-f646-4b82-afe6-d24723ded9d8",
+	      "key": "0ba82077-4cf0-430a-9cf9-8f588373f678",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68527,7 +69053,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fd1afd18-2fd1-415b-a60b-08476429114e",
+	      "key": "f0a33603-6aac-463d-bc3a-8e4eec458903",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68592,7 +69118,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4592e832-5304-49b7-9ee6-16986ff15b6a",
+	      "key": "2ec29154-5254-4a05-ba22-01a8f7786372",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68646,7 +69172,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e80e43fd-e8db-49a4-b7ca-b8cc0de0c0a6",
+	      "key": "402b6ed4-3030-4bdf-9e83-3b4cdc408509",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68736,7 +69262,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ba08ccd0-26fa-4ce2-bf17-f748052c19f4",
+	      "key": "acb46d6e-207e-4317-91b7-2acac59358ca",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68838,7 +69364,7 @@
 	}
 
 /***/ },
-/* 776 */
+/* 778 */
 /*!**************************!*\
   !*** ./content/talks.js ***!
   \**************************/
@@ -68846,27 +69372,28 @@
 
 	'use strict';
 	
-	var req = __webpack_require__(/*! ./talks/ */ 777);
+	var req = __webpack_require__(/*! ./talks/ */ 779);
 	var talks = req.keys().map(function (k) {
 	  return req(k);
 	});
 	module.exports = talks;
 
 /***/ },
-/* 777 */
+/* 779 */
 /*!*****************************!*\
   !*** ./content/talks \.md$ ***!
   \*****************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./component-vs-layout.md": 778,
-		"./es-intro-deck.md": 779,
-		"./es-intro.md": 780,
-		"./from-zero-to-docker-deck.md": 781,
-		"./from-zero-to-production-docker.md": 782,
-		"./ui-principles-deck.md": 783,
-		"./ui-principles.md": 784
+		"./component-vs-layout.md": 780,
+		"./embedding-workflow-in-applications.md": 781,
+		"./es-intro-deck.md": 782,
+		"./es-intro.md": 783,
+		"./from-zero-to-docker-deck.md": 784,
+		"./from-zero-to-production-docker.md": 785,
+		"./ui-principles-deck.md": 786,
+		"./ui-principles.md": 787
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -68879,11 +69406,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 777;
+	webpackContext.id = 779;
 
 
 /***/ },
-/* 778 */
+/* 780 */
 /*!**********************************************!*\
   !*** ./content/talks/component-vs-layout.md ***!
   \**********************************************/
@@ -68900,14 +69427,160 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f8c52ff2-e380-453d-88fb-27ede572783d",
+	      "key": "37a2bd58-cb86-4375-8918-58c8ca574325",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 779 */
+/* 781 */
+/*!*************************************************************!*\
+  !*** ./content/talks/embedding-workflow-in-applications.md ***!
+  \*************************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Embedding Workflow In Applications",
+	  "slug": "embedding-workflow",
+	  "summary": "My past attempts to create software to run business processes was slow, tedious, and easily drifted from business goals.  Join me as I look into Business Process Model and Notation and embedded engines to drive rapid application development that better align with business.",
+	  "event": "Little Rock .NET User Group",
+	  "location": "Arkansas Regional Innovation Hub",
+	  "date": "Nov 9, 2016 05:30 PM",
+	  "created": "2016-09-01T05:16:37.449Z",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "type": "post",
+	  "category": "upcoming talk",
+	  "ready": false,
+	  "register": "http://www.meetup.com/Little-Rock-NET-User-Group/events/235106149/?a=socialmedia",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "2529dcb1-06f3-4909-907f-b9e766ca3a70",
+	      "body": [
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            [
+	              "",
+	              {
+	                "type": "wikismith",
+	                "slug": "from-zero-to-docker-deck",
+	                "method": "embed"
+	              },
+	              ""
+	            ]
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "LIVE DEMO SOURCE"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "link",
+	                  "href": "https://github.com/jrhicks/lrtechfest2016",
+	                  "title": null,
+	                  "text": "https://github.com/jrhicks/lrtechfest2016"
+	                },
+	                ""
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "RESOURCES"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://kubernetes.io/",
+	                      "title": null,
+	                      "text": "http://kubernetes.io/"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://cloud.google.com/",
+	                      "title": null,
+	                      "text": "https://cloud.google.com/"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://devcenter.wercker.com/docs/index.html",
+	                      "title": null,
+	                      "text": "http://devcenter.wercker.com/docs/index.html"
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://stackoverflow.com/a/39062160",
+	                      "title": null,
+	                      "text": "http://stackoverflow.com/a/39062160"
+	                    },
+	                    " - GCR_JSON_KEY_FILE"
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
+/* 782 */
 /*!****************************************!*\
   !*** ./content/talks/es-intro-deck.md ***!
   \****************************************/
@@ -68925,14 +69598,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "53fbd623-dc80-4637-b024-27dc5ef0206f",
+	      "key": "26a67e86-b3a2-4149-bcd3-ea6a17b93dce",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 780 */
+/* 783 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -68954,7 +69627,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "98f9671a-f2d5-4a96-85ea-055e4f7a98cd",
+	      "key": "c69aa8b5-e26f-428d-ad8c-197e798a3bd8",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -69257,7 +69930,7 @@
 	}
 
 /***/ },
-/* 781 */
+/* 784 */
 /*!***************************************************!*\
   !*** ./content/talks/from-zero-to-docker-deck.md ***!
   \***************************************************/
@@ -69275,14 +69948,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c0ea0045-f03c-49ef-9c0b-3fc5be836a22",
+	      "key": "755ead86-91df-46ba-a360-af1d9e00d69f",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 782 */
+/* 785 */
 /*!*********************************************************!*\
   !*** ./content/talks/from-zero-to-production-docker.md ***!
   \*********************************************************/
@@ -69299,13 +69972,13 @@
 	  "author": "Jeffrey R. Hicks",
 	  "twitter": "jrhicks",
 	  "type": "post",
-	  "category": "upcoming talk",
+	  "category": "past talk",
 	  "ready": true,
 	  "register": "http://www.lrtechfest.com/#tickets",
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "c727a9f2-87b2-4bd9-962c-517bf42f7d63",
+	      "key": "3afee60d-c9dc-46f7-a77b-f6f7b34a2af5",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -69335,9 +70008,9 @@
 	              "text": [
 	                {
 	                  "type": "link",
-	                  "href": "https://github.com/jrhicks/lrtechfest2017",
+	                  "href": "https://github.com/jrhicks/lrtechfest2016",
 	                  "title": null,
-	                  "text": "https://github.com/jrhicks/lrtechfest2017"
+	                  "text": "https://github.com/jrhicks/lrtechfest2016"
 	                },
 	                ""
 	              ]
@@ -69428,7 +70101,7 @@
 	}
 
 /***/ },
-/* 783 */
+/* 786 */
 /*!*********************************************!*\
   !*** ./content/talks/ui-principles-deck.md ***!
   \*********************************************/
@@ -69446,14 +70119,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2de2e6c4-bbca-44e3-8ea2-6bc7f75769d5",
+	      "key": "156f0ef0-fcdd-483a-ae7e-be7221bb8e1c",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 784 */
+/* 787 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -69476,7 +70149,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "fbec4307-4c3b-42ae-9c15-4916c8f0bb6b",
+	      "key": "e6142616-817e-4212-96fd-cdaf7f5de2ee",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -69514,7 +70187,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4286bf58-98c1-44b4-9e4b-0d6bd443db5c",
+	      "key": "f278b2db-9177-4f43-b7b8-ba3f14ae40b1",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69634,7 +70307,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e17d5ca5-6abe-4a4c-a5ca-6e76fdb75989",
+	      "key": "cedbdc5c-8615-4e35-bb1a-37559c94bb19",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69669,7 +70342,7 @@
 	}
 
 /***/ },
-/* 785 */
+/* 788 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -69679,7 +70352,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 786 */
+/* 789 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -69711,7 +70384,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 787);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 790);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -69762,7 +70435,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 787 */
+/* 790 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -69772,7 +70445,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 788 */
+/* 791 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -69806,13 +70479,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
-	var _reactMotion = __webpack_require__(/*! react-motion */ 789);
+	var _reactMotion = __webpack_require__(/*! react-motion */ 792);
 	
 	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 803);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 806);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -69949,7 +70622,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 789 */
+/* 792 */
 /*!********************************************!*\
   !*** ./~/react-motion/lib/react-motion.js ***!
   \********************************************/
@@ -69961,34 +70634,34 @@
 	
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 	
-	var _Motion = __webpack_require__(/*! ./Motion */ 790);
+	var _Motion = __webpack_require__(/*! ./Motion */ 793);
 	
 	exports.Motion = _interopRequire(_Motion);
 	
-	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 797);
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 800);
 	
 	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 	
-	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 798);
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 801);
 	
 	exports.TransitionMotion = _interopRequire(_TransitionMotion);
 	
-	var _spring = __webpack_require__(/*! ./spring */ 800);
+	var _spring = __webpack_require__(/*! ./spring */ 803);
 	
 	exports.spring = _interopRequire(_spring);
 	
-	var _presets = __webpack_require__(/*! ./presets */ 801);
+	var _presets = __webpack_require__(/*! ./presets */ 804);
 	
 	exports.presets = _interopRequire(_presets);
 	
 	// deprecated, dummy warning function
 	
-	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 802);
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 805);
 	
 	exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ },
-/* 790 */
+/* 793 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/Motion.js ***!
   \**************************************/
@@ -70002,27 +70675,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 791);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 794);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 792);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 795);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 793);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 796);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 794);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 797);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 795);
+	var _raf = __webpack_require__(/*! raf */ 798);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 796);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 799);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -70237,7 +70910,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 791 */
+/* 794 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mapToZero.js ***!
   \*****************************************/
@@ -70264,7 +70937,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 792 */
+/* 795 */
 /*!******************************************!*\
   !*** ./~/react-motion/lib/stripStyle.js ***!
   \******************************************/
@@ -70293,7 +70966,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 793 */
+/* 796 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/stepper.js ***!
   \***************************************/
@@ -70344,7 +71017,7 @@
 	// array reference around.
 
 /***/ },
-/* 794 */
+/* 797 */
 /*!*****************************************************************!*\
   !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
   \*****************************************************************/
@@ -70386,13 +71059,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 795 */
+/* 798 */
 /*!***************************************!*\
   !*** ./~/react-motion/~/raf/index.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 794)
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 797)
 	  , root = typeof window === 'undefined' ? global : window
 	  , vendors = ['moz', 'webkit']
 	  , suffix = 'AnimationFrame'
@@ -70468,7 +71141,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 796 */
+/* 799 */
 /*!***************************************************!*\
   !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
   \***************************************************/
@@ -70507,7 +71180,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 797 */
+/* 800 */
 /*!***********************************************!*\
   !*** ./~/react-motion/lib/StaggeredMotion.js ***!
   \***********************************************/
@@ -70521,27 +71194,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 791);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 794);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 792);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 795);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 793);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 796);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 794);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 797);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 795);
+	var _raf = __webpack_require__(/*! raf */ 798);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 796);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 799);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -70777,7 +71450,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 798 */
+/* 801 */
 /*!************************************************!*\
   !*** ./~/react-motion/lib/TransitionMotion.js ***!
   \************************************************/
@@ -70791,31 +71464,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 791);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 794);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 792);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 795);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 793);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 796);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 799);
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 802);
 	
 	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 794);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 797);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 795);
+	var _raf = __webpack_require__(/*! raf */ 798);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 796);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 799);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -71273,7 +71946,7 @@
 	// that you've unmounted but that's still animating. This is where it lives
 
 /***/ },
-/* 799 */
+/* 802 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mergeDiff.js ***!
   \*****************************************/
@@ -71389,7 +72062,7 @@
 	// to loop through and find a key's index each time), but I no longer care
 
 /***/ },
-/* 800 */
+/* 803 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/spring.js ***!
   \**************************************/
@@ -71405,7 +72078,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _presets = __webpack_require__(/*! ./presets */ 801);
+	var _presets = __webpack_require__(/*! ./presets */ 804);
 	
 	var _presets2 = _interopRequireDefault(_presets);
 	
@@ -71420,7 +72093,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 801 */
+/* 804 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/presets.js ***!
   \***************************************/
@@ -71438,7 +72111,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 802 */
+/* 805 */
 /*!*******************************************!*\
   !*** ./~/react-motion/lib/reorderKeys.js ***!
   \*******************************************/
@@ -71464,7 +72137,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 803 */
+/* 806 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -71474,7 +72147,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 804 */
+/* 807 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -71484,7 +72157,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 805 */
+/* 808 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -71494,12 +72167,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 806),
+	  component: __webpack_require__(/*! ./Content */ 809),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 806 */
+/* 809 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -71535,7 +72208,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 807);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 810);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -71570,7 +72243,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 807 */
+/* 810 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
