@@ -5918,7 +5918,7 @@
 	
 	var rootRoute = {
 	  component: __webpack_require__(/*! ./Layout/Layout */ 435),
-	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 808)]
+	  childRoutes: [__webpack_require__(/*! ./_Home */ 497), __webpack_require__(/*! ./_Content */ 809)]
 	};
 	
 	_reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: history, routes: rootRoute }), document.getElementById('app'));
@@ -34270,15 +34270,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 789);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel */ 790);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 791);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel */ 792);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
-	var _Home = __webpack_require__(/*! ./Home.scss */ 807);
+	var _Home = __webpack_require__(/*! ./Home.scss */ 808);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -34366,7 +34366,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 788);
+	var _MainPanel = __webpack_require__(/*! ./MainPanel.scss */ 789);
 	
 	var _MainPanel2 = _interopRequireDefault(_MainPanel);
 	
@@ -59736,7 +59736,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d9ea35d4-f07d-40f1-95cf-1db0900cc967",
+	      "key": "46ff0fb4-79dc-4162-b5c4-b5dd67e6eff5",
 	      "body": [
 	        "",
 	        {
@@ -59794,7 +59794,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "b41368e5-d2cd-4cce-a69f-75411a9c0f31",
+	      "key": "405c797b-9ca9-43bd-b962-956dca86a63b",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -59869,7 +59869,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "41b5a73d-0dd2-4ad5-839e-2e9a48802444",
+	      "key": "e6099ef9-e1fa-4b0a-bb82-ce1cc434ceb3",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60241,7 +60241,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "93df5740-279c-4b98-9b9c-f717b5f2896b",
+	      "key": "e462076b-a110-47e9-b7e3-07946494aa36",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60420,7 +60420,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "317c8e6e-2424-4851-8238-4f951a3930ae",
+	      "key": "de409f04-a314-46fb-b634-4b14ffdb0bce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -60686,7 +60686,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "591363a1-71fe-4483-888a-35226a43b70d",
+	      "key": "8c589911-98ba-4b9f-8b2d-214e25453ce8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61007,7 +61007,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5f8f6225-a8fd-4f90-960e-a9b72a7cf28d",
+	      "key": "ec668cc3-4950-47f1-aadf-148b82f21e08",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61039,7 +61039,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d3bc62aa-6dbe-4be1-a7be-e5f09aceb030",
+	      "key": "83aaa597-67ad-4873-b94e-2298956be36c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61092,7 +61092,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "7fa41ca5-9520-4282-af97-aa0e16f7dfad",
+	      "key": "c8fe0cb0-18bd-4537-88cc-9718a9dc66bc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61125,7 +61125,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d454faf8-60d3-4c9d-96a9-f02ea7e80fd5",
+	      "key": "25c5bb0e-c26a-4cca-97f0-6d215653fefe",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61178,7 +61178,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "83853802-eed7-445e-b88d-40bcbba60fab",
+	      "key": "8ae6d694-3779-4712-9f8d-006b02ee9d99",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -61266,7 +61266,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6fea5bf7-6194-4431-b357-8161c8a39bb5",
+	      "key": "e9bbd746-0dc2-4424-93aa-cce13a8392ec",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61285,7 +61285,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "63a52ec8-effd-4aca-a722-bce193461b0a",
+	      "key": "2a5b5f2a-9008-4e8a-aaba-3cb4d732f863",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61329,7 +61329,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "27aa4758-5252-46fa-99e2-a4491cf4c7dd",
+	      "key": "59dd393a-19b1-4d3d-b5e8-daf219f17555",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61367,7 +61367,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6ac7c1f9-67a6-49f4-9e98-04285ae5f589",
+	      "key": "6022d6e9-05e3-417d-9fae-8a0222ef98aa",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61428,7 +61428,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "10bea32c-6b77-47d1-9b7b-03573bc72d84",
+	      "key": "d7cacbe7-cb3a-46f3-9fe1-95699f236f65",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61518,7 +61518,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "67e85358-1d3d-4f0a-a72c-6029dbb5ac22",
+	      "key": "869ea146-40ef-48e2-8e01-45bbb15827ef",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61717,7 +61717,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "9249d131-37b0-400f-99bf-24172e31b2c2",
+	      "key": "4a35217a-aff2-49bc-a647-b760a5ca6bcf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61757,7 +61757,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4ac24ab6-b55f-4427-8211-019a18927001",
+	      "key": "198364c8-0503-4f53-b8c1-a1c206e5d954",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61800,7 +61800,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c0a1b9aa-c06d-4d9b-b7ca-a8ce5dca8e25",
+	      "key": "cb9b6b3c-6c75-4451-80cf-1e5d5b507ced",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -61883,7 +61883,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "56e07d99-5285-4119-8674-8bef113a31ba",
+	      "key": "8a62741e-9425-434b-a7f2-8b5b276cb5cc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62252,7 +62252,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "581978db-5fa1-443a-937d-4c169038ea46",
+	      "key": "b25138e4-8ca9-445a-a415-e03b087fba29",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62347,7 +62347,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "af4a2810-f6a6-4ce7-a012-2be0e3e6b711",
+	      "key": "61b6d911-f828-47b1-970e-2d2fd6743bd4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62413,7 +62413,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f4db49ed-343f-4c60-a997-8f85c948e957",
+	      "key": "242a7535-cad6-4a67-bdb7-4cea070263c2",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62562,7 +62562,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "92910959-21e7-4556-b18d-044b7bec37c2",
+	      "key": "4e5cffd1-bcb1-42b7-b180-982992218348",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62695,7 +62695,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "ca3692f4-1216-4fdb-8a39-fd7582d39b38",
+	      "key": "412e722f-7ad2-493d-853a-2fe37c6a9464",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62729,7 +62729,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "45fde572-d9e6-46e8-ac9b-6949e5a534ba",
+	      "key": "f96fab75-03b8-47e2-a846-98e1f364a30b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62779,7 +62779,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3fd97f59-da58-486c-a722-eb02b1b9d176",
+	      "key": "ebc52a3d-145f-4e64-9d74-92b3294f9454",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62840,7 +62840,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cd3184f7-03ff-430e-9bc2-b94eade5bca2",
+	      "key": "a5ce3fcc-ab93-4797-9423-8ad3787ba4ce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -62919,7 +62919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0466ad15-1d87-4fa7-ada5-352f7ef19391",
+	      "key": "cdf8e4f4-c2f7-49e4-8984-4c0d3482549a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63024,7 +63024,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "42e0366e-cdad-403e-aeeb-42c8d979b02d",
+	      "key": "614b7cee-86be-460f-b20b-187fcca7ca9f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63092,7 +63092,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5730e2ad-5558-4306-a199-4c39e2928ec5",
+	      "key": "c7a85401-bfad-46c8-9d47-4f7eb096f738",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63142,7 +63142,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4cdc3549-f16c-4c74-a1b0-5fd8584e5aff",
+	      "key": "cd16f7e5-b390-4a3f-84d0-d594d88373cb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63195,7 +63195,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "0417862b-bae2-49eb-b776-2e42f17fa042",
+	      "key": "5a99d69a-6022-4266-ab3d-37930c065dc0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63238,7 +63238,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "05777665-b555-4ce1-85b9-058714d62056",
+	      "key": "825cf786-c7e9-4f14-9a31-5dc98bb676c9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63258,7 +63258,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6d876e7c-af6c-4608-bab5-74fec6057f04",
+	      "key": "5806f705-4253-4546-b296-a61bbc7e725b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63278,7 +63278,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4686c0df-2ae3-4ae5-962b-0ae95780c19a",
+	      "key": "66e96e6d-d511-4f78-8e67-44e39a841631",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63304,7 +63304,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "24bef1f4-3d50-450e-9d0c-af42844f5f49",
+	      "key": "953ceae6-6062-4adc-a7f3-9ccc91d4c1aa",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63330,7 +63330,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cbefbeb4-d3d6-4c4d-bb9e-7d1cb4be15f3",
+	      "key": "b4b20649-e18f-41cb-865e-77ae0bc08976",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63350,7 +63350,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b1b9ec56-1b3a-4bd3-9e86-04d63d429ca7",
+	      "key": "8a71f2b9-6c4f-4101-9b39-8cf8da6447ae",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63415,7 +63415,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2df4d514-33b5-4bfd-abcb-9753b7c7c2dc",
+	      "key": "73fa1be8-2e0c-4886-b912-9e04624a9f97",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63429,7 +63429,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "6638e67b-784d-4ccb-9a87-1592be2577cc",
+	      "key": "7cf8238b-f937-4cae-bc51-a43205a10644",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63488,7 +63488,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1dddd359-a106-4a7e-8add-a5c3d37e94b6",
+	      "key": "982e0171-da1a-419b-b29c-add839ba6291",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63531,7 +63531,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5c95bb12-bf65-448b-b88c-d6197c16a40a",
+	      "key": "5f89b5d4-273f-4620-9a15-064c155070c9",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63590,7 +63590,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "cd64e598-11da-46a3-bd6c-39c8ed9632f9",
+	      "key": "23839cba-6f28-4192-9898-82caaa8048ea",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63660,7 +63660,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "437a7cb4-cf76-47a2-8739-1d5190cf5069",
+	      "key": "d398bbc9-3813-4a79-8f14-3c8b0029028a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63723,7 +63723,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "afd5dfc2-c44f-49a4-aec5-227c49ec44bb",
+	      "key": "468b3763-724d-4384-b72c-5fac4e54f78b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63794,7 +63794,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "26fbbe52-1e25-4de7-b0fd-2dd32c07087d",
+	      "key": "ba32b336-0b54-43d8-b72e-8fd94ab3865a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63837,7 +63837,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "0b5fba62-cacd-4ed3-a57a-0f0616864303",
+	      "key": "beb48fe8-25ed-4f72-a62a-0963883f38cb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63868,7 +63868,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2cd1f0fc-f69e-4a5a-97b6-cc99dc7681c6",
+	      "key": "c599fc7f-c6ad-44ab-99c3-3f7853a2bda4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63919,7 +63919,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "f05a4168-1641-43e7-a466-f7ce508c8a4e",
+	      "key": "5546f703-7907-4824-8309-cd975cfb5100",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -63984,7 +63984,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "bed0de41-d1ac-4c5e-930e-e70614b9dfdc",
+	      "key": "0b91f779-c1f1-4bff-ac99-5408af081aa0",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64049,7 +64049,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b8cffd01-f71a-4a99-9f02-117a0b2e28ad",
+	      "key": "a2aea5c6-deac-4845-aeec-9136db2973cf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64197,7 +64197,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "83fcfa28-ba68-4497-82c5-781810123e50",
+	      "key": "ca4d2db8-aac0-4ebe-8b87-517478bcf7fc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64435,7 +64435,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4b95c0a8-1195-46c8-bf8b-3efbcf02dc03",
+	      "key": "4ab57bbb-b794-4328-8cd0-dd4e802ace36",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64534,7 +64534,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a0cdba22-0db7-4bb8-b7c9-fea554c7fb25",
+	      "key": "8af486a8-d55d-4fc3-8e1f-1b4003ce2f73",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64686,7 +64686,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "729785f6-2149-432c-9b93-983526823760",
+	      "key": "7a8df1e1-9574-4ff6-9857-c524aca80148",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64781,7 +64781,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2f984949-76f7-42c8-bb3f-273438b31f18",
+	      "key": "a5a97420-7b30-4ea7-b05f-477b3615271a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -64919,7 +64919,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "16ec246d-cc64-4442-8ae8-9331971619e7",
+	      "key": "9d3be4a2-f4a1-4dca-92a4-3d179a76ce8e",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65114,7 +65114,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "46663e4d-0ea0-43cd-9678-37595a09e504",
+	      "key": "4b3dd0fa-3dc6-4151-8e23-a5c075190f12",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65257,7 +65257,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "db4a1d6e-be5c-451c-a837-c215a614abe6",
+	      "key": "595b22c4-7deb-430d-833c-066a3d4a2417",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -65269,7 +65269,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "709ac38b-2e6e-4eae-84c9-69cfdc1f97af",
+	      "key": "acc68846-cac2-4bc5-b424-1d75177f805f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65378,7 +65378,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a9677ae1-77be-4af0-a337-180f085becd4",
+	      "key": "6024ddf3-91cf-40a1-bf1b-f6c2cef539ce",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65427,7 +65427,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b6430b8f-5782-4b5b-a653-f3804ee36d15",
+	      "key": "c4c06558-1928-40e9-9184-a2061f00f3ae",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65499,7 +65499,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "45daa8eb-d479-4e97-9ed6-b7785359c193",
+	      "key": "83314e99-ee4d-403c-8a8e-acf065da4614",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65552,7 +65552,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "2021b922-920b-452f-9f15-a4c34b16a38a",
+	      "key": "dc474bb7-fa58-4f47-816a-bcadaba5c1f3",
 	      "body": []
 	    }
 	  ]
@@ -65577,7 +65577,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "de6567fe-e1c1-4e3e-832b-3531c29d12e3",
+	      "key": "d61cb023-133d-4c99-963b-03781de14058",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65634,7 +65634,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5b02d39a-82fd-46d6-8737-059254c22d66",
+	      "key": "fe11bbd7-f098-45e5-9563-6dad196117c7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65690,7 +65690,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "05f46875-86f5-4d62-b136-1641be264424",
+	      "key": "969c347a-4b18-454e-9f5d-bdf4deaa1bb5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65776,7 +65776,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b9a0964a-54c8-4d77-82c3-3fac1bc5e20c",
+	      "key": "0327612c-02ff-452a-9b72-2d2969877526",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65861,7 +65861,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "60ecb3da-4f15-446e-9854-e846a54c52dc",
+	      "key": "e4087829-bc7b-49d5-84d0-35d888498c93",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -65982,7 +65982,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "481bec33-00e0-4863-aad1-4e9552462288",
+	      "key": "96f76718-5c29-45f1-b33a-ae71dbad2aaa",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66125,7 +66125,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "461244e3-e1c1-45f4-bebd-98a017711232",
+	      "key": "ea2cced5-09d3-497c-a2b2-d1ca9cd9e74c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66199,7 +66199,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "5990d8af-1d05-4149-87aa-779c178f49af",
+	      "key": "281d3bed-886f-4ada-8941-1ee4e1c878dd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66219,7 +66219,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9a38f0e6-efcf-497c-9b90-94b3e5f7cef0",
+	      "key": "4e9d8224-1c2a-4e72-ab44-783516adf4e5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66239,7 +66239,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4104da78-9d55-4ec1-acb6-38dbf42131a4",
+	      "key": "aac3a23b-0c99-47dd-9b19-f3cf2464d96d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66388,7 +66388,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "b084c979-eb1d-4500-8c44-7f546646e86a",
+	      "key": "ba6f1584-089f-4d01-9229-9a7a3d3b5f47",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -66461,7 +66461,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "7f2569f9-23f9-47b3-8c67-c955b8e02502",
+	      "key": "bd8208b4-8ed2-4dc4-a498-6ad04bbaca91",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67088,7 +67088,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1b254d9b-446b-40fa-b332-b65103006fe7",
+	      "key": "67bceb63-f539-4fae-afa0-b765e95a5355",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67483,7 +67483,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f17a14d2-beda-4111-bcbb-57f9416acc81",
+	      "key": "d9bb9278-34b4-4619-bded-d16d37b14a3c",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67674,7 +67674,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f3ab6148-434a-4a02-8f3c-66d7b319806b",
+	      "key": "bd0068a1-6812-48f0-adc2-04419ea37186",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67824,7 +67824,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "69cdb52f-efd6-4ea5-87d7-ddc702da5edc",
+	      "key": "9aa6e861-bcb3-4928-854f-ac2e2e1b212d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -67975,7 +67975,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "fd40d060-b3b5-48e8-b8b6-1786c3fb5843",
+	      "key": "9c540d7d-1546-4174-959e-81c5c53c5de7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68069,7 +68069,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "e53b25eb-fb3a-440b-a6ff-0da50348e4e1",
+	      "key": "7e59d3a1-5e0a-4103-87ae-4e570ee7b542",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68167,7 +68167,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "435524c1-5c09-479d-8928-9216323217be",
+	      "key": "e95b87d6-0b2a-4db7-8ab2-fc7e53a5c188",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68208,7 +68208,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "03ef2791-24e4-46d2-8a1e-c08ba1e36d1c",
+	      "key": "9c2463f1-8a42-452e-97d0-872064ae3334",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68247,7 +68247,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "2eb13932-9237-4769-a707-e04261edbca5",
+	      "key": "81ffbd34-0a00-40f7-942e-1f885834435f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68273,7 +68273,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c87d1ba5-534e-4d36-be04-d91b33f673ce",
+	      "key": "f28d27e2-9dd0-4731-8505-aa0fc832fd8b",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68351,7 +68351,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9d10e2c4-8464-4994-9581-1416525a0ae7",
+	      "key": "860073ac-a5b2-4411-83db-0628801fc9b8",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68380,7 +68380,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c631d56c-74a6-4c01-a35b-9c48e187de90",
+	      "key": "a8aeaf2e-b87a-4ba8-b4b8-a373e1f6e8e5",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68400,7 +68400,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "1332d672-e158-434c-8e51-3da9474c8bde",
+	      "key": "62383c2b-496c-49e3-a52a-1b9031bae2fb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68439,7 +68439,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "674e676a-e14b-4489-ad29-6ffc26b1ef5d",
+	      "key": "2012b3db-044e-4557-8ea7-bd4a355028fb",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68473,7 +68473,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "ac7f912c-1b22-4e90-a2eb-5fce43c8f427",
+	      "key": "e612c566-a337-41bd-9532-d565ae48eb9a",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68573,7 +68573,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1538b970-76b8-4884-b235-f4e6083e969f",
+	      "key": "32071c4a-7aba-41d9-a5f9-622f3d706890",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -68592,7 +68592,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a5dec555-b4f6-4d1a-a769-1b806165cce7",
+	      "key": "5e306852-5359-48c0-992e-222686c649f4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68699,7 +68699,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "4a571fa0-d586-4c38-a330-07e4acc9e9c5",
+	      "key": "daa90556-f94c-4cab-bada-3f616e21d4cd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68719,7 +68719,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "c523b51e-edeb-4c15-83b8-4a8733f6865c",
+	      "key": "43a8a35f-54a8-43ef-b3dd-fbf8bba50356",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68758,7 +68758,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "83d53eb5-63f4-4faf-a4aa-e5ca2ccc385e",
+	      "key": "60b7307c-bfe0-40be-9d01-8b9def0d2297",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68792,7 +68792,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f4b6f463-847d-46a4-b463-ee4aab2141e9",
+	      "key": "6e718d92-8b6b-45d7-ac7b-34cea9087cda",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68824,7 +68824,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e9707158-8910-42ab-9145-b140031bc55c",
+	      "key": "0322ea88-ecc1-45db-a5a3-011d303b3409",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68858,7 +68858,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "3acf615e-905e-4dba-8146-e56ef2ffd185",
+	      "key": "da96eeb3-ff9b-4fb8-ad8d-efb1216995b4",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68941,7 +68941,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "f1e558b8-e4ae-40f4-96ca-558e1e082f92",
+	      "key": "26c1e1fe-9726-4971-a851-0c28b3753efc",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -68975,7 +68975,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "9f034a1b-b6e1-446f-b830-029fd1f195ab",
+	      "key": "7cefc893-dfb5-45a3-83d1-f75420fe5e9d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69029,7 +69029,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "ff961566-eff6-4094-9979-8b38dd2fa20e",
+	      "key": "8f008714-b79f-4e1d-a6ae-a24879bcfa78",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -69053,7 +69053,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "d9ad518d-819d-48b7-b4a1-6b7a17841cc3",
+	      "key": "f3fe18fa-4262-494f-b758-a6b512b24cd7",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69118,7 +69118,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "05d187c5-a300-43f2-bf6c-46be8a5396b8",
+	      "key": "2fd692ad-dd0a-40e0-9e71-8f994094794d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69172,7 +69172,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "16c39424-8f84-4ca7-8f80-183467134745",
+	      "key": "07ca1c02-d4a4-422f-a885-0ec5e1effc1d",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69262,7 +69262,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "de03772b-46de-4607-967e-258530c8630c",
+	      "key": "fa513e6d-7738-49c5-94ae-6d680b4ee54f",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -69387,13 +69387,14 @@
 
 	var map = {
 		"./component-vs-layout.md": 780,
-		"./embedding-workflow-in-applications.md": 781,
-		"./es-intro-deck.md": 782,
-		"./es-intro.md": 783,
-		"./from-zero-to-docker-deck.md": 784,
-		"./from-zero-to-production-docker.md": 785,
-		"./ui-principles-deck.md": 786,
-		"./ui-principles.md": 787
+		"./es-intro-deck.md": 781,
+		"./es-intro.md": 782,
+		"./from-zero-to-docker-deck.md": 783,
+		"./from-zero-to-production-docker.md": 784,
+		"./ui-principles-deck.md": 785,
+		"./ui-principles.md": 786,
+		"./writing-software-for-bpm-talk.md": 787,
+		"./writing-software-for-bpm.md": 788
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -69427,7 +69428,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "669ce1b4-949e-4ccc-ac0d-d3a3fe835856",
+	      "key": "9e80409f-857b-4b86-8ac9-0c0632c880a1",
 	      "body": []
 	    }
 	  ]
@@ -69435,152 +69436,6 @@
 
 /***/ },
 /* 781 */
-/*!*************************************************************!*\
-  !*** ./content/talks/embedding-workflow-in-applications.md ***!
-  \*************************************************************/
-/***/ function(module, exports) {
-
-	module.exports = {
-	  "title": "Writing Software for Business Process Management",
-	  "slug": "embedding-workflow",
-	  "summary": "My past attempts to create software to run business processes was slow, tedious, and easily drifted from business goals.  Join me as I look into Business Process Model and Notation and embedded engines to drive rapid application development that better align with business.",
-	  "event": "Little Rock .NET User Group",
-	  "location": "Arkansas Regional Innovation Hub",
-	  "date": "Nov 9, 2016 05:30 PM",
-	  "created": "2016-09-01T05:16:37.449Z",
-	  "author": "Jeffrey R. Hicks",
-	  "twitter": "jrhicks",
-	  "type": "post",
-	  "category": "upcoming talk",
-	  "ready": false,
-	  "register": "http://www.meetup.com/Little-Rock-NET-User-Group/events/235106149/?a=socialmedia",
-	  "ast": [
-	    {
-	      "type": "section",
-	      "key": "6f7ea3a5-b951-4dcc-8f09-18627859f97f",
-	      "body": [
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            [
-	              "",
-	              {
-	                "type": "wikismith",
-	                "slug": "from-zero-to-docker-deck",
-	                "method": "embed"
-	              },
-	              ""
-	            ]
-	          ]
-	        },
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            "LIVE DEMO SOURCE"
-	          ]
-	        },
-	        {
-	          "type": "list",
-	          "body": [
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "link",
-	                  "href": "https://github.com/jrhicks/lrtechfest2016",
-	                  "title": null,
-	                  "text": "https://github.com/jrhicks/lrtechfest2016"
-	                },
-	                ""
-	              ]
-	            }
-	          ],
-	          "ordered": false
-	        },
-	        {
-	          "type": "paragraph",
-	          "text": [
-	            "RESOURCES"
-	          ]
-	        },
-	        {
-	          "type": "list",
-	          "body": [
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://kubernetes.io/",
-	                      "title": null,
-	                      "text": "http://kubernetes.io/"
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "https://cloud.google.com/",
-	                      "title": null,
-	                      "text": "https://cloud.google.com/"
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://devcenter.wercker.com/docs/index.html",
-	                      "title": null,
-	                      "text": "http://devcenter.wercker.com/docs/index.html"
-	                    }
-	                  ]
-	                }
-	              ]
-	            },
-	            {
-	              "type": "listitem",
-	              "text": [
-	                {
-	                  "type": "paragraph",
-	                  "text": [
-	                    {
-	                      "type": "link",
-	                      "href": "http://stackoverflow.com/a/39062160",
-	                      "title": null,
-	                      "text": "http://stackoverflow.com/a/39062160"
-	                    },
-	                    " - GCR_JSON_KEY_FILE"
-	                  ]
-	                }
-	              ]
-	            }
-	          ],
-	          "ordered": false
-	        }
-	      ]
-	    }
-	  ]
-	}
-
-/***/ },
-/* 782 */
 /*!****************************************!*\
   !*** ./content/talks/es-intro-deck.md ***!
   \****************************************/
@@ -69598,14 +69453,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "1acf9568-9302-4271-9269-f6f4e4e0f3b6",
+	      "key": "59deb561-048b-4007-b611-0df61603dd49",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 783 */
+/* 782 */
 /*!***********************************!*\
   !*** ./content/talks/es-intro.md ***!
   \***********************************/
@@ -69627,7 +69482,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "d6a054a8-3f05-45b6-bd28-d0da1ac0bc2a",
+	      "key": "fe6c344c-4c67-4bd4-af04-6b8c90e7209f",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -69930,7 +69785,7 @@
 	}
 
 /***/ },
-/* 784 */
+/* 783 */
 /*!***************************************************!*\
   !*** ./content/talks/from-zero-to-docker-deck.md ***!
   \***************************************************/
@@ -69948,14 +69803,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "bc65df87-abe9-4148-afe7-62e1e76c52e0",
+	      "key": "b0f3c83b-1e22-4342-b193-d2aacdbf6909",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 785 */
+/* 784 */
 /*!*********************************************************!*\
   !*** ./content/talks/from-zero-to-production-docker.md ***!
   \*********************************************************/
@@ -69978,7 +69833,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "13fd4b2a-88ee-49c4-bf86-b062518f26ae",
+	      "key": "9075dd24-e967-4610-9a29-0db85b44ed35",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -70101,7 +69956,7 @@
 	}
 
 /***/ },
-/* 786 */
+/* 785 */
 /*!*********************************************!*\
   !*** ./content/talks/ui-principles-deck.md ***!
   \*********************************************/
@@ -70119,14 +69974,14 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "89351b08-3033-4c6f-bba0-a717865fe225",
+	      "key": "5ff892b4-fe36-4173-945d-54dec80a4be7",
 	      "body": []
 	    }
 	  ]
 	}
 
 /***/ },
-/* 787 */
+/* 786 */
 /*!****************************************!*\
   !*** ./content/talks/ui-principles.md ***!
   \****************************************/
@@ -70149,7 +70004,7 @@
 	  "ast": [
 	    {
 	      "type": "section",
-	      "key": "4efb960c-3b03-455d-9ec7-53ff7ccdd73b",
+	      "key": "9b374f76-e6d7-4214-bf97-3ab80fc86ca7",
 	      "body": [
 	        {
 	          "type": "paragraph",
@@ -70187,7 +70042,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "e5658f89-e34a-41a3-a400-b5f892d88780",
+	      "key": "170967c2-9295-49a4-82e8-90b3b2d960fd",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -70307,7 +70162,7 @@
 	    },
 	    {
 	      "type": "section",
-	      "key": "a6a93fd8-a51a-42dc-8c9a-c761638a9c5a",
+	      "key": "16cc2e61-85a3-47f0-878b-86c88e20cadf",
 	      "body": [
 	        {
 	          "type": "heading",
@@ -70342,7 +70197,197 @@
 	}
 
 /***/ },
+/* 787 */
+/*!********************************************************!*\
+  !*** ./content/talks/writing-software-for-bpm-talk.md ***!
+  \********************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "Writing Software for Business Processes",
+	  "slug": "writing-software-for-bpm-talk",
+	  "summary": "My past attempts to create software to run business processes was slow, tedious, and easily drifted from business goals.  Join me as I look into Business Process Model and Notation and embedded engines to drive rapid application development that better align with business.",
+	  "event": "Little Rock .NET User Group",
+	  "location": "Arkansas Regional Innovation Hub",
+	  "date": "Nov 9, 2016 05:30 PM",
+	  "created": "2016-09-01T05:16:37.449Z",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "type": "post",
+	  "category": "upcoming talk",
+	  "ready": true,
+	  "register": "http://www.meetup.com/Little-Rock-NET-User-Group/events/235106149/?a=socialmedia",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "73802e2e-4ae3-41d1-909e-92441846e1f3",
+	      "body": [
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            [
+	              "",
+	              {
+	                "type": "wikismith",
+	                "slug": "writing-software-for-bpm",
+	                "method": "embed"
+	              },
+	              ""
+	            ]
+	          ]
+	        },
+	        {
+	          "type": "paragraph",
+	          "text": [
+	            "RESOURCES"
+	          ]
+	        },
+	        {
+	          "type": "list",
+	          "body": [
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://github.com/jrhicks/camunda-lab-1",
+	                      "title": null,
+	                      "text": [
+	                        "Camunda Lab / Live Demo Source"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://network.camunda.org/webinars/",
+	                      "title": null,
+	                      "text": [
+	                        "Camunda Webinars"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.omg.org/cgi-bin/doc?dtc/10-06-02",
+	                      "title": null,
+	                      "text": [
+	                        "BPMN 2.0 By Example"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "http://www.bpmb.de/images/BPMN2_0_Poster_EN.pdf",
+	                      "title": null,
+	                      "text": [
+	                        "Poster"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://open.hpi.de/courses/bpm2016/",
+	                      "title": null,
+	                      "text": [
+	                        "Free 6 Week Online Course"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            },
+	            {
+	              "type": "listitem",
+	              "text": [
+	                {
+	                  "type": "paragraph",
+	                  "text": [
+	                    {
+	                      "type": "link",
+	                      "href": "https://www.process.st/business-process-modeling/",
+	                      "title": null,
+	                      "text": [
+	                        "The process for creating a process map"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            }
+	          ],
+	          "ordered": false
+	        }
+	      ]
+	    }
+	  ]
+	}
+
+/***/ },
 /* 788 */
+/*!***************************************************!*\
+  !*** ./content/talks/writing-software-for-bpm.md ***!
+  \***************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "title": "writing software for bpm",
+	  "slug": "writing-software-for-bpm",
+	  "summary": null,
+	  "created": "2016-11-09T01:28:50.039Z",
+	  "author": "Jeffrey R. Hicks",
+	  "twitter": "jrhicks",
+	  "type": "speakerdeck",
+	  "data-id": "ab020460251943e8a12dbf2002d643ac",
+	  "ast": [
+	    {
+	      "type": "section",
+	      "key": "ee7f346e-1566-4e96-9754-c0874d9ca1bb",
+	      "body": []
+	    }
+	  ]
+	}
+
+/***/ },
+/* 789 */
 /*!**********************************!*\
   !*** ./app/_Home/MainPanel.scss ***!
   \**********************************/
@@ -70352,7 +70397,7 @@
 	module.exports = {"blogColumn":"MainPanel__blogColumn___ggwhf","talksColumn":"MainPanel__talksColumn___3L0t8","panelContainer":"MainPanel__panelContainer___2RZ2b","panelContent":"MainPanel__panelContent___3w64X","collectionOfYears":"MainPanel__collectionOfYears___28Z2k","collectionOfEntries":"MainPanel__collectionOfEntries___HDplu"};
 
 /***/ },
-/* 789 */
+/* 790 */
 /*!************************************!*\
   !*** ./app/_Home/ProfilePanel.jsx ***!
   \************************************/
@@ -70384,7 +70429,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 790);
+	var _ProfilePanel = __webpack_require__(/*! ./ProfilePanel.scss */ 791);
 	
 	var _ProfilePanel2 = _interopRequireDefault(_ProfilePanel);
 	
@@ -70435,7 +70480,7 @@
 	module.exports = MainPanel;
 
 /***/ },
-/* 790 */
+/* 791 */
 /*!*************************************!*\
   !*** ./app/_Home/ProfilePanel.scss ***!
   \*************************************/
@@ -70445,7 +70490,7 @@
 	module.exports = {"media":"ProfilePanel__media___3dLFj","bd":"ProfilePanel__bd___EnBFI","img":"ProfilePanel__img___O4v7c","img--rev":"ProfilePanel__img--rev___22HCM","heading":"ProfilePanel__heading___3ovu8","description":"ProfilePanel__description___2crKI","panelContainer":"ProfilePanel__panelContainer___1LR7z","panelContent":"ProfilePanel__panelContent___20OO9"};
 
 /***/ },
-/* 791 */
+/* 792 */
 /*!***********************************!*\
   !*** ./app/_Home/AgendaPanel.jsx ***!
   \***********************************/
@@ -70479,13 +70524,13 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 349);
 	
-	var _reactMotion = __webpack_require__(/*! react-motion */ 792);
+	var _reactMotion = __webpack_require__(/*! react-motion */ 793);
 	
 	var _wikismith = __webpack_require__(/*! ../wikismith */ 528);
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 806);
+	var _AgendaPanel = __webpack_require__(/*! ./AgendaPanel.scss */ 807);
 	
 	var _AgendaPanel2 = _interopRequireDefault(_AgendaPanel);
 	
@@ -70622,7 +70667,7 @@
 	module.exports = AgendaPanel;
 
 /***/ },
-/* 792 */
+/* 793 */
 /*!********************************************!*\
   !*** ./~/react-motion/lib/react-motion.js ***!
   \********************************************/
@@ -70634,34 +70679,34 @@
 	
 	function _interopRequire(obj) { return obj && obj.__esModule ? obj['default'] : obj; }
 	
-	var _Motion = __webpack_require__(/*! ./Motion */ 793);
+	var _Motion = __webpack_require__(/*! ./Motion */ 794);
 	
 	exports.Motion = _interopRequire(_Motion);
 	
-	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 800);
+	var _StaggeredMotion = __webpack_require__(/*! ./StaggeredMotion */ 801);
 	
 	exports.StaggeredMotion = _interopRequire(_StaggeredMotion);
 	
-	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 801);
+	var _TransitionMotion = __webpack_require__(/*! ./TransitionMotion */ 802);
 	
 	exports.TransitionMotion = _interopRequire(_TransitionMotion);
 	
-	var _spring = __webpack_require__(/*! ./spring */ 803);
+	var _spring = __webpack_require__(/*! ./spring */ 804);
 	
 	exports.spring = _interopRequire(_spring);
 	
-	var _presets = __webpack_require__(/*! ./presets */ 804);
+	var _presets = __webpack_require__(/*! ./presets */ 805);
 	
 	exports.presets = _interopRequire(_presets);
 	
 	// deprecated, dummy warning function
 	
-	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 805);
+	var _reorderKeys = __webpack_require__(/*! ./reorderKeys */ 806);
 	
 	exports.reorderKeys = _interopRequire(_reorderKeys);
 
 /***/ },
-/* 793 */
+/* 794 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/Motion.js ***!
   \**************************************/
@@ -70675,27 +70720,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 794);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 795);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 795);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 796);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 796);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 797);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 797);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 798);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 798);
+	var _raf = __webpack_require__(/*! raf */ 799);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 799);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 800);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -70910,7 +70955,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 794 */
+/* 795 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mapToZero.js ***!
   \*****************************************/
@@ -70937,7 +70982,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 795 */
+/* 796 */
 /*!******************************************!*\
   !*** ./~/react-motion/lib/stripStyle.js ***!
   \******************************************/
@@ -70966,7 +71011,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 796 */
+/* 797 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/stepper.js ***!
   \***************************************/
@@ -71017,7 +71062,7 @@
 	// array reference around.
 
 /***/ },
-/* 797 */
+/* 798 */
 /*!*****************************************************************!*\
   !*** ./~/react-motion/~/performance-now/lib/performance-now.js ***!
   \*****************************************************************/
@@ -71059,13 +71104,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 798 */
+/* 799 */
 /*!***************************************!*\
   !*** ./~/react-motion/~/raf/index.js ***!
   \***************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 797)
+	/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ 798)
 	  , root = typeof window === 'undefined' ? global : window
 	  , vendors = ['moz', 'webkit']
 	  , suffix = 'AnimationFrame'
@@ -71141,7 +71186,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 799 */
+/* 800 */
 /*!***************************************************!*\
   !*** ./~/react-motion/lib/shouldStopAnimation.js ***!
   \***************************************************/
@@ -71180,7 +71225,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 800 */
+/* 801 */
 /*!***********************************************!*\
   !*** ./~/react-motion/lib/StaggeredMotion.js ***!
   \***********************************************/
@@ -71194,27 +71239,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 794);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 795);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 795);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 796);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 796);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 797);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 797);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 798);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 798);
+	var _raf = __webpack_require__(/*! raf */ 799);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 799);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 800);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -71450,7 +71495,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 801 */
+/* 802 */
 /*!************************************************!*\
   !*** ./~/react-motion/lib/TransitionMotion.js ***!
   \************************************************/
@@ -71464,31 +71509,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 794);
+	var _mapToZero = __webpack_require__(/*! ./mapToZero */ 795);
 	
 	var _mapToZero2 = _interopRequireDefault(_mapToZero);
 	
-	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 795);
+	var _stripStyle = __webpack_require__(/*! ./stripStyle */ 796);
 	
 	var _stripStyle2 = _interopRequireDefault(_stripStyle);
 	
-	var _stepper3 = __webpack_require__(/*! ./stepper */ 796);
+	var _stepper3 = __webpack_require__(/*! ./stepper */ 797);
 	
 	var _stepper4 = _interopRequireDefault(_stepper3);
 	
-	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 802);
+	var _mergeDiff = __webpack_require__(/*! ./mergeDiff */ 803);
 	
 	var _mergeDiff2 = _interopRequireDefault(_mergeDiff);
 	
-	var _performanceNow = __webpack_require__(/*! performance-now */ 797);
+	var _performanceNow = __webpack_require__(/*! performance-now */ 798);
 	
 	var _performanceNow2 = _interopRequireDefault(_performanceNow);
 	
-	var _raf = __webpack_require__(/*! raf */ 798);
+	var _raf = __webpack_require__(/*! raf */ 799);
 	
 	var _raf2 = _interopRequireDefault(_raf);
 	
-	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 799);
+	var _shouldStopAnimation = __webpack_require__(/*! ./shouldStopAnimation */ 800);
 	
 	var _shouldStopAnimation2 = _interopRequireDefault(_shouldStopAnimation);
 	
@@ -71946,7 +71991,7 @@
 	// that you've unmounted but that's still animating. This is where it lives
 
 /***/ },
-/* 802 */
+/* 803 */
 /*!*****************************************!*\
   !*** ./~/react-motion/lib/mergeDiff.js ***!
   \*****************************************/
@@ -72062,7 +72107,7 @@
 	// to loop through and find a key's index each time), but I no longer care
 
 /***/ },
-/* 803 */
+/* 804 */
 /*!**************************************!*\
   !*** ./~/react-motion/lib/spring.js ***!
   \**************************************/
@@ -72078,7 +72123,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _presets = __webpack_require__(/*! ./presets */ 804);
+	var _presets = __webpack_require__(/*! ./presets */ 805);
 	
 	var _presets2 = _interopRequireDefault(_presets);
 	
@@ -72093,7 +72138,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 804 */
+/* 805 */
 /*!***************************************!*\
   !*** ./~/react-motion/lib/presets.js ***!
   \***************************************/
@@ -72111,7 +72156,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 805 */
+/* 806 */
 /*!*******************************************!*\
   !*** ./~/react-motion/lib/reorderKeys.js ***!
   \*******************************************/
@@ -72137,7 +72182,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 190)))
 
 /***/ },
-/* 806 */
+/* 807 */
 /*!************************************!*\
   !*** ./app/_Home/AgendaPanel.scss ***!
   \************************************/
@@ -72147,7 +72192,7 @@
 	module.exports = {"buttonCell":"AgendaPanel__buttonCell___mdHZT","responsiveTable":"AgendaPanel__responsiveTable___1imD0","heading":"AgendaPanel__heading___1R9BA","button":"AgendaPanel__button___31hPS","panelContainer":"AgendaPanel__panelContainer___3klt_","panelContent":"AgendaPanel__panelContent___LNATz","titleCell":"AgendaPanel__titleCell___3Yh8D","dateCell":"AgendaPanel__dateCell___22MjH"};
 
 /***/ },
-/* 807 */
+/* 808 */
 /*!*****************************!*\
   !*** ./app/_Home/Home.scss ***!
   \*****************************/
@@ -72157,7 +72202,7 @@
 	module.exports = {"panelCollection":"Home__panelCollection___1jjFm"};
 
 /***/ },
-/* 808 */
+/* 809 */
 /*!*******************************!*\
   !*** ./app/_Content/index.js ***!
   \*******************************/
@@ -72167,12 +72212,12 @@
 	
 	module.exports = {
 	  path: '/content/:slug',
-	  component: __webpack_require__(/*! ./Content */ 809),
+	  component: __webpack_require__(/*! ./Content */ 810),
 	  childRoutes: []
 	};
 
 /***/ },
-/* 809 */
+/* 810 */
 /*!**********************************!*\
   !*** ./app/_Content/Content.jsx ***!
   \**********************************/
@@ -72208,7 +72253,7 @@
 	
 	var _wikismith2 = _interopRequireDefault(_wikismith);
 	
-	var _Content = __webpack_require__(/*! ./Content.scss */ 810);
+	var _Content = __webpack_require__(/*! ./Content.scss */ 811);
 	
 	var _Content2 = _interopRequireDefault(_Content);
 	
@@ -72243,7 +72288,7 @@
 	module.exports = Content;
 
 /***/ },
-/* 810 */
+/* 811 */
 /*!***********************************!*\
   !*** ./app/_Content/Content.scss ***!
   \***********************************/
