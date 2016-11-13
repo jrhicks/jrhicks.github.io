@@ -836,6 +836,10 @@
           flex-direction: column;
 }
 
+.Content__homeNav___1_zpt {
+  padding-top: 1em;
+}
+
 @media (max-width: 600px) {
   .Content__panelContainer___2m3oF {
     padding: 0 10px;
